@@ -20,7 +20,7 @@ The following links provide the solution in code and within an online compile th
 | generate a 32 byte long key | [Website](generatekey.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 | Language | available | Online-compiler
-| ------ | :---: | :----: | :---: | :--: | :--: | :--: |
+| ------ | :---: | :----: | 
 | [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/) |
 | [PHP](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/) |
 | [C#](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/) |

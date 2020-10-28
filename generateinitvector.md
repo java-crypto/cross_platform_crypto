@@ -1,12 +1,10 @@
 Cross-platform cryptography
 ===============
 
-Generate a secure random AES key
+Generate a secure random initialization vector (IV)
 ---------------
 
-One of the most important fact for secure cryptography is to use an encryption key that is generated randomly and **not** by taking a passwordphrase and simply convert it to a key.
-
-The codes will generate an AES key with size of 32 byte = 256 bit that is the maximum key size available for AES encryption.
+Some AES encryption modes need a random generated initialization vector (iv). The codes will generate an iv with size of 16 byte = 128 bit.
 
 :warning: Security warning :warning:
 ---------------
@@ -17,7 +15,7 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
+| [Java](GenerateInitvector/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomInitvector#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandom-Initvector#Main.java/)
 | [PHP](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
 | [C#](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
 | [Javacrypto](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
@@ -26,6 +24,11 @@ The following links provide the solution in code and within an online compile th
 This is an output (as there is a random element your output will differ):
 
 ```plaintext
-Generate a 32 byte long AES key
-generated key length: 32 base64: a9VVidAcHk6mv09zGSfH6ZiWNWSsjt/gryi6UcnMdAg=
+Generate a 16 byte long Initialization vector (IV)
+generated iv length: 32 base64: V+zuFGNj42igh5EmYNKduOpj8pgxgbupFey8hBzO4To=
 ```
+
+
+Last update: Oct. 28th 2020
+
+Back to the main page: [readme.md](readme.md)

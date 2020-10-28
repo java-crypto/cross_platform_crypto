@@ -13,7 +13,7 @@ I'm trying to serve a broad spectrum of programming languages and actually I hav
 
 | Solution | Java | PHP | C# | JS | Node.JS | 
 | ------ | :---: | :----: | :---: | :--: | :--: | 
-| [generate a 32 byte long AES key](generateaeskey.md) | :white_check_mark: | :white_check_mark: | :soon: | :soon: | :soon: |
+| [generate a 32 byte long AES key](generateaeskey.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :soon: |
 | [generate a 16 byte long initvector](generateinitvector.md) | :white_check_mark: | :white_check_mark: | :soon: | :soon: | :soon: |
 | [generate a 12 byte long nonce](generatenonce.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [Base64 encoding & decoding](base64encoding.html) | :soon: | :soon: | :soon: | :soon: | :soon: |

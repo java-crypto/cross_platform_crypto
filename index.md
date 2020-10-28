@@ -3,7 +3,9 @@ Cross-platform cryptography
 General information and overview
 ---------------
 
-Github-Link: [Github index2.md]  (https://java-crypto.github.com/cross_platform_crypto/index2.md)
+Github-Link: [Github index2.md]  (https://java-crypto.github.com/cross_platform_crypto/index2.md/)
+
+Github-Link2: [Github index2.md]  (https://github.com/java-crypto/cross_platform_crypto/blob/main/index.md/)
 
 This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
 

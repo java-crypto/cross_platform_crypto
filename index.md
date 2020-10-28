@@ -16,7 +16,7 @@ I'm trying to serve a broad spectrum of programming languages and actually I hav
 
 | Solution | Link | Java | PHP | C# | JS | Node.JS
 | ------ | ------ | :----: | :---: | :--: | :--: | :--: |
-| AES CBC 256 String Encryption | [Lizenz](licence.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| AES CBC 256 String Encryption | [Lizenz](license.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 
 Here is an overview of the next articles:

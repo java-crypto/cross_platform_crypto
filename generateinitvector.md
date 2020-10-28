@@ -6,6 +6,8 @@ Generate a secure random initialization vector (IV)
 
 Some AES encryption modes need a random generated initialization vector (iv). The codes will generate an iv with size of 16 byte = 128 bit.
 
+The iv output format is a byte array but when sending this iv to another system or persons you often need another (string based) format - so I'm providing the iv also as a Base64 encoded string.
+
 :warning: Security warning :warning:
 ---------------
 

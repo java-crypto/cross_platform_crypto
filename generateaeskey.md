@@ -8,6 +8,8 @@ One of the most important fact for secure cryptography is to use an encryption k
 
 The codes will generate an AES key with size of 32 byte = 256 bit that is the maximum key size available for AES encryption.
 
+The key output format is a byte array but when sending this key to another system or persons you often need another (string based) format - so I'm providing the key also as a Base64 encoded string.
+
 :warning: Security warning :warning:
 ---------------
 
@@ -18,7 +20,7 @@ The following links provide the solution in code and within an online compile th
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
 | [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
-| [PHP](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
+| [PHP](GenerateAesKey/GenerateRandomAesKey.php) | :white_check_mark: | [repl.it CspPhpGenerateRandomAesKey](https://repl.it/@javacrypto/CspPhpGenerateRandomAesKey/)
 | [C#](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
 | [Javacrypto](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
 | [Node.JS](generateaeskey.html) | :x: | [repl.it](http://javacrypto.bplaced.net/)
@@ -29,3 +31,8 @@ This is an output (as there is a random element your output will differ):
 Generate a 32 byte long AES key
 generated key length: 32 base64: a9VVidAcHk6mv09zGSfH6ZiWNWSsjt/gryi6UcnMdAg=
 ```
+
+
+Last update: Oct. 28th 2020
+
+Back to the main page: [readme.md](readme.md)

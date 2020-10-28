@@ -1,0 +1,4 @@
+title: Cryptography in practise
+description: A short description of this site's purpose
+kramdown:
+  syntax_highlighter: rouge

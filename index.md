@@ -7,6 +7,8 @@ Github-Link: [Github index2.md]  (https://java-crypto.github.com/cross_platform_
 
 Github-Link2: [Github index2.md]  (https://github.com/java-crypto/cross_platform_crypto/blob/main/index.md//)
 
+Github-Link3: [Github](https://github.com/java-crypto/cross_platform_crypto/blob/main/index.md/)
+
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 
 RSA 2048 Encryption: [Encryption](http://javacrypto.bplaced.net/)

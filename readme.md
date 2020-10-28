@@ -24,8 +24,8 @@ I'm trying to serve a broad spectrum of programming languages and actually I hav
 ### General routines ###
 
 | Solution | Java | PHP | C# | JS | Node.JS | 
-| ------ | :---: | :----: | :---: | :--: | :--: | :--: |
-| [generate a 32 byte long AES key](generateaeskey.md5) | :white_check_mark: | :soon: | :soon: | :soon: | :soon: |
+| ------ | :---: | :----: | :---: | :--: | :--: | 
+| [generate a 32 byte long AES key](generateaeskey.md) | :white_check_mark: | :soon: | :soon: | :soon: | :soon: |
 | [generate a 16 byte long initvector](generateiv.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [generate a 12 byte long nonce](generatenonce.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [Base64 encoding & decoding](base64encoding.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
@@ -36,7 +36,7 @@ I'm trying to serve a broad spectrum of programming languages and actually I hav
 ### AES encryption ###
 
 | Solution | Java | PHP | C# | JS | Node.JS |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |
+| ------ | :------: | :----: | :---: | :--: | :--: |
 | [CBC-mode String Encryption](aescbcstring.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [CBC-mode PBKDF2 String Encryption](aescbcpbkdf2string.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode String Encryption](aesgcmstring.html) | :soon: | :soon: | :soon: | :soon: | :soon: |

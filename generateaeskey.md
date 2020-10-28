@@ -15,11 +15,15 @@ The codes will generate an AES key with size of 32 byte = 256 bit that is the ma
 
 The following links provide the solution in code and within an online compile that runs the code.
 
+| Solution | Link | Java | PHP | C# | JS | Node.JS
+| ------ | ------ | :----: | :---: | :--: | :--: | :--: |
+| generate a 32 byte long key | [Website](generatekey.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
+
 | Language | available | Online-compiler
 | ------ | :---: | :----: | :---: | :--: | :--: | :--: |
-| [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
-| [PHP](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
-| [C#](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
-| [Javacrypto](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
-| [Node.JS](generateaeskey.html) | :x: | [repl.it](http://javacrypto.bplaced.net/)
+| [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/) |
+| [PHP](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/) |
+| [C#](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/) |
+| [Javacrypto](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/) |
+| [Node.JS](generateaeskey.html) | :x: | [repl.it](http://javacrypto.bplaced.net/) |
 

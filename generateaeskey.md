@@ -23,7 +23,7 @@ The following links provide the solution in code and within an online compile th
 | [PHP](GenerateAesKey/GenerateRandomAesKey.php) | :white_check_mark: | [repl.it CspPhpGenerateRandomAesKey](https://repl.it/@javacrypto/CspPhpGenerateRandomAesKey/)
 | [C#](GenerateAesKey/GenerateRandomAesKey.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomAesKey#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomAesKey#main.cs/)
 | [CryptoJs](GenerateAesKey/GenerateRandomAesKey.cryptoJs) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomAesKey](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)
-| [Node.JS](GenerateAesKey/GenerateRandomAesKey.nodeJs) | :white_check_mark: | [repl.it](http://javacrypto.bplaced.net/)
+| [Node.JS](GenerateAesKey/GenerateRandomAesKey.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
 
 This is an output (as there is a random element your output will differ):
 

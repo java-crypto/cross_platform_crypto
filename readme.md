@@ -11,24 +11,78 @@ I'm trying to serve a broad spectrum of programming languages and actually I hav
 
 ### General routines ###
 
-| Solution | Java | PHP | C# | JS | Node.JS | 
+| Solution | Java | PHP | C# | CryptoJS | Node.JS | 
 | ------ | :---: | :----: | :---: | :--: | :--: | 
 | [generate a 32 byte long AES key](generateaeskey.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [generate a 16 byte long initvector](generateinitvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [generate a 12 byte long nonce](generatenonce.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [Base64 encoding & decoding](base64encoding.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [byte array to hexstring & retour](bytearray.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [SHA256 hashing](sha256.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [PBKDF2 key derivation](pbkdf2.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [generate a 12 byte long nonce](generatenonce.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [Base64 encoding & decoding](base64encoding.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [byte array to hexstring & retour](bytearray.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [SHA256 hashing](sha256.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [PBKDF2 key derivation](pbkdf2.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### AES string encryption ###
 
-| Solution | Java | PHP | C# | JS | Node.JS |
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
 | ------ | :------: | :----: | :---: | :--: | :--: |
-| [CBC-mode String Encryption](aescbcstring.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [CBC-mode PBKDF2 String Encryption](aescbcpbkdf2string.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode String Encryption](aesgcmstring.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode PBKDF2 String Encryption](aesgcmpbkdf2string.html) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [CBC-mode String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [CBC-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+
+### AES file encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+| [CBC-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [CBC-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 AAD File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+
+planned in future
+
+### RSA encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+| [RSA PKCS1 padding](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [RSA OEAP padding](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+
+planned in future
+
+### RSA signature ###
+
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+
+
+planned in future
+
+### Elliptic curve encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+
+planned in future
+
+### Elliptic curve signature ###
+
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+
+
+planned in future
+
+### Diffie-Hellman key exchange ###
+
+| Solution | Java | PHP | C# | CryptoJS | Node.JS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+
+
+planned in future
+
 
 Last update: Oct. 29th 2020
 

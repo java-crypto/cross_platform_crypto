@@ -12,9 +12,9 @@ public class Main {
     }
     private static byte[] generateRandomInitvector() {
         SecureRandom secureRandom = new SecureRandom();
-        byte[] key = new byte[32];
-        secureRandom.nextBytes(key);
-        return key;
+        byte[] iv = new byte[16];
+        secureRandom.nextBytes(iv);
+        return iv;
     }
     private static String base64Encoding(byte[] input) {
         return Base64.getEncoder().encodeToString(input);

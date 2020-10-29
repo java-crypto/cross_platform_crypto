@@ -22,8 +22,8 @@ The following links provide the solution in code and within an online compile th
 | [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
 | [PHP](GenerateAesKey/GenerateRandomAesKey.php) | :white_check_mark: | [repl.it CspPhpGenerateRandomAesKey](https://repl.it/@javacrypto/CspPhpGenerateRandomAesKey/)
 | [C#](GenerateAesKey/GenerateRandomAesKey.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomAesKey#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomAesKey#main.cs/)
-| [Javacrypto](generateaeskey.html) | :soon: | [repl.it](http://javacrypto.bplaced.net/)
-| [Node.JS](generateaeskey.html) | :x: | [repl.it](http://javacrypto.bplaced.net/)
+| [CryptoJs](GenerateAesKey/GenerateRandomAesKey.cryptoJs) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomAesKey](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)
+| [Node.JS](GenerateAesKey/GenerateRandomAesKey.nodeJs) | :white_check_mark: | [repl.it](http://javacrypto.bplaced.net/)
 
 This is an output (as there is a random element your output will differ):
 
@@ -33,6 +33,6 @@ generated key length: 32 base64: a9VVidAcHk6mv09zGSfH6ZiWNWSsjt/gryi6UcnMdAg=
 ```
 
 
-Last update: Oct. 28th 2020
+Last update: Oct. 29th 2020
 
 Back to the main page: [readme.md](readme.md)

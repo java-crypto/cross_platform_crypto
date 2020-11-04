@@ -50,7 +50,7 @@ The following links provide the solutions in code and an online compile that run
 | [PHP](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesCbc256StringEncryptionFull/)
 | [C#](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringEncryptionFull#main.cs/)
 | [CryptoJs](AesCbc256StringEncryption/AesCbc256StringEncryptionFull.cryptoJs) | :white_check_mark: | [repl.it AesCbc256StringEncryption_Full](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)
-| [Node.JS](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
+| [NodeJS](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
 
 This is an output (as there are random elements your output will differ):
 

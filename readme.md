@@ -25,7 +25,7 @@ I'm trying to serve a broad spectrum of programming languages and actually I hav
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |
 | ------ | :------: | :----: | :---: | :--: | :--: |
 | [CBC-mode String Encryption](aescbc256stringencryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [CBC-mode String Decryption only](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [CBC-mode String Decryption only](aescbc256stringdecryptiononly.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [CBC-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: |

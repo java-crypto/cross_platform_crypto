@@ -46,7 +46,7 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](AesCbc256StringEncryption/Main.java) | :white_check_mark: | [repl.it CpcJavaAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcJavaAesCbc256StringEncryptionFull#Main.java/)
+| [Java](AesCbc256StringEncryption/AesCbc256StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcJavaAesCbc256StringEncryptionFull#Main.java/)
 | [PHP](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesCbc256StringEncryptionFull/)
 | [C#](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringEncryptionFull#main.cs/)
 | [CryptoJs](AesCbc256StringEncryption/AesCbc256StringEncryptionFull.cryptoJs) | :white_check_mark: | [repl.it AesCbc256StringEncryption_Full](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)

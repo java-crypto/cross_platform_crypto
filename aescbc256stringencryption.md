@@ -48,8 +48,9 @@ The following links provide the solutions in code and an online compile that run
 | [Java](AesCbc256StringEncryption/AesCbc256StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcJavaAesCbc256StringEncryptionFull#Main.java/)
 | [PHP](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesCbc256StringEncryptionFull/)
 | [C#](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringEncryptionFull#main.cs/)
-| [CryptoJs](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.cryptoJs) | :white_check_mark: | [repl.it AesCbc256StringEncryption_Full](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)
-| [NodeJS](AesCbc256StringEncryption/AesCbc256StringEncryption_Full.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
+| [Javascript CryptoJs](AesCbc256StringEncryption/AesCbc256StringEncryption_FullCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)
+| [NodeJS Crypto](AesCbc256StringEncryption/AesCbc256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256StringEncryptionFull#index.js/)
+| [NodeJS node-forge](AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
 
 This is an output (as there are random elements your output will differ):
 
@@ -70,6 +71,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
 
-Last update: Nov. 4th 2020
+Last update: Nov. 7th 2020
 
 Back to the main page: [readme.md](readme.md)

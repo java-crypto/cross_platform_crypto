@@ -31,8 +31,9 @@ The following links provide the solutions in code and an online compile that run
 | [Java](AesCbc256StringEncryption/AesCbc256StringDecryptionOnly.java) | :white_check_mark: | [repl.it CpcJavaAesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcJavaAesCbc256StringDecryptionOnly#Main.java/)
 | [PHP](AesCbc256StringEncryption/AesCbc256StringDecryptionOnly.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcPhpAesCbc256StringDecryptionOnly/)
 | [C#](AesCbc256StringEncryption/AesCbc256StringDecryptionOnly.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringDecryptionOnly#main.cs/)
-| [CryptoJs](AesCbc256StringEncryption/AesCbc256StringDecryptionOnly.cryptoJs) | :white_check_mark: | [repl.it AesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringDecryptionOnly#index.js/)
-| [NodeJS](AesCbc256StringEncryption/AesCbc256StringDecryptionOnly.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringDecryptionOnly#index.js/)
+| [Javascript CryptoJs](AesCbc256StringEncryption/AesCbc256StringDecryptionOnlyCryptoJs.js) | :white_check_mark: | [repl.it AesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringDecryptionOnly#index.js/)
+| [NodeJS Crypto](AesCbc256StringEncryption/AesCbc256StringDecryptionOnlyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256StringDecryptionOnly#index.js/)
+| [NodeJS node-forge](AesCbc256StringEncryption/AesCbc256StringDecryptionOnlyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringDecryptionOnly](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringDecryptionOnly#index.js/)
 
 This is an output (as there are random elements your output will differ):
 
@@ -46,6 +47,6 @@ input is (Base64) iv : (Base64) ciphertext
 plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Nov. 4th 2020
+Last update: Nov. 7th 2020
 
 Back to the main page: [readme.md](readme.md)

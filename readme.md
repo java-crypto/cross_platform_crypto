@@ -19,6 +19,8 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [byte array to hexstring & retour](bytearray.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [SHA256 hashing](sha256.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [PBKDF2 key derivation](pbkdf2.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [Generate RSA keys](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [Generate Elliptic keys](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### AES string encryption ###
 

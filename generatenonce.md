@@ -17,8 +17,9 @@ The following links provide the solution in code and within an online compile th
 | [Java](GenerateNonce/GenerateRandomNonce.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomNonce#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomNonce#Main.java/)
 | [PHP](GenerateNonce/GenerateRandomNonce.php) | :white_check_mark: | [repl.it CpcPhpGenerateNonce#main.php](https://repl.it/@javacrypto/CpcThe nonce output format is a byte array but when sending this nonce to another system or persons you often need another (string based) format - so I'm providing the nonce also as a Base64 encoded string.
 | [C#](GenerateNonce/GenerateRandomNonce.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomNonce#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomNonce#main.cs/)
-| [CryptoJs](GenerateNonce/GenerateRandomNonce.cryptoJs) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomNonce/)
-| [NodeJS](GenerateNonce/GenerateRandomNonce.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomNonce/)
+| [Javascript CryptoJs](GenerateNonce/GenerateRandomNonceCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomNonce/)
+| [NodeJS Crypto](GenerateNonce/GenerateRandomNonceNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomNonce/)
+| [NodeJS forge](GenerateNonce/GenerateRandomNonceNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomNonce/)
 
 This is an output (as there is a random element your output will differ):
 
@@ -28,6 +29,6 @@ generated nonce length: 12 base64: iK+wXGH26uFN+XFX
 ```
 
 
-Last update: Nov. 4th 2020
+Last update: Nov. 7th 2020
 
 Back to the main page: [readme.md](readme.md)

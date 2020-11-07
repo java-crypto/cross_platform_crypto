@@ -17,8 +17,9 @@ The following links provide the solution in code and within an online compile th
 | [Java](GenerateInitvector/GenerateRandomInitvector.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomInitvector#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomInitvector#Main.java/)
 | [PHP](GenerateInitvector/GenerateRandomInitvector.php) | :white_check_mark: | [repl.it CpcPhpGenerateInitvector#main.php](https://repl.it/@javacrypto/CpcPhpGenerateInitvector#main.php/)
 | [C#](GenerateInitvector/GenerateRandomInitvector.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomInitvector#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomInitvector#main.cs/)
-| [CryptoJs](GenerateInitvector/GenerateRandomInitvector.cryptoJs) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomInitvector/)
-| [NodeJS](GenerateInitvector/GenerateRandomInitvector.nodeJs) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
+| [Javascript CryptoJs](GenerateInitvector/GenerateRandomInitvectorCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomInitvector/)
+| [NodeJS CryptoJs](GenerateInitvector/GenerateRandomInitvectorNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
+| [NodeJS forge](GenerateInitvector/GenerateRandomInitvectorNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
 
 This is an output (as there is a random element your output will differ):
 
@@ -28,6 +29,6 @@ generated iv length: 16 base64: PnujuygIgaMxwdQRWz9wvA==
 ```
 
 
-Last update: Nov. 4th 2020
+Last update: Nov. 7th 2020
 
 Back to the main page: [readme.md](readme.md)

@@ -14,7 +14,7 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](GenerateInitvector/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomInitvector#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomInitvector#Main.java/)
+| [Java](GenerateInitvector/GenerateRandomInitvector.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomInitvector#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomInitvector#Main.java/)
 | [PHP](GenerateInitvector/GenerateRandomInitvector.php) | :white_check_mark: | [repl.it CpcPhpGenerateInitvector#main.php](https://repl.it/@javacrypto/CpcPhpGenerateInitvector#main.php/)
 | [C#](GenerateInitvector/GenerateRandomInitvector.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomInitvector#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomInitvector#main.cs/)
 | [CryptoJs](GenerateInitvector/GenerateRandomInitvector.cryptoJs) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomInitvector/)

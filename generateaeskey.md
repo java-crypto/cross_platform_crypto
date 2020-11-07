@@ -16,7 +16,7 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](GenerateAesKey/Main.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
+| [Java](GenerateAesKey/GenerateRandomAesKey.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
 | [PHP](GenerateAesKey/GenerateRandomAesKey.php) | :white_check_mark: | [repl.it CspPhpGenerateRandomAesKey](https://repl.it/@javacrypto/CspPhpGenerateRandomAesKey/)
 | [C#](GenerateAesKey/GenerateRandomAesKey.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomAesKey#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomAesKey#main.cs/)
 | [CryptoJs](GenerateAesKey/GenerateRandomAesKey.cryptoJs) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomAesKey](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)

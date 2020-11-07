@@ -1,5 +1,5 @@
 title: Cross platform cryptography
-description: crytpographic routines for exchange between platforms
+description: cryptographic routines for exchange between platforms
 theme: jekyll-theme-modernist
 kramdown:
   syntax_highlighter: rouge

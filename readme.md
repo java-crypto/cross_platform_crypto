@@ -59,8 +59,8 @@ planned in future
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |
-| [RSA String Signature (full)](readme.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
-| [RSA String Signature Verification only](readme.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
+| [RSA String Signature (full)](rsasignaturestring.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
+| [RSA String Signature Verification only](rsasignaturestringverificationonly.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
 
 ### RSA keys ###
 

@@ -50,7 +50,8 @@ planned in future
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
 | [RSA PKCS1 padding String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [RSA OEAP padding String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [RSA OEAP padding SHA-1 String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [RSA OEAP padding SHA-256 String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 planned in future
 
@@ -61,6 +62,10 @@ planned in future
 | [RSA String Signature (full)](readme.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
 | [RSA String Signature Verification only](readme.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
 
+### RSA keys ###
+
+Working with RSA key pairs can get tricky sometimes so I'm providing some more information about RSA keys:  [How to generate RSA key pairs](rsakeygeneration.md) and [How to convert RSA keys](rsakeyconversion.md). My programs uses a sample key pair, information are available are here: 
+[RSA sample keys](rsasamplekeypair.md).
 
 ### Elliptic curve encryption ###
 
@@ -98,7 +103,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 
-Last update: Nov. 7th 2020
+Last update: Nov. 9th 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

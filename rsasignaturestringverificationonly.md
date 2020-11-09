@@ -27,12 +27,12 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](RsaSignatureString/RsaSignatureStringVerificationOnly.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaAesCbc256StringEncryptionFull#Main.java/)
-| [PHP](RsaSignatureString/RsaSignatureStringVerificationOnly.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesCbc256StringEncryptionFull/)
-| [C#](RsaSignatureString/RsaSignatureStringVerificationOnly.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringEncryptionFull#main.cs/)
+| [Java](RsaSignatureString/RsaSignatureStringVerificationOnly.java) | :white_check_mark: | [repl.it CpcJavaRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringVerificationOnly/)
+| [PHP](RsaSignatureString/RsaSignatureStringVerificationOnly.php) | :white_check_mark: | [repl.it CpcPhpRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcPhpRsaSignatureStringVerificationOnly#main.php/)
+| [C#](RsaSignatureString/RsaSignatureStringVerificationOnly.cs) | :white_check_mark: | [repl.it CpcCsharpRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcCsharpRsaSignatureStringVerificationOnly#main.cs/)
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
-| [NodeJS Crypto](RsaSignatureString/RsaSignatureStringVerificationOnlyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
-| [NodeJS forge](RsaSignatureString/RsaSignatureStringVerificationOnlyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
+| [NodeJS Crypto](RsaSignatureString/RsaSignatureStringVerificationOnlyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringVerificationOnly#index.js/)
+| [NodeJS forge](RsaSignatureString/RsaSignatureStringVerificationOnlyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringVerificationOnly#index.js/)
 
 This is an output:
 

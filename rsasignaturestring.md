@@ -2,17 +2,17 @@
 
 ## RSA string signature
 
-The standard signature algorithm is **RSA** using a **RSA** Private-/ Publickey key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and he is been able to check = verify the signature.
+The standard signature algorithm is **RSA** using a **RSA** Private-/ Public key key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and the recipient is been able to check = verify the signature.
 
 To get this to work in cross platform systems there is one parameter that has to be equal - that is the hash algorithm that is used. My programs are using **SHA256** for this task.
 
 The second important data are the **keys** itself - it's easy not to recognize that "- Begin Private Key -" isn't the same as "- Begin RSA Private Key - ". Using the wrong keys will cause the the verification to fail. 
 
-**Key generation:** At the moment I'm not showing any programs how the RSA keys got generated; this will follow soon. The most important point is to generate a **PKCS8** key encoding (and not a PKCS1 formatted one).
+**Key generation:** All examples use pre-generated keys that are described on the page [RSA sample keys](rsasamplekeypair.md). If you want to see how my keys got generated visit the page [RSA key generation](rsakeygeneration.md). 
 
 When comparing the programs you will notice that the keys for C# looking like different as they are not in the "PEM"-format ("---Begin...") but in a XML-format. As it is a little bit tricky to convert the keys between XML- and PEM-format I setup an own page for this point: [rsakeyconversion.md](rsakeyconversion.md)
 
-One note about the **key management** in my programs: usually the keys are (securely) stored in files or a keystore and have additional password protection. Both scenarios are unhandy in demonstration programs running in an online compiler. That's why I'm using <u>static, hard-coded</u> keys in my programs - **please do not do this in production environment! Never ever store a Private Key in the source!** The minimum is to load the keys from secured files.
+One note about the **key management** in my programs: usually the keys are (securely) stored in files or a key store and may have additional password protection. Both scenarios are unhandy in demonstration programs running in an online compiler. That's why I'm using <u>static, hard-coded</u> keys in my programs - **please do not do this in production environment! Never ever store a Private Key in the source!** The minimum is to load the keys from a secured device.
 
 ### steps in the program
 
@@ -39,12 +39,12 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](RsaSignatureString/RsaSignatureStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaAesCbc256StringEncryptionFull#Main.java/)
-| [PHP](RsaSignatureString/RsaSignatureStringFull.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesCbc256StringEncryptionFull/)
-| [C#](RsaSignatureString/RsaSignatureStringFull.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringEncryptionFull#main.cs/)
+| [Java](RsaSignatureString/RsaSignatureStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringFull#Main.java/)
+| [PHP](RsaSignatureString/RsaSignatureStringFull.php) | :white_check_mark: | [repl.it CpcPhpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcPhpRsaSignatureStringFull#main.php/)
+| [C#](RsaSignatureString/RsaSignatureStringFull.cs) | :white_check_mark: | [repl.it CpcCsharpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcCsharpRsaSignatureStringFull#main.cs/)
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
-| [NodeJS Crypto](RsaSignatureString/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
-| [NodeJS forge](RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
+| [NodeJS Crypto](RsaSignatureString/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
+| [NodeJS forge](RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
 
 This is an output:
 

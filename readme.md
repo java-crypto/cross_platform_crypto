@@ -71,7 +71,7 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 [How to generate RSA key pairs](rsakeygeneration.md) | creation of RSA key pairs with OpenSSL |
 [How to convert RSA keys](rsakeyconversion.md) | convert keys between XML- and PEM-format |
 [RSA sample keys](rsasamplekeypair.md) | for my encryption and signature examples I used these keys |
-[RSA key formats](rsakeyformat.md) | explanation of the most used key formats |
+[RSA key formats](rsakeyformats.md) | explanation of the most used key formats |
 
 
 ### Elliptic curve encryption ###
@@ -110,7 +110,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 
-Last update: Nov. 9th 2020
+Last update: Nov. 11th 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

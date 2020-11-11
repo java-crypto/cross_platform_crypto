@@ -64,10 +64,10 @@ XML RSA private key:  2048 bits
 
 If you change the verbose-constant to true in the code you get all of the key data... try it your own.
 
-The source code is available as well in my Github repository: [RsaKeyConverterPemToXml.cs](RsaKeyConversion/RsaKeyConverterPemToXml.cs)
+The source code is available as well in my Github repository: [CsharpRsaKeyConverterPemToXml.cs](RsaKeyConversion/CsharpRsaKeyConverterPemToXml.cs)
 
 Go to [RSA string signature](rsasignaturestring.md) and [RSA string signature verification only](rsasignaturestringverificationonly.md).
 
-Last update: Nov. 9th 2020
+Last update: Nov. 11th 2020
 
 Back to the main page: [readme.md](readme.md)

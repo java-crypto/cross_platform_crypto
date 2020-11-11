@@ -31,6 +31,8 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 **AES string encryption:** AES 256 CBC mode
 
+**RSA string encryption:** RSA OAEP SHA1 padding encryption
+
 **RSA string signature:** RSA 2048 signature
 
 ### Which solutions are planned for the future?
@@ -40,8 +42,6 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 **AES string encryption:** AES 256 CBC mode with PBKDF2 string encryption, AES 256 GCM mode string encryption, AES 256 GCM mode with PBKDF2 string encryption
 
 **AES file encryption:** AES 256 in modes CBC and GCM (and with or without PBKDF2 key derivation)
-
-**RSA string encryption:** RSA 2048 PKCS1 padding string encryption, RSA 2048 OEAP padding string encryption
 
 **Elliptic curve encryption** not for the near future, sorry
 

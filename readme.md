@@ -49,11 +49,11 @@ planned in future
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
-| [RSA PKCS1 padding String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [RSA OEAP padding SHA-1 String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [RSA OEAP padding SHA-1 String](rsaencryptionoaepsha1string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
+| [RSA OEAP padding SHA-1 String decryption only](rsadecryptionoaepsha1string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
 | [RSA OEAP padding SHA-256 String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [RSA OEAP padding SHA-256 String decryption only](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
-planned in future
 
 ### RSA signature ###
 
@@ -64,8 +64,15 @@ planned in future
 
 ### RSA keys ###
 
-Working with RSA key pairs can get tricky sometimes so I'm providing some more information about RSA keys:  [How to generate RSA key pairs](rsakeygeneration.md) and [How to convert RSA keys](rsakeyconversion.md). My programs uses a sample key pair, information are available are here: 
-[RSA sample keys](rsasamplekeypair.md).
+Working with RSA key pairs can get tricky sometimes so I'm providing some more information about RSA keys: 
+
+| page | information |
+| ------ | :------: |
+[How to generate RSA key pairs](rsakeygeneration.md) | creation of RSA key pairs with OpenSSL |
+[How to convert RSA keys](rsakeyconversion.md) | convert keys between XML- and PEM-format |
+[RSA sample keys](rsasamplekeypair.md) | for my encryption and signature examples I used these keys |
+[RSA key formats](rsakeyformat.md) | explanation of the most used key formats |
+
 
 ### Elliptic curve encryption ###
 

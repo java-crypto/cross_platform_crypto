@@ -6,7 +6,7 @@ As there are many formats or encodings in use with Private- / Public key cryptog
 
 The second reason is - using the wrong key format on one or both sides will cause the cryptography to fail.
 
-I will present a sample key pair for each format and on my Github-repository ["sample keys"](SampleKeys) you will find all keys in separate files.
+I will present a sample key pair for each format and on my Github-repository ["RSA sample keys"](RsaSampleKeys) you will find all keys in separate files.
 
 Let's start with the format that is used in my examples - a PKCS8 key pair in PEM encoding:
 

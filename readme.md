@@ -12,22 +12,22 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
 | ------ | :---: | :----: | :---: | :--: | :--: | :--: | 
-| [generate a 32 byte long AES key](generateaeskey.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [generate a 16 byte long initvector](generateinitvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [generate a 12 byte long nonce](generatenonce.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [generate a 32 byte long AES key](generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [generate a 16 byte long initvector](generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [generate a 12 byte long nonce](generate_nonce.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [Base64 encoding & decoding](base64encoding.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [byte array to hexstring & retour](bytearray.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [SHA256 hashing](sha256.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [PBKDF2 key derivation](pbkdf2.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [Generate RSA keys](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Generate RSA keys](rsa_key_generation.md) | see explanation |
 | [Generate Elliptic keys](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### AES string encryption ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
-| [CBC-mode String Encryption](aescbc256stringencryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [CBC-mode String Decryption only](aescbc256stringdecryptiononly.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [CBC-mode String Encryption](aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [CBC-mode String Decryption only](aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [CBC-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
@@ -49,8 +49,8 @@ planned in future
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
-| [RSA OEAP padding SHA-1 String](rsaencryptionoaepsha1string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
-| [RSA OEAP padding SHA-1 String decryption only](rsadecryptionoaepsha1string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
+| [RSA OEAP padding SHA-1 String](rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
+| [RSA OEAP padding SHA-1 String decryption only](rsa_decryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
 | [RSA OEAP padding SHA-256 String](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [RSA OEAP padding SHA-256 String decryption only](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
@@ -59,8 +59,8 @@ planned in future
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |
-| [RSA String Signature (full)](rsasignaturestring.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
-| [RSA String Signature Verification only](rsasignaturestringverificationonly.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
+| [RSA String Signature (full)](rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
+| [RSA String Signature Verification only](rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: |
 
 ### RSA keys ###
 
@@ -68,10 +68,10 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 | page | information |
 | ------ | :------: |
-[How to generate RSA key pairs](rsakeygeneration.md) | creation of RSA key pairs with OpenSSL |
-[How to convert RSA keys](rsakeyconversion.md) | convert keys between XML- and PEM-format |
-[RSA sample keys](rsasamplekeypair.md) | for my encryption and signature examples I used these keys |
-[RSA key formats](rsakeyformats.md) | explanation of the most used key formats |
+[How to generate RSA key pairs](rsa_key_generation.md) | creation of RSA key pairs with OpenSSL |
+[How to convert RSA keys](rsa_key_conversion.md) | convert keys between XML- and PEM-format |
+[RSA sample keys](rsa_sample_keypair.md) | for my encryption and signature examples I used these keys |
+[RSA key formats](rsa_key_formats.md) | explanation of the most used key formats |
 
 
 ### Elliptic curve encryption ###
@@ -110,7 +110,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 
-Last update: Nov. 11th 2020
+Last update: Nov. 15th 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

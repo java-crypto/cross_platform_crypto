@@ -16,6 +16,9 @@ There are several AES modes defined and here we are using the most common one - 
 
 The used CBC mode is a block algorithm means that the encryption (and decryption) is done in blocks of 16 bytes of data. There are only a few scenarios where you have to handle exact 16 bytes of data - in all other cases you have to fill up the plaintext to a length of multiple of 16. There are some padding algorithms available and our programs will use the PKCS#5 or PKCS#7 padding (Java names this padding PKCS#5, most other languages use PKCS#7).
 
+### Is this encryption secure?
+The answer is "it depends on...". The algorithm itself is secure but you should keep in mind that an attacker may been able to modify the ciphertext on transport. One example for this is the so called **tampering** - you can find a simple [example here](aes_cbc_tampering.md).
+
 ### steps in the program
 
 The program follows the usual sequence:
@@ -68,6 +71,6 @@ input is (Base64) iv : (Base64) ciphertext
 plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Nov. 15th 2020
+Last update: Nov. 23rd 2020
 
 Back to the main page: [readme.md](readme.md)

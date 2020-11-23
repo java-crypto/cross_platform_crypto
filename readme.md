@@ -6,7 +6,7 @@ This is a series of cryptography articles that will show show how cryptography i
 
 I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto** and **NodeJs node-forge**  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters.
 
-A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" or you can use "node-forge").
+A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
 
 ### General routines ###
 
@@ -15,12 +15,13 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [generate a 32 byte long AES key](generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [generate a 16 byte long initvector](generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [generate a 12 byte long nonce](generate_nonce.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [Base64 encoding & decoding](base64encoding.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [byte array to hexstring & retour](bytearray.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [SHA256 hashing](sha256.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| Base64 encoding & decoding | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| byte array to hexstring & retour | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| SHA256 hashing | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [HMAC 256 calculating](hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [Generate RSA keys](rsa_key_generation.md) | see explanation |
-| [Generate Elliptic keys](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [Generate RSA keys](rsa_key_generation.md) | [see explanation](rsa_key_generation.md) |
+| Generate Elliptic keys | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### AES string encryption ###
 
@@ -28,10 +29,18 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
 | [CBC-mode String Encryption](aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [CBC-mode String Decryption only](aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [CBC-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [CBC-mode PBKDF2 String Encryption](aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: |
+| [CBC-mode PBKDF2 String Decryption only](aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: |
+| [CBC-mode PBKDF2 HMAC String Encryption](aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: |
 | [GCM-mode String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+
+
+#### AES CBC special: tampering
+| Solution | Java | Explanation |
+| ------ | :------: | :----: |
+| [AES CBC-mode tampering](aes_cbc_tampering.md) | :white_check_mark: | in Java as it is for demonstration only |
 
 ### AES file encryption ###
 
@@ -73,6 +82,15 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 [RSA sample keys](rsa_sample_keypair.md) | for my encryption and signature examples I used these keys |
 [RSA key formats](rsa_key_formats.md) | explanation of the most used key formats |
 
+### Curve 25519 key exchange ###
+
+| Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |
+How to generate Curve 25519 key pairs | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+Curve 25519 key exchange and encryption | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+
+**planned in near future**
+
 
 ### Elliptic curve encryption ###
 
@@ -88,12 +106,6 @@ planned in later future
 
 planned in later future
 
-### Diffie-Hellman key exchange ###
-
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |
-| ------ | :------: | :----: | :---: | :--: | :--: |
-
-planned in later future
 
 ### Which platforms are supported at the moment?
 
@@ -110,7 +122,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 
-Last update: Nov. 15th 2020
+Last update: Nov. 23rd 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

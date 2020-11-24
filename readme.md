@@ -21,6 +21,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [HMAC 256 calculating](hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Generate RSA keys](rsa_key_generation.md) | [see explanation](rsa_key_generation.md) |
+[Generate Curve 25519 keys](curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
 | Generate Elliptic keys | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### AES string encryption ###
@@ -86,7 +87,6 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |
-How to generate Curve 25519 key pairs | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 Curve 25519 key exchange and encryption | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 **planned in near future**
@@ -122,7 +122,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 
-Last update: Nov. 23rd 2020
+Last update: Nov. 24th 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

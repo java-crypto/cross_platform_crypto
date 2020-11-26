@@ -108,7 +108,7 @@ planned in later future
 
 ### Which platforms are supported at the moment?
 
-I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like [https://repl.it/](https://repl.it/). Please don't ask I the programs will run on your system with a lower or higher version - just try it on your own.
+I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like [https://repl.it/](https://repl.it/). Please don't ask if the programs will run on your system with a lower or higher version - just try it on your own.
 
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" or you can use "node-forge").
 

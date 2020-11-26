@@ -69,7 +69,7 @@ The following links provide the solutions in code and an online compile that run
 | [PHP](Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.php) | :white_check_mark: | [repl.it CpcPhpCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcPhpCurve25519KeyExchangeAesCbc256StringEncryption#main.php/)
 | [C#](Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcCsharpCurve25519KeyExchangeAesCbc256StringEncryption#main.cs/)
 | [Javascript CryptoJs](Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption#index.js/)
-| [NodeJS Crypto](Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryption/#index.js/)
+| [NodeJS Crypto](Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryp#index.js/)
 | NodeJS node-forge | :x: | please use the built-in Node Crypto-solution above
 
 ### What additional libraries do I need to run the examples?

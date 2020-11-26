@@ -87,10 +87,9 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |
-Curve 25519 key exchange and encryption | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+[Curve 25519 key exchange & AES CBC mode 256 string encryption](curve25519_key_exchange_aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
 
-**planned in near future**
-
+Note: you need external libraries for this feature!
 
 ### Elliptic curve encryption ###
 
@@ -122,7 +121,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 
-Last update: Nov. 24th 2020
+Last update: Nov. 26th 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

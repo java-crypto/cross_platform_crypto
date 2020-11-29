@@ -1,0 +1,8 @@
+h1, p {
+  font-family: Lato;
+}
+
+.output {
+  border: 1px solid #efefef;
+  padding:10px;
+}

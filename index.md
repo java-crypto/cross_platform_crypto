@@ -16,6 +16,8 @@ I'm using an IDE for Java and PHP but for the other ones I'm using online compil
 
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" or you can use "node-forge").
 
+The few Javascript Webcrypto examples will run directly in your browser so you will need an actual one and Javascript is enabled.
+
 | Language |  Online-compiler | framework version
 | ------ | :---: | :----: |
 | Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
@@ -24,22 +26,25 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
+| Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
 ### Which cryptographic problems are solved platform-wide?
 
-**General routines:** generate a random AES-key and initialization vector
+**General routines:** generate a random AES-key, an initialization vector and a random nonce, HMAC 256 calculating, PBKDF2 key derivation, generate a RSA key pair, generate a Curve 25519 key pair
 
-**AES string encryption:** AES 256 CBC mode
+**AES string encryption:** AES 256 CBC mode, AES 256 CBC mode with PBKDF2, AES 256 CBC mode with PBKDF2 and HMAC 256 
 
 **RSA string encryption:** RSA OAEP SHA1 padding encryption
 
 **RSA string signature:** RSA 2048 signature
 
+**Curve 25519 key exchange:** Curve 25519 key exchange & AES CBC mode 256 string encryption
+
 ### Which solutions are planned for the future?
 
-**General routines:** generate a random nonce, Base64 encoding & decoding, byte array to hexstring & retour , SHA256 hashing, PBKDF2 key derivation
+**General routines:** Base64 encoding & decoding, byte array to hex string & retour , SHA256 hashing, PBKDF2 key derivation
 
-**AES string encryption:** AES 256 CBC mode with PBKDF2 string encryption, AES 256 GCM mode string encryption, AES 256 GCM mode with PBKDF2 string encryption
+**AES string encryption:** AES 256 GCM mode string encryption, AES 256 GCM mode with PBKDF2 string encryption
 
 **AES file encryption:** AES 256 in modes CBC and GCM (and with or without PBKDF2 key derivation)
 
@@ -49,7 +54,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 **Diffie-Hellman key exchange** not for the near future, sorry
 
-Last update: Nov. 07th. 2020
+Last update: Dec. 07th. 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto/index.html](https://java-crypto.github.io/cross_platform_crypto//)
 

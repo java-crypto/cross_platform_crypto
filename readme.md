@@ -111,6 +111,8 @@ I'm using an IDE for Java and PHP but for the other ones I'm using online compil
 
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" or you can use "node-forge").
 
+The few Javascript Webcrypto examples will run directly in your browser so you will need an actual one and Javascript is enabled.
+
 | Language |  Online-compiler | framework version
 | ------ | :---: | :----: |
 | Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)

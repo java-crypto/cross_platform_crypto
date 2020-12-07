@@ -61,6 +61,8 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS node-forge](AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [Webcrypto](AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullWebcrypto.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryption_FullWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullWebcrypto.html)
 
+An important note about the Webcrypto-program: the program is of **very poor quality** and should be used for demonstration purpose only. It has a lot of unnecessary conversions - **never ever use it as basis for your own (business) programs**.
+
 This is an output (as there are random elements your output will differ):
 
 ```plaintext
@@ -75,6 +77,24 @@ output is (Base64) salt : (Base64) iv : (Base64) ciphertext
 ciphertext (Base64): zQAobC3IWzxIN4bVs936hM5Jc7uFQIzJ1lg4qtWPnXw=:ZZsPdYbPlI6nTF6iRgP5lg==:Tpski19GwNnAvB113A6yS+ty9R9LQdc8mKxiRvGD0/C0+l615bOj3tITAoGUkXOf
 input is (Base64) salt : (Base64) iv : (Base64) ciphertext
 plaintext: The quick brown fox jumps over the lazy dog
+```
+
+This is the output of the (browser based) Webcrypto:
+
+```plaintext
+AES CBC 256 String encryption with PBKDF2 derived key
+
+Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.
+
+Plaintext: The quick brown fox jumps over the lazy dog
+
+Secret password: secret password
+
+CiphertextCpc: 0hjPdiaEjzCYpYbfXWb47U9Yz2vcqTbo+2ixn6dYZxQ=:hx2yzgjkpB0oB+qj4HK1pg==:obDSutcfyv4mNn6SIpR/5cP+rccR0lEwi27lXxWDadOmfC51zi2fECXN3mjCb7pF
+
+Ciphertext is (Base64) salt : (Base64) iv : (Base64) ciphertext
+
+DecryptedtextCpc: The quick brown fox jumps over the lazy dog
 ```
 
 Last update: Dec. 07th 2020

@@ -47,12 +47,12 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](AesGCM256StringEncryption/AesGCM256StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcJavaAesGcm256StringEncryption#Main.java/)
-| [PHP](AesGCM256StringEncryption/AesGCM256StringEncryption.php) | :white_check_mark: | [repl.it CpcPhpAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcPhpAesGCM256StringEncryption#main.php/)
-| [C#](AesGCM256StringEncryption/AesGCM256StringEncryption.cs) *1) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpAesGCM256StringEncryption](https://dotnetfiddle.net/c91C0t/)
+| [Java](AesGCM256StringEncryption/AesGcm256StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcJavaAesGcm256StringEncryption#Main.java/)
+| [PHP](AesGCM256StringEncryption/AesGcm256StringEncryption.php) | :white_check_mark: | [repl.it CpcPhpAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcPhpAesGCM256StringEncryption#main.php/)
+| [C#](AesGCM256StringEncryption/AesGcm256StringEncryption.cs) *1) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpAesGCM256StringEncryption](https://dotnetfiddle.net/c91C0t/)
 | Javascript CryptoJs | :x: | not available
-| [NodeJS Crypto](AesGCM256StringEncryption/AesGCM256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256StringEncryption#index.js/)
-| NodeJS node-forge | :white_check_mark: | [repl.it CpcNodeJsAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256StringEncryption#index.js/)
+| [NodeJS Crypto](AesGCM256StringEncryption/AesGcm256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256StringEncryption#index.js/)
+| [NodeJS node-forge](AesGCM256StringEncryption/AesGcm256StringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256StringEncryption#index.js/)
 
 *1) C# needs **dot.net 5** to run, so I changed my online compiler for this example.
 

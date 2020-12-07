@@ -37,23 +37,10 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [GCM-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |
 
-
 #### AES CBC special: tampering
 | Solution | Java | Explanation |
 | ------ | :------: | :----: |
 | [AES CBC-mode tampering](aes_cbc_tampering.md) | :white_check_mark: | in Java as it is for demonstration only |
-
-### AES file encryption ###
-
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
-| [CBC-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [CBC-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode PBKDF2 AAD File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-
-planned in future
 
 ### RSA encryption ###
 
@@ -90,6 +77,18 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 [Curve 25519 key exchange & AES CBC mode 256 string encryption](curve25519_key_exchange_aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
 
 Note: you need external libraries for this feature!
+
+### AES file encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
+| [CBC-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [CBC-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 AAD File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+
+planned in future
 
 ### Elliptic curve encryption ###
 

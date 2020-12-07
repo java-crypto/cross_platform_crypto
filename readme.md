@@ -120,6 +120,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
+| Webcrypto | modern browser | tested in Firefox 83 (x64) or Google Chrome 84.0.4147.135 (x86)
 
 Last update: Dec. 07th 2020
 

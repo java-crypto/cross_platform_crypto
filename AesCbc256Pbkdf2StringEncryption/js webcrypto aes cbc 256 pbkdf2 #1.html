@@ -1,0 +1,226 @@
+<HTML>
+<HEAD>
+<TITLE>CPC JS Webcrypto AES CBC 256 PBKDF2 #1</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+var ciphertextComplete;
+
+// Utils
+const hexToBuf = hex => {
+  for (var bytes = [], c = 0; c < hex.length; c += 2)
+    bytes.push(parseInt(hex.substr(c, 2), 16));
+  return new Uint8Array(bytes);
+};
+
+const bufToHex = buf => {
+  var byteArray = new Uint8Array(buf);
+  var hexString = "";
+  var nextHexByte;
+
+  for (var i = 0; i < byteArray.byteLength; i++) {
+    nextHexByte = byteArray[i].toString(16);
+    if (nextHexByte.length < 2) {
+      nextHexByte = "0" + nextHexByte;
+    }
+    hexString += nextHexByte;
+  }
+  return hexString;
+};
+
+const strToBuf = str => new TextEncoder().encode(str);
+const bufToStr = str => new TextDecoder().decode(str);
+
+const strToB64 = str =>
+  btoa(
+    encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) =>
+      String.fromCharCode("0x" + p1)
+    )
+  );
+const b64ToStr = str =>
+  decodeURIComponent(
+    Array.prototype.map
+      .call(
+        atob(str),
+        c => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2)
+      )
+      .join("")
+  );
+
+const bufToB64 = buf =>
+  btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+const b64ToBuf = b64 => {
+  const binstr = atob(b64),
+    buf = new Uint8Array(binstr.length);
+  Array.prototype.forEach.call(binstr, (ch, i) => {
+    buf[i] = ch.charCodeAt(0);
+  });
+  return buf;
+};
+
+/**
+ * Creates a new Uint8Array based on two different ArrayBuffers
+ *
+ * @private
+ * @param {ArrayBuffers} buffer1 The first buffer.
+ * @param {ArrayBuffers} buffer2 The second buffer.
+ * @return {ArrayBuffers} The new ArrayBuffer created out of the two.
+ */
+var concatBuffer = function(buffer1, buffer2) {
+  var tmp = new Uint8Array(buffer1.byteLength + buffer2.byteLength);
+  tmp.set(new Uint8Array(buffer1), 0);
+  tmp.set(new Uint8Array(buffer2), buffer1.byteLength);
+  return tmp.buffer;
+};
+
+// Encrypt
+const encrypt = (data, key, iv, mode) =>
+  crypto.subtle
+    .importKey("raw", key, { name: mode }, true, ["encrypt", "decrypt"])
+    .then(bufKey => crypto.subtle.encrypt({ name: mode, iv }, bufKey, data));
+
+// Decrypt
+const decrypt = (data, key, iv, mode) =>
+  crypto.subtle
+    .importKey("raw", key, { name: mode }, true, ["encrypt", "decrypt"])
+    .then(bufKey => crypto.subtle.decrypt({ name: mode, iv }, bufKey, data));
+
+// PBKDF2
+const pbkdf2 = (password, salt, iterations, hash, mode) =>
+  crypto.subtle
+    .importKey("raw", password, { name: "PBKDF2" }, false, ["deriveKey"])
+    .then(baseKey =>
+      crypto.subtle.deriveKey(
+        { name: "PBKDF2", salt, iterations, hash },
+        baseKey,
+        { name: mode, length: 256 },
+        true,
+        ["encrypt", "decrypt"]
+      )
+    )
+    .then(key => crypto.subtle.exportKey("raw", key));
+
+const encStr = (data, password) => {
+  const salt = crypto.getRandomValues(new Uint8Array(32));
+  const iv = crypto.getRandomValues(new Uint8Array(16));
+  const iterations = 15000;
+  const hash = "SHA-256";
+  const mode = "AES-CBC";
+
+  return pbkdf2(strToBuf(password), salt, iterations, hash, mode)
+    .then(keyBuf => encrypt(strToBuf(data), keyBuf, iv, mode))
+    .then(buf =>
+      btoa(
+        JSON.stringify({
+          hash,
+          mode,
+          iterations,
+          salt: bufToHex(salt),
+          iv: bufToHex(iv),
+          data: bufToHex(buf)
+        })
+      )
+    );
+};
+
+const decStrCpc = (salt, iv, data, password) => {
+  const iterations = 15000;
+  const hash = "SHA-256";
+  const mode = "AES-CBC";
+  //const { salt, iterations, hash, mode, iv, data } = JSON.parse(atob(raw));
+  return pbkdf2(strToBuf(password), salt, iterations, hash, mode)
+    .then(key => decrypt(data, key, iv, mode))
+    .then(buf => bufToStr(buf));
+};
+
+// funktioniert !
+function encryptDataCpc (form) {
+  const ownPassword = document.getElementById("secretpassword").value;
+  const ownPlaintext = document.getElementById("plaintext").value;
+  encStr(ownPlaintext, ownPassword)
+  .then(enc => {
+	// split data
+	const { salt, iterations, hash, mode, iv, data } = JSON.parse(atob(enc));
+    const saltBase64 = bufToB64(hexToBuf(salt));
+	const nonceBase64 = bufToB64(hexToBuf(iv));
+	const ciphertextBase64 = bufToB64(hexToBuf(data));
+	const outputLine = saltBase64 + ':' + nonceBase64 + ':' + ciphertextBase64;	
+	document.getElementById("ciphertextCpc").value = outputLine;
+  })
+  .catch(console.error);
+}
+
+// funktioniert
+function decryptDataCpc (form) {
+  const ownPassword = document.getElementById("secretpassword").value;
+  const ownCiphertext = document.getElementById("ciphertextCpc").value;
+  // split the string
+  var dataSplit = ownCiphertext.split(":");
+  var salt = b64ToBuf(dataSplit[0]);
+  var iv = b64ToBuf(dataSplit[1]);
+  var ciphertext = b64ToBuf(dataSplit[2]);
+  decStrCpc(salt, iv, ciphertext, ownPassword)
+  .then(dec => {
+    document.getElementById("decryptedtextCpc").value = dec;
+  })
+  .catch(console.error);
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME="myform" ACTION="" METHOD="GET">CPC JS Webcrypto AES CBC 256 PBKDF2 #1<BR>
+
+<p>
+  Plaintext:
+  <input
+    type="text"
+    name="plaintext"
+    id="plaintext"
+    size="100"
+    value="The quick brown fox jumps over the lazy dog"
+  />
+</p>
+
+<p>
+  Secret password:
+  <input
+    type="text"
+    name="secretpassword"
+    id="secretpassword"
+    size="100"
+    value="secret password"
+  />
+</p>
+
+<hr>
+
+<p>
+  <INPUT TYPE="button" NAME="button" Value="encryptDataCpc" onClick="encryptDataCpc(this.form)">
+</p>
+
+<p>
+  CiphertextCpc: <input type="text" name="ciphertextCpc" id="ciphertextCpc" size="250" />
+</p>
+
+<hr>
+
+<p>
+  <INPUT TYPE="button" NAME="button" Value="decryptDataCpc" onClick="decryptDataCpc(this.form)">
+</p>
+
+<p>
+  DecryptedtextCpc:
+  <input
+    type="text"
+    name="decryptedtextCpc"
+    id="decryptedtextCpc"
+    size="100"
+    value="decrypted text"
+  />
+</p>
+
+<hr>
+
+</FORM>
+</BODY>
+</HTML>

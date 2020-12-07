@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>CPC JS Webcrypto AES CBC 256 PBKDF2 #1</TITLE>
+<TITLE>'AES CBC 256 String encryption with PBKDF2 derived key</TITLE>
 <SCRIPT LANGUAGE="JavaScript">
 
 var ciphertextComplete;
@@ -57,14 +57,6 @@ const b64ToBuf = b64 => {
   return buf;
 };
 
-/**
- * Creates a new Uint8Array based on two different ArrayBuffers
- *
- * @private
- * @param {ArrayBuffers} buffer1 The first buffer.
- * @param {ArrayBuffers} buffer2 The second buffer.
- * @return {ArrayBuffers} The new ArrayBuffer created out of the two.
- */
 var concatBuffer = function(buffer1, buffer2) {
   var tmp = new Uint8Array(buffer1.byteLength + buffer2.byteLength);
   tmp.set(new Uint8Array(buffer1), 0);
@@ -132,7 +124,6 @@ const decStrCpc = (salt, iv, data, password) => {
     .then(buf => bufToStr(buf));
 };
 
-// funktioniert !
 function encryptDataCpc (form) {
   const ownPassword = document.getElementById("secretpassword").value;
   const ownPlaintext = document.getElementById("plaintext").value;
@@ -164,12 +155,15 @@ function decryptDataCpc (form) {
   })
   .catch(console.error);
 }
-
 </SCRIPT>
 </HEAD>
 <BODY>
-<FORM NAME="myform" ACTION="" METHOD="GET">CPC JS Webcrypto AES CBC 256 PBKDF2 #1<BR>
-
+<FORM NAME="myform" ACTION="" METHOD="GET">AES CBC 256 String encryption with PBKDF2 derived key<BR>
+<hr>
+<p>
+<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+</p>
+<hr>
 <p>
   Plaintext:
   <input
@@ -180,7 +174,6 @@ function decryptDataCpc (form) {
     value="The quick brown fox jumps over the lazy dog"
   />
 </p>
-
 <p>
   Secret password:
   <input
@@ -191,23 +184,20 @@ function decryptDataCpc (form) {
     value="secret password"
   />
 </p>
-
 <hr>
-
 <p>
   <INPUT TYPE="button" NAME="button" Value="encryptDataCpc" onClick="encryptDataCpc(this.form)">
 </p>
-
 <p>
   CiphertextCpc: <input type="text" name="ciphertextCpc" id="ciphertextCpc" size="250" />
 </p>
-
+<p>
+  Ciphertext is (Base64) salt : (Base64) iv : (Base64) ciphertext
+</p>
 <hr>
-
 <p>
   <INPUT TYPE="button" NAME="button" Value="decryptDataCpc" onClick="decryptDataCpc(this.form)">
 </p>
-
 <p>
   DecryptedtextCpc:
   <input
@@ -218,9 +208,7 @@ function decryptDataCpc (form) {
     value="decrypted text"
   />
 </p>
-
 <hr>
-
 </FORM>
 </BODY>
 </HTML>

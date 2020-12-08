@@ -54,12 +54,12 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption_Full.java) | :white_check_mark: | [repl.it CpcJavaAesGcm256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcJavaAesGcm256Pbkdf2StringEncryptionFull#Main.java/)
-| [PHP](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption_Full.php) | :white_check_mark: | [repl.it CpcPhpAesGcm256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesGcm256Pbkdf2StringEncryptionFull/)
-| [C#](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption_Full.cs) | :white_check_mark: | [repl.it CpcCsharpAesGcm256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesGcm256Pbkdf2StringEncryptionFull#main.cs/)
+| [Java](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcJavaAesGcm256Pbkdf2StringEncryption#Main.java/)
+| [PHP](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.php) | :white_check_mark: | [repl.it CpcPhpAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcPhpAesGcm256Pbkdf2StringEncryption/)
+| [C#](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcCsharpAesGcm256Pbkdf2StringEncryption#main.cs/)
 | Javascript CryptoJs | :x: | not available
-| [NodeJS Crypto](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption_FullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGcm256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256Pbkdf2StringEncryptionFull#index.js/)
-| [NodeJS node-forge](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGcm256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesGcm256Pbkdf2StringEncryptionFull#index.js/)
+| [NodeJS Crypto](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256Pbkdf2StringEncryption#index.js/)
+| [NodeJS node-forge](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256Pbkdf2StringEncryption#index.js/)
 | [Webcrypto](AesGcm256Pbkdf2StringEncryption/aesgcm256pbkdf2stringencryptionwebcrypto.html) | :white_check_mark: | [your browser AesGcm256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesGcm256Pbkdf2StringEncryption/aesgcm256pbkdf2stringencryptionwebcrypto.html)
 
 An important note about the Webcrypto-program: the program is of **very poor quality** and should be used for demonstration purpose only. It has a lot of unnecessary conversions - **never ever use it as basis for your own (business) programs**.

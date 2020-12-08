@@ -56,7 +56,7 @@ The following links provide the solutions in code and an online compile that run
 | ------ | :---: | :----: |
 | [Java](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcJavaAesGcm256Pbkdf2StringEncryption#Main.java/)
 | [PHP](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.php) | :white_check_mark: | [repl.it CpcPhpAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcPhpAesGcm256Pbkdf2StringEncryption/)
-| [C#](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcCsharpAesGcm256Pbkdf2StringEncryption#main.cs/)
+| [C#](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpAesGcm256Pbkdf2StringEncryption](https://dotnetfiddle.net/v4PaLu/)
 | Javascript CryptoJs | :x: | not available
 | [NodeJS Crypto](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256Pbkdf2StringEncryption#index.js/)
 | [NodeJS node-forge](AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256Pbkdf2StringEncryption#index.js/)

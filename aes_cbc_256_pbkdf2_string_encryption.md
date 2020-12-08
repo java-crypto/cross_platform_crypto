@@ -8,7 +8,7 @@ This version is the advanced version of [AES CBC mode 256 string encryption](aes
 
 #### First parameter: the password or passphrase
 
-This is a string (or char array in Java) and in a program it gets filled by a user input like "input passwort".
+This is a string (or char array in Java) and in a program it gets filled by a user input like "input password".
 
 #### Second parameter: the data to encrypt (or decrypt)
 
@@ -59,7 +59,7 @@ The following links provide the solutions in code and an online compile that run
 | [Javascript CryptoJs](AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [NodeJS Crypto](AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [NodeJS node-forge](AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull#index.js/)
-| [Webcrypto](AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullWebcrypto.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryption_FullWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullWebcrypto.html)
+| [Webcrypto](AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html)
 
 An important note about the Webcrypto-program: the program is of **very poor quality** and should be used for demonstration purpose only. It has a lot of unnecessary conversions - **never ever use it as basis for your own (business) programs**.
 
@@ -67,16 +67,18 @@ This is an output (as there are random elements your output will differ):
 
 ```plaintext
 AES CBC 256 String encryption with PBKDF2 derived key
-plaintext: The quick brown fox jumps over the lazy dog
+plaintext:  The quick brown fox jumps over the lazy dog
 
 * * * Encryption * * *
-ciphertext (Base64): zQAobC3IWzxIN4bVs936hM5Jc7uFQIzJ1lg4qtWPnXw=:ZZsPdYbPlI6nTF6iRgP5lg==:Tpski19GwNnAvB113A6yS+ty9R9LQdc8mKxiRvGD0/C0+l615bOj3tITAoGUkXOf
+ciphertext (Base64): mZa29HurA54RaYjXQ67UyFSAJXm5KPkXb720TERXvrQ=:jmmpanDGdObdsD163bxSnQ==:ZYgY4j8I1P3EL4lrbPnIPrUtijYr2uRac7nIvxFi7wx0oTJ3/SwHRsGfbYX1Ghsd
 output is (Base64) salt : (Base64) iv : (Base64) ciphertext
 
 * * * Decryption * * *
-ciphertext (Base64): zQAobC3IWzxIN4bVs936hM5Jc7uFQIzJ1lg4qtWPnXw=:ZZsPdYbPlI6nTF6iRgP5lg==:Tpski19GwNnAvB113A6yS+ty9R9LQdc8mKxiRvGD0/C0+l615bOj3tITAoGUkXOf
+AES CBC 256 String decryption with PBKDF2 derived key
+ciphertext (Base64): mZa29HurA54RaYjXQ67UyFSAJXm5KPkXb720TERXvrQ=:jmmpanDGdObdsD163bxSnQ==:ZYgY4j8I1P3EL4lrbPnIPrUtijYr2uRac7nIvxFi7wx0oTJ3/SwHRsGfbYX1Ghsd
 input is (Base64) salt : (Base64) iv : (Base64) ciphertext
-plaintext: The quick brown fox jumps over the lazy dog
+plaintext:  The quick brown fox jumps over the lazy dog
+
 ```
 
 This is the output of the (browser based) Webcrypto:
@@ -97,6 +99,6 @@ Ciphertext is (Base64) salt : (Base64) iv : (Base64) ciphertext
 DecryptedtextCpc: The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Dec. 07th 2020
+Last update: Dec. 08th 2020
 
 Back to the main page: [readme.md](readme.md)

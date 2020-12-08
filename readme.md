@@ -34,7 +34,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [CBC-mode PBKDF2 String Decryption only](aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: |
 | [CBC-mode PBKDF2 HMAC String Encryption](aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: |
 | [GCM-mode String Encryption](aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: |
-| [GCM-mode PBKDF2 String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [GCM-mode PBKDF2 String Encryption](aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
 | [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |
 
 #### AES CBC special: tampering

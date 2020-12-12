@@ -15,7 +15,7 @@ As you could imaging a secure one wouldn't be replaced by OpenSSL so the answer 
 
 **Please use this function only for migration and not for actual (new written) software projects as it is UNSECURE**.
 
-If you want read more about the encryption kindly see my article [AES CBC mode 256 string encryption](aes_cbc_256_pbkdf2_string_encryption.md).
+If you want read more about the encryption kindly see my article [AES CBC mode 256 string encryption](aes_cbc_256_string_encryption.md).
 
 ### Is this encryption secure?
 Beneath the issue with the password derivation the answer is "it depends on...". The encryption algorithm itself is secure but you should keep in mind that an attacker may been able to modify the ciphertext on transport. One example for this is the so called **tampering** - you can find a simple [example here](aes_cbc_tampering.md).

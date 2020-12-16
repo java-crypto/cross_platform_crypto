@@ -16,7 +16,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [generate a 16 byte long initvector](generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [generate a 12 byte long nonce](generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Base64 encoding & decoding | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| byte array to hexstring & retour | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| byte array to a hex string & back | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | SHA256 hashing | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | [HMAC 256 calculating](hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -71,6 +71,12 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 [RSA sample keys](rsa_sample_keypair.md) | for my encryption and signature examples I used these keys |
 [RSA key formats](rsa_key_formats.md) | explanation of the most used key formats |
 
+### RSA AES hybrid encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |
+| [RSA AES CBC 256 hybrid encryption](rsa_aes_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
+
 ### Curve 25519 key exchange ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
@@ -124,7 +130,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Dec. 12th 2020
+Last update: Dec. 16th 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

@@ -15,7 +15,7 @@ Taking our RSA sample key of 2048 bit = 256 byte we get:
 maximum plaintext to encrypt = 256 - 42 = 214 byte
 ```
 
-This size is good for short strings or - that is the way it should be done for larger sizes - using a **hybrid encryption scheme**. In short it uses a randomly created AES key of 32 byte, encrypts the data with this key in AES CBC- or (better) GCM- mode and encrypts the key with the RSA public key (and vice versa with the RSA private key for decryption).
+This size is good for short strings or - that is the way it should be done for larger sizes - using a [**hybrid encryption scheme**](rsa_aes_hybrid_encryption_string.md). In short it uses a randomly created AES key of 32 byte, encrypts the data with this key in AES CBC- or (better) GCM- mode and encrypts the key with the RSA public key (and vice versa with the RSA private key for decryption).
 
 Using the RSA encryption there are three padding modes: "no padding", "PKCS1 padding" or "OAEP padding". As the first two named are very vulnerable please don't use them, instead use an **OAEP padding** because it adds a random parameter so the ciphertext will differ each time you encrypt (even with an equal key and plaintext).
 
@@ -76,6 +76,6 @@ decryptedtext: The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Nov. 15th 2020
+Last update: Dec. 16th 2020
 
 Back to the main page: [readme.md](readme.md)

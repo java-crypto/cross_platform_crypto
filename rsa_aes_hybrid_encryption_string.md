@@ -27,11 +27,11 @@ The following links provide the solutions in code and an online compile that run
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
 | [Java](RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.java) | :white_check_mark: | [repl.it CpcJavaRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcJavaRsaAesCbcHybridStringEncryption#Main.java/)
-| [PHP](RsaAesCbcHybridEncryptionString/RsaEncryptionOaepSha1.php) | :white_check_mark: | [repl.it CpcPhpRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcPhpRsaAesCbcHybridStringEncryption#main.php/)
-| [C#](RsaAesCbcHybridEncryptionString/RsaEncryptionOaepSha1.cs) | :white_check_mark: | [repl.it CpcCsharpRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcCsharpRsaAesCbcHybridStringEncryption#main.cs/)
+| [PHP](RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.php) | :white_check_mark: | [repl.it CpcPhpRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcPhpRsaAesCbcHybridStringEncryption#main.php/)
+| [C#](RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcCsharpRsaAesCbcHybridStringEncryption#main.cs/)
 | Javascript CryptoJs | :x: | the encryption functionality is not available in CryptoJs
-| [NodeJS Crypto](RsaAesCbcHybridEncryptionString/RsaEncryptionOaepSha1NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaAesCbcHybridStringEncryption#index.js/)
-| [NodeJS forge](RsaAesCbcHybridEncryptionString/RsaEncryptionOaepSha1NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesCbcHybridStringEncryption#index.js/)
+| [NodeJS Crypto](RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaAesCbcHybridStringEncryption#index.js/)
+| [NodeJS forge](RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesCbcHybridStringEncryption#index.js/)
 
 This is an output (your will differ because a random element):
 

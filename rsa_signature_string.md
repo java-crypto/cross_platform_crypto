@@ -2,13 +2,25 @@
 
 ## RSA string signature
 
-The standard signature algorithm is **RSA** using a **RSA** Private-/ Public key key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and the recipient is been able to check = verify the signature.
+The standard signature algorithm is **RSA** using a (RSA) Private-/ Public key key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and the recipient is been able to check = verify the signature.
 
 To get this to work in cross platform systems there is one parameter that has to be equal - that is the hash algorithm that is used. My programs are using **SHA256** for this task.
 
-The second important data are the **keys** itself - it's easy not to recognize that "- Begin Private Key -" isn't the same as "- Begin RSA Private Key - ". Using the wrong keys will cause the the verification to fail. 
+The second important data are the **keys** itself - it's easy not to recognize that "- Begin Private Key -" isn't the same as "- Begin RSA Private Key - ". Using the wrong keys will cause the the verification to fail.
 
-**Key generation:** All examples use pre-generated keys that are described on the page [RSA sample keys](rsa_sample_keypair.md). If you want to see how my keys got generated visit the page [RSA key generation](rsa_key_generation.md). 
+The third parameter is hidden in most implementations, it is the **padding**. The programs in this example use the **PKCS#1.5-padding** that is available platform wide but **not as secure as modern ones**.
+
+### Why is the PKCS#1.5 padding not so secure?
+
+An important parameter in cryptography is **randomness** - this prevents from easy textbook attacks. For a digital signature it means: the signature of the the same string and same (private) key results in the same value. Running my codes will always result in a (Base64 encoded) string beginning with "vCSB4744p30..", so an attacker may been able to "see" that a previous used signature is in use again.
+
+### What would be a (more) secure padding?
+
+A modern padding is the use of **PSS padding** (Probabilistic Signature Scheme) but this is not available "out of the box" and it will take some time to publish a solution here.
+
+### Key generation: 
+
+All examples use pre-generated keys that are described on the page [RSA sample keys](rsa_sample_keypair.md). If you want to see how my keys got generated visit the page [RSA key generation](rsa_key_generation.md). 
 
 When comparing the programs you will notice that the keys for C# looking like different as they are not in the "PEM"-format ("---Begin...") but in a XML-format. As it is a little bit tricky to convert the keys between XML- and PEM-format I setup an own page for this point: [rsa_key_conversion.md](rsa_key_conversion.md)
 
@@ -45,6 +57,8 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](RsaSignatureString/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
 | [NodeJS forge](RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
+| [Webcrypto sign only](RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString//rsasignaturestringsign.html)
+| [Webcrypto verify only](RsaSignatureString//rsasignaturestringverification.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString//rsasignaturestringverification.html)
 
 This is an output:
 
@@ -76,6 +90,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Nov. 15th 2020
+Last update: Dec. 22nd 2020
 
 Back to the main page: [readme.md](readme.md)

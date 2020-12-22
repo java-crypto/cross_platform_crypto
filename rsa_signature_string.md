@@ -57,8 +57,8 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](RsaSignatureString/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
 | [NodeJS forge](RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
-| [Webcrypto sign only](RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString//rsasignaturestringsign.html)
-| [Webcrypto verify only](RsaSignatureString//rsasignaturestringverification.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString//rsasignaturestringverification.html)
+| [Webcrypto sign only](RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString//rsasignaturestringsign.html)
+| [Webcrypto verify only](RsaSignatureString/rsasignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoRsaSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
 
 This is an output:
 

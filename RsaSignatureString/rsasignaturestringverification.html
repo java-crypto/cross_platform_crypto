@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>RSA 2048 signature RSA PKCS1-5 SHA-256 (verification only)</title>
+   </head>
+   <body>
+      <main>
+         <h1>RSA 2048 signature RSA PKCS1-5 SHA-256 (verification only)</h1>
+         <hr>
+         <p>
+            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+         </p>
+         <hr>
+<p>
+            Insert the Public Key you received (PEM encoding):<br><br>
+            <textarea name="publickey-value" id="publickey-value" form= "myform" rows="10" cols="70">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8EmWJUZ/Osz4vXtUU2S+0M4BP9+s423gjMjoX+qP1iCnlcRcFWxthQGN2CWSMZwR/vY9V0un/nsIxhZSWOH9iKzqUtZD4jt35jqOTeJ3PCSr48JirVDNLet7hRT37Ovfu5iieMN7ZNpkjeIG/CfT/QQl7R+kO/EnTmL3QjLKQNV/HhEbHS2/44x7PPoHqSqkOvl8GW0qtL39gTLWgAe801/w5PmcQ38CKG0oT2gdJmJqIxNmAEHkatYGHcMDtXRBpOhOSdraFj6SmPyHEmLBishaq7Jm8NPPNK9QcEQ3q+ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb/LJ2aW2gQwIDAQAB
+-----END PUBLIC KEY-----</textarea>
+          </p>
+		  
+         <section class="import-key spki">
+		 Enter a message to verify:
+              <input type="text" id="plaintext" name="plaintext" size="50"
+                     value="The quick brown fox jumps over the lazy dog">
+					 <hr>
+            <br>
+		 
+            Enter the signature to verify:<br><br>
+            <textarea name="spki-message" id="spki-message" form="myform" rows="5" cols="100">vCSB4744p30IBl/sCLjvKm2nix7wfScQn99YX9tVIDNQIvU3QnSCLc2cF+J6R9WMRIXOsY94MxjKCQANW0CuaSs+w31ePHaounFVnmXyY092SicZrtpwlxw2CHqJ0NSyciDpxlRId1vjKlp9E5IJmYtVMtL2hfb711P+nb+m+1sPplNXPpJpdnWIzfLsDMVxCkplAdrcoH2HuWgOtOCHAf3vWbUC/vkvi388NT1UXJRPoERM0m1v11ogP9DiycMdoJxg3fbdH3HknbR02MLNEr7q4ZMzlrKxnYChwp2hnnBvJDcXpPDnQz7sG8zrim1nL/PS8CRG5lxhYYAZqTc+Vg==</textarea>
+            <hr><br>
+            <b>Instructions:</b><br>
+            1.: insert the received public key and press the "Import key" button<br>
+            2.: if the public key is valid the "Verify" button is enabled<br>
+            3.: enter the plaintext message<br>
+			4.: enter the signature<br> 
+            5.: press the "Verify button"<br>
+            6.: receive the verification status<br><hr>
+            <input class="import-key-button" type="button" value="Import Key">
+            <input class="verify-button hidden" type="button" value="Verify" disabled>
+         </section>
+         <p>
+            verification status:<br>
+            <textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
+         </div>
+         </p>
+      </main>
+   </body>
+   <SCRIPT LANGUAGE="JavaScript">
+      const bufToB64 = buf =>
+        btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+      
+      const b64ToBuf = b64 => {
+        const binstr = atob(b64),
+          buf = new Uint8Array(binstr.length);
+        Array.prototype.forEach.call(binstr, (ch, i) => {
+          buf[i] = ch.charCodeAt(0);
+        });
+        return buf;
+      };
+      
+        /*
+        The unwrapped signing key.
+        */
+        let publicKey;
+      
+        const verifyButton = document.querySelector(".spki .verify-button");
+      
+        /*
+        Convert a string into an ArrayBuffer
+        from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+        */
+        function str2ab(str) {
+          const buf = new ArrayBuffer(str.length);
+          const bufView = new Uint8Array(buf);
+          for (let i = 0, strLen = str.length; i < strLen; i++) {
+            bufView[i] = str.charCodeAt(i);
+          }
+          return buf;
+        }
+	
+  /*
+  Fetch the contents of the "message" textbox, and encode it
+  in a form we can use for the encrypt operation.
+  */
+  function getMessageEncoding() {
+    const messageBox = document.querySelector("#plaintext");
+    const message = messageBox.value;
+    const enc = new TextEncoder();
+    return enc.encode(message);
+  }		
+		
+		  /*
+  Import a PEM encoded RSA public key, to use for RSA-OAEP encryption.
+  Takes a string containing the PEM encoded key, and returns a Promise
+  that will resolve to a CryptoKey representing the public key.
+  */
+  function importPublicKey(pem) {
+    // fetch the part of the PEM string between header and footer
+    const pemHeader = "-----BEGIN PUBLIC KEY-----";
+    const pemFooter = "-----END PUBLIC KEY-----";
+    const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+    // base64 decode the string to get the binary data
+    const binaryDerString = window.atob(pemContents);
+    // convert from a binary string to an ArrayBuffer
+    const binaryDer = str2ab(binaryDerString);
+    return window.crypto.subtle.importKey(
+      "spki",
+      binaryDer,
+      {
+        name: "RSASSA-PKCS1-v1_5",
+		hash: "SHA-256"
+      },
+      true,
+      ["verify"]
+    );
+  }
+      		
+		/*
+  Fetch the encoded message-to-sign and verify it against the stored signature.
+  * If it checks out, set the "valid" class on the signature.
+  * Otherwise set the "invalid" class.
+  */
+	async function verifyMessage() {
+		const signatureValue = b64ToBuf(document.getElementById("spki-message").value);
+		let encoded = getMessageEncoding();
+		let result = await window.crypto.subtle.verify(
+			"RSASSA-PKCS1-v1_5",
+			publicKey,
+			signatureValue,
+			encoded
+		);
+		document.getElementById("verificationstatus").value = result;
+	}
+     
+        /*
+        Show and enable the verify button.
+        */
+        function enableVerifyButton() {
+          verifyButton.classList.add('fade-in');
+          verifyButton.addEventListener('animationend', () => {
+            verifyButton.classList.remove('fade-in');
+          });
+          verifyButton.removeAttribute("disabled");
+          verifyButton.classList.remove("hidden");
+        }
+      
+        /*
+        When the user clicks "Import Key"
+        - import the key
+        - enable the "Verify" button
+        */
+const importKeyButton = document.querySelector(".spki .import-key-button");
+  importKeyButton.addEventListener("click", async () => {
+    var pemEncodedKeyTextarea = document.getElementById("publickey-value").value;
+	publicKey = await importPublicKey(pemEncodedKeyTextarea);
+	enableVerifyButton();
+  });
+  verifyButton.addEventListener("click", verifyMessage);		
+		
+    </SCRIPT>	
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RSA 2048 signature PSS SHA-256 (signature only)</title>
+  </head>
+  <body>
+    <main>
+      <h1>RSA 2048 signature PSS SHA-256 (signature only)</h1>
+<hr><p>
+            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+         </p><hr>	  
+	  
+<p>
+            Insert your own Private Key (in PEM encoding):<br><br>
+            <textarea name="privatekey-value" id="privatekey-value" form= "myform" rows="10" cols="70">-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDwSZYlRn86zPi9e1RTZL7QzgE/36zjbeCMyOhf6o/WIKeVxFwVbG2FAY3YJZIxnBH+9j1XS6f+ewjGFlJY4f2IrOpS1kPiO3fmOo5N4nc8JKvjwmKtUM0t63uFFPfs69+7mKJ4w3tk2mSN4gb8J9P9BCXtH6Q78SdOYvdCMspA1X8eERsdLb/jjHs8+gepKqQ6+XwZbSq0vf2BMtaAB7zTX/Dk+ZxDfwIobShPaB0mYmojE2YAQeRq1gYdwwO1dEGk6E5J2toWPpKY/IcSYsGKyFqrsmbw0880r1BwRDer4RFrkzp4zvY+kX3eDanlyMqDLPN+ghXT1lv8snZpbaBDAgMBAAECggEBAIVxmHzjBc11/73bPB2EGaSEg5UhdzZm0wncmZCLB453XBqEjk8nhDsVfdzIIMSEVEowHijYz1c4pMq9osXR26eHwCp47AI73H5zjowadPVluEAot/xgn1IdMN/boURmSj44qiI/DcwYrTdOi2qGA+jD4PwrUl4nsxiJRZ/x7PjLhMzRbvDxQ4/Q4ThYXwoEGiIBBK/iB3Z5eR7lFa8E5yAaxM2QP9PENBr/OqkGXLWVqA/YTxs3gAvkUjMhlScOi7PMwRX9HsrAeLKbLuC1KJv1p2THUtZbOHqrAF/uwHajygUblFaa/BTckTN7PKSVIhp7OihbD04bSRrh+nOilcECgYEA/8atV5DmNxFrxF1PODDjdJPNb9pzNrDF03TiFBZWS4Q+2JazyLGjZzhg5Vv9RJ7VcIjPAbMy2Cy5BUffEFE+8ryKVWfdpPxpPYOwHCJSw4Bqqdj0Pmp/xw928ebrnUoCzdkUqYYpRWx0T7YVRoA9RiBfQiVHhuJBSDPYJPoP34kCgYEA8H9wLE5L8raUn4NYYRuUVMa+1k4Q1N3XBixm5cccc/Ja4LVvrnWqmFOmfFgpVd8BcTGaPSsqfA4j/oEQp7tmjZqggVFqiM2mJ2YEv18cY/5kiDUVYR7VWSkpqVOkgiX3lK3UkIngnVMGGFnoIBlfBFF9uo02rZpC5o5zebaDImsCgYAE9d5wv0+nq7/STBj4NwKCRUeLrsnjOqRriG3GA/TifAsX+jw8XS2VF+PRLuqHhSkQiKazGr2Wsa9Y6d7qmxjEbmGkbGJBC+AioEYvFX9TaU8oQhvihgA6ZRNid58EKuZJBbe/3ek4/nR3A0oAVwZZMNGIH972P7cSZmb/uJXMOQKBgQCsFaQAL+4sN/TUxrkAkylqF+QJmEZ26l2nrzHZjMWROYNJcsn8/XkaEhD4vGSnazCu/B0vU6nMppmezF9Mhc112YSrw8QFK5GOc3NGNBoueqMYy1MG8Xcbm1aSMKVv8xbarh+BZQbxy6x61CpCfaT9hAoA6HaNdeoU6y05lBz1DQKBgAbYiIk56QZHeoZKiZxy4eicQS0sVKKRb24ZUd+04cNSTfeIuuXZrYJ48Jbr0fzjIM3EfHvLgh9rAZ+aHe/L84Ig17KiExe+qyYHjut/SC0wODDtzM/jtrpqyYa5JoEpPIaUSgPuTH/WhO3cDsx63PIW4/CddNs8mCSBOqTnoaxh
+-----END PRIVATE KEY-----</textarea>
+
+         </p>		  
+
+        <section class="import-key spki">
+              <label for="spki-message">Enter a message to sign:</label>
+              <input type="text" id="plaintext" name="plaintext" size="50"
+                     value="The quick brown fox jumps over the lazy dog">
+					 <hr>
+            <br>
+            <b>Instructions:</b><br>
+            1.: insert your own private and press the "Import key" button<br>
+            2.: if the private key is valid the "Sign" button is enabled<br>
+            3.: enter the message to sign<br>
+            4.: press the "Sign" button<br>
+            5.: receive the signature in Base64 encoding<br>
+            <hr>
+            <input class="import-key-button" type="button" value="Import Key">
+            <input class="sign-button hidden" type="button" value="Sign" disabled>
+			<hr>
+        </section>
+	  <p>
+  signature (in Base64 encoding):<br>
+  <textarea name="signatureBase64" id="signatureBase64" form= "myform" rows="10" cols="64">the signature in Base64 encoding comes here...</textarea>
+		</div>
+</p>
+    </main>
+  </body>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+const bufToB64 = buf =>
+  btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+
+  /*
+  The unwrapped signing key.
+  */
+  let privatekey;
+
+  const signButton = document.querySelector(".spki .sign-button");
+
+  /*
+  Convert a string into an ArrayBuffer
+  from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+  */
+  function str2ab(str) {
+    const buf = new ArrayBuffer(str.length);
+    const bufView = new Uint8Array(buf);
+    for (let i = 0, strLen = str.length; i < strLen; i++) {
+      bufView[i] = str.charCodeAt(i);
+    }
+    return buf;
+  }
+
+        /*
+        Import a PEM encoded RSA private key, to use for RSA-PSS signing.
+        Takes a string containing the PEM encoded key, and returns a Promise
+        that will resolve to a CryptoKey representing the private key.
+        */
+        function importPrivateKey(pem) {
+          // fetch the part of the PEM string between header and footer
+          const pemHeader = "-----BEGIN PRIVATE KEY-----";
+          const pemFooter = "-----END PRIVATE KEY-----";
+          const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+          // base64 decode the string to get the binary data
+          const binaryDerString = window.atob(pemContents);
+          // convert from a binary string to an ArrayBuffer
+          const binaryDer = str2ab(binaryDerString);
+           return window.crypto.subtle.importKey(
+            "pkcs8",
+            binaryDer,
+            {
+     		  name: "RSA-PSS",
+      		  hash: "SHA-256"
+            },
+            true,
+      	  ["sign"]
+          );
+        }
+
+  /*
+  Fetch the contents of the "message" textbox, and encode it
+  in a form we can use for the encrypt operation.
+  */
+  function getMessageEncoding() {
+    const messageBox = document.querySelector("#plaintext");
+    const message = messageBox.value;
+    const enc = new TextEncoder();
+    return enc.encode(message);
+  }
+  
+  /*
+  Get the encoded message-to-sign, sign it and display a representation
+  of the first part of it in the "signature" element.
+  */
+	async function signMessage() {
+		let encoded = getMessageEncoding();
+		 const signature = await window.crypto.subtle.sign(
+      {
+        name: "RSA-PSS",
+        saltLength: 32,
+      },
+      privateKey,
+      encoded
+    );
+		document.getElementById("signatureBase64").value = bufToB64(new Uint8Array(signature));
+	}
+
+  /*
+  Show and enable the sign button.
+  */
+  function enableSignButton() {
+    signButton.classList.add('fade-in');
+    signButton.addEventListener('animationend', () => {
+      signButton.classList.remove('fade-in');
+    });
+    signButton.removeAttribute("disabled");
+    signButton.classList.remove("hidden");
+  }
+
+  /*
+  When the user clicks "Import Key"
+  - import the key
+  - enable the "Sign" button
+  */
+  const importKeyButton = document.querySelector(".spki .import-key-button");
+        importKeyButton.addEventListener("click", async () => {
+          var pemEncodedKeyTextarea = document.getElementById("privatekey-value").value;
+      	privateKey = await importPrivateKey(pemEncodedKeyTextarea);
+      	enableSignButton();
+        });
+        signButton.addEventListener("click", signMessage);
+</SCRIPT>	
+</html>

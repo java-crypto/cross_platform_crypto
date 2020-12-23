@@ -1,22 +1,18 @@
 # Cross-platform cryptography
 
-## RSA string signature with PKCS#1.5 padding
+## RSA string signature with PSS padding
 
 The standard signature algorithm is **RSA** using a (RSA) Private-/ Public key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and the recipient is been able to check = verify the signature.
 
 To get this to work in cross platform systems there are three parameters that have to been equal - that is the hash algorithm that is used. My programs are using **SHA256** for this task.
 
-The second important data are the **keys** itself - it's easy not to recognize that "- Begin Private Key -" isn't the same as "- Begin RSA Private Key - ". Using the wrong keys will cause the the verification to fail.
+The second important data are the **keys** itself - it's easy not to recognize that "- Begin Private Key -" isn't the same as "- Begin RSA Private Key -". Using the wrong keys will cause the the verification to fail.
 
-The third parameter is hidden in most implementations, it is the **padding**. The programs in this example use the **PKCS#1.5-padding** that is available platform wide but **not as secure as modern ones**.
+The third parameter is hidden in most implementations, it is the **padding**. The programs in this example use the **PSS-padding** (Probabilistic Signature Scheme) that is available platform wide.
 
-### Why is the PKCS#1.5 padding not so secure?
+### Why is the PSS padding more secure than PKCS#1.5 padding?
 
-An important parameter in cryptography is **randomness** - this prevents from easy textbook attacks. For a digital signature it means: the signature of the the same string and same (private) key results in the same value. Running my codes will always result in a (Base64 encoded) string beginning with "vCSB4744p30..", so an attacker may been able to "see" that a previous used signature is in use again.
-
-### What would be a (more) secure padding?
-
-A modern padding is the use of **PSS padding** (Probabilistic Signature Scheme) but this is not available "out of the box" and it will take some time to publish a solution here.
+An important parameter in cryptography is **randomness** - this prevents from easy textbook attacks. For a digital signature it means: the signature of the the same string and same (private) key results **not** in the same value. Running my codes will always result in a different (Base64 encoded) string, so an attacker is not been able to "see" that a previous used signature is in use again.
 
 ### Key generation: 
 
@@ -41,7 +37,7 @@ The program follows the usual sequence:
 10. set the verification parameters (same as used for signing)
 11. verify the signature against the "data to sign" and show the result.
 
-If you like to see the **verification part only** see my separate article [RSA signature string verification only](rsa_signature_string_verification_only.md) (coming soon).
+As the examples do a full round of signing and verifying I do not provide separate codes for verification only (except Webcrypto examples as they are "single versions" - "signature only" and "verification only").
 
 ## :warning: Security warning :warning:
 
@@ -51,19 +47,21 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](RsaSignatureString/RsaSignatureStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringFull#Main.java/)
-| [PHP](RsaSignatureString/RsaSignatureStringFull.php) | :white_check_mark: | [repl.it CpcPhpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcPhpRsaSignatureStringFull#main.php/)
-| [C#](RsaSignatureString/RsaSignatureStringFull.cs) | :white_check_mark: | [repl.it CpcCsharpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcCsharpRsaSignatureStringFull#main.cs/)
+| [Java](RsaSignaturePssString/RsaSignaturePssStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringFull#Main.java/)
+| [PHP *1)](RsaSignaturePssString/RsaSignaturePssStringFull.php) | :white_check_mark: | no online compiler available that runs with phpseclib version 3
+| [C#](RsaSignaturePssString/RsaSignaturePssStringFull.cs) | :white_check_mark: | no online compiler available that runs with 'RSACng'
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
-| [NodeJS Crypto](RsaSignatureString/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
-| [NodeJS forge](RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
-| [Webcrypto sign only](RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringsign.html)
-| [Webcrypto verify only](RsaSignatureString/rsasignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
+| [NodeJS Crypto](RsaSignaturePssString/RsaSignaturePssStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
+| [NodeJS forge](RsaSignaturePssString/RsaSignaturePssStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
+| [Webcrypto sign only](RsaSignaturePssString/rsasignaturepssstringsign.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturestringsign.html)
+| [Webcrypto verify only](RsaSignaturePssString/rsasignaturepssstringverification.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturestringverification.html)
+
+PHP *1): you need the library phpseclib version 3 to run this program
 
 This is an output:
 
 ```plaintext
-RSA signature string
+RSA signature PSS string
 dataToSign: The quick brown fox jumps over the lazy dog
 
 * * * sign the plaintext with the RSA private key * * *
@@ -71,18 +69,16 @@ used private key:
 -----BEGIN PRIVATE KEY-----
 MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDwSZYlRn86zPi9
 ...
-84Ig17KiExe+qyYHjut/SC0wODDtzM/jtrpqyYa5JoEpPIaUSgPuTH/WhO3cDsx6
 3PIW4/CddNs8mCSBOqTnoaxh
 -----END PRIVATE KEY-----
 
-signature (Base64): vCSB4744p30IBl/sCLjvKm2nix7wfScQn99YX9tVIDNQIvU3QnSCLc2cF+J6R9WMRIXOsY94MxjKCQANW0CuaSs+w31ePHaounFVnmXyY092SicZrtpwlxw2CHqJ0NSyciDpxlRId1vjKlp9E5IJmYtVMtL2hfb711P+nb+m+1sPplNXPpJpdnWIzfLsDMVxCkplAdrcoH2HuWgOtOCHAf3vWbUC/vkvi388NT1UXJRPoERM0m1v11ogP9DiycMdoJxg3fbdH3HknbR02MLNEr7q4ZMzlrKxnYChwp2hnnBvJDcXpPDnQz7sG8zrim1nL/PS8CRG5lxhYYAZqTc+Vg==
+signature (Base64): fXQk+o3rlHhx/rYbwhdpsQYYRaXMydurGToRaQONfvosBJulom4yvpkncqHx/Yy2ga+U59lHghHCVZKOXxsZdGMgK91oqvDhapBt0VCipE4T1sJiGiFtLPNUJmJkdbpK1puKhmo1ZQniS6KXe8yTOF++V/S3geIFdyicGKJJgSueF0EotkOLFwr5P5UUVH9nowTvVlsFcT0+MFHygKzqZJ/O2R3m8ru9rvZhR3af97k+ZnlCOj+uI3V136Qz2Lta87ydKoK2usSz9NTfisg+7+mS8BZDcmzWZt90ped7Br0HtlaiPL3glcX/njSaR9/Fp1ioOuiO/xbZ27KOaPcPPg==
 
 * * * verify the signature against the plaintext with the RSA public key * * *
 used public key:
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8EmWJUZ/Osz4vXtUU2S+
 ...
-ishaq7Jm8NPPNK9QcEQ3q+ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb/LJ2aW2g
 QwIDAQAB
 -----END PUBLIC KEY-----
 

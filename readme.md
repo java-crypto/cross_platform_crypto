@@ -53,12 +53,13 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [RSA OEAP padding SHA-256 String decryption only](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 
-### RSA signature ###
+### RSA signature with different paddings ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
-| [RSA String Signature (full)](rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark:
-| [RSA String Signature Verification only](rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark:
+| [RSA String Signature PKSC#1.5 (full)](rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark:
+| [RSA String Signature PKSC#1.5 Verification only](rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark:
+| [RSA String Signature PSS (full)](rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark:
 
 ### RSA keys ###
 
@@ -124,13 +125,14 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | ------ | :---: | :----: |
 | Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
 | PHP |  repl.it | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
+| PHP phpseclib |   | version 3
 | C# |  repl.it | Mono C# compiler version 6.8.0.123
 | Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Dec. 22nd 2020
+Last update: Dec. 23rd 2020
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

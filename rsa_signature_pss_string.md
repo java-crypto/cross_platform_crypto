@@ -53,8 +53,8 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](RsaSignaturePssString/RsaSignaturePssStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
 | [NodeJS forge](RsaSignaturePssString/RsaSignaturePssStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
-| [Webcrypto sign only](RsaSignaturePssString/rsasignaturepssstringsign.html) | :white_check_mark: | [your browser WebcryptoRsaPssSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepsssign.html)
-| [Webcrypto verify only](RsaSignaturePssString/rsasignaturepssstringverification.html) | :white_check_mark: | [your browser WebcryptoRsaPssVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepssverification.html)
+| [Webcrypto sign only](RsaSignaturePssString/rsasignaturepsssign.html) | :white_check_mark: | [your browser WebcryptoRsaPssSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepsssign.html)
+| [Webcrypto verify only](RsaSignaturePssString/rsasignaturepssverification.html) | :white_check_mark: | [your browser WebcryptoRsaPssVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepssverification.html)
 
 PHP *1): you need the library phpseclib version 3 to run this program
 

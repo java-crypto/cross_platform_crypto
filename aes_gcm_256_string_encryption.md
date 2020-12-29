@@ -18,7 +18,7 @@ The used CBC mode is a block algorithm means that the encryption (and decryption
 
 ### Is this encryption secure?
 
-The answer is easy - it is most secure AES mode available. It calculates a checksum (like a HMAC) and is often named as "tag" or "gcmTag". Some frameworks like Java append the tag to the ciphertext, others like PHP get the tag directly from the cipher engine. My programs always separate the tag from the ciphertext and transport it a an own (base64 encoded) variable.
+The answer is easy - it is most secure AES mode available. It calculates a checksum (like a HMAC) and is often named as "tag" or "gcmTag". Some frameworks like Java append the tag to the ciphertext, others like PHP get the tag directly from the cipher engine. My programs always separate the tag from the ciphertext and transport it in an own (Base64 encoded) variable.
 
 ### steps in the program
 
@@ -26,22 +26,22 @@ The program follows the usual sequence:
 1. generate a random encryption key and show the key in Base64 encoding for later usage
 2. convert the plaintext to a binary format (e.g. a byte array)
 3. starts the encryption process
-4. generate a random initialization vector (iv)
+4. generate a random nonce
 5. set the encryption parameters
-6. encrypt the plaintext, prepends the iv to the ciphertext, appends the tag and show the result ( iv:ciphertext:tag) in Base64 encoding
+6. encrypt the plaintext, prepends the nonce to the ciphertext, appends the gcmTag and show the result ( nonce:ciphertext:tag) in Base64 encoding
 7. start the decryption process
 8. Base64 decoding of the encryption key and the ciphertext
-9. split the complete ciphertext-string into iv, ciphertext and tag
+9. split the complete ciphertext-string into nonce, ciphertext and gcmTag
 10. set the decryption parameters (same as used for encryption)
 11. decrypt the ciphertext and show the resulting plaintext
 
-I don't provide a stand alone decryption only example because all parts are available in the full programs..
+I don't provide a stand alone decryption only example because all parts are available in the full program.
 
 ### **Serious notice: although the program looks like simple there is NO CHANCE for recovering the original plaintext without the key used for encryption!**
 
 ## :warning: Security warning :warning:
 
-**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life checked by a qualified professional cryptographer.**
+**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
 The following links provide the solutions in code and an online compile that runs the code. Unfortunately this mode is not so widely supported as the CBC mode. If you like to get a pure Javascript solution running in your browser kindly see my Webcrypto example in the article [AES GCM mode PBKDF2 string encryption](aes_gcm_256_pbkdf2_string_encryption.md).
 

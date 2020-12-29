@@ -45,7 +45,7 @@ If you like to see the **verification part only** see my separate article [RSA s
 
 ## :warning: Security warning :warning:
 
-**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life checked by a qualified professional cryptographer.**
+**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
 The following links provide the solutions in code and an online compile that runs the code.
 
@@ -57,7 +57,7 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](RsaSignatureString/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
 | [NodeJS forge](RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
-| [Webcrypto sign only](RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringsign.html)
+| [Webcrypto sign only](RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser WebcryptoRsaSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringsign.html)
 | [Webcrypto verify only](RsaSignatureString/rsasignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
 
 This is an output:

@@ -6,7 +6,7 @@ The standard encryption algorithm is **AES** after it got choosen and standardiz
 
 **First parameter: the length of the key**
 
-An AES key has 3 "allowed" key lengths: 128 bit = 16 byte, 192 bit = 24 byte and 256 bits = 32 byte. Our programs will run with a fixed length of 32 byte for a maximum of .
+An AES key has 3 "allowed" key lengths: 128 bit = 16 byte, 192 bit = 24 byte and 256 bits = 32 byte. Our programs will run with a fixed length of 32 byte for a maximum of security.
 
 **Second parameter: the mode of operation**
 
@@ -40,7 +40,7 @@ If you like to see the **decryption part only** see my separate article [AES CBC
 
 ## :warning: Security warning :warning:
 
-**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life checked by a qualified professional cryptographer.**
+**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
 The following links provide the solutions in code and an online compile that runs the code.
 

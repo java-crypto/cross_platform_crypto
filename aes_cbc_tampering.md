@@ -26,7 +26,7 @@ The only way to prevent from this kind of manipulation is to append some data th
 
 ## :warning: Security warning :warning:
 
-**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life checked by a qualified professional cryptographer.**
+**This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
 As the program is for a demonstration of tampering only I wrote "just" a Java version - [test it here online](https://paiza.io/projects/e/M9Qy0oQqYPFy12_yUx2T_Q/). Kindly note that the tampering method itself has no access to the encryption key. The program is based on my article [AES CBC mode 256 string encryption](aes_cbc_256_string_encryption.md/).
 

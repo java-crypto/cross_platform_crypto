@@ -57,14 +57,14 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](EcSignatureP256Sha256String/RsaSignatureStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringFull#Main.java/)
-| [PHP](EcSignatureP256Sha256String/RsaSignatureStringFull.php) | :white_check_mark: | [repl.it CpcPhpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcPhpRsaSignatureStringFull#main.php/)
-| [C#](EcSignatureP256Sha256String/RsaSignatureStringFull.cs) | :white_check_mark: | [repl.it CpcCsharpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcCsharpRsaSignatureStringFull#main.cs/)
+| [Java](EcSignatureP256Sha256String/EcSignatureStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringFull#Main.java/)
+| [PHP](EcSignatureP256Sha256String/EcSignatureStringFull.php) | :white_check_mark: | [repl.it CpcPhpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcPhpRsaSignatureStringFull#main.php/)
+| [C#](EcSignatureP256Sha256String/EcSignatureStringFull.cs) | :white_check_mark: | [repl.it CpcCsharpRsaSignatureStringFull](https://repl.it/@javacrypto/CpcCsharpRsaSignatureStringFull#main.cs/)
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
-| [NodeJS Crypto](EcSignatureP256Sha256String/RsaSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
+| [NodeJS Crypto](EcSignatureP256Sha256String/EcSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
 | NodeJS forge | :x: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
-| [Webcrypto sign only](EcSignatureP256Sha256String/rsasignaturestringsign.html) *1) | :white_check_mark: | [your browser WebcryptoEcSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringsign.html) - does not work with Firefox 84
-| [Webcrypto verify only](EcSignatureP256Sha256String/rsasignaturestringverification.html) *1) | :white_check_mark: | [your browser WebcryptoEcVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
+| [Webcrypto sign only](EcSignatureP256Sha256String/ecsignaturestringsign.html) *1) | :white_check_mark: | [your browser WebcryptoEcSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringsign.html) - does not work with Firefox 84
+| [Webcrypto verify only](EcSignatureP256Sha256String/ecsignaturestringverification.html) *1) | :white_check_mark: | [your browser WebcryptoEcVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
 
 Notes regarding the implementations: to get a most cross platform wide implementation I have choosen the **IEEE-P1363 encoding** of the signature. This encoding is easy to detect as the signature is 64 bytes long and consist of 2 concatenated values (R | S) of each 32 bytes long. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSAinP1363format** and everything is fine. Other platforms like PHP do need a programmatical code to achive this encoding. Whenever I used sources from other people I added a note.
 

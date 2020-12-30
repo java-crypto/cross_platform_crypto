@@ -2,9 +2,9 @@
 
 ## RSA key generation
 
-There are several way to generate RSA key, even on each framework and operation system. Usually you will generate the keys within your main  framework and just convert them on demand to other formats.
+There are several ways to generate RSA key, even on each framework and operation system. Usually you will generate the keys within your main  framework and just convert them on demand to other formats.
 
-Here I'm showing you a different tool that is very useful in all cryptographic question - it the **OpenSSL** software. OpenSSL is available on a lot of platforms and sometimes "built-in" as in modern PHP-frameworks. As OpenSSL has a lot of functions it is often called "Swiss knife".
+Here I'm showing you a different tool that is very useful in all cryptographic questions - it is the **OpenSSL** software. OpenSSL is available on a lot of platforms and sometimes "built-in" as in modern PHP-frameworks. As OpenSSL has a lot of functions it is often called "Swiss knife".
 
 The **key generation** takes place in two steps - first we generate the RSA <u>private key</u> and then we generate the belonging <u>public key</u>:
 
@@ -34,6 +34,6 @@ d) use password protected ("encrypted") private keys. They are <u>my favorite</u
 
 Go to [RSA string signature](rsa_signature_string.md) and [RSA string signature verification only](rsa_signature_string_verification_only.md).
 
-Last update: Nov. 15th 2020
+Last update: Dec. 30th 2020
 
 Back to the main page: [readme.md](readme.md)

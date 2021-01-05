@@ -126,6 +126,8 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | PHP |  repl.it | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
 | PHP phpseclib |   | version 3
 | C# |  repl.it | Mono C# compiler version 6.8.0.123
+| C# |  dotnetfiddle.net | .NET 4.7.2
+| C# |  Bouncy Castle | version 1.89
 | Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 

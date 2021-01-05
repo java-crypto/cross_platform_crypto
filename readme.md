@@ -109,8 +109,8 @@ planned in later future
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
-| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark:
-
+| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark:
+| [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:
 
 ### Which platforms are supported at the moment?
 
@@ -131,7 +131,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Dec. 30th 2020
+Last update: Jan. 04th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

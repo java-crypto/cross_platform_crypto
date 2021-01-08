@@ -26,8 +26,8 @@ The following links provide the solutions in code and an online compiler that ru
 | [PHP P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDer.php) | :white_check_mark: | [repl.it CpcPhpEcSignatureConverter](https://repl.it/@javacrypto/CpcPhpEcSignatureConvertP1363ToDer#main.php/)
 | C# | :x: | not available
 | Javascript CryptoJs | :x: | not available
-| [NodeJS Crypto DER to P1363](EcSignatureConverter/EcSignatureConverterDerToP1363NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureConverterDerToP1363](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureConvertDerToP1363#Main.java/)
-| [NodeJS Crypto P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDerNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureConverterP1363ToDer](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureConvertP1363ToDer#Main.java/)
+| [NodeJS Crypto DER to P1363](EcSignatureConverter/EcSignatureConverterDerToP1363NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureConverterDerToP1363](https://repl.it/@javacrypto/CpcNodeJsCryptoConvertDerToP1363#index.js/)
+| [NodeJS Crypto P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDerNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureConverterP1363ToDer](https://repl.it/@javacrypto/CpcNodeJsCryptoConvertP1363ToDer#index.js/)
 | NodeJS forge | :x: | not available
 | [Webcrypto DER to P1363](EcSignatureConverter/ecsignatureconverterdertop1363.html) | :white_check_mark: | [Your browser WebcryptoEcSignatureConverterDerToP1363.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureConverter/ecsignatureconverterdertop1363.html)
 | [Webcrypto P1363 to DER](EcSignatureConverter/ecsignatureconverterp1363toder.html) | :white_check_mark: | [Your browser WebcryptoEcSignatureConverterP1363ToDer.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureConverter/ecsignatureconverterp1363toder.html)

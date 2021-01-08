@@ -99,7 +99,7 @@ Note: you need external libraries for this feature!
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
 | [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark:
 | [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark:
-| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: | :x:| :white_check_mark:
+| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark:
 
 ### Elliptic curve encryption ###
 

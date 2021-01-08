@@ -4,7 +4,7 @@
 
 This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
 
-I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto** and **NodeJs node-forge**  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser.
+I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto** and **NodeJs node-forge**  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an **OpenSSL** solution.
 
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
 
@@ -95,11 +95,19 @@ Note: you need external libraries for this feature!
 
 ### Elliptic curve signature ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
-| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark:
-| [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark:
-| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark:
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
+| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:|
+| [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark:
+| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:|
+
+### OpenSSL solutions ###
+| Solution | Descryption |
+| ------ | ------ |
+[OpenSSL overview](openssl_overview.md) | general information about OpenSSL cryptography |
+[Generate a RSA key pair](rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding
+[Generate an EC key pair](ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding
+[Elliptic curve file signature DER encoding](ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) |
 
 ### Elliptic curve encryption ###
 
@@ -129,7 +137,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 The few Javascript Webcrypto examples will run directly in your browser so you will need an actual one and Javascript is enabled.
 
 | Language |  Online-compiler | framework version
-| ------ | :---: | :----: |
+| ------ | :---: | ---- |
 | Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
 | PHP |  repl.it | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
 | PHP phpseclib |   | version 3
@@ -140,6 +148,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
+| OpenSSL |  | version 1.1.1g Windows x64
 
 Last update: Jan. 08th 2021
 

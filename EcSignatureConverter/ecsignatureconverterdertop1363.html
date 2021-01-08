@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EC signature converter DER to P1363 encoding</title>
+</head>
+
+<body>
+    <main>
+        <h1>EC signature converter DER to P1363 encoding</h1>
+        <hr>
+        <p>
+            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+        </p>
+        <hr>
+
+
+        <label>Enter a signature in DER-format and Base64 encoding:</label>
+        <input type="text" id="signaturederBase64" name="signaturederBase64" size="110" value="MEUCIQCW98vDD+c/Wx3WX3T+Ph9ZDf1s5nuDThz2xrhSOjwGFAIgNpUg5SygNK7W+zzw4eNZkivizpU/UUXMMR2zPw2D7J4=">
+        <hr>
+        <br>
+        <b>Instructions:</b><br>
+        1.: insert your signature in DER format and Base64 encoding and press the "convert signature" button<br>
+        2.: receive the signature in IEEE-P1363 format and Base64 encoding<br>
+        <hr>
+        <input class="convert-button" type="button" value="convert signature">
+        <hr>
+
+        <p>
+            signature (will be in IEEE P1363 format and Base64 encoding):<br>
+            <textarea name="signatureBase64" id="signatureBase64" form="myform" rows="1" cols="120">the IEEE P1363 signature in Base64 encoding comes here...</textarea>
+            </div>
+        </p>
+    </main>
+</body>
+<SCRIPT LANGUAGE = "JavaScript" >
+
+const bufToB64 = buf =>
+        btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+
+const b64ToBuf = b64 => {
+    const binstr = atob(b64),
+    	buf = new Uint8Array(binstr.length);
+    Array.prototype.forEach.call(binstr, (ch, i) => {
+        buf[i] = ch.charCodeAt(0);
+    });
+    return buf;
+};
+
+/**
+ * Converts an ECDSA signature from P1363 to DER format
+ * source: https://developer.token.io/sdk/esdoc/file/src/security/CryptoBrowser.js.html
+ *
+ * @param {Uint8Array} sig - P1363 signature
+ * @return {Uint8Array} DER signature
+ * @private
+ */
+function p1363ToDer(sig) {
+    const signature = Array.from(sig, x => ('00' + x.toString(16)).slice(-2)).join('');
+    let r = signature.substr(0, signature.length / 2);
+    let s = signature.substr(signature.length / 2);
+    r = r.replace(/^(00)+/, '');
+    s = s.replace(/^(00)+/, '');
+    if ((parseInt(r, 16) & '0x80') > 0) r = `00${r}`;
+    if ((parseInt(s, 16) & '0x80') > 0) s = `00${s}`;
+    const rString = `02${(r.length / 2).toString(16).padStart(2, '0')}${r}`;
+    const sString = `02${(s.length / 2).toString(16).padStart(2, '0')}${s}`;
+    const derSig = `30${((rString.length + sString.length) / 2)
+            .toString(16).padStart(2, '0')}${rString}${sString}`;
+    return new Uint8Array(derSig.match(/[\da-f]{2}/gi).map(h => parseInt(h, 16)));
+}
+
+/**
+ * Converts an ECDSA signature from DER to P1363 format
+ * source: https://developer.token.io/sdk/esdoc/file/src/security/CryptoBrowser.js.html
+ *
+ * @param {Uint8Array} sig - DER signature
+ * @return {Uint8Array} P1363 signature
+ * @private
+ */
+function derToP1363(sig) {
+    const signature = Array.from(sig, x => ('00' + x.toString(16)).slice(-2)).join('');
+    const rLength = parseInt(signature.substr(6, 2), 16) * 2;
+    let r = signature.substr(8, rLength);
+    let s = signature.substr(12 + rLength);
+    r = r.length > 64 ? r.substr(-64) : r.padStart(64, '0');
+    s = s.length > 64 ? s.substr(-64) : s.padStart(64, '0');
+    const p1363Sig = `${r}${s}`;
+    return new Uint8Array(p1363Sig.match(/[\da-f]{2}/gi).map(h => parseInt(h, 16)));
+}
+
+async function convertDerToP1363() {
+    document.getElementById("signatureBase64").value = bufToB64(derToP1363(b64ToBuf(document.getElementById("signaturederBase64").value)));
+}
+
+/*
+When the user clicks "Convert Key"
+- import the key
+- enable the "Sign" button
+*/
+const convertButton = document.querySelector(".convert-button");
+convertButton.addEventListener("click", async () => {
+    convertDerToP1363();
+});
+</SCRIPT>
+</html>

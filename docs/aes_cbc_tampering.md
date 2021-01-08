@@ -22,7 +22,7 @@ This kind of manipulating is called **tampering** and the bad news are - **it wo
 
 #### How to avoid the possibility of tampering?
 
-The only way to prevent from this kind of manipulation is to append some data that work like a "signature" or "checksum". If you receive such secured encrypted data you first have to check for the signature and **only if the "signature" is correct you decrypt it**. In my article [AES CBC mode 256 PBKDF2 HMAC string encryption](aes_cbc_tampering.md) I present a solution for this security issue.
+The only way to prevent from this kind of manipulation is to append some data that work like a "signature" or "checksum". If you receive such secured encrypted data you first have to check for the signature and **only if the "signature" is correct you decrypt it**. In my article [AES CBC mode 256 PBKDF2 HMAC string encryption](aes_cbc_256_pbkdf2_hmac_string_encryption.md) I present a solution for this security issue.
 
 ## :warning: Security warning :warning:
 

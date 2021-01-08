@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>EC P-256 signature SHA-256 DER (verification only)</title>
+   </head>
+   <body>
+      <main>
+         <h1>EC P-256 signature SHA-256 DER (verification only)</h1>
+         <hr>
+         <p>
+            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+         </p>
+         <hr>
+<p>
+            Insert the Public Key you received (PEM encoding):<br><br>
+            <textarea name="publickey-value" id="publickey-value" form= "myform" rows="5" cols="70">-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2MrspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==
+-----END PUBLIC KEY-----</textarea>
+          </p>
+		  
+         <section class="import-key spki">
+		 Enter a message to verify:
+              <input type="text" id="plaintext" name="plaintext" size="50"
+                     value="The quick brown fox jumps over the lazy dog">
+					 <hr>
+            <br>
+		 
+            Enter the signature to verify (the signature has to be in DER format and base64 encoded):<br><br>
+            <textarea name="spki-message" id="spki-message" form="myform" rows="4" cols="64">MEQCIIxU0wR/eklB1biWjHKCcWRELTbJ3T5GmUCl2VqM6eG+AiCL5lJGkazeVcHOmzyqKMPYvPkSey+dsD/NnHWlVwcVSQ==</textarea>
+            <hr><br>
+            <b>Instructions:</b><br>
+            1.: insert the received public key and press the "Import key" button<br>
+            2.: if the public key is valid the "Verify" button is enabled<br>
+            3.: enter the plaintext message<br>
+			4.: enter the signature<br> 
+            5.: press the "Verify button"<br>
+            6.: receive the verification status<br><hr>
+            <input class="import-key-button" type="button" value="Import Key">
+            <input class="verify-button hidden" type="button" value="Verify" disabled>
+         </section>
+         <p>
+            verification status:<br>
+            <textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
+         </div>
+         </p>
+      </main>
+   </body>
+   <SCRIPT LANGUAGE="JavaScript">
+      const bufToB64 = buf =>
+        btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+      
+      const b64ToBuf = b64 => {
+        const binstr = atob(b64),
+          buf = new Uint8Array(binstr.length);
+        Array.prototype.forEach.call(binstr, (ch, i) => {
+          buf[i] = ch.charCodeAt(0);
+        });
+        return buf;
+      };
+      
+        /*
+        The unwrapped signing key.
+        */
+        let publicKey;
+      
+        const verifyButton = document.querySelector(".spki .verify-button");
+      
+        /*
+        Convert a string into an ArrayBuffer
+        from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+        */
+        function str2ab(str) {
+          const buf = new ArrayBuffer(str.length);
+          const bufView = new Uint8Array(buf);
+          for (let i = 0, strLen = str.length; i < strLen; i++) {
+            bufView[i] = str.charCodeAt(i);
+          }
+          return buf;
+        }
+	
+    /**
+     * Converts an ECDSA signature from P1363 to DER format
+	 * source: https://developer.token.io/sdk/esdoc/file/src/security/CryptoBrowser.js.html
+     *
+     * @param {Uint8Array} sig - P1363 signature
+     * @return {Uint8Array} DER signature
+     * @private
+     */
+    function p1363ToDer(sig) {
+        const signature = Array.from(sig, x => ('00' + x.toString(16)).slice(-2)).join('');
+        let r = signature.substr(0, signature.length / 2);
+        let s = signature.substr(signature.length / 2);
+        r = r.replace(/^(00)+/, '');
+        s = s.replace(/^(00)+/, '');
+        if ((parseInt(r, 16) & '0x80') > 0) r = `00${r}`;
+        if ((parseInt(s, 16) & '0x80') > 0) s = `00${s}`;
+        const rString = `02${(r.length / 2).toString(16).padStart(2, '0')}${r}`;
+        const sString = `02${(s.length / 2).toString(16).padStart(2, '0')}${s}`;
+        const derSig = `30${((rString.length + sString.length) / 2)
+            .toString(16).padStart(2, '0')}${rString}${sString}`;
+        return new Uint8Array(derSig.match(/[\da-f]{2}/gi).map(h => parseInt(h, 16)));
+    }
+ 
+    /**
+     * Converts an ECDSA signature from DER to P1363 format
+	 * source: https://developer.token.io/sdk/esdoc/file/src/security/CryptoBrowser.js.html
+     *
+     * @param {Uint8Array} sig - DER signature
+     * @return {Uint8Array} P1363 signature
+     * @private
+     */
+    function derToP1363(sig) {
+        const signature = Array.from(sig, x => ('00' + x.toString(16)).slice(-2)).join('');
+        const rLength = parseInt(signature.substr(6, 2), 16) * 2;
+        let r = signature.substr(8, rLength);
+        let s = signature.substr(12 + rLength);
+        r = r.length > 64 ? r.substr(-64) : r.padStart(64, '0');
+        s = s.length > 64 ? s.substr(-64) : s.padStart(64, '0');
+        const p1363Sig = `${r}${s}`;
+        return new Uint8Array(p1363Sig.match(/[\da-f]{2}/gi).map(h => parseInt(h, 16)));
+    }
+
+	
+  /*
+  Fetch the contents of the "message" textbox, and encode it
+  in a form we can use for the encrypt operation.
+  */
+  function getMessageEncoding() {
+    const messageBox = document.querySelector("#plaintext");
+    const message = messageBox.value;
+    const enc = new TextEncoder();
+    return enc.encode(message);
+  }		
+		
+		  /*
+  Import a PEM encoded RSA public key, to use for RSA-OAEP encryption.
+  Takes a string containing the PEM encoded key, and returns a Promise
+  that will resolve to a CryptoKey representing the public key.
+  */
+  function importPublicKey(pem) {
+    // fetch the part of the PEM string between header and footer
+    const pemHeader = "-----BEGIN PUBLIC KEY-----";
+    const pemFooter = "-----END PUBLIC KEY-----";
+    const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+    // base64 decode the string to get the binary data
+    const binaryDerString = window.atob(pemContents);
+    // convert from a binary string to an ArrayBuffer
+    const binaryDer = str2ab(binaryDerString);
+    return window.crypto.subtle.importKey(
+      "spki",
+      binaryDer,
+      {
+     		  name: "ECDSA",
+			  namedCurve:"P-256",
+      		  hash: "SHA-256"
+      },
+      true,
+      ["verify"]
+    );
+  }
+      		
+		/*
+  Fetch the encoded message-to-sign and verify it against the stored signature.
+  * If it checks out, set the "valid" class on the signature.
+  * Otherwise set the "invalid" class.
+  */
+	async function verifyMessage() {
+		const signatureValue = derToP1363(b64ToBuf(document.getElementById("spki-message").value));
+		let encoded = getMessageEncoding();
+		let result = await window.crypto.subtle.verify(
+			{
+				name: "ECDSA",
+				hash: {name: "SHA-256"},
+			},
+			publicKey,
+			signatureValue,
+			encoded
+		);
+		document.getElementById("verificationstatus").value = result;
+	}
+     
+        /*
+        Show and enable the verify button.
+        */
+        function enableVerifyButton() {
+          verifyButton.classList.add('fade-in');
+          verifyButton.addEventListener('animationend', () => {
+            verifyButton.classList.remove('fade-in');
+          });
+          verifyButton.removeAttribute("disabled");
+          verifyButton.classList.remove("hidden");
+        }
+      
+        /*
+        When the user clicks "Import Key"
+        - import the key
+        - enable the "Verify" button
+        */
+const importKeyButton = document.querySelector(".spki .import-key-button");
+  importKeyButton.addEventListener("click", async () => {
+    var pemEncodedKeyTextarea = document.getElementById("publickey-value").value;
+	publicKey = await importPublicKey(pemEncodedKeyTextarea);
+	enableVerifyButton();
+  });
+  verifyButton.addEventListener("click", verifyMessage);		
+		
+    </SCRIPT>	
+</html>

@@ -64,8 +64,8 @@ The following links provide the solutions in code and an online compiler that ru
 | [NodeJS Crypto](EcSignatureP256Sha256DerString/EcSignatureDerStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureP256DerStringFull#index.js/)
 | NodeJS forge | :white_check_mark: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
 |  [Webcrypto sign only](EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) - does not work with Firefox 84
-| [Webcrypto verify only](EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcVerifyDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) 
-| OpenSSL | :soon: | coming soon
+| [Webcrypto verify only](EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) | :white_check_mark: | [Your browser WebcryptoEcVerifyDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) 
+| [OpenSSL (file signature)](ecdsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [EC signature DER OpenSSL](ecdsa_signature_file_openssl.md)
 
 ***1)** runs with .NET 4.7.2 and Bouncy Castle 1.89
 

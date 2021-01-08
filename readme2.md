@@ -102,7 +102,7 @@ Note: you need external libraries for this feature!
 | [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:|
 
 ### OpenSSL solutions ###
-| Solution | Descryption |
+| Solution | Description |
 | ------ | ------ |
 [OpenSSL overview](docs/openssl_overview.md) | general information about OpenSSL cryptography |
 [Generate a RSA key pair](docs/rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding

@@ -22,7 +22,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [PBKDF2 key derivation](docs/pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Generate RSA keys](docs/rsa_key_generation.md) | [see explanation](docs/rsa_key_generation.md) |
 [Generate Curve 25519 keys](docs/curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
-| [Generate Elliptic keys](docs/ec_key_generation.md) | [see explanation](ec_key_generation.md) |
+| [Generate Elliptic keys](docs/ec_key_generation.md) | [see explanation](docs/ec_key_generation.md) |
 
 ### AES string encryption ###
 

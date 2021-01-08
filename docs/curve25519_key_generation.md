@@ -32,7 +32,7 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](./Curve25519KeyGeneration/GenerateCurve25519Keypair.java) | :white_check_mark: | [jdoodle.com  CpcJavaGenerateCurve25519Keypair](https://jdoodle.com/a/2EHr/)
+| [Java](../Curve25519KeyGeneration/GenerateCurve25519Keypair.java) | :white_check_mark: | [jdoodle.com  CpcJavaGenerateCurve25519Keypair](https://jdoodle.com/a/2EHr/)
 | [PHP](./Curve25519KeyGeneration/GenerateCurve25519Keypair.php) | :white_check_mark: | [repl.it CpcPhpCurve25519KeyGeneration](https://repl.it/@javacrypto/CpcPhpCurve25519KeyGeneration/)
 | [C#](./Curve25519KeyGeneration/GenerateCurve25519Keypair.cs) | :white_check_mark: | [repl.it CpcCsharpCurve25519KeyGeneration#main.css](https://repl.it/@javacrypto/CpcCsharpCurve25519KeyGeneration#main.cs/)
 | [Javascript CryptoJs](./Curve25519KeyGeneration/GenerateCurve25519KeypairCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsCurve25519KeyGeneration#index.js](https://repl.it/@javacrypto/CpcCryptoJsCurve25519KeyGeneration#index.js/)

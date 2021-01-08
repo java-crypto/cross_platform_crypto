@@ -20,10 +20,10 @@ The following links provide the solutions in code and an online compiler that ru
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java DER to P1363](EcSignatureConverter/EcSignatureConverterDerToP1363.java) | :white_check_mark: | [repl.it CpcJavaEcSignatureConverterDerToP1363](https://repl.it/@javacrypto/CpcJavaEcSignatureConverterDerToP1363#Main.java/)
-| [Java P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDer.java) | :white_check_mark: | [repl.it CpcJavaEcSignatureConverterP1363ToDer](https://repl.it/@javacrypto/CpcJavaEcSignatureConverterP1363ToDer#Main.java/)
-| [PHP DER to P1363](EcSignatureConverter/EcSignatureConverterDerToP1363.php) | :white_check_mark: | [repl.it CpcPhpEcSignatureConverter](https://repl.it/@javacrypto/CpcPhpEcSignatureConverterDerToP1363#main.php/)
-| [PHP P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDer.php) | :white_check_mark: | [repl.it CpcPhpEcSignatureConverter](https://repl.it/@javacrypto/CpcPhpEcSignatureConverterP1363ToDer#main.php/)
+| [Java DER to P1363](EcSignatureConverter/EcSignatureConverterDerToP1363.java) | :white_check_mark: | [repl.it CpcJavaEcSignatureConverterDerToP1363](https://repl.it/@javacrypto/CpcJavaEcSignatureConvertDerToP1363#Main.java/)
+| [Java P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDer.java) | :white_check_mark: | [repl.it CpcJavaEcSignatureConverterP1363ToDer](https://repl.it/@javacrypto/CpcJavaEcSignatureConvertP1363ToDer#Main.java/)
+| [PHP DER to P1363](EcSignatureConverter/EcSignatureConverterDerToP1363.php) | :white_check_mark: | [repl.it CpcPhpEcSignatureConverter](https://repl.it/@javacrypto/CpcPhpEcSignatureConvertDerToP1363#main.php/)
+| [PHP P1363 to DER](EcSignatureConverter/EcSignatureConverterP1363ToDer.php) | :white_check_mark: | [repl.it CpcPhpEcSignatureConverter](https://repl.it/@javacrypto/CpcPhpEcSignatureConvertP1363ToDer#main.php/)
 | C# | :x: | not available
 | Javascript CryptoJs | :x: | not available
 | NodeJS Crypto | :x: | not available

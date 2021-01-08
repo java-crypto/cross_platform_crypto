@@ -63,8 +63,8 @@ The following links provide the solutions in code and an online compiler that ru
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](EcSignatureP256Sha256DerString/EcSignatureDerStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureP256DerStringFull#index.js/)
 | NodeJS forge | :white_check_mark: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
-|  [Webcrypto sign only](EcSignatureP256Sha256String/ecsignaturestringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringsign.html) - does not work with Firefox 84
-| [Webcrypto verify only](EcSignatureP256Sha256String/ecsignaturestringverification.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringverification.html) 
+|  [Webcrypto sign only](EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) - does not work with Firefox 84
+| [Webcrypto verify only](EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcVerifyDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) 
 | OpenSSL | :soon: | coming soon
 
 ***1)** runs with .NET 4.7.2 and Bouncy Castle 1.89

@@ -18,11 +18,11 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | Base64 encoding & decoding | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | byte array to a hex string & back | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | SHA256 hashing | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [HMAC 256 calculating](hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [HMAC 256 calculation](hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Generate RSA keys](rsa_key_generation.md) | [see explanation](rsa_key_generation.md) |
 [Generate Curve 25519 keys](curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
-| Generate Elliptic keys | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [Generate Elliptic keys](ec_key_generation.md) | [see explanation](ec_key_generation.md) |
 
 ### AES string encryption ###
 
@@ -86,6 +86,28 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 Note: you need external libraries for this feature!
 
+### Elliptic curve keys ###
+
+| page | information |
+| ------ | :------: |
+[EC key generation](ec_key_generation.md) | creation of EC key pairs with OpenSSL
+[EC sample keys](ec_sample_keypair.md) | sample key pair for curve SECP256R1 = P-256 = PRIME256V1
+
+### Elliptic curve signature ###
+
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
+| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark:
+| [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark:
+| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: | :x:| :white_check_mark:
+
+### Elliptic curve encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |
+| ------ | :------: | :----: | :---: | :--: | :--: |
+
+planned in later future
+
 ### AES file encryption ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
@@ -97,20 +119,6 @@ Note: you need external libraries for this feature!
 | [GCM-mode PBKDF2 AAD File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 planned in future
-
-### Elliptic curve encryption ###
-
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |
-| ------ | :------: | :----: | :---: | :--: | :--: |
-
-planned in later future
-
-### Elliptic curve signature ###
-
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
-| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark:
-| [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:
 
 ### Which platforms are supported at the moment?
 
@@ -133,7 +141,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Jan. 04th 2021
+Last update: Jan. 08th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

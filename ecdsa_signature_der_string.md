@@ -62,13 +62,18 @@ The following links provide the solutions in code and an online compiler that ru
 | [C#](EcSignatureP256Sha256DerString/EcSignatureDerStringFull.cs) ***1)** | :white_check_mark: | [dotnetfiddle.net  CpcCsharpEcSignatureDerStringFull](https://dotnetfiddle.net/espTT1/)
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](EcSignatureP256Sha256DerString/EcSignatureDerStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureP256DerStringFull#index.js/)
-| NodeJS forge | :x: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
-| Webcrypto sign only | :x: | not available
-| Webcrypto verify only | :x: | not available
+| NodeJS forge | :white_check_mark: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
+|  [Webcrypto sign only](EcSignatureP256Sha256String/ecsignaturestringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringsign.html) - does not work with Firefox 84
+| [Webcrypto verify only](EcSignatureP256Sha256String/ecsignaturestringverification.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringverification.html) 
+| OpenSSL | :soon: | coming soon
 
 ***1)** runs with .NET 4.7.2 and Bouncy Castle 1.89
 
+***2)** Running the WebCrypto examples in my Browser I found that the Firefox Browser (tested with Version 84, x64 Windows) cannot run the **sign** example due to a long lasting bug - please use Chrome or Opera as they will sign.
+
 Notes regarding the implementations: for this article I have choosen the **DER encoding** of the signature. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSA** and everything is fine. If you like need the example with [IEEE P1363 encoding see this article](ecdsa_signature_ieee_p1363_string.md).
+
+If you need to convert the signature format types (DER to IEEE P1363 and vice versa) see my article [ecdsa signature conversion](ecdsa_signature_conversion.md).
 
 The other important part is the key management. Some implementations will work with other curves, some implementations do have hard-coded import functions that will work with the named curve **SECP256R1** only.
 
@@ -98,6 +103,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Jan. 04th 2021
+Last update: Jan. 08th 2021
 
 Back to the main page: [readme.md](readme.md)

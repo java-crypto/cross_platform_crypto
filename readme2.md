@@ -12,15 +12,15 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
 | ------ | :---: | :----: | :---: | :--: | :--: | :--: | 
-| [generate a 32 byte long AES key](generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [generate a 16 byte long initvector](generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [generate a 12 byte long nonce](generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [generate a 32 byte long AES key](docs/generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [generate a 16 byte long initvector](docs/generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [generate a 12 byte long nonce](docs/generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Base64 encoding & decoding | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | byte array to a hex string & back | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | SHA256 hashing | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [HMAC 256 calculation](hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [Generate RSA keys](rsa_key_generation.md) | [see explanation](rsa_key_generation.md) |
+| [HMAC 256 calculation](docs/hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [PBKDF2 key derivation](docs/pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Generate RSA keys](docs/rsa_key_generation.md) | [see explanation](docs/rsa_key_generation.md) |
 [Generate Curve 25519 keys](docs/curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
 | [Generate Elliptic keys](docs/ec_key_generation.md) | [see explanation](ec_key_generation.md) |
 

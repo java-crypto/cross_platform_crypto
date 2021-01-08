@@ -33,10 +33,10 @@ The following links provide the solution in code and within an online compile th
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
 | [Java](../Curve25519KeyGeneration/GenerateCurve25519Keypair.java) | :white_check_mark: | [jdoodle.com  CpcJavaGenerateCurve25519Keypair](https://jdoodle.com/a/2EHr/)
-| [PHP](./Curve25519KeyGeneration/GenerateCurve25519Keypair.php) | :white_check_mark: | [repl.it CpcPhpCurve25519KeyGeneration](https://repl.it/@javacrypto/CpcPhpCurve25519KeyGeneration/)
-| [C#](./Curve25519KeyGeneration/GenerateCurve25519Keypair.cs) | :white_check_mark: | [repl.it CpcCsharpCurve25519KeyGeneration#main.css](https://repl.it/@javacrypto/CpcCsharpCurve25519KeyGeneration#main.cs/)
-| [Javascript CryptoJs](./Curve25519KeyGeneration/GenerateCurve25519KeypairCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsCurve25519KeyGeneration#index.js](https://repl.it/@javacrypto/CpcCryptoJsCurve25519KeyGeneration#index.js/)
-| [NodeJS Crypto](./Curve25519KeyGeneration/GenerateCurve25519KeypairNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoCurve25519KeyGeneration#index.js](https://repl.it/@javacrypto/CpcNodeJsCryptoCurve25519KeyGeneration#index.js/)
+| [PHP](../Curve25519KeyGeneration/GenerateCurve25519Keypair.php) | :white_check_mark: | [repl.it CpcPhpCurve25519KeyGeneration](https://repl.it/@javacrypto/CpcPhpCurve25519KeyGeneration/)
+| [C#](../Curve25519KeyGeneration/GenerateCurve25519Keypair.cs) | :white_check_mark: | [repl.it CpcCsharpCurve25519KeyGeneration#main.css](https://repl.it/@javacrypto/CpcCsharpCurve25519KeyGeneration#main.cs/)
+| [Javascript CryptoJs](../Curve25519KeyGeneration/GenerateCurve25519KeypairCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsCurve25519KeyGeneration#index.js](https://repl.it/@javacrypto/CpcCryptoJsCurve25519KeyGeneration#index.js/)
+| [NodeJS Crypto](../Curve25519KeyGeneration/GenerateCurve25519KeypairNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoCurve25519KeyGeneration#index.js](https://repl.it/@javacrypto/CpcNodeJsCryptoCurve25519KeyGeneration#index.js/)
 | NodeJS forge | :x: | please use the built-in Node Crypto-solution above
 
 This is the output with the (Base64 encoded) Curve 25519 <u>private key</u> and  the belonging <u>public key</u>:
@@ -54,4 +54,4 @@ Go to the complete workflow for an key exchange with AES encryption: [curve25519
 
 Last update: Jan. 08th 2021
 
-Back to the main page: [readme.md](readme.md)
+Back to the main page: [readme.md](../readme.md)

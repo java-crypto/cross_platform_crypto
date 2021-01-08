@@ -22,7 +22,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [PBKDF2 key derivation](pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Generate RSA keys](rsa_key_generation.md) | [see explanation](rsa_key_generation.md) |
 [Generate Curve 25519 keys](docs/curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
-| [Generate Elliptic keys](ec_key_generation.md) | [see explanation](ec_key_generation.md) |
+| [Generate Elliptic keys](docs/ec_key_generation.md) | [see explanation](ec_key_generation.md) |
 
 ### AES string encryption ###
 
@@ -90,24 +90,24 @@ Note: you need external libraries for this feature!
 
 | page | information |
 | ------ | :------: |
-[EC key generation](ec_key_generation.md) | creation of EC key pairs with OpenSSL
-[EC sample keys](ec_sample_keypair.md) | sample key pair for curve SECP256R1 = P-256 = PRIME256V1
+[EC key generation](docs/ec_key_generation.md) | creation of EC key pairs with OpenSSL
+[EC sample keys](docs/ec_sample_keypair.md) | sample key pair for curve SECP256R1 = P-256 = PRIME256V1
 
 ### Elliptic curve signature ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
-| [ECDSA String Signature IEEE-P1363 encoding ](ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:|
-| [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark:
-| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:|
+| [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:|
+| [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark:
+| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:|
 
 ### OpenSSL solutions ###
 | Solution | Descryption |
 | ------ | ------ |
-[OpenSSL overview](openssl_overview.md) | general information about OpenSSL cryptography |
-[Generate a RSA key pair](rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding
-[Generate an EC key pair](ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding
-[Elliptic curve file signature DER encoding](ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](ecdsa_signature_der_string.md) |
+[OpenSSL overview](docs/openssl_overview.md) | general information about OpenSSL cryptography |
+[Generate a RSA key pair](docs/rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding
+[Generate an EC key pair](docs/ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding
+[Elliptic curve file signature DER encoding](docs/ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) |
 
 ### Elliptic curve encryption ###
 

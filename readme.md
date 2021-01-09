@@ -55,11 +55,11 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### RSA signature with different padding modes ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
-| [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark:
-| [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark:
-| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark:
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
+| [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:
+| [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x:
+| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon:
 
 ### RSA keys ###
 
@@ -107,6 +107,7 @@ Note: you need external libraries for this feature!
 [OpenSSL overview](docs/openssl_overview.md) | general information about OpenSSL cryptography |
 [Generate a RSA key pair](docs/rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding
 [Generate an EC key pair](docs/ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding
+[RSA file signature with PKCS#1.5 padding](rsa_signature_file_openssl.md) |   the signature and verification is compatible with solutions in  [RSA string signature with PKCS#1.5 padding](rsa_signature_string.md)|
 [Elliptic curve file signature DER encoding](docs/ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) |
 
 ### Elliptic curve encryption ###
@@ -150,7 +151,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 | OpenSSL |  | version 1.1.1g Windows x64
 
-Last update: Jan. 08th 2021
+Last update: Jan. 09th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

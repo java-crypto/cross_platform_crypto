@@ -55,6 +55,7 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS forge](../RsaSignaturePssString/RsaSignaturePssStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
 | [Webcrypto sign only](../RsaSignaturePssString/rsasignaturepsssign.html) | :white_check_mark: | [your browser WebcryptoRsaPssSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepsssign.html)
 | [Webcrypto verify only](R../saSignaturePssString/rsasignaturepssverification.html) | :white_check_mark: | [your browser WebcryptoRsaPssVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepssverification.html)
+| [OpenSSL (file signature)](rsa_signature_pss_file_openssl.md) | :white_check_mark: | see explanation here: [RSA signature PSS OpenSSL](rsa_signature_pss_file_openssl.md)
 
 PHP *1): you need the library phpseclib version 3 to run this program
 

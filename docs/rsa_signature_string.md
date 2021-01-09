@@ -59,6 +59,7 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS forge](../RsaSignatureString/RsaSignatureStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
 | [Webcrypto sign only](../RsaSignatureString/rsasignaturestringsign.html) | :white_check_mark: | [your browser WebcryptoRsaSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringsign.html)
 | [Webcrypto verify only](../RsaSignatureString/rsasignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
+| [OpenSSL (file signature)](rsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [RSA signature OpenSSL](rsa_signature_file_openssl.md)
 
 This is an output:
 
@@ -90,6 +91,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Jan. 09th 2021
 
 Back to the main page: [readme.md](../readme.md)

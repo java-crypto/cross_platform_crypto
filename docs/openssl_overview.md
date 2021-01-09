@@ -14,11 +14,12 @@ Here are my articles regarding OpenSSL themes:
 
 | Solution | Description |
 | ------ | :------: |
-[Generate a RSA key pair](rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding
-[Generate an EC key pair](ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding
-[Elliptic curve (ECDSA) file signature DER format](ecdsa_signature_file_openssl.md) | full example for EC key generation, signing and verifying a file. The results are interchangable with [Elliptic key string signature (ECDSA) with DER encoding](ecdsa_signature_der_string.md)
+[Generate a RSA key pair](rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding |
+[Generate an EC key pair](ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding |
+[RSA file signature with PKCS#1.5 padding](rsa_signature_file_openssl.md) |  full example for RSA key generation, signing and verifying a file. The results are interchangable with [RSA string signature with PKCS#1.5 padding](rsa_signature_string.md)|
+[Elliptic curve (ECDSA) file signature DER format](ecdsa_signature_file_openssl.md) | full example for EC key generation, signing and verifying a file. The results are interchangable with [Elliptic key string signature (ECDSA) with DER encoding](ecdsa_signature_der_string.md) |
 
-Last update: Jan. 08th 2021
+Last update: Jan. 09th 2021
 
 Back to the main page: [readme.md](../readme.md)
 

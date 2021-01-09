@@ -59,7 +59,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
 | [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:
 | [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x:
-| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon:
+| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:
 
 ### RSA keys ###
 
@@ -108,6 +108,7 @@ Note: you need external libraries for this feature!
 [Generate a RSA key pair](docs/rsa_key_generation.md) | generate a RSA private key and public key in PEM encoding
 [Generate an EC key pair](docs/ec_key_generation.md) | generate an Elliptic curve (EC) private key and public key in PEM encoding
 [RSA file signature with PKCS#1.5 padding](rsa_signature_file_openssl.md) |   the signature and verification is compatible with solutions in  [RSA string signature with PKCS#1.5 padding](rsa_signature_string.md)|
+[RSA file signature with PSS padding](rsa_signature_pss_file_openssl.md) |   the signature and verification is compatible with solutions in  [RSA string signature with PSS padding](rsa_signature_pss_string.md)|
 [Elliptic curve file signature DER encoding](docs/ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) |
 
 ### Elliptic curve encryption ###

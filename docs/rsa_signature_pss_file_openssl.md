@@ -1,10 +1,10 @@
 # Cross-platform cryptography
 
-## RSA file signature with PKCS#1.5 padding and OpenSSL
+## RSA file signature with PSS padding and OpenSSL
 
 This article will show you how to generate a RSA key pair, sign a file with the private key and verify the signature with the public key. All you need for this task is an installed OpenSSL program on your machine.
 
-Best of all: when working as explained you get a full compatibility to the elliptic curve signatures described in the article [RSA string signature with PKCS#1.5 padding](rsa_signature_string.md).
+Best of all: when working as explained you get a full compatibility to the elliptic curve signatures described in the article [RSA string signature with PSS padding](rsa_signature_pss_string.md).
 
 This example was tested with **OpenSSL version 1.1.1g** - kindly do no use older versions (<= 1.1.0) as they may not work as expected.
 
@@ -65,16 +65,35 @@ This is an example file ("rsamessage.txt") in hex view mode that has the "CR/LF"
 
 I'm providing a sample file **rsamessage.txt** that has just one row with my demonstration text to sign in my GitHub-repository.
 
-Now we are signing this file:
+You may have seen the example in [RSA file signature with PKCS#1.5 padding](rsa_signature_file_openssl.md) where we directly sign the message file with OpenSSL, this is **not possible** when using the PSS padding. Unfortunately we have to hash the message with the requested hash algorithm first and then we will sign this hash.
+
+#### Sub-Task: hash the message file with SHA-256
+
+You will encounter a minimal problem when hashing a file with OpenSSL - you can get the output (the hash value) written to file and you need to redirect the output to a file. On a Windows system it is done with ">" but I can't test this sub task on other operating systems.
+
+Simply create a file "openssl sha256.cmd" with this content:
+```plaintext
+openssl dgst -sha256 -binary rsamessage.txt -out > rsamessage.hash.bin
+```
+and let it run, you will receive a file "rsamessage.hash.bin" with the binary hash value:
+```plaintext
+D7 A8 FB B3 07 D7 80 94 69 CA 9A BC B0 08 2E 4F 
+8D 56 51 E4 6D 3C DB 76 2D 02 D0 BF 37 C9 E5 92 
+```
+Now we can proceed with the signature process.
+
+#### Sub-Task: sign the hash file
+
+Now we are signing the hash of our "rsamessage.txt" file. The command line is longer due to the PSS parameters passed to OpenSSL that have to been equal to the other cross platform programs.
 
 ```plaintext
-openssl dgst -sha256 -sign privatekey2048.pem -out rsamessage.signature.bin rsamessage.txt
+openssl pkeyutl -sign -out rsamesssage.pss.signature.bin -pkeyopt digest:sha256 -pkeyopt rsa_padding_mode:pss -pkeyopt rsa_pss_saltlen:32 -in rsamessage.hash.bin -inkey privatekey2048.pem
 ```
-As the signature is in binary encoding we need to take a hex view to the signature:
+As the signature is in binary encoding we need to take a hex view to the signature. You will notice that the signature is much longer (256 byte) that theRSA signature done with PKCS#1.5 padding (32 bytes):
 ```plaintext
-BC 24 81 E3 BE 38 A7 7D 08 06 5F EC 08 B8 EF 2A |.....8..........  
+62 FE E5 E0 34 9B 1E 3B 18 7B A1 E5 23 C8 2A 97 
 ...
-2F F3 D2 F0 24 46 E6 5C 61 61 80 19 A9 37 3E 56 |.....F..aa...7.V 
+33 26 CC 06 2B 03 8D 8C 12 99 8A C9 FA 2C 02 42 
 ```
 If you stay with OpenSSL for verification on your machine you do not need to run the next two steps and proceed directly to task five.
 
@@ -83,14 +102,14 @@ If you stay with OpenSSL for verification on your machine you do not need to run
 With just one line you can convert the binary signature to a Base64 encoded signature:
 
 ```plaintext
-openssl base64 -in rsamessage.signature.bin -out rsamessage.signature.base64.txt
+openssl base64 -in rsamesssage.pss.signature.bin -out rsamessage.pss.signature.base64.txt
 ```
 Here we see the result - please note that OpenSSL is adding a "new line character" after 64 characters:
 
 ```plaintext
-vCSB4744p30IBl/sCLjvKm2nix7wfScQn99YX9tVIDNQIvU3QnSCLc2cF+J6R9WM
+Yv7l4DSbHjsYe6HlI8gql49zdrAgppQXkg8SZp521TFa85ZUN4OZ8o9Rua6w9USf
 ...
-L/PS8CRG5lxhYYAZqTc+Vg==
+MybMBisDjYwSmYrJ+iwCQg==
 ```
 
 The encoding is perfect for transmitting via Email or chat purposes. The signature can be as well provided to the other programs for verifying - try it with the Browser based verification tool: 
@@ -100,23 +119,22 @@ The encoding is perfect for transmitting via Email or chat purposes. The signatu
 When verifying this signature with OpenSSL or getting a signature from third party you need to Base64 decode the signature back to a binary format:
 
 ```plaintext
-openssl base64 -d -in rsamessage.signature.base64.txt -out rsamessage.signature.dec.bin
+openssl base64 -d -in rsamessage.pss.signature.base64.txt -out rsamessage.pss.signature.dec.bin
 ```
 
 ### Fifth task: verify the signature of a file with the private key using OpenSSL
 
-To verify the digital signature we do need to have 3 files available: the file itself, the signature and the **public key** of the signer. Now we verify the signature with one line of code:
+To verify the digital signature we do need to have 3 files available: the (or better the file with the hash of the) file itself, the signature and the **public key** of the signer. Now we verify the signature with one line of code:
 
 ```plaintext
-openssl dgst -sha256 -verify publickey2048.pem -signature rsamessage.signature.bin rsamessage.txt
+openssl pkeyutl -verify -pkeyopt rsa_padding_mode:pss -pkeyopt rsa_pss_saltlen:32 -pkeyopt digest:sha256 -in rsamessage.hash.bin -sigfile rsamesssage.pss.signature.bin -pubin -inkey publickey2048.pem
 when using the Base64 decoded signature from task 4 use this command:
-openssl dgst -sha256 -verify publickey2048.pem -signature rsamessage.signature.dec.bin rsamessage.txt
+openssl pkeyutl -verify -pkeyopt rsa_padding_mode:pss -pkeyopt rsa_pss_saltlen:32 -pkeyopt digest:sha256 -in rsamessage.hash.bin -sigfile rsamesssage.pss.signature.dec.bin -pubin -inkey publickey2048.pem
 ```
 Both commands will successfully run with a positive result - when the signature is correct:
 ```plaintext
-Verified OK
+Signature Verified Successfully
 ```
-
 
 ## :warning: Security warning :warning:
 

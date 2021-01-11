@@ -1,24 +1,26 @@
 # Cross-platform cryptography
 
-## Base64 encoding & decoding
+## SHA-256 hash of a string
 
-When using my programs you will see these conversions are in nearly every source code.
+Hashing of data is one of the most function used when working with cryptographic.
 
-### Why is Base64 encoding so important?
+### What is a hash?
 
-The answer is very simple: because all types of cryptography are working with binary data but when trying to transport the data (e.g. a ciphertext) from one system to another system you encounter the problem - "how should I transport binary data?".
+The hash of data is often described as "fingerprint" of the data as the result is a kind of "checksum" that is characteristic for the data. An other name for a hash is a trapdoor as there should be no way back meaning: with having a hash value it should not been able to get the data back or even think what data was used as input.
 
-As binary data can consist of bytes that are not directly printable as a string (e.g. value hex x00) we need to convert the data to a better (string) encoding. In general there are two encodings on the market - the **Base64 encoding** and the **hex string representation** of the binary data.
+### How secure is a hash?
 
-This article focuses on the Base64 encoding, if you like to know more about the hex string representation of binary data see my article [binary data to a hex string & back](binary_data_hex_string.md).
+Very import for hash function is it to change a lot of bytes even when just 1 byte of the plaintext changes. As hashes are very often used in combination with digital signatures it is most important that you cannot create a changed or second document that gets the same hash. One example for an **unsecure hash algorithm is MD5** - please don't use it ever! Visit the website [https://natmchugh.blogspot.com/2015/02/create-your-own-md5-collisions.html](https://natmchugh.blogspot.com/2015/02/create-your-own-md5-collisions.html) and see the two pictures - one is a crashing plane and the other is the wrack of a sunken ship - both have the **same MD5 hash**. This of second contract that was digitally signed but is total different to that you have signed... horrible.
 
-### How does Base64 encoding work?
+The second **unsecure hash algorithm is SHA-1** - please use it not more longer in new programs. A team of developers tryed to find a second PDF-document that has the same SHA-1 value as the first one. With the kindly help of Google's machine power they find it - read the complete story on [http://shattered.it/](http://shattered.it/). Same to MD5 - do not use SHA-1 in new programs.
 
-A byte can hold up to 256 values that need to find a string representation. When trying to use only the letters a..z, A..Z and numbers 0..9 and 3 extra symbols like "/", "+" and "=" we get a character set of (in total) 65 characters - much to low for the necessary 256 characters. So trick is not to use the 8 bit of byte but only 6 bit of the byte sequence, convert this 6 bit chunk into a character of the set and in the end all bytes get converted.
+### What is a secure hash algorithm?
 
-This procedure will exand the length of encoded data about 33% but those characters are available on nearly every western operating system. The decoding goes the other way round and there is the "problem" with a padding that is done with the "=" character because not all byte sequences are divisible by "6".
+As date of writing a SHA-256 is secure enough but if possible you should change to the SHA-3-variants as they are more secure and faster.
 
-If need more detailed information about this process kindly see the [Wikipedia Base64 article](https://en.wikipedia.org/wiki/Base64).
+### What hash algorithm are we using?
+
+My programs will use SHA-256 as default algorithm but in rare cases I'm using a signature algorithm with a SHA-1 hashing.
 
 ## :warning: Security warning :warning:
 

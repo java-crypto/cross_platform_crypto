@@ -1,24 +1,24 @@
 # Cross-platform cryptography
 
-## Base64 encoding & decoding
+## Binary data to a hex string & back
 
-When using my programs you will see these conversions are in nearly every source code.
+The hex string is second most encoding to represent or transport binary data. 
 
-### Why is Base64 encoding so important?
+### Why is the hex string not so often in use?
 
-The answer is very simple: because all types of cryptography are working with binary data but when trying to transport the data (e.g. a ciphertext) from one system to another system you encounter the problem - "how should I transport binary data?".
+The answer is easy: each byte is converted into 2 characters (character set 0..9 and a..f) so this encoding **doubles** the size of data.
 
-As binary data can consist of bytes that are not directly printable as a string (e.g. value hex x00) we need to convert the data to a better (string) encoding. In general there are two encodings on the market - the **Base64 encoding** and the **hex string representation** of the binary data.
+### Why is a hex string so often used?
 
-This article focuses on the Base64 encoding, if you like to know more about the hex string representation of binary data see my article [binary data to a hex string & back](binary_data_hex_string.md).
+Especially when in debugging state of development phase the programmer wants to see what is in a variable and that can be better done than using a Base64 encoding or using decimals.
 
-### How does Base64 encoding work?
+### How does it work?
 
-A byte can hold up to 256 values that need to find a string representation. When trying to use only the letters a..z, A..Z and numbers 0..9 and 3 extra symbols like "/", "+" and "=" we get a character set of (in total) 65 characters - much to low for the necessary 256 characters. So trick is not to use the 8 bit of byte but only 6 bit of the byte sequence, convert this 6 bit chunk into a character of the set and in the end all bytes get converted.
+As a byte has a range of 256 numbers (decimal 0..255) the number is pushed into a 16 number base (compared to our decimal number space of 10) so we need to hexadecimal characters to get the value of one byte.
 
-This procedure will exand the length of encoded data about 33% but those characters are available on nearly every western operating system. The decoding goes the other way round and there is the "problem" with a padding that is done with the "=" character because not all byte sequences are divisible by "6".
+My implementations will provide the character in low or high chars, depending on the default of the framework.
 
-If need more detailed information about this process kindly see the [Wikipedia Base64 article](https://en.wikipedia.org/wiki/Base64).
+This article focuses on the hex string encoding, if you like to know more about the Base64 representation of binary data see my article [Base64 encoding & decoding](base64_encoding_decoding.md).
 
 ## :warning: Security warning :warning:
 

@@ -34,6 +34,7 @@ The following links provide the solution in code and within an online compile th
 | [Javascript CryptoJs](../GenerateSha256Base64Hex/GenerateSha256Base64HexCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomAesKey](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)
 | [NodeJS Crypto](../GenerateSha256Base64Hex/GenerateSha256Base64HexNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
 | [NodeJS forge](../GenerateSha256Base64Hex/GenerateSha256Base64HexNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
+| [Webcrypto](../GenerateSha256Base64Hex/generatesha256base64hex.html) | :white_check_mark: | [your browser WebcryptoGenerateSha256Base64Hex.html](https://java-crypto.github.io/cross_platform_crypto/GenerateSha256Base64Hex/generatesha256base64hex.html)
 
 This is an output:
 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Generate a SHA-256 hash, Base64 en- and decoding and hex conversions</title>
+</head>
+
+<body>
+    <main>
+        <h1>Generate a SHA-256 hash, Base64 en- and decoding and hex conversions</h1>
+        <hr>
+        <p>
+            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+        </p>
+        <hr>
+
+
+        <label>Enter a plaintext to hash with SHA-256:</label>
+        <input type="text" id="plaintext" name="plaintext" size="110" value="The quick brown fox jumps over the lazy dog">
+        <hr>
+        <br>
+        <b>Instructions:</b><br>
+        1.: insert your plaintext and press the "hash a plaintext" button<br>
+        2.: receive the SHA-256 hash in Base64 encoding and hex string representation<br>
+        <hr>
+        <input class="hash-button" type="button" value="hash a plaintext">
+        <hr>
+
+        <p>
+            sha-256 hash of the plaintext (will be in hex format):<br>
+            <textarea name="sha256Hex" id="sha256Hex" rows="1" cols="120" disabled>the sha-256 hash of the plaintext comes here...</textarea>
+            </div>
+        </p>
+		<p>
+            sha-256 hash of the plaintext (will be in Base64 encoding):<br>
+            <textarea name="sha256Base64" id="sha256Base64" rows="1" cols="120" disabled>the sha-256 hash of the plaintext in Base64 encoding comes here...</textarea>
+            </div>
+        </p>
+		<p>
+            sha-256 hash of the plaintext (decoded from Base64 encoding in hex style):<br>
+            <textarea name="sha256DecodedBase64" id="sha256DecodedBase64" rows="1" cols="120" disabled>the decoded Base64 sha-256 hash comes here...</textarea>
+            </div>
+        </p>
+		<p>
+            hex string representation of a sha-256 hash:<br>
+            <textarea name="sha256HexString" id="sha256HexString" rows="1" cols="120">d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592</textarea>
+            </div>
+        </p>
+		<p>
+            Base64 representation of a sha-256 hash:<br>
+            <textarea name="sha256Base64String" id="sha256Base64String" rows="1" cols="120" disabled>the Base64 representation of the hex sha-256 value comes here...</textarea>
+            </div>
+        </p>
+		
+    </main>
+</body>
+<SCRIPT LANGUAGE = "JavaScript" >
+
+
+const bufToB64 = buf =>
+        btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+
+const b64ToBuf = b64 => {
+    const binstr = atob(b64),
+    	buf = new Uint8Array(binstr.length);
+    Array.prototype.forEach.call(binstr, (ch, i) => {
+        buf[i] = ch.charCodeAt(0);
+    });
+    return buf;
+};
+
+function hexStringToByteArray(input) {
+  var buffer = new Uint8Array((input.length/2));
+	for(i = 0; i < buffer.length; i++) buffer[i] = parseInt(input.substr(i<<1, 2), 16);
+  return buffer;
+}
+
+function sha256(str) {
+  // Get the string as arraybuffer.
+  var buffer = new TextEncoder("utf-8").encode(str)
+  return crypto.subtle.digest("SHA-256", buffer).then(function(hash) {
+	document.getElementById("sha256Hex").value = hex(hash);
+	var sha256Hex = document.getElementById("sha256Hex").value;
+	var sha256Buffer = hexStringToByteArray(sha256Hex);
+	document.getElementById("sha256Base64").value = bufToB64(sha256Buffer);
+	document.getElementById("sha256DecodedBase64").value = hex(b64ToBuf(document.getElementById("sha256Base64").value).buffer);
+	var sha256HexString = document.getElementById("sha256HexString").value;
+	sha256Buffer = hexStringToByteArray(sha256HexString);
+	document.getElementById("sha256Base64String").value = bufToB64(sha256Buffer);
+  })
+}
+
+function hex(buffer) {
+  var digest = ''
+  var view = new DataView(buffer)
+  for(var i = 0; i < view.byteLength; i += 4) {
+    // We use getUint32 to reduce the number of iterations (notice the `i += 4`)
+    var value = view.getUint32(i)
+    // toString(16) will transform the integer into the corresponding hex string
+    // but will remove any initial "0"
+    var stringValue = value.toString(16)
+    // One Uint32 element is 4 bytes or 8 hex chars (it would also work with 4
+    // chars for Uint16 and 2 chars for Uint8)
+    var padding = '00000000'
+    var paddedValue = (padding + stringValue).slice(-padding.length)
+    digest += paddedValue
+  }
+  return digest
+}
+
+async function doConversions() {
+	var plaintext = document.getElementById("plaintext").value;
+	sha256(plaintext);
+}
+
+/*
+When the user clicks "Hash Key"
+- import the key
+*/
+const hashButton = document.querySelector(".hash-button");
+hashButton.addEventListener("click", async () => {doConversions();})
+
+</SCRIPT>
+</html>

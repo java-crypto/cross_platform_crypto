@@ -18,7 +18,7 @@ A byte can hold up to 256 values that need to find a string representation. When
 
 This procedure will exand the length of encoded data about 33% but those characters are available on nearly every western operating system. The decoding goes the other way round and there is the "problem" with a padding that is done with the "=" character because not all byte sequences are divisible by "6".
 
-If need more detailed information about this process kindly see the [Wikipedia Base64 article](https://en.wikipedia.org/wiki/Base64/).
+If need more detailed information about this process kindly see the [Wikipedia Base64 article](https://en.wikipedia.org/wiki/Base64).
 
 ## :warning: Security warning :warning:
 

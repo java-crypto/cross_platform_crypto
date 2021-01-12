@@ -116,18 +116,6 @@ Note: you need external libraries for this feature!
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |
 | ------ | :------: | :----: | :---: | :--: | :--: |
 
-planned in later future
-
-### AES file encryption ###
-
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | 
-| [CBC-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [CBC-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode PBKDF2 File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-| [GCM-mode PBKDF2 AAD File Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-
 planned in future
 
 ### Which platforms are supported at the moment?
@@ -152,7 +140,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 | OpenSSL |  | version 1.1.1g Windows x64
 
-Last update: Jan. 11th 2021
+Last update: Jan. 12th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

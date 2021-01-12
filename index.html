@@ -521,6 +521,7 @@ based on dark.css by Vladimir Epifanov
 <th style="text-align: center;">CryptoJS</th>
 <th style="text-align: center;">NodeJS</th>
 <th style="text-align: center;">NodeJs forge</th>
+<th style="text-align: center;">WebCrypto</th>
 </tr>
 </thead>
 <tbody>
@@ -532,6 +533,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="docs/generate_initvector.md">generate a 16 byte long initvector</a></td>
@@ -541,6 +543,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="docs/generate_nonce.md">generate a 12 byte long nonce</a></td>
@@ -550,33 +553,37 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td>Base64 encoding &amp; decoding</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
+<td><a href="base64_encoding_decoding.md">Base64 encoding &amp; decoding</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td>byte array to a hex string &amp; back</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
+<td><a href="binary_data_hex_string.md">binary data to a hex string &amp; back</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td>SHA256 hashing</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
+<td><a href="sha256_hash.md">SHA256 hashing</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td><a href="docs/hmac_256_calculation.md">HMAC 256 calculation</a></td>
@@ -586,6 +593,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="docs/pbkdf2.md">PBKDF2 key derivation</a></td>
@@ -595,10 +603,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="docs/rsa_key_generation.md">Generate RSA keys</a></td>
 <td style="text-align: center;"><a href="docs/rsa_key_generation.md">see explanation</a></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -613,10 +623,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="docs/ec_key_generation.md">Generate Elliptic keys</a></td>
 <td style="text-align: center;"><a href="docs/ec_key_generation.md">see explanation</a></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1049,68 +1061,6 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </thead>
 </table>
-<p>planned in later future</p>
-<h3 id="aes-file-encryption">AES file encryption</h3>
-<table>
-<thead>
-<tr>
-<th>Solution</th>
-<th style="text-align: center;">Java</th>
-<th style="text-align: center;">PHP</th>
-<th style="text-align: center;">C#</th>
-<th style="text-align: center;">CryptoJS</th>
-<th style="text-align: center;">NodeJS</th>
-<th style="text-align: center;">NodeJs forge</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="readme.md">CBC-mode File Encryption</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-</tr>
-<tr>
-<td><a href="readme.md">CBC-mode PBKDF2 File Encryption</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-</tr>
-<tr>
-<td><a href="readme.md">GCM-mode File Encryption</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-</tr>
-<tr>
-<td><a href="readme.md">GCM-mode PBKDF2 File Encryption</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-</tr>
-<tr>
-<td><a href="readme.md">GCM-mode PBKDF2 AAD File Encryption</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-</tr>
-</tbody>
-</table>
 <p>planned in future</p>
 <h3 id="which-platforms-are-supported-at-the-moment">Which platforms are supported at the moment?</h3>
 <p>I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like <a href="https://repl.it/">https://repl.it/</a>. Please don't ask if the programs will run on your system with a lower or higher version - just try it on your own.</p>
@@ -1182,7 +1132,7 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
-<p>Last update: Jan. 09th 2021</p>
+<p>Last update: Jan. 12th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

@@ -44,15 +44,15 @@ There is something I'm proud of: for the first time I did starting the programmi
 | [PHP](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPhpJavaLibsodiumCryptoboxEncryptionString#main.php/)
 | [C#](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpLibsodiumCryptoboxStringEncryption](https://dotnetfiddle.net/2U7cm5/)
 | [Javascript / NodeJs](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionStringNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcNodeJsLibsodiumCryptoboxEncryptionString#index.js)
-| NodeJS CryptoJs | :x: | not available
-| NodeJS Crypto | :x: | not available
-| NodeJS forge | :x: | not available 
+| NodeJS CryptoJs | :x: | use above Javascript / NodeJs solution
+| NodeJS Crypto | :x: | use above Javascript / NodeJs solution
+| NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Webcrypto](../LibsodiumCryptoboxEncryptionString/libsodiumcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionfull.html/)
 
 This is an output (your will differ because a random element):
 
 ```plaintext
-Libsodium secret box hybrid string encryption
+Libsodium crypto box hybrid string encryption
 plaintext: The quick brown fox jumps over the lazy dog
 
 * * * encryption * * *

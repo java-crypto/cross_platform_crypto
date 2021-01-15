@@ -22,25 +22,26 @@ Giving a summary you may say "*I have never heard the names of the algorithms be
 
 A more detailed overview is available with the original [Libsodium documentation](https://doc.libsodium.org/) that is written in and for the "C" framework but the functionality is equal on all bindings for tother languages.
 
-But the good news are: there are binding available for Java, PHP (built-in since PHP 7.x), C#, NodeJs and for browser usage and I'm providing solutions for all major cryptography tasks like key encryption, private-public encryption and signing.
+But the good news are: there are bindings available for Java, PHP (built-in since PHP 7.x), C#, NodeJs and for browser usage and I'm providing solutions for all major cryptography tasks like key encryption, private-public encryption and signing.
 
 Here are my articles regarding Libsodium themes:
 
 | Solution | Description | Java | PHP | C# | NodeJs | Browser
 | ------ | :------: | :--: |:--: |:--: |:--: |:--: |
-[Generate a X25519 key pair](x25519_key_generation.md) | generate a X25519 private key and public key pair in Base64 encoding | :x: | :x: |  :x: |  :x: |  :white_check_mark: |  
-[Generate the X25519 public key from a secret key](x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding |  :x: |  :x: |  :x: |  :x: |  :white_check_mark: |  
-authenticated string encryption with a random key | n.a. | :x: |  :x: |  :x: |  :x: |  :soon: |  
-authenticated string encryption with a passphrase | n.a. | :x: |  :x: |  :x: |  :x: |  :x: |  
-[authenticated string hybrid encryption with a private-public key exchange](libsodium_cryptobox_encryption_string.md) | using of "secret boxes" | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
-anonymizised authenticated string hybrid encryption with a private-public key | using of "sealed boxes" | :x: |  :x: |  :x: |  :x: |  :x: |  
-hash a string | n.a. | :x: |  :x: |  :x: |  :x: |  :x: |  
-generate a random key | n.a. | :x: |  :x: |  :x: |  :x: |  :x: |  
-dervice an encryption key from a passphrase | n.a. | :x: |  :x: |  :x: |  :x: |  :x: |  
+[Generate a X25519 key pair](x25519_key_generation.md) | generate a X25519 private key and public key pair in Base64 encoding | :soon: | :soon: |  :soon: |  :soon: |  :white_check_mark: |  
+[Generate the X25519 public key from a secret key](x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding |  :soon: |  :soon: |  :soon: |  :soon: |  :white_check_mark: |  
+authenticated string encryption with a random key | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+authenticated string encryption with a passphrase | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+[authenticated hybrid string encryption with a private-public key exchange](libsodium_cryptobox_encryption_string.md) | uses "crypto boxes" | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
+anonymizised authenticated string hybrid encryption with a private-public key | uses "sealed boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+sign a string with a private-public key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: | 
+hash a string |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+generate a random key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+derive an encryption key from a passphrase |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
 
 ### What additional libraries do I need to get the stuff working?
 
-Below I'm providing the names and download links of all libraries I have used to run the examples. Please note that I did not take a deep care of the licences of the libraries - please do this before using them in any commercial context.
+Below I'm providing the names and download links of all libraries I have used to run the examples. Please note that I did not take a deep care of the licenses of the libraries - please check them before using them in any (commercial) context.
 
 | Framework | library | documentation | source and download link
 | ------ | :------: | -- | -- |

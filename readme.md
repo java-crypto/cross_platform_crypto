@@ -107,7 +107,7 @@ Note: you need external libraries for this feature!
 | Solution | Description | Java | PHP | C# | NodeJS | Browser
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |
-|[Libsodium crypto box authenticated hybrid string encryption](libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|[Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Libsodium sealed box authenticated hybrid string encryption |  | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### <a name="readme-openssl"></a>OpenSSL solutions ###

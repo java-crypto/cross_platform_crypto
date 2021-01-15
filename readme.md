@@ -104,8 +104,7 @@ Note: you need external libraries for this feature!
 | [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:|
 
 
-(#readme-libsodium)
-### Libsodium solutions
+### <a name="readme-libsodium"></a> Libsodium solutions
 | Solution | Description | Java | PHP | C# | NodeJS | Browser
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |

@@ -30,6 +30,10 @@ And - in my eyes - the most important fact is the compatibility of the code cros
 
 Answered from a technical side it is **yes**. When using private-public cryptography you should always keep in mind a possible "man in the middle" attack that you should be aware of. When receiving a public key from a 3rd party you definitely have to know that the key is from the person (think of an email from a friend "*hey let's start a secure encrypted communication - here is my public key, please send me yours*"). It could be good idea to check that the key (or maybe the sha-256 hash of the key) is from your friend [done via telephone or personal contact].
 
+### Is there any anonymized solution available?
+
+There is a way of just using recipient's public key for encryption and using the recipient's private key for decryption and it is called **sealed crypto box encryption** - here you find an example for [Libsodium sealed crypto box authenticated hybrid string encryption](libsodium_sealedcryptobox_encryption_string.md).
+
 I do not provide a "decryption only" version as all functions are available in the full version.
 
 ## :warning: Security warning :warning:
@@ -41,6 +45,7 @@ There is something I'm proud of: for the first time I did starting the programmi
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
 | [Java](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.java) | :white_check_mark: | [repl.it CpcJavaLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcJavaLibsodiumCryptoboxEncryptionString#Main.java/)
+| [Java](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionStringAlternativly.java) *1) alternativly | :white_check_mark: | [repl.it CpcJavaLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcJavaLibsodiumCryptoboxEncryptionStringAlternativly#Main.java/)
 | [PHP](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPhpJavaLibsodiumCryptoboxEncryptionString#main.php/)
 | [C#](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpLibsodiumCryptoboxStringEncryption](https://dotnetfiddle.net/2U7cm5/)
 | [Javascript / NodeJs](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionStringNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcNodeJsLibsodiumCryptoboxEncryptionString#index.js)
@@ -48,6 +53,8 @@ There is something I'm proud of: for the first time I did starting the programmi
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Webcrypto](../LibsodiumCryptoboxEncryptionString/libsodiumcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionfull.html/)
+
+1) Java alternativly solution: uses the library xsalsa20poly1305-0.11.0.jar - this is not a full Libsodium compatible library so you can use it just in this case (Libsodium Cryptobox).
 
 This is an output (your will differ because a random element):
 
@@ -71,6 +78,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 16th 2021
+Last update: Jan. 17th 2021
 
 Back to the main page: [readme.md](../readme.md)

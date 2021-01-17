@@ -1,11 +1,13 @@
 package Libsodium_Cryptobox_Encryption_String;
 
+import com.codahale.xsalsa20poly1305.SecretBox;
+
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.Base64;
+import java.util.Optional;
 
-public class LibsodiumCryptoboxEncryptionString {
-    // uses TweetNacl https://github.com/InstantWebP2P/tweetnacl-java
+public class LibsodiumCryptoboxEncryptionStringAlternativly {
     public static void main(String[] args) {
         System.out.println("Libsodium crypto box hybrid string encryption");
 
@@ -47,16 +49,17 @@ public class LibsodiumCryptoboxEncryptionString {
     private static String cryptoboxEncryptionToBase64(byte[] privateKey, byte[] publicKey, String plaintext) {
         byte[] data = plaintext.getBytes(StandardCharsets.UTF_8);
         byte[] nonce = generateRandomNonce();
-        TweetNaclFast.Box box = new TweetNaclFast.Box(publicKey, privateKey);
-        return base64Encoding(nonce) + ":" + base64Encoding(box.box(data, nonce));
+        final SecretBox secretBox = new SecretBox(publicKey, privateKey);
+        return base64Encoding(nonce) + ":" + base64Encoding(secretBox.seal(nonce, data));
     }
 
     private static String cryptoboxDecryptionFromBase64(byte[] privateKey, byte[] publicKey, String ciphertextBase64) {
         String[] parts = ciphertextBase64.split(":", 0);
         byte[] nonce = base64Decoding(parts[0]);
         byte[] ciphertext = base64Decoding(parts[1]);
-        TweetNaclFast.Box box = new TweetNaclFast.Box(publicKey, privateKey);
-        return new String(box.open(ciphertext, nonce), StandardCharsets.UTF_8);
+        SecretBox secretBox = new SecretBox(publicKey, privateKey);
+        Optional<byte[]> decryptedtext = secretBox.open(nonce, ciphertext);
+        return new String(decryptedtext.get(), StandardCharsets.UTF_8);
     }
 
     private static byte[] generateRandomNonce() {

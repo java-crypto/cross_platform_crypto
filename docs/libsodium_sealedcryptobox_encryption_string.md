@@ -2,18 +2,18 @@
 
 ## Libsodium sealed crypto box authenticated hybrid string encryption
 
-This **sealed cryptobox encryption** is a "one-way" or "anonymized" version of the [Libsodium crytobox encryption program](libsodium_cryptobox_encryption_string.md). Instead of explaining I'm trying to give you a scenario where this encryption could get used.
+This **sealed cryptobox encryption** is a "one-way" or "anonymized" version of the [Libsodium crytobox encryption program](libsodium_cryptobox_encryption_string.md). Instead of explaining the difference I'm trying to give you a scenario where this encryption could get used.
 
 ### Can you give a practical example why I should use it?
 
-Think of a website owner like me that want to receive encrypted information and therefore publishes his **X25519 public key** on his website - or provides a simple html web page that does the encryption with his hard coded public key: [visit my example website](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsampleencryption.html/). Now anyone can enter a message on the website and receives a (Base64 encoded) encrypted string that he can email to me.
+Think of a website owner like me that want to receive encrypted information and therefore publishes his **X25519 public key** on his website - or provides a simple html web page that does the encryption with his hard coded public key: [visit my example website](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsamplesender.html/). Now anyone can enter a message on the website and receives a (Base64 encoded) encrypted string that he can email to me.
 
-On my side I will copy the message in my [visit my locally running decryption webpage](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsampledecryption.html/)
+On my side I will copy the message in my [visit my locally running decryption webpage](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsamplereceiver.html/)
 and receive the decrypted data.
 
 ### What is the advantage of this procedure?
 
-You don't need to exchange any keys "upfront" - just paste the plaintext and receive the (encrypted) ciphertext. 
+You don't need to exchange any keys "upfront" - just paste the plaintext and receive the (encrypted) ciphertext for emailing the data to the recipient. 
 
 ### Are there any security issues when using the anonymized cryptobox?
 
@@ -39,6 +39,8 @@ The following links provide the solutions in code and an online compiler that ru
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Browser](../LibsodiumSealedCryptoboxEncryptionString/libsodiumealedcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html/)
+| [Browser sample encryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumealedcryptoboxencryptionexamplesender.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsamplesender.html/)
+| [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumealedcryptoboxencryptionexampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
 
 This is an output (your will differ because a random element):
 

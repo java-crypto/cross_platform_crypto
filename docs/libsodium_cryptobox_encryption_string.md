@@ -44,7 +44,7 @@ There is something I'm proud of: for the first time I did starting the programmi
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.java) | :white_check_mark: | [repl.it CpcJavaLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcJavaLibsodiumCryptoboxEncryptionString#Main.java/)
+| [Java](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.java) | :white_check_mark: | [repl.it CpcJavaLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcLibsodiumCryptoboxEncryptionString#Main.java/)
 | [Java](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionStringAlternativly.java) *1) alternativly | :white_check_mark: | [repl.it CpcJavaLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcJavaLibsodiumCryptoboxEncryptionStringAlternativly#Main.java/)
 | [PHP](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPhpJavaLibsodiumCryptoboxEncryptionString#main.php/)
 | [C#](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpLibsodiumCryptoboxStringEncryption](https://dotnetfiddle.net/2U7cm5/)

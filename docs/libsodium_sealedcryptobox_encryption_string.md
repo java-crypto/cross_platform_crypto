@@ -6,9 +6,9 @@ This **sealed cryptobox encryption** is a "one-way" or "anonymized" version of t
 
 ### Can you give a practical example why I should use it?
 
-Think of a website owner like me that want to receive encrypted information and therefore publishes his **X25519 public key** on his website - or provides a simple html web page that does the encryption with his hard coded public key: [visit my example website](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsamplesender.html/). Now anyone can enter a message on the website and receives a (Base64 encoded) encrypted string that he can email to me.
+Think of a website owner like me that want to receive encrypted information and therefore publishes his **X25519 public key** on his website - or provides a simple html web page that does the encryption with his hard coded public key: [visit my example website](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsamplesender.html/). Now anyone can enter a message on the website and receives a (Base64 encoded) encrypted string that he can email to me.
 
-On my side I will copy the message in my [visit my locally running decryption webpage](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsamplereceiver.html/)
+On my side I will copy the message in my [visit my locally running decryption webpage](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsampledecrypt.html/)
 and receive the decrypted data.
 
 ### What is the advantage of this procedure?

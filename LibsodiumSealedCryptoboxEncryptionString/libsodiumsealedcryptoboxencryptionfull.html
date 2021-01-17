@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Libsodium sealed crypto box hybrid string encryption</title>
+</head>
+<body>
+<h1>Libsodium sealed crypto box hybrid string encryption</h1>
+<hr><p>
+	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+</p><hr>
+<h2>Encryption</h2>
+<p>
+	For encryption you need the public key from the one you are sending the data to.
+</p>
+<p>Insert recipient's (party B) Public Key (in Base64 encoding):<br><br>
+	<textarea name="publicKeyBBase64" id="publicKeyBBase64" rows="2" cols="50">jVSuHjVH47PMbMaAxL5ziBS9/Z0HQK6TJLw9X3Jw6yg=</textarea>
+</p>
+<p>Insert the string you like to encrypt:<br><br>
+	<textarea name="plaintext" id="plaintext" rows="5" cols="100">The quick brown fox jumps over the lazy dog</textarea>
+</p>
+<p>
+press the encrypt button to proceed:
+	<button onclick="encryptSealed()">encrypt</button> 
+</p>
+<p>encrypted (ciphertext) in Base64 encoding:<br><br>
+	<textarea name="ciphertextBase64" id="ciphertextBase64" rows="6" cols="100">the ciphertext comes here...</textarea><br>
+	The output is (Base64) ciphertext
+</p>
+<h2>Decryption</h2>
+<p>
+	For decryption you need receipient's (party B) secret key.
+</p>
+<p>Insert your (party B) Secret Key (in Base64 encoding):<br><br>
+	<textarea name="secretKeyBBase64" id="secretKeyBBase64" rows="2" cols="50">yNmXR5tfBXA/uZjanND+IYgGXlrFnrdUiUXesI4fOlM=</textarea>
+</p>
+<p>Insert the ciphertext you like to decrypt or press the "sample data" button:
+	<button onclick="sampledata()">sample data</button> 
+	<br><br>
+	<textarea name="ciphertextDecryptionBase64" id="ciphertextDecryptionBase64" rows="5" cols="100">The ciphertext comes here...</textarea><br>
+	The input is (Base64) ciphertext
+</p>
+<p>
+press the decrypt button to proceed:
+	<button onclick="decryptSealed()">decrypt</button> 
+</p>
+<p>decrypted plaintext:<br><br>
+	<textarea name="decryptedtext" id="decryptedtext" rows="6" cols="100">the decryptedtext comes here...</textarea>
+	
+</p>
+<hr><p>
+	<b>Technical note: this program uses the X25519 key exchange algorithm, XSalsa20 stream cipher for encryption and Poly1305 MAC for authenticated encryption.</b>
+</p><hr>
+<script src="http://javacrypto.bplaced.net/cpclibsodium/nacl.min.js"></script>
+<script src="http://javacrypto.bplaced.net/cpclibsodium/nacl-util.min.js"></script>
+<script src="http://javacrypto.bplaced.net/cpclibsodium/sealedbox.web.js"></script>
+<script>
+// is running on http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html
+
+function encryptSealed() {
+	var publicKeyBBase64 = document.getElementById('publicKeyBBase64').value;
+	var publicKeyB = nacl.util.decodeBase64(publicKeyBBase64);
+	var plaintext = nacl.util.decodeUTF8(document.getElementById('plaintext').value);
+	var ciphertext = sealedBox.seal(plaintext, publicKeyB);
+	var ciphertextBase64 = nacl.util.encodeBase64(ciphertext);
+	document.getElementById('ciphertextBase64').value = ciphertextBase64;
+}
+
+function sampledata() {
+	document.getElementById('ciphertextDecryptionBase64').value = 'wCnbPe8FkZJ9PVEh7eI90fY6IjkUWAZK5YLbGb3QdQbaxMqsP2KNpfM47LETnIJJDvE+QhFEjFYksnNSU8iLyfOKxtWtY/ZZvdrSQSPGsHXnUywQ+DArk8JeBg==';
+}
+
+function decryptSealed() {
+	var secretKeyBBase64 = document.getElementById('secretKeyBBase64').value;
+	var secretKeyB = nacl.util.decodeBase64(secretKeyBBase64);
+	// get the public key from secret key via generating the key pair
+	var keypair = nacl.box.keyPair.fromSecretKey(secretKeyB);
+	var publicKeyB = keypair.publicKey;
+	var ciphertext = nacl.util.decodeBase64(document.getElementById('ciphertextDecryptionBase64').value);
+	var decryptedtext = sealedBox.open(ciphertext, publicKeyB, secretKeyB);
+	document.getElementById('decryptedtext').value = nacl.util.encodeUTF8(decryptedtext);
+}	
+
+</script>
+</body>
+</html>

@@ -38,9 +38,9 @@ The following links provide the solutions in code and an online compiler that ru
 | NodeJS CryptoJs | :x: | use above Javascript / NodeJs solution
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
-| [Browser](../LibsodiumSealedCryptoboxEncryptionString/libsodiumealedcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html/)
-| [Browser sample encryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumealedcryptoboxencryptionexamplesender.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsamplesender.html/)
-| [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumealedcryptoboxencryptionexampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
+| [Browser](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html/)
+| [Browser sample encryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsamplesender.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsamplesender.html/)
+| [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
 
 This is an output (your will differ because a random element):
 

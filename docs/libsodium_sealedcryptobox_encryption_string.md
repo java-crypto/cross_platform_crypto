@@ -4,7 +4,7 @@
 
 This **sealed cryptobox encryption** is a "one-way" or "anonymized" version of the [Libsodium crytobox encryption program](libsodium_cryptobox_encryption_string.md). Instead of explaining I'm trying to give you a scenario where this encryption could get used.
 
-## Can you give a practical example why I should use it?
+### Can you give a practical example why I should use it?
 
 Think of a website owner like me that want to receive encrypted information and therefore publishes his **X25519 public key** on his website - or provides a simple html web page that does the encryption with his hard coded public key: [visit my example website](http://javacrypto.bplaced.net/cpclibsodium/libsodiumcryptoboxencryptionsampleencryption.html/). Now anyone can enter a message on the website and receives a (Base64 encoded) encrypted string that he can email to me.
 
@@ -15,7 +15,7 @@ and receive the decrypted data.
 
 You don't need to exchange any keys "upfront" - just paste the plaintext and receive the (encrypted) ciphertext. 
 
-## Are there any security issues when using the anonymized cryptobox?
+### Are there any security issues when using the anonymized cryptobox?
 
 Seen from the technical view, the complete encryption is secure and authenticated. The risk remaining is that you don't know if the sender of the message is really the one he is pretending. By using of the "two-way" cryptobox you are sure that the ciphertext is from the person who has a specific private key and you received the public key directly from this person.
 

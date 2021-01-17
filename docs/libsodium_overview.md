@@ -33,7 +33,7 @@ Here are my articles regarding Libsodium themes:
 authenticated string encryption with a random key | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
 authenticated string encryption with a passphrase | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
 [authenticated hybrid string encryption with a private-public key exchange](libsodium_cryptobox_encryption_string.md) | uses "crypto boxes" | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
-anonymizised authenticated string hybrid encryption with a private-public key | uses "sealed boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+[anonymizised authenticated string hybrid encryption with a private-public key](libsodium_sealedcryptobox_encryption_string.md) | uses "sealed boxes" |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |   
 sign a string with a private-public key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: | 
 hash a string |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
 generate a random key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  

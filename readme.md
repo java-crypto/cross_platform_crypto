@@ -108,7 +108,7 @@ Note: you need external libraries for this feature!
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |
 |[Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Libsodium sealed box authenticated hybrid string encryption |  | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication but without key exchange between the two partners |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### <a name="readme-openssl"></a>OpenSSL solutions ###
 | Solution | Description |
@@ -149,7 +149,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 | OpenSSL |  | version 1.1.1g Windows x64
 
-Last update: Jan. 12th 2021
+Last update: Jan. 17th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

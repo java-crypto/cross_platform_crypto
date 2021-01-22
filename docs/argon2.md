@@ -54,7 +54,7 @@ The following links provide the solution in code and within an online compiler t
 | NodeJs CryptoJs | :x: | use below version with NodeJs built-in Crypto module
 | [NodeJS Crypto](../Argon2id/Argon2idNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoArgon2id](https://repl.it/@javacrypto/CpcNodeJsCryptoArgon2id#index.js/)
 | NodeJS forge | :x: | use version with NodeJs built-in Crypto module
-| [Browser](../Argon2id/argon2id.html) | :white_check_mark: | [your browser](http://javacrypto.bplaced.net/cpcjs/argon2id/argon2id.html/)
+| [Browser](../Argon2id/argon2id.html) | :white_check_mark: | [your browser](http://javacrypto.bplaced.net/cpcjs/argon2id/argon2id.html)
 
 This is an output generated with "generateFixedSalt16Byte" for comparison reasons - don't do this in production!:
 

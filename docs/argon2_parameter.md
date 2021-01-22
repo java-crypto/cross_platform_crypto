@@ -1,6 +1,6 @@
 # Cross-platform cryptography
 
-## Argon 2 Password-Based Key Derivation Function
+## Argon 2 parameter
 
 This article is about the parameter for the Argon 2 algorithm. It is important to understand what they do to get a key derivation that meets your security standards. [Here is the Argon 2 algorithm in different frameworks](argon2.md).
 

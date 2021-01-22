@@ -2,7 +2,7 @@
 
 ## Argon 2 Password-Based Key Derivation Function
 
-This article is about the parameter for the Argon 2 algorithm. It is important to understand what they do to get a key derivation that meets your security standards.
+This article is about the parameter for the Argon 2 algorithm. It is important to understand what they do to get a key derivation that meets your security standards. [Here is the Argon 2 algorithm in different frameworks](argon2.md).
 
 A lot of implementations just take the parameter in a specific range but give no recommendations about the "right" value. Fortunately I found some fixed and named parameter sets in the **PHP Libsodium** documentation.
 
@@ -126,7 +126,7 @@ The following link provide the solution in code and within an online compile tha
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [PHP parameter](../Argon2/argon2Parameter.php) | :white_check_mark: | [repl.it CpcPhpArgon2Parameter](https://repl.it/@javacrypto/CpcPhpArgon2Parameter#main.php/)
+| [PHP parameter](../Argon2id/Argon2Parameter.php) | :white_check_mark: | [repl.it CpcPhpArgon2Parameter](https://repl.it/@javacrypto/CpcPhpArgon2Parameter#main.php/)
 
 Last update: Jan. 22nd 2021
 

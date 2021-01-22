@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Argon2id</title>
+</head>
+<body>
+<h1>Argon2id</h1>
+<hr><p>
+	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+</p><hr>
+<h2>key derivation</h2>
+<p>
+	For key derivation you need the passphrase and a salt (length 16 bytes, Base64 encoding).
+</p>
+<p>Insert the passphrase string:<br><br>
+	<textarea name="passphrase" id="passphrase" rows="2" cols="100">secret password</textarea>
+</p>
+<p>Insert the salt (in Base64 encoding):<br><br>
+	<textarea name="saltBase64" id="saltBase64" rows="2" cols="50">AAAAAAAAAAAAAAAAAAAAAA==</textarea>
+</p>
+<p>choose parameter set:<br>
+	<label class="radio-inline">
+		<input type="radio" name="radioType" id="inlineRadio2" value="2"> minimal parameters 
+		(version: 19, memory: 8192, time: 2, parallelism: 1, salt length 16, key length 32) ### probably UNSECURE ###
+	</label><br>
+	<label class="radio-inline">
+			<input type="radio" name="radioType" id="inlineRadio0" value="0" checked="checked"> interactive parameters 
+		(version: 19, memory: 66536, time: 2, parallelism: 1, salt length 16, key length 32)
+	</label><br>
+	<label class="radio-inline">
+		<input type="radio" name="radioType" id="inlineRadio1" value="1"> moderate parameters 
+		(version: 19, memory: 262144, time: 3, parallelism: 1, salt length 16, key length 32)
+	</label>
+</p>
+
+<p>
+press the generate hash button to proceed:
+	<button onclick="generateHash()">generate hash</button> 
+</p>
+<p>hash data in Base64 encoding:<br><br>
+	<textarea name="hashData" id="hashData" rows="12" cols="100">the hash data comes here...</textarea><br>
+</p>
+	
+</p>
+<hr><p>
+	<b>Technical note: this program uses the Argon2id algorithm to derive a 32 bytes long secret key from a passphrase</b>
+</p><hr>
+
+<script>
+'use strict';
+var global = typeof window === 'undefined' ? self : window;
+var root = typeof window === 'undefined' ? '../' : '';
+
+function loadScript(src, onload, onerror) {
+	//log('run loadSript: ', src);
+    var el = document.createElement('script');
+    el.src = src;
+    el.onload = onload;
+    el.onerror = onerror;
+    document.body.appendChild(el);
+}
+
+function getArgMinimal() {
+    return {
+        pass: document.getElementById('passphrase').value || 'secret password',
+        salt: document.getElementById('saltBase64').value || 'AAAAAAAAAAAAAAAAAAAAAA==',
+		time: 2,
+        mem: 8192,
+        hashLen: 32,
+        parallelism: 1,
+        type: 2, // 0=argon2d, 1=argon2i, 2=argon2id
+    };
+}
+
+function getArgInteractive() {
+    return {
+        pass: document.getElementById('passphrase').value || 'secret password',
+        salt: document.getElementById('saltBase64').value || 'AAAAAAAAAAAAAAAAAAAAAA==',
+		time: 2,
+        mem: 66536,
+        hashLen: 32,
+        parallelism: 1,
+        type: 2, // 0=argon2d, 1=argon2i, 2=argon2id
+    };
+}
+
+function getArgModerate() {
+    return {
+        pass: document.getElementById('passphrase').value || 'secret password',
+        salt: document.getElementById('saltBase64').value || 'AAAAAAAAAAAAAAAAAAAAAA==',
+        time: 3,
+        mem: 262144,
+        hashLen: 32,
+        parallelism: 1,
+        type: 2, // 0=argon2d, 1=argon2i, 2=argon2id
+    };
+}
+
+function calcBinaryen(method, options) {
+    clearLog();
+
+    if (!global.WebAssembly) {
+        log(
+            "Your browser doesn't support WebAssembly, please try it in Chrome Canary or Firefox Nightly with WASM flag enabled"
+        );
+        return;
+    }
+	var mem;
+	if (document.getElementById('inlineRadio2').checked) {
+		log('generateHash minimal ### probably UNSECURE ###');
+		mem = getArgMinimal().mem;
+	}
+	if (document.getElementById('inlineRadio0').checked) {
+		log('generateHash interactive');
+		mem = getArgInteractive().mem;
+	}
+	if (document.getElementById('inlineRadio1').checked) {
+		log('generateHash moderate');
+		mem = getArgModerate().mem;
+	}
+    if (
+        global.Module &&
+        global.Module.wasmJSMethod === method &&
+        global.Module._argon2_hash_ext
+    ) {
+        setTimeout(calcHash, 10);
+        return;
+    }
+
+    const KB = 1024 * 1024;
+    const MB = 1024 * KB;
+    const GB = 1024 * MB;
+    const WASM_PAGE_SIZE = 64 * 1024;
+
+    const totalMemory = (2 * GB - 64 * KB) / 1024 / WASM_PAGE_SIZE;
+    const initialMemory = Math.min(
+        Math.max(Math.ceil((mem * 1024) / WASM_PAGE_SIZE), 256) + 256,
+        totalMemory
+    );
+    log(
+        'Memory: ' +
+            initialMemory +
+            ' pages (' +
+            Math.round(initialMemory * 64) +
+            ' KB)',
+        totalMemory
+    );
+    const wasmMemory = new WebAssembly.Memory({
+        initial: initialMemory,
+        maximum: totalMemory,
+    });
+
+    global.Module = {
+        print: log,
+        printErr: log,
+        setStatus: log,
+        wasmBinary: null,
+        wasmJSMethod: method,
+        wasmMemory: wasmMemory,
+        buffer: wasmMemory.buffer,
+        TOTAL_MEMORY: initialMemory * WASM_PAGE_SIZE,
+    };
+
+    var wasmFileName = 'argon2.wasm';
+    var xhr = new XMLHttpRequest();
+	xhr.open('GET', root + wasmFileName, true);
+    xhr.responseType = 'arraybuffer';
+    xhr.onload = function () {
+        global.Module.wasmBinary = xhr.response;
+        global.Module.postRun = calcHash;
+        var ts = now();
+        loadScript(
+			root + 'argon2.js',
+            function () {
+                //log('Calculating hash...');
+            },
+            function () {
+                log('Error loading script');
+            }
+        );
+    };
+    xhr.onerror = function () {
+        log('Error loading wasm');
+    };
+    xhr.send(null);
+}
+
+function calcHash() {
+	var arg;
+	if (document.getElementById('inlineRadio2').checked) {
+		arg = getArgMinimal();
+	}
+	if (document.getElementById('inlineRadio0').checked) {
+		arg = getArgInteractive();
+	}
+	if (document.getElementById('inlineRadio1').checked) {
+		arg = getArgModerate();
+	}
+	
+    if (!Module._argon2_hash_ext) {
+        return log('Error');
+    }
+    var dt = now();
+    var t_cost = (arg && arg.time) || 2; // interactive parameter set
+    var m_cost = (arg && arg.mem) || 66536;
+    var parallelism = (arg && arg.parallelism) || 1;
+    var passEncoded = encodeUtf8(arg.pass || 'secret password');
+    var pwd = allocateArray(passEncoded);
+    var pwdlen = passEncoded.length;
+	var saltEncoded = decodeBinary(arg.salt || 'AAAAAAAAAAAAAAAAAAAAAA==');
+    var argon2_type = (arg && arg.type) || 0;
+    var salt = allocateArray(saltEncoded);
+    var saltlen = saltEncoded.length;
+    var hash = Module.allocate(
+        new Array((arg && arg.hashLen) || 32),
+        'i8',
+        Module.ALLOC_NORMAL
+    );
+    var hashlen = (arg && arg.hashLen) || 32;
+    var encodedlen = Module._argon2_encodedlen(
+        t_cost,
+        m_cost,
+        parallelism,
+        saltlen,
+        hashlen,
+        argon2_type
+    );
+    var encoded = Module.allocate(
+        new Array(encodedlen + 1),
+        'i8',
+        Module.ALLOC_NORMAL
+    );
+    var secret = 0;
+    var secretlen = 0;
+    var ad = 0;
+    var adlen = 0;
+    var version = 0x13 // fixed
+    var err;
+    try {
+        var res = Module._argon2_hash_ext(
+            t_cost,
+            m_cost,
+            parallelism,
+            pwd,
+            pwdlen,
+            salt,
+            saltlen,
+            hash,
+            hashlen,
+            encoded,
+            encodedlen,
+            argon2_type,
+            secret,
+            secretlen,
+            ad,
+            adlen,
+            version
+        );
+    } catch (e) {
+        err = e;
+    }
+    var elapsed = now() - dt;
+    if (res === 0 && !err) {
+        var hashArr = [];
+        for (var i = hash; i < hash + hashlen; i++) {
+            hashArr.push(Module.HEAP8[i]);
+        }
+        log('output: ' + Module.UTF8ToString(encoded));
+        log(
+            'Hash (hex encoding): ' +
+                hashArr
+                    .map(function (b) {
+                        return ('0' + (0xff & b).toString(16)).slice(-2);
+                    })
+                    .join('')
+        );
+        log('Elapsed: ' + Math.round(elapsed) + 'ms');
+    } else {
+        try {
+            if (!err) {
+                err = Module.UTF8ToString(Module._argon2_error_message(res));
+            }
+        } catch (e) {}
+        log('Error: ' + res + (err ? ': ' + err : ''));
+    }
+    try {
+        Module._free(pwd);
+        Module._free(salt);
+        Module._free(hash);
+        Module._free(encoded);
+    } catch (e) {}
+}
+
+function encodeUtf8(str) {
+    return new TextEncoder().encode(str);
+}
+
+function allocateArray(arr) {
+    return Module.allocate(arr, 'i8', Module.ALLOC_NORMAL);
+}
+
+function now() {
+    return global.performance ? performance.now() : Date.now();
+}
+
+
+function decodeBinary(base64) {
+        const text = atob(base64);
+        const binary = new Uint8Array(new ArrayBuffer(text.length));
+        for (let i = 0; i < text.length; i++) {
+            binary[i] = text.charCodeAt(i);
+        }
+        return binary;
+    }
+
+function clearLog() {
+    document.getElementById('hashData').value = '';
+}
+
+function log(msg) {
+    if (!msg) {
+        return;
+    }
+    var txtRes = document.getElementById('hashData');
+    txtRes.value += (txtRes.value ? '\n' : '') + msg;
+}
+
+function generateHash() {
+	calcBinaryen('native-wasm');
+}
+
+</script>
+</body>
+</html>

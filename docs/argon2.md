@@ -28,13 +28,13 @@ Third: the clever algorithm will shuffle the low entrophy "password" to a high e
 
 Argon 2 is the winner of a **Password Hashing Competition** (PHC) that was held from 2013 to 2015 to get a successor of the well known [**PBKDF2 algorithm**](pbkdf2.md). For a more detailed information kindly see the articles about the [Password Hashing Competition](https://www.password-hashing.net//) and [Argon 2](https://www.password-hashing.net/#argon2). Unfortunately the implementation of the algorithm is not widely available in standard libraries like NodeJs/Crypto or Java and you mostly need the help of 3rd party libraries to run my examples. The good news are: for all my frameworks I could find a solution that is working cross-platform wide.
 
-#### What parameters are the input of an Argon2 algorithm?
+#### What parameters are the input of an Argon 2 algorithm?
 
 As there are seven parameters kindly see my separate article about the [Argon 2 parameter](argon2_parameter.md).
 
 #### What should you avoid?
 
-Don't rely on default parameters when working with Argon 2-functions on different platforms. They can change when framework updates are made and different frameworks may have different parameters.
+Don't rely on default parameters when working with Argon 2-functions on different platforms. They can change when framework updates are made and different frameworks may have different default  parameter.
 
 #### Serious security note
 
@@ -44,23 +44,37 @@ To get a comparable output I'm using a function called "generateFixedSalt16Byte"
 
 **This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
-The following links provide the solution in code and within an online compile that runs the code. Please note that due to restrictions (e.g. maximum running time for a script) the run get aborted - there is no error in code. I could have left out the critical functions but the code in my GitHub repository should be the same "online".
+The following links provide the solution in code and within an online compiler that runs the code. Please note that due to restrictions (e.g. maximum running time for a script) the run get aborted - **there is no error in code**. I could have left out the critical functions but the code in my GitHub repository should be the same as "online".
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../Pbkdf2/Pbkdf2.java) | :white_check_mark: | [repl.it CpcJavaPbkdf2](https://repl.it/@javacrypto/CpcJavaPbkdf2#Main.java/)
-| [PHP](../Pbkdf2/Pbkdf2.php) | :white_check_mark: | [repl.it CpcPhpPbkdf2](https://repl.it/@javacrypto/CpcPhpPbkdf2#main.php/)
-| [C#](../Pbkdf2/Pbkdf2.cs) | :white_check_mark: | [repl.it CpcCsharpPbkdf2](https://repl.it/@javacrypto/CpcCsharpPbkdf2#main.cs/)
-| [Javascript CryptoJs](../Pbkdf2/Pbkdf2CryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsPbkdf2](https://repl.it/@javacrypto/CpcCryptoJsPbkdf2#index.js/)
-| [NodeJS CryptoJs](../Pbkdf2/Pbkdf2NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoPbkdf2](https://repl.it/@javacrypto/CpcNodeJsCryptoPbkdf2#index.js/)
-| [NodeJS forge](../Pbkdf2/Pbkdf2NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsPbkdf2](https://repl.it/@javacrypto/CpcNodeJsPbkdf2#index.js/)
+| [Java](../Argon2id/Argon2id.java) | :white_check_mark: | [repl.it CpcJavaArgon2id](https://repl.it/@javacrypto/CpcJavaArgon2id#Main.java/)
+| [PHP](../Argon2id/Argon2id.php) | :white_check_mark: | [repl.it CpcPhpArgon2id](https://repl.it/@javacrypto/CpcPhpArgon2id#main.php/)
+| [C#](../Argon2id/Argon2id.cs) | :white_check_mark: | [repl.it CpcCsharpArgon2id](https://repl.it/@javacrypto/CpcCsharpArgon2id#main.cs/)
+| NodeJs CryptoJs | :x: | use below version with NodeJs built-in Crypto module
+| [NodeJS Crypto](../Argon2id/Argon2idNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoArgon2id](https://repl.it/@javacrypto/CpcNodeJsCryptoArgon2id#index.js/)
+| NodeJS forge | :x: | use version with NodeJs built-in Crypto module
+| [Browser](../Argon2id/argon2id.html) | :white_check_mark: | [your browser](http://javacrypto.bplaced.net/cpcjs/argon2id/argon2id.html/)
 
-This is an output generated with "generateFixedSalt32Byte" for comparison reasons - don't do this in production!:
+This is an output generated with "generateFixedSalt16Byte" for comparison reasons - don't do this in production!:
 
 ```plaintext
-aesKeySha512 length:  32  data:  d6e87030bfb04f170b43c110ec2797bf5366fdc1b99189f0185f47168fc7e560
-aesKeySha256 length:  32  data:  e1ea3e4b0376c0f9bf93b94fe71719a099317297b79108aacd88c8a355d7a3d4
-aesKeySha1   length:  32  data:  d6bc1ae2aea28f5098826b555d7a0fe073e5bc7d8136d232e01d422ba2dd761e
+Generate a 32 byte long encryption key with Argon2id
+password: secret password
+salt (Base64): AAAAAAAAAAAAAAAAAAAAAA==
+encryptionKeyArgon2id (Base64) minimal:     e9G7+HHmftUaCEP2O1NwCSJkfyAT0QBzod3Szm1elf0=
+encryptionKeyArgon2id (Base64) interactive: FZcsUwo7wf7V24qWTwKeSN9//+Pxy2gCKN35KZX2hXs=
+encryptionKeyArgon2id (Base64) moderate:    gdizE6kia1W/CgTA3bRKKjtaf8cgZL1BIe6jeDegg0c=
+encryptionKeyArgon2id (Base64) sensitive:   19Uym9wI6e/l5f0NocZmNEaouoHvsSyVfrp9iRYl/C8=
+```
+
+Below is the output of the browser version that looks like different to the other ones. The output provides the "full argon 2id hash" that incorporates some more information as just the hash. It gives an information about the used algorithm (argon2id), version number (in decimals: 19), the memory limit (66536), the ops limit (2), the parallelism (1) and hash in use (in Base64 encoding: AAAAAAAAAAAAAAAAAAAAAA). Note that after the hash the next value is separated with a "$" character and that is the "encryptionKeyArgon2id" (FZcsUwo7wf7V24qWTwKeSN9//+Pxy2gCKN35KZX2hXs) with a skipped "=" at the end. The value "hash" is the encryption key in hex string encoding (15972c530a3bc1fed5db8a964f029e48df7fffe3f1cb680228ddf92995f6857b). 
+
+```plaintext
+generateHash interactive
+...
+$argon2id$v=19$m=66536,t=2,p=1$AAAAAAAAAAAAAAAAAAAAAA$FZcsUwo7wf7V24qWTwKeSN9//+Pxy2gCKN35KZX2hXs
+Hash (hex encoding): 15972c530a3bc1fed5db8a964f029e48df7fffe3f1cb680228ddf92995f6857b
 ```
 
 Last update: Jan. 22nd 2021

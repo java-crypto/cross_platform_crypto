@@ -20,9 +20,9 @@ If want to derive an encryption key from a passphrase it will be generated with 
 
 Giving a summary you may say "*I have never heard the names of the algorithms before*" and you are right... me too! That's the reason why I did not try to find a "cross platform solution" as there is no **AES**, **RSA** or **traditional EC curve** cryptography available in Libsodium. When viewing the sourcecodes you will notice that all **Libsodium programs are short** compared to the traditional ones because it is a high developed library that does a lot in the background.
 
-A more detailed overview is available with the original [Libsodium documentation](https://doc.libsodium.org/) that is written in and for the "C" framework but the functionality is equal on all bindings for tother languages.
+A more detailed overview is available with the original [Libsodium documentation](https://doc.libsodium.org/) that is written in and for the "C" framework but the functionality is equal on all bindings for other languages.
 
-But the good news are: there are bindings available for Java, PHP (built-in since PHP 7.x), C#, NodeJs and for browser usage and I'm providing solutions for all major cryptography tasks like key encryption, private-public encryption and signing.
+But the good news are: there are bindings available for Java, PHP (built-in since PHP 7.x), C#, NodeJs and for browser usage and I'm providing solutions for all major cryptography tasks like key encryption, private-public encryption and signing. **For all starting cryptography with Libsodium I strongly recommend to do this in PHP** because Libsodium support is included (PHP version >= 7.3) and all of my examples will run "out of the box".
 
 Here are my articles regarding Libsodium themes:
 
@@ -30,20 +30,19 @@ Here are my articles regarding Libsodium themes:
 | ------ | :------: | :--: |:--: |:--: |:--: |:--: |
 [Generate a X25519 key pair](x25519_key_generation.md) | generate a X25519 private key and public key pair in Base64 encoding | :soon: | :soon: |  :soon: |  :soon: |  :white_check_mark: |  
 [Generate the X25519 public key from a secret key](x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding |  :soon: |  :soon: |  :soon: |  :soon: |  :white_check_mark: |  
-| [Argon 2 parameter](argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | see explanation
+| [Argon 2 parameter](argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
 | [Argon 2 password derivation function](argon2.md) | derives an encryption key from a passphrase |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
-authenticated string encryption with a random key | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+[authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | uses "secret boxes" |   :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 authenticated string encryption with a passphrase | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
 [authenticated hybrid string encryption with a private-public key exchange](libsodium_cryptobox_encryption_string.md) | uses "crypto boxes" | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 [anonymizised authenticated string hybrid encryption with a private-public key](libsodium_sealedcryptobox_encryption_string.md) | uses "sealed boxes" |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |   
 sign a string with a private-public key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: | 
 hash a string |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
-generate a random key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
-derive an encryption key from a passphrase |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+[generate a random key](libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |   
 
 ### What additional libraries do I need to get the stuff working?
 
-Below I'm providing the names and download links of all libraries I have used to run the examples. Please note that I did not take a deep care of the licenses of the libraries - please check them before using them in any (commercial) context.
+Below I'm providing the names and download links of all libraries I have used to run the examples. Please note that I did not take a deep care of the license terms of the libraries - please check them before using them in any (commercial or private) context.
 
 | Framework | library | library is used in... and documentation | source and download link
 | ------ | :------: | -- | -- | 

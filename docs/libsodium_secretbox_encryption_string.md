@@ -38,14 +38,14 @@ I do not provide a "decryption only" version as all functions are available in t
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.java) | :white_check_mark: | [repl.it CpcJavaLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcLibsodiumSecretboxEncryptionString#Main.java/)
-| [PHP](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcPhpJavaLibsodiumSecretboxEncryptionString#main.php/)
-| [C#](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpLibsodiumSecretboxStringEncryption](https://dotnetfiddle.net/2U7cm5/)
+| [Java](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.java) | :white_check_mark: | [repl.it CpcJavaLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcJavaLibsodiumSecretboxEncryptionString#Main.java/)
+| [PHP](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcPhpLibsodiumSecretboxEncryptionString#main.php/)
+| [C#](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpLibsodiumSecretboxStringEncryption](https://dotnetfiddle.net/ErYhvs)
 | [Javascript / NodeJs](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionStringNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcNodeJsLibsodiumSecretboxEncryptionString#index.js)
 | NodeJS CryptoJs | :x: | use above Javascript / NodeJs solution
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
-| [Webcrypto](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryptionstring.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsecretboxencryptionfull.html/)
+| [Webcrypto / Browser](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryptionstring.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpcjs/secretbox/libsodiumsecretboxencryptionstring.html/)
 
 This is an output (your will differ because a random element):
 

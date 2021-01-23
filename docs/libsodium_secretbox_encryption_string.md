@@ -45,12 +45,24 @@ I do not provide a "decryption only" version as all functions are available in t
 | NodeJS CryptoJs | :x: | use above Javascript / NodeJs solution
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
-| [Webcrypto](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryption.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsecretboxencryptionfull.html/)
+| [Webcrypto](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryptionstring.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsecretboxencryptionfull.html/)
 
 This is an output (your will differ because a random element):
 
 ```plaintext
+Libsodium secret box random key string encryption
+plaintext: The quick brown fox jumps over the lazy dog
+keyBase64): 2D+rQ4BiIjvktHQtFAyAa2FgcZORFB4JQHieO1YKSM4=
 
+* * * encryption * * *
+all data are in Base64 encoding
+ciphertext:  DaiA7r5xBBviqULcVerR4zI9EALgC2x+:DBHu6jcfLUFdKrwePnIreaFkczcfGzT9ZWFl1gu2uAWToTjuFVg8+kelmDi3lp7eaTnftCnmkodkbi4=
+output is (Base64) nonce : (Base64) ciphertext
+
+* * * decryption * * *
+ciphertext:  DaiA7r5xBBviqULcVerR4zI9EALgC2x+:DBHu6jcfLUFdKrwePnIreaFkczcfGzT9ZWFl1gu2uAWToTjuFVg8+kelmDi3lp7eaTnftCnmkodkbi4=
+input is (Base64) nonce : (Base64) ciphertext
+decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 

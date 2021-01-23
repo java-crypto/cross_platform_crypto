@@ -45,7 +45,7 @@ I do not provide a "decryption only" version as all functions are available in t
 | NodeJS CryptoJs | :x: | use above Javascript / NodeJs solution
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
-| [Webcrypto](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsecretboxencryptionfull.html/)
+| [Webcrypto](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryption.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsecretboxencryptionfull.html/)
 
 This is an output (your will differ because a random element):
 

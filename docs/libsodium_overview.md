@@ -28,16 +28,18 @@ Here are my articles regarding Libsodium themes:
 
 | Solution | Description | Java | PHP | C# | NodeJs | Browser
 | ------ | :------: | :--: |:--: |:--: |:--: |:--: |
-[Generate a X25519 key pair](x25519_key_generation.md) | generate a X25519 private key and public key pair in Base64 encoding | :soon: | :soon: |  :soon: |  :soon: |  :white_check_mark: |  
-[Generate the X25519 public key from a secret key](x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding |  :soon: |  :soon: |  :soon: |  :soon: |  :white_check_mark: |  
+[generate a X25519 key pair](x25519_key_generation.md) | generate a X25519 private key and public key pair in Base64 encoding | :soon: | :soon: |  :soon: |  :soon: |  :white_check_mark: |  
+[generate the X25519 public key from a secret key](x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding |  :soon: |  :soon: |  :soon: |  :soon: |  :white_check_mark: |  
 | [Argon 2 parameter](argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
 | [Argon 2 password derivation function](argon2.md) | derives an encryption key from a passphrase |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 [authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | uses "secret boxes" |   :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 authenticated string encryption with a passphrase | uses "secret boxes" | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
 [authenticated hybrid string encryption with a private-public key exchange](libsodium_cryptobox_encryption_string.md) | uses "crypto boxes" | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 [anonymizised authenticated string hybrid encryption with a private-public key](libsodium_sealedcryptobox_encryption_string.md) | uses "sealed boxes" |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |   
-sign a string with a private-public key |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: | 
+[sign a string with a private-public key](libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 hash a string |  | :soon: |  :soon: |  :soon: |  :soon: |  :soon: |  
+generate an ED25519 key pair | generate an ED25519 private key and public key pair in Base64 encoding | :soon: | :soon: |  :soon: |  :soon: |  :soon: |
+generate an ED25519 public key from a private key | generate an ED25519 public key from a private key in Base64 encoding | :soon: | :soon: |  :soon: |  :soon: |  :soon: |
 [generate a random key](libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |   
 
 ### What additional libraries do I need to get the stuff working?
@@ -60,7 +62,7 @@ Below I'm providing the names and download links of all libraries I have used to
 | Browser | TweetNaCl.js version 1.0.3 | [Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md), [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) Basic library  [https://github.com/dchest/tweetnacl-js](https://github.com/dchest/tweetnacl-js) | [https://github.com/dchest/tweetnacl-js](https://github.com/dchest/tweetnacl-js). My programs are tested with  [nacl.min.js](https://github.com/dchest/tweetnacl-js/blob/master/nacl.min.js) |
 | Browser | Tweetnacl-util-js version 0.15.1 | [Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md), [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) neccessary for data encoding [https://github.com/dchest/tweetnacl-util-js](https://github.com/dchest/tweetnacl-util-js) | [https://github.com/dchest/tweetnacl-util-js](https://github.com/dchest/tweetnacl-util-js) I used this file: [nacl-util.js](https://github.com/dchest/tweetnacl-util-js/blob/master/nacl-util.js)
 
-Last update: Jan. 22nd 2021
+Last update: Jan. 24nd 2021
 
 Back to the main page: [readme.md](../readme.md)
 

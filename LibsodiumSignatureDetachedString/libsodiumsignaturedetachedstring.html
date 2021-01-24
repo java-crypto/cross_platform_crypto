@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Libsodium detached signature of a string</title>
+</head>
+<body>
+<h1>Libsodium detached signature of a string</h1>
+<hr><p>
+	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+</p><hr>
+<h2>Signature</h2>
+<p>
+	For signing you need your private key in Base64 encoding.
+</p>
+<p>Insert your private key (in Base64 encoding): or
+	<button onclick="generateKeypair()">generate a new signature key pair</button>
+	<br><br>
+	<textarea name="privateKeyBase64" id="privateKeyBase64" rows="1" cols="100">Gjho7dILimbXJY8RvmQZEBczDzCYbZonGt/e5QQ3Vro2sjTp95EMxOrgEaWiprPduR/KJFBRA+RlDDpkvmhVfw==</textarea>
+</p>
+<p>Insert the string you like to sign:<br><br>
+	<textarea name="plaintext" id="plaintext" rows="3" cols="100">The quick brown fox jumps over the lazy dog</textarea>
+</p>
+<p>
+press the sign button to proceed:
+	<button onclick="sign()">sign the plaintext</button> 
+</p>
+<p>signature in Base64 encoding:<br><br>
+	<textarea name="signatureBase64" id="signatureBase64" rows="1" cols="100">the signature comes here...</textarea><br>
+	The output is (Base64) signature
+</p>
+<h2>Verification</h2>
+<p>
+	For verification you need the public key in Base64 encoding.
+</p>
+<p>Insert the public key (in Base64 encoding):<br><br>
+	<textarea name="publicKeyBase64" id="publicKeyBase64" rows="1" cols="50">NrI06feRDMTq4BGloqaz3bkfyiRQUQPkZQw6ZL5oVX8=</textarea>
+</p>
+<p>Insert the plaintext you like to verify the signature of or press the "sample data" button:
+	<button onclick="sampledata()">sample data</button> 
+	<br><br>
+	<textarea name="plaintextVerify" id="plaintextVerify" rows="2" cols="100">The quick brown fox jumps over the lazy dog</textarea><br>
+	The input is (Base64) nonce : (Base64) ciphertext
+</p>
+<p>Insert the signature in Base64 encoding:<br><br>
+	<textarea name="signatureVerifyBase64" id="signatureVerifyBase64" rows="1" cols="100">x41mufah/9VO347W+nPXu5FYeSJOI894YClbbTiX0pwRrvfAPMymxEvyMMsDFMI0R0sulCnuCRSgN0WOKnZBDg==</textarea><br>
+	The input is (Base64) signature
+</p>
+<p>
+press the verify button to proceed:
+	<button onclick="verify()">verify</button> 
+</p>
+<p>result of verification:<br><br>
+	<textarea name="verificationResult" id="verificationResult" rows="1" cols="100" disabled>the result of the verification comes here...</textarea>
+	
+</p>
+<hr><p>
+	<b>Technical note: this program uses the Ed25519 curve for signing.</b>
+</p><hr>
+<script src="http://javacrypto.bplaced.net/cpcjs/signature/nacl.min.js"></script>
+<script src="http://javacrypto.bplaced.net/cpcjs/signature/nacl-util.min.js"></script>
+<script>
+
+
+function sign() {
+	var privateKeyBase64 = document.getElementById('privateKeyBase64').value;
+	var privateKey = nacl.util.decodeBase64(privateKeyBase64);
+	var plaintext = nacl.util.decodeUTF8(document.getElementById('plaintext').value);
+	document.getElementById('signatureBase64').value = nacl.util.encodeBase64(nacl.sign.detached(plaintext, privateKey));
+	clearVerifyFields();
+}
+
+function verify() {
+	clearVerifyFields();
+	var publicKeyBase64 = document.getElementById('publicKeyBase64').value;
+	var publicKey = nacl.util.decodeBase64(publicKeyBase64);
+	var plaintext = nacl.util.decodeUTF8(document.getElementById('plaintextVerify').value);
+	var signatureVerifyBase64 = document.getElementById('signatureVerifyBase64').value;
+	var signature = nacl.util.decodeBase64(signatureVerifyBase64);
+	var result = nacl.sign.detached.verify(plaintext, signature, publicKey);
+	if (result == true) {
+		document.getElementById('verificationResult').style.color='green';
+		document.getElementById('verificationResult').value = 'the result is TRUE - the signature matches the plaintext';
+	} else {
+		document.getElementById('verificationResult').style.color='red';
+		document.getElementById('verificationResult').value = 'the result is FALSE - the signature does NOT MATCH the plaintext';
+	}
+}
+
+function generateKeypair() {
+	var keyPair = nacl.sign.keyPair();
+	document.getElementById('privateKeyBase64').value = nacl.util.encodeBase64(keyPair.secretKey);
+	document.getElementById('publicKeyBase64').value = nacl.util.encodeBase64(keyPair.publicKey);
+}
+
+function clearVerifyFields() {
+	document.getElementById('verificationResult').style.color='grey';
+	document.getElementById('verificationResult').value = 'the result of the verification comes here...';
+	
+
+}
+
+function sampledata() {
+	document.getElementById('publicKeyBase64').value = 'NrI06feRDMTq4BGloqaz3bkfyiRQUQPkZQw6ZL5oVX8=';
+	document.getElementById('signatureVerifyBase64').value = 'x41mufah/9VO347W+nPXu5FYeSJOI894YClbbTiX0pwRrvfAPMymxEvyMMsDFMI0R0sulCnuCRSgN0WOKnZBDg==';
+	clearVerifyFields();
+}
+</script>
+</body>
+</html>

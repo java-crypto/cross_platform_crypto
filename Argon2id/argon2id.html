@@ -1,51 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Argon2id</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="radio"] {border: 0px; font-size: 150%}
+		label {font-size: 150%; }
+	</style>		
 </head>
 <body>
 <h1>Argon2id</h1>
 <hr><p>
 	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/argon2.md"  target="_blank">
+my webpage <b>Argon 2 Password-Based Key Derivation Function</b></a><br>
 </p><hr>
 <h2>key derivation</h2>
-<p>
-	For key derivation you need the passphrase and a salt (length 16 bytes, Base64 encoding).
-</p>
-<p>Insert the passphrase string:<br><br>
-	<textarea name="passphrase" id="passphrase" rows="2" cols="100">secret password</textarea>
-</p>
-<p>Insert the salt (in Base64 encoding):<br><br>
-	<textarea name="saltBase64" id="saltBase64" rows="2" cols="50">AAAAAAAAAAAAAAAAAAAAAA==</textarea>
-</p>
-<p>choose parameter set:<br>
-	<label class="radio-inline">
-		<input type="radio" name="radioType" id="inlineRadio2" value="2"> minimal parameters 
-		(version: 19, memory: 8192, time: 2, parallelism: 1, salt length 16, key length 32) ### probably UNSECURE ###
+<p>For key derivation you need the passphrase and a salt (length 16 bytes, Base64 encoding).</p>
+<p>Insert the passphrase string:</p>
+<textarea name="passphrase" id="passphrase" rows="2" cols="40">secret password</textarea>
+<p>Insert the salt (in Base64 encoding):</p>
+<textarea name="saltBase64" id="saltBase64" rows="2" cols="40">AAAAAAAAAAAAAAAAAAAAAA==</textarea>
+<p>choose parameter set:</p>
+	<input type="radio" name="radioType" id="inlineRadio2" value="2"><label for "inlineRadio2"> <b>minimal parameters</b> 
+	(version: 19, memory: 8192, time: 2, parallelism: 1, salt length 16, key length 32) ### probably UNSECURE ###
 	</label><br>
-	<label class="radio-inline">
-			<input type="radio" name="radioType" id="inlineRadio0" value="0" checked="checked"> interactive parameters 
-		(version: 19, memory: 66536, time: 2, parallelism: 1, salt length 16, key length 32)
+	<input type="radio" name="radioType" id="inlineRadio0" value="0" checked="checked"><label for "inlineRadio02"> <b>interactive parameters</b> 
+	(version: 19, memory: 66536, time: 2, parallelism: 1, salt length 16, key length 32)
 	</label><br>
-	<label class="radio-inline">
-		<input type="radio" name="radioType" id="inlineRadio1" value="1"> moderate parameters 
-		(version: 19, memory: 262144, time: 3, parallelism: 1, salt length 16, key length 32)
+	<input type="radio" name="radioType" id="inlineRadio1" value="1"><label for "inlineRadio1"> <b>moderate parameters</b> 
+	(version: 19, memory: 262144, time: 3, parallelism: 1, salt length 16, key length 32)
 	</label>
-</p>
-
-<p>
-press the generate hash button to proceed:
-	<button onclick="generateHash()">generate hash</button> 
-</p>
-<p>hash data in Base64 encoding:<br><br>
-	<textarea name="hashData" id="hashData" rows="12" cols="100">the hash data comes here...</textarea><br>
-</p>
-	
-</p>
-<hr><p>
-	<b>Technical note: this program uses the Argon2id algorithm to derive a 32 bytes long secret key from a passphrase</b>
-</p><hr>
+<p>press the generate hash button to proceed:</p>
+<button onclick="generateHash()">generate hash</button> 
+<p>hash data in Base64 encoding:</p>
+<textarea name="hashData" id="hashData" rows="12" cols="40">the hash data comes here...</textarea><br>
+<hr><p><b>Technical note: this program uses the Argon2id algorithm to derive a 32 bytes long secret key from a passphrase</b></p><hr>
 
 <script>
 'use strict';

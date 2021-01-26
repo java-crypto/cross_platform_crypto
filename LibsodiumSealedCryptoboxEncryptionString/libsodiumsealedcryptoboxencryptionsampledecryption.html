@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Libsodium sealed crypto box hybrid string encryption (sample decryption only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+	</style>	
 </head>
 <body>
 <h1>Libsodium sealed crypto box hybrid string encryption  (sample decryption only)</h1>
 <hr><p>
 	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_sealedcryptobox_encryption_string.md"  target="_blank">
+my webpage <b>Libsodium sealed crypto box authenticated hybrid string encryption</b></a><br>
 </p><hr>
-<p>
-	<b>This is a sample version that shows how to decrypt data anonymized with fixed private key.</b>
-</p><hr>
+<p><b>This is a sample version that shows how to decrypt data anonymized with fixed private key.</b></p><hr>
 <h2>Decryption</h2>
-<p>
-	For decryption you need receipient's (party B) secret key.
-</p>
-<p>Fixed (party B) Secret Key (in Base64 encoding):<br><br>
-	<textarea name="secretKeyBBase64" id="secretKeyBBase64" rows="2" cols="50" disabled>yNmXR5tfBXA/uZjanND+IYgGXlrFnrdUiUXesI4fOlM=</textarea>
-</p>
-<p>Insert the ciphertext you like to decrypt:
-	<br><br>
-	<textarea name="ciphertextDecryptionBase64" id="ciphertextDecryptionBase64" rows="5" cols="100">wCnbPe8FkZJ9PVEh7eI90fY6IjkUWAZK5YLbGb3QdQbaxMqsP2KNpfM47LETnIJJDvE+QhFEjFYksnNSU8iLyfOKxtWtY/ZZvdrSQSPGsHXnUywQ+DArk8JeBg==</textarea><br>
-	The input is (Base64) ciphertext
-</p>
-<p>
-press the decrypt button to proceed:
-	<button onclick="decryptSealed()">decrypt</button> 
-</p>
-<p>decrypted plaintext:<br><br>
-	<textarea name="decryptedtext" id="decryptedtext" rows="6" cols="100">the decryptedtext comes here...</textarea>
-	
-</p>
+<p>For decryption you need receipient's (party B) secret key.</p>
+<p>Fixed (party B) Secret Key (in Base64 encoding):</p>
+<textarea name="secretKeyBBase64" id="secretKeyBBase64" rows="2" cols="40" disabled>yNmXR5tfBXA/uZjanND+IYgGXlrFnrdUiUXesI4fOlM=</textarea>
+<p>Insert the ciphertext you like to decrypt:</p>
+<textarea name="ciphertextDecryptionBase64" id="ciphertextDecryptionBase64" rows="5" cols="40">wCnbPe8FkZJ9PVEh7eI90fY6IjkUWAZK5YLbGb3QdQbaxMqsP2KNpfM47LETnIJJDvE+QhFEjFYksnNSU8iLyfOKxtWtY/ZZvdrSQSPGsHXnUywQ+DArk8JeBg==</textarea><br>
+<p>The input is (Base64) ciphertext</p>
+<p>press the decrypt button to proceed:</p>
+<button onclick="decryptSealed()">decrypt</button> 
+<p>decrypted plaintext:</p>
+<textarea name="decryptedtext" id="decryptedtext" rows="6" cols="40">the decryptedtext comes here...</textarea>
 <hr><p>
 	<b>Technical note: this program uses the X25519 key exchange algorithm, XSalsa20 stream cipher for encryption and Poly1305 MAC for authenticated encryption.</b>
 </p><hr>

@@ -1,62 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Libsodium detached signature of a string</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+</style>
 </head>
 <body>
 <h1>Libsodium detached signature of a string</h1>
 <hr><p>
-	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>
+Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_signature_detached_string.md"  target="_blank">
+my webpage <b>Libsodium detached signature of a string</b></a><br>
 </p><hr>
 <h2>Signature</h2>
-<p>
-	For signing you need your private key in Base64 encoding.
-</p>
-<p>Insert your private key (in Base64 encoding): or
-	<button onclick="generateKeypair()">generate a new signature key pair</button>
-	<br><br>
-	<textarea name="privateKeyBase64" id="privateKeyBase64" rows="1" cols="100">Gjho7dILimbXJY8RvmQZEBczDzCYbZonGt/e5QQ3Vro2sjTp95EMxOrgEaWiprPduR/KJFBRA+RlDDpkvmhVfw==</textarea>
-</p>
-<p>Insert the string you like to sign:<br><br>
-	<textarea name="plaintext" id="plaintext" rows="3" cols="100">The quick brown fox jumps over the lazy dog</textarea>
-</p>
-<p>
-press the sign button to proceed:
-	<button onclick="sign()">sign the plaintext</button> 
-</p>
-<p>signature in Base64 encoding:<br><br>
-	<textarea name="signatureBase64" id="signatureBase64" rows="1" cols="100">the signature comes here...</textarea><br>
-	The output is (Base64) signature
-</p>
+<p>For signing you need your private key in Base64 encoding.</p>
+<p>Insert your private key (in Base64 encoding): or</p>
+<button onclick="generateKeypair()">generate a new signature key pair</button><br><br>
+<textarea name="privateKeyBase64" id="privateKeyBase64" rows="3" cols="40">Gjho7dILimbXJY8RvmQZEBczDzCYbZonGt/e5QQ3Vro2sjTp95EMxOrgEaWiprPduR/KJFBRA+RlDDpkvmhVfw==</textarea>
+<p>Insert the string you like to sign:</p>
+<textarea name="plaintext" id="plaintext" rows="3" cols="40">The quick brown fox jumps over the lazy dog</textarea>
+<p>press the sign button to proceed:</p>
+<button onclick="sign()">sign the plaintext</button> 
+<p>signature in Base64 encoding:</p>
+<textarea name="signatureBase64" id="signatureBase64" rows="3" cols="40">the signature comes here...</textarea><br>
+<p>The output is (Base64) signature</p>
+
 <h2>Verification</h2>
-<p>
-	For verification you need the public key in Base64 encoding.
-</p>
-<p>Insert the public key (in Base64 encoding):<br><br>
-	<textarea name="publicKeyBase64" id="publicKeyBase64" rows="1" cols="50">NrI06feRDMTq4BGloqaz3bkfyiRQUQPkZQw6ZL5oVX8=</textarea>
-</p>
-<p>Insert the plaintext you like to verify the signature of or press the "sample data" button:
-	<button onclick="sampledata()">sample data</button> 
-	<br><br>
-	<textarea name="plaintextVerify" id="plaintextVerify" rows="2" cols="100">The quick brown fox jumps over the lazy dog</textarea><br>
-	The input is (Base64) nonce : (Base64) ciphertext
-</p>
-<p>Insert the signature in Base64 encoding:<br><br>
-	<textarea name="signatureVerifyBase64" id="signatureVerifyBase64" rows="1" cols="100">x41mufah/9VO347W+nPXu5FYeSJOI894YClbbTiX0pwRrvfAPMymxEvyMMsDFMI0R0sulCnuCRSgN0WOKnZBDg==</textarea><br>
-	The input is (Base64) signature
-</p>
-<p>
-press the verify button to proceed:
-	<button onclick="verify()">verify</button> 
-</p>
-<p>result of verification:<br><br>
-	<textarea name="verificationResult" id="verificationResult" rows="1" cols="100" disabled>the result of the verification comes here...</textarea>
-	
-</p>
-<hr><p>
-	<b>Technical note: this program uses the Ed25519 curve for signing.</b>
-</p><hr>
+<p>For verification you need the public key in Base64 encoding.</p>
+<p>Insert the public key (in Base64 encoding):</p>
+<textarea name="publicKeyBase64" id="publicKeyBase64" rows="3" cols="40">NrI06feRDMTq4BGloqaz3bkfyiRQUQPkZQw6ZL5oVX8=</textarea>
+<p>Insert the plaintext you like to verify the signature of or press the "sample data" button:</p>
+<button onclick="sampledata()">sample data</button><br><br>
+<textarea name="plaintextVerify" id="plaintextVerify" rows="3" cols="40">The quick brown fox jumps over the lazy dog</textarea><br>
+<p>Insert the signature in Base64 encoding:</p>
+<textarea name="signatureVerifyBase64" id="signatureVerifyBase64" rows="3" cols="40">x41mufah/9VO347W+nPXu5FYeSJOI894YClbbTiX0pwRrvfAPMymxEvyMMsDFMI0R0sulCnuCRSgN0WOKnZBDg==</textarea><br>
+<p>The input is (Base64) signature</p>
+<p>press the verify button to proceed:</p>
+<button onclick="verify()">verify</button> 
+<p>result of verification:</p>
+<textarea name="verificationResult" id="verificationResult" rows="2" cols="40" disabled>the result of the verification comes here...</textarea>
+<hr><p><b>Technical note: this program uses the Ed25519 curve for signing.</b></p><hr>
 <script src="http://javacrypto.bplaced.net/cpcjs/signature/nacl.min.js"></script>
 <script src="http://javacrypto.bplaced.net/cpcjs/signature/nacl-util.min.js"></script>
 <script>

@@ -32,15 +32,15 @@ The following links provide the solutions in code and an online compiler that ru
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
 | [Java](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.java) | :white_check_mark: | [repl.it CpcJavaSealedLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcJavaLibsodiumSealedCryptoboxEncryptionString#Main.java/)
-| [PHP](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumSealedCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPhpJavaLibsodiumSealedCryptoboxEncryptionString#main.php/)
+| [PHP](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.php) | :white_check_mark: | [repl.it CpcPhpLibsodiumSealedCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPhpJavaLibsodiumCryptoboxEncryptionString#main.php/)
 | [C#](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.cs) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpLibsodiumSealedCryptoboxStringEncryption](https://dotnetfiddle.net/2U7cm5/)
 | [Javascript / NodeJs](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionStringNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsLibsodiumSealedCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcNodeJsLibsodiumSealedCryptoboxEncryptionString#index.js)
 | NodeJS CryptoJs | :x: | use above Javascript / NodeJs solution
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
-| [Browser](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html/)
-| [Browser sample encryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsamplesender.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsamplesender.html/)
-| [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
+| [Browser](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html)
+| [Browser sample encryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampleencryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringSampleEncryption.html](http://javacrypto.bplaced.net/cpcjs/sealedcryptobox/libsodiumsealedcryptoboxencryptionsampleencryption.html)
+| [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringSampleDecryption.html](http://javacrypto.bplaced.net/cpcjs/sealedcryptobox/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
 
 This is an output (your will differ because a random element):
 
@@ -62,6 +62,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 17th 2021
+Last update: Jan. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

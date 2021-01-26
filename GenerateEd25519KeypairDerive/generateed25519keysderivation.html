@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Curve ED25519 private and public key generation and public key derivation from private key</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="radio"] {border: 0px; font-size: 150%}
+		label {font-size: 150%; }
+	</style>		
+</head>
+<body>
+<h1>Curve ED25519 private and public key generation and public key derivation from private key</h1>
+<hr><p>
+	<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/argon2.md"  target="_blank">
+my webpage <b>Argon 2 Password-Based Key Derivation Function</b></a><br>
+</p><hr>
+<h2>key generation</h2>
+<p>press the "generate key pair" button to proceed:</p>
+<button onclick="generate()">generate key pair</button> 
+<p>generated private key (in Base64 encoding):</p>
+<textarea name="privateKeyBase64" id="privateKeyBase64" rows="2" cols="43">private key comes here ...</textarea>
+<p>generated public key (in Base64 encoding):</p>
+<textarea name="publicKeyBase64" id="publicKeyBase64" rows="2" cols="43">public key comes here</textarea>
+
+<h2>public key derivation from private key</h2>
+<p>pase private key (in Base64 encoding) or press "copy private key" button</p>
+<textarea name="privateKeyDerivedBase64" id="privateKeyDerivedBase64" rows="2" cols="43">fwLfzd62n4JoeAQ9wZcjWJ3ckCjN+8cuLHfYa5YPOA5JbGwu/4Cdz3MtnFjLMP1QYpBti4HM7+6yAxDOF/IIVg==</textarea>
+<button onclick="copy()">copy private key</button> 
+<p>press the "derive public key" button to proceed:</p>
+<button onclick="derive()">derive public key</button> 
+<p>derived public key (in Base64 encoding):</p>
+<textarea name="publicKeyDerivedBase64" id="publicKeyDerivedBase64" rows="2" cols="43">derived public key comes here</textarea>
+<hr><p><b>Technical note: this program uses the ED25519 curve algorithm to generate and derive keys</b></p><hr>
+
+<script src="http://javacrypto.bplaced.net/cpcjs/generateed25519keyderivation/nacl.min.js"></script>
+<script src="http://javacrypto.bplaced.net/cpcjs/generateed25519keyderivation/nacl-util.min.js"></script>
+
+<script>
+function generate(){
+	var keyPair = nacl.sign.keyPair();
+	var privateKey = keyPair.secretKey;
+	var publicKey = keyPair.publicKey;
+	document.getElementById('privateKeyBase64').value = nacl.util.encodeBase64(privateKey);
+	document.getElementById('publicKeyBase64').value = nacl.util.encodeBase64(publicKey);
+}
+
+function derive(){
+	var privateKey = nacl.util.decodeBase64(document.getElementById('privateKeyDerivedBase64').value);
+	var publicKey = nacl.sign.keyPair.fromSecretKey(privateKey).publicKey;
+	document.getElementById('publicKeyDerivedBase64').value = nacl.util.encodeBase64(publicKey);
+}
+
+function copy(){
+	document.getElementById('privateKeyDerivedBase64').value = document.getElementById('privateKeyBase64').value;
+}
+
+</script>
+</body>
+</html>

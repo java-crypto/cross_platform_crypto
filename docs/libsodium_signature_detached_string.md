@@ -8,11 +8,15 @@ A cryptographic library should also offer the possibility to (digitally) sign do
 
 Three simple steps are necessary to run a complete sign and verify round:
 
-1. generate an ED25519 private-public key pair (or use a pre-generated one)
+1. [generate an ED25519 private-public key pair](generate_ed25519_keypair.md) (or use a pre-generated one)
 2. sign a plaintext with the private key and receive a signature
 3. verify the received signature against the plaintext with the public key
 
 The best of all: the source code in most examples will just have some lines of code (I know there are more lines but in the end the "overhead" is just needed for input, output and encoding).
+
+### How do I generate a curve ED25519 key pair?
+
+For all frameworks I'm providing a small program to [**generate the ED25519 key pair**](generate_ed25519_keypair.md).
 
 Here is an example in PHP:
 ```plaintext
@@ -46,10 +50,6 @@ verification status: the signature is valid
 
 There are two signature types available within Libsodium, the **detached signature** and the **included signature**. The "detached" one provides a separate signature analogue to the RSA- or Elliptic curve ones, so you need to send the original plaintext and the signature to the recipient. The "included signature" gives only one signature result that incorporates the plaintext within the signature. After a positive ("valid") verification the original plaintext gets revealed, when the signature is invalid the verification function will return the complete signature string. For my programs I opted the "detached" version - feel free to use the included one.
 
-### How to get an ED25519 key pair?
-
-:soon: At the moment I'm not providing a solution for this although they are available (but my time is not endless), so this will be available soon. :soon:
-
 I do not provide a "verification only" version as all functions are available in the full version.
 
 ## :warning: Security warning :warning:
@@ -81,6 +81,7 @@ signature (Base64): x41mufah/9VO347W+nPXu5FYeSJOI894YClbbTiX0pwRrvfAPMymxEvyMMsD
 * * * verify the signature against the plaintext with the ED25519 public key * * *
 signature (Base64): x41mufah/9VO347W+nPXu5FYeSJOI894YClbbTiX0pwRrvfAPMymxEvyMMsDFMI0R0sulCnuCRSgN0WOKnZBDg==
 signature (Base64) verified: true
+
 ```
 
 Last update: Jan. 24th 2021

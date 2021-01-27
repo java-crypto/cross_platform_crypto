@@ -107,6 +107,11 @@ Note: you need external libraries for this feature!
 | Solution | Description | Java | PHP | C# | NodeJS | Browser
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |
+[generate a random key](docs/libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](docs/libsodium_secretbox_encryption_string.md) | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |   
+[generate a curve 25519 key pair](docs/curve25519_key_generation.md) | generate a curve X25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :x: |  
+[derive the curve X25519 public key from a secret key](docs/x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding |  :soon: |  :soon: |  :soon: |  :soon: |  :white_check_mark: |  
+[generate a curve ED25519 key pair](docs/generate_ed25519_keypair.md) | generate a curve ED25519 private key and public key pair in Base64 encoding |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
+[generate a curve ED25519 public key from a private key](docs/generate_ed25519_keypair.md) | generate an ED25519 public key from a private key in Base64 encoding | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 | [Argon 2 password derivation function](docs/argon2.md) | derives a password from a passphrase using the "modern" Argon2id algorithm | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |[Argon 2 parameter](docs/argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
 | [Libsodium authenticated string encryption with a random key](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -153,7 +158,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 | OpenSSL |  | version 1.1.1g Windows x64
 
-Last update: Jan. 24th 2021
+Last update: Jan. 27th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

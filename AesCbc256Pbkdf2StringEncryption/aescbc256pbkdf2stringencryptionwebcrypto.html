@@ -1,6 +1,21 @@
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
 <HEAD>
-<TITLE>'AES CBC 256 String encryption with PBKDF2 derived key</TITLE>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<TITLE>AES CBC 256 String encryption with PBKDF2 derived key</TITLE>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+	</style>
+</HEAD>
+
 <SCRIPT LANGUAGE="JavaScript">
 
 var ciphertextComplete;
@@ -155,41 +170,27 @@ function decryptDataCpc (form) {
   .catch(console.error);
 }
 </SCRIPT>
-</HEAD>
+
 <BODY>
-<FORM NAME="myform" ACTION="" METHOD="GET">AES CBC 256 String encryption with PBKDF2 derived key<BR>
+<h2>AES CBC 256 String encryption with PBKDF2 derived key</h2>
+<FORM NAME="myform" ACTION="" METHOD="GET">
 <hr>
 <p>
 <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_string_encryption.md"  target="_blank">
+my webpage <b>AES CBC mode 256 PBKDF2 string encryption</b></a><br>
 </p>
 <hr>
-<p>
-  Plaintext:
-  <input
-    type="text"
-    name="plaintext"
-    id="plaintext"
-    size="100"
-    value="The quick brown fox jumps over the lazy dog"
-  />
-</p>
-<p>
-  Secret password:
-  <input
-    type="text"
-    name="secretpassword"
-    id="secretpassword"
-    size="100"
-    value="secret password"
-  />
-</p>
+<p>Insert the string you like to encrypt:</p>
+<textarea name="plaintext" id="plaintext" rows="5" cols="40">The quick brown fox jumps over the lazy dog</textarea>
+<p>Insert your password:</p>
+<textarea name="secretpassword" id="secretpassword" rows="2" cols="40">secret password</textarea>
 <hr>
 <p>
   <INPUT TYPE="button" NAME="button" Value="encrypt data" onClick="encryptDataCpc(this.form)">
 </p>
-<p>
-  CiphertextCpc: <input type="text" name="ciphertextCpc" id="ciphertextCpc" size="250" />
-</p>
+<p>CiphertextCpc:</p>
+<textarea name="ciphertextCpc" id="ciphertextCpc" rows="6" cols="40">the ciphertext comes here...</textarea>
 <p>
   Ciphertext is (Base64) salt : (Base64) iv : (Base64) ciphertext
 </p>
@@ -197,17 +198,9 @@ function decryptDataCpc (form) {
 <p>
   <INPUT TYPE="button" NAME="button" Value="decrypt data" onClick="decryptDataCpc(this.form)">
 </p>
-<p>
-  DecryptedtextCpc:
-  <input
-    type="text"
-    name="decryptedtextCpc"
-    id="decryptedtextCpc"
-    size="100"
-    value="decrypted text"
-  />
-</p>
-<hr>
+<p>decrypted plaintext:</p>
+<textarea name="decryptedtextCpc" id="decryptedtextCpc" rows="6" cols="40">the decryptedtext comes here...</textarea>
+<hr><p><b>Technical note: this program uses the PBKDF2 algorithm for key derivation and AES 256 CBC mode for encryption.</b></p><hr>
 </FORM>
 </BODY>
 </HTML>

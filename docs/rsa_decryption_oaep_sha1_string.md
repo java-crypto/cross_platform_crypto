@@ -32,6 +32,7 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | the encryption functionality is not available in CryptoJs
 | [NodeJS Crypto](../RsaEncryptionOaepSha1String/RsaDecryptionOaepSha1NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaDecryptionOaepSha1String](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaDecryptionOaepSha1String#index.js/)
 | [NodeJS forge](../RsaEncryptionOaepSha1String/RsaDecryptionOaepSha1NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaDecryptionOaepSha1String](https://repl.it/@javacrypto/CpcNodeJsRsaDecryptionOaepSha1String#index.js/)
+| [Webcrypto decryption only](../RsaEncryptionOaepSha1String/rsadecryptionoaepsha1.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaEncryptionOaepSha1String/rsadecryptionoaepsha1.html)
 
 This is an output (your will differ because a random element):
 
@@ -44,6 +45,6 @@ decryptedtext: The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Jan. 29th 2021
 
 Back to the main page: [readme.md](../readme.md)

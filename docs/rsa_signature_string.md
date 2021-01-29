@@ -41,7 +41,7 @@ The program follows the usual sequence:
 10. set the verification parameters (same as used for signing)
 11. verify the signature against the "data to sign" and show the result.
 
-If you like to see the **verification part only** see my separate article [RSA signature string verification only](rsa_signature_string_verification_only.md) (coming soon).
+If you like to see the **verification part only** see my separate article [RSA signature string verification only](rsa_signature_string_verification_only.md).
 
 ## :warning: Security warning :warning:
 
@@ -91,6 +91,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Jan. 09th 2021
+Last update: Jan. 29th 2021
 
 Back to the main page: [readme.md](../readme.md)

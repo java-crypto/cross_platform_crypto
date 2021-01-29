@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>EC signature converter DER to P1363 encoding</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>EC P-256 signature SHA-256 (signature only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+	</style>	
 </head>
 
 <body>
@@ -12,24 +22,21 @@
         <hr>
         <p>
             <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
-        </p>
-        <hr>
-
-
-        <label>Enter a signature in DER-format and Base64 encoding:</label>
-        <input type="text" id="signaturederBase64" name="signaturederBase64" size="110" value="MEUCIQCW98vDD+c/Wx3WX3T+Ph9ZDf1s5nuDThz2xrhSOjwGFAIgNpUg5SygNK7W+zzw4eNZkivizpU/UUXMMR2zPw2D7J4=">
-        <hr>
-        <br>
-        <b>Instructions:</b><br>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_conversion.md" target="_blank">
+my webpage <b>Elliptic key string signature conversion between DER and IEEE P1363 encoding</b></a><br>
+</p><hr>
+<p>Enter a signature in DER-format and Base64 encoding:<p>
+<textarea name="signaturederBase64" id="signaturederBase64" rows="3" cols="40">MEUCIQCW98vDD+c/Wx3WX3T+Ph9ZDf1s5nuDThz2xrhSOjwGFAIgNpUg5SygNK7W+zzw4eNZkivizpU/UUXMMR2zPw2D7J4=</textarea>
+<hr>
+        <p><b>Instructions:</b><br>
         1.: insert your signature in DER format and Base64 encoding and press the "convert signature" button<br>
-        2.: receive the signature in IEEE-P1363 format and Base64 encoding<br>
+        2.: receive the signature in IEEE-P1363 format and Base64 encoding<br></p>
         <hr>
         <input class="convert-button" type="button" value="convert signature">
         <hr>
-
         <p>
             signature (will be in IEEE P1363 format and Base64 encoding):<br>
-            <textarea name="signatureBase64" id="signatureBase64" form="myform" rows="1" cols="120">the IEEE P1363 signature in Base64 encoding comes here...</textarea>
+            <textarea name="signatureBase64" id="signatureBase64" form="myform" rows="3" cols="40">the IEEE P1363 signature in Base64 encoding comes here...</textarea>
             </div>
         </p>
     </main>

@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="utf-8">
-      <title>EC P-256 signature SHA-256 (verification only)</title>
-   </head>
-   <body>
-      <main>
-         <h1>EC P-256 signature SHA-256 (verification only)</h1>
-         <hr>
-         <p>
-            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
-         </p>
-         <hr>
-<p>
-            Insert the Public Key you received (PEM encoding):<br><br>
-            <textarea name="publickey-value" id="publickey-value" form= "myform" rows="5" cols="70">-----BEGIN PUBLIC KEY-----
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>EC P-256 signature SHA-256 (verification only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+	</style>	
+</head>
+<body>
+<h1>EC P-256 signature SHA-256 (verification only)</h1>
+<hr>
+<p><b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_ieee_p1363_string.md"  target="_blank">
+my webpage <b>Elliptic key string signature (ECDSA) with IEEE P1363 encoding</b></a><br></p>
+<hr>
+<p>Insert the Public Key you received (PEM encoding):</p>
+<textarea name="publickey-value" id="publickey-value" form= "myform" rows="5" cols="70">-----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2MrspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==
 -----END PUBLIC KEY-----</textarea>
-          </p>
 		  
-         <section class="import-key spki">
-		 Enter a message to verify:
-              <input type="text" id="plaintext" name="plaintext" size="50"
-                     value="The quick brown fox jumps over the lazy dog">
-					 <hr>
-            <br>
-		 
-            Enter the signature to verify (the signature has to be in IEEE-P1363 = R|S = raw format and base64 encoded):<br><br>
-            <textarea name="spki-message" id="spki-message" form="myform" rows="4" cols="64">j6oY538oBKJ2H5xrt8ObLCjT4F2TjKt6DhAu460192PaGiDKs6O4yU3e27hKAbMzZcke2pHE+mPVEYu3CqR1sg==</textarea>
-            <hr><br>
-            <b>Instructions:</b><br>
-            1.: insert the received public key and press the "Import key" button<br>
-            2.: if the public key is valid the "Verify" button is enabled<br>
-            3.: enter the plaintext message<br>
-			4.: enter the signature<br> 
-            5.: press the "Verify button"<br>
-            6.: receive the verification status<br><hr>
-            <input class="import-key-button" type="button" value="Import Key">
-            <input class="verify-button hidden" type="button" value="Verify" disabled>
-         </section>
-         <p>
-            verification status:<br>
-            <textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
-         </div>
-         </p>
-      </main>
-   </body>
+<section class="import-key spki">
+<p>Enter a message to verify:</p>
+<input type="text" id="plaintext" name="plaintext" size="50" value="The quick brown fox jumps over the lazy dog">
+<hr>
+<p>Enter the signature to verify (the signature has to be in IEEE-P1363 = R|S = raw format and base64 encoded):</p>
+<textarea name="spki-message" id="spki-message" form="myform" rows="4" cols="64">j6oY538oBKJ2H5xrt8ObLCjT4F2TjKt6DhAu460192PaGiDKs6O4yU3e27hKAbMzZcke2pHE+mPVEYu3CqR1sg==</textarea>
+<hr>
+<p><b>Instructions:</b><br>
+1.: insert the received public key and press the "Import key" button<br>
+2.: if the public key is valid the "Verify" button is enabled<br>
+3.: enter the plaintext message<br>
+4.: enter the signature<br> 
+5.: press the "Verify button"<br>
+6.: receive the verification status</p><hr>
+<input class="import-key-button" type="button" value="Import Key">
+<input class="verify-button hidden" type="button" value="Verify" disabled>
+</section>
+<p>verification status:</p>
+<textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
+</div>
+</p>
+<hr><p><b>Technical note: this program uses the ECDSA Elliptic curve signature algorithm and curve SECP256R1 / NIST P-256 / PRIME256V1 / O.I.D. identifier 1.2.840.10045.3.1.7, the signature is encoded in IEEE P1363 = R|S = raw format.</b></p><hr>
+</body>
    <SCRIPT LANGUAGE="JavaScript">
       const bufToB64 = buf =>
         btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));

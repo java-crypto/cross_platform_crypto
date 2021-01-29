@@ -1,47 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>EC P-256 signature SHA-256 (signature only)</title>
-  </head>
-  <body>
-    <main>
-      <h1>EC P-256 signature SHA-256 (signature only)</h1>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>EC P-256 signature SHA-256 (signature only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+	</style>	
+</head>
+<body>
+<h1>EC P-256 signature SHA-256 (signature only)</h1>
 <hr><p>
-            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
-         </p><hr>	  
+<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_ieee_p1363_string.md"  target="_blank">
+my webpage <b>Elliptic key string signature (ECDSA) with IEEE P1363 encoding</b></a><br>
+</p><hr>	  
 	  
-<p>
-            Insert your own Private Key (in PEM encoding):<br><br>
-            <textarea name="privatekey-value" id="privatekey-value" form= "myform" rows="6" cols="70">-----BEGIN EC PRIVATE KEY-----
+<p>Insert your own Private Key (in PEM encoding):</p>
+<textarea name="privatekey-value" id="privatekey-value" form= "myform" rows="6" cols="70">-----BEGIN EC PRIVATE KEY-----
 MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY96yXUhFY5vppVjw1iPKRfk1wHA==
 -----END EC PRIVATE KEY-----</textarea>
-         </p>		  
-
-        <section class="import-key spki">
-              <label for="spki-message">Enter a message to sign:</label>
-              <input type="text" id="plaintext" name="plaintext" size="50"
-                     value="The quick brown fox jumps over the lazy dog">
-					 <hr>
-            <br>
-            <b>Instructions:</b><br>
-            1.: insert your own private and press the "Import key" button<br>
-            2.: if the private key is valid the "Sign" button is enabled<br>
-            3.: enter the message to sign<br>
-            4.: press the "Sign" button<br>
-            5.: receive the signature in Base64 encoding<br>
-            <hr>
-            <input class="import-key-button" type="button" value="Import Key">
-            <input class="sign-button hidden" type="button" value="Sign" disabled>
-			<hr>
-        </section>
-	  <p>
-  signature (will be in IEEE P1363 = R|S = raw format and in Base64 encoding):<br>
-  <textarea name="signatureBase64" id="signatureBase64" form= "myform" rows="4" cols="64">the signature in Base64 encoding comes here...</textarea>
-		</div>
+<section class="import-key spki">
+<p>Enter a message to sign:</p>
+<input type="text" id="plaintext" name="plaintext" size="50" value="The quick brown fox jumps over the lazy dog">
+<hr>
+<p><b>Instructions:</b><br>
+1.: insert your own private and press the "Import key" button<br>
+2.: if the private key is valid the "Sign" button is enabled<br>
+3.: enter the message to sign<br>
+4.: press the "Sign" button<br>
+5.: receive the signature in Base64 encoding</p>
+<hr>
+<input class="import-key-button" type="button" value="Import Key">
+<input class="sign-button hidden" type="button" value="Sign" disabled>
+<hr>
+</section>
+<p>signature (will be in IEEE P1363 = R|S = raw format and in Base64 encoding):</p>
+<textarea name="signatureBase64" id="signatureBase64" form= "myform" rows="4" cols="64">the signature in Base64 encoding comes here...</textarea>
+</div>
 </p>
-    </main>
-  </body>
+<hr><p><b>Technical note: this program uses the ECDSA Elliptic curve signature algorithm and curve SECP256R1 / NIST P-256 / PRIME256V1 / O.I.D. identifier 1.2.840.10045.3.1.7, the signature is encoded in IEEE P1363 = R|S = raw format.</b></p><hr>
+</body>
 
 <SCRIPT LANGUAGE="JavaScript">
 

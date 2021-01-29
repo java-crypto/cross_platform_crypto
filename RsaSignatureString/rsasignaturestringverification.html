@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <meta charset="utf-8">
-      <title>RSA 2048 signature RSA PKCS1-5 SHA-256 (verification only)</title>
-   </head>
-   <body>
-      <main>
-         <h1>RSA 2048 signature RSA PKCS1-5 SHA-256 (verification only)</h1>
-         <hr>
-         <p>
-            <b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
-         </p>
-         <hr>
-<p>
-            Insert the Public Key you received (PEM encoding):<br><br>
-            <textarea name="publickey-value" id="publickey-value" form= "myform" rows="10" cols="70">-----BEGIN PUBLIC KEY-----
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>RSA 2048 signature RSA PKCS1-5 SHA-256 (verification only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+	</style>	
+</head>
+<body>
+<h1>RSA 2048 signature RSA PKCS1-5 SHA-256 (verification only)</h1>
+<hr>
+<p><b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string_verification_only.md" target="_blank">
+my webpage <b>RSA string signature verification only with PKCS#1.5 padding</b></a><br>
+<p>Insert the Public Key you received (PEM encoding):</p>
+<textarea name="publickey-value" id="publickey-value" rows="10" cols="40">-----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8EmWJUZ/Osz4vXtUU2S+0M4BP9+s423gjMjoX+qP1iCnlcRcFWxthQGN2CWSMZwR/vY9V0un/nsIxhZSWOH9iKzqUtZD4jt35jqOTeJ3PCSr48JirVDNLet7hRT37Ovfu5iieMN7ZNpkjeIG/CfT/QQl7R+kO/EnTmL3QjLKQNV/HhEbHS2/44x7PPoHqSqkOvl8GW0qtL39gTLWgAe801/w5PmcQ38CKG0oT2gdJmJqIxNmAEHkatYGHcMDtXRBpOhOSdraFj6SmPyHEmLBishaq7Jm8NPPNK9QcEQ3q+ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb/LJ2aW2gQwIDAQAB
 -----END PUBLIC KEY-----</textarea>
-          </p>
-		  
-         <section class="import-key spki">
-		 Enter a message to verify:
-              <input type="text" id="plaintext" name="plaintext" size="50"
-                     value="The quick brown fox jumps over the lazy dog">
-					 <hr>
-            <br>
-		 
-            Enter the signature to verify:<br><br>
-            <textarea name="spki-message" id="spki-message" form="myform" rows="5" cols="100">vCSB4744p30IBl/sCLjvKm2nix7wfScQn99YX9tVIDNQIvU3QnSCLc2cF+J6R9WMRIXOsY94MxjKCQANW0CuaSs+w31ePHaounFVnmXyY092SicZrtpwlxw2CHqJ0NSyciDpxlRId1vjKlp9E5IJmYtVMtL2hfb711P+nb+m+1sPplNXPpJpdnWIzfLsDMVxCkplAdrcoH2HuWgOtOCHAf3vWbUC/vkvi388NT1UXJRPoERM0m1v11ogP9DiycMdoJxg3fbdH3HknbR02MLNEr7q4ZMzlrKxnYChwp2hnnBvJDcXpPDnQz7sG8zrim1nL/PS8CRG5lxhYYAZqTc+Vg==</textarea>
-            <hr><br>
-            <b>Instructions:</b><br>
-            1.: insert the received public key and press the "Import key" button<br>
-            2.: if the public key is valid the "Verify" button is enabled<br>
-            3.: enter the plaintext message<br>
-			4.: enter the signature<br> 
-            5.: press the "Verify button"<br>
-            6.: receive the verification status<br><hr>
-            <input class="import-key-button" type="button" value="Import Key">
-            <input class="verify-button hidden" type="button" value="Verify" disabled>
-         </section>
-         <p>
-            verification status:<br>
-            <textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
-         </div>
-         </p>
-      </main>
-   </body>
+<section class="import-key spki">
+<p>Enter a message to verify:</p>
+<input type="text" id="plaintext" name="plaintext" size="50" value="The quick brown fox jumps over the lazy dog">
+<hr>
+<p>Enter the signature to verify:</p>
+<textarea name="spki-message" id="spki-message" form="myform" rows="10" cols="40">vCSB4744p30IBl/sCLjvKm2nix7wfScQn99YX9tVIDNQIvU3QnSCLc2cF+J6R9WMRIXOsY94MxjKCQANW0CuaSs+w31ePHaounFVnmXyY092SicZrtpwlxw2CHqJ0NSyciDpxlRId1vjKlp9E5IJmYtVMtL2hfb711P+nb+m+1sPplNXPpJpdnWIzfLsDMVxCkplAdrcoH2HuWgOtOCHAf3vWbUC/vkvi388NT1UXJRPoERM0m1v11ogP9DiycMdoJxg3fbdH3HknbR02MLNEr7q4ZMzlrKxnYChwp2hnnBvJDcXpPDnQz7sG8zrim1nL/PS8CRG5lxhYYAZqTc+Vg==</textarea>
+<hr>
+<p><b>Instructions:</b><br>
+1.: insert the received public key and press the "Import key" button<br>
+2.: if the public key is valid the "Verify" button is enabled<br>
+3.: enter the plaintext message<br>
+4.: enter the signature<br> 
+5.: press the "Verify button"<br>
+6.: receive the verification status</p><hr>
+<input class="import-key-button" type="button" value="Import Key">
+<input class="verify-button hidden" type="button" value="Verify" disabled>
+</section>
+<p>verification status:</p>
+<textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
+<hr><p><b>Technical note: this program uses the RSA signature algorithm with a 2048 bit long key and PKCS1-5 signature padding.</b></p><hr>
+</body>
    <SCRIPT LANGUAGE="JavaScript">
       const bufToB64 = buf =>
         btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));

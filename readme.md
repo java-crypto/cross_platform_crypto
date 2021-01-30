@@ -50,7 +50,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | 
 | [RSA OEAP padding SHA-1 String](docs/rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
 | [RSA OEAP padding SHA-1 String decryption only](docs/rsa_decryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
-| [RSA OEAP padding SHA-256 String](docs/rsa_emcryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
+| [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
 
 
 
@@ -151,6 +151,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | PHP phpseclib |   | version 3
 | C# |  repl.it | Mono C# compiler version 6.8.0.123
 | C# |  dotnetfiddle.net | .NET 4.7.2
+| C# |  dotnetfiddle.net | .NET 5
 | C# |  Bouncy Castle | version 1.89
 | Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g

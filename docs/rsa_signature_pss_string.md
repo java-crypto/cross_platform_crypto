@@ -47,9 +47,9 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../RsaSignaturePssString/RsaSignaturePssStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignatureFull](https://repl.it/@javacrypto/CpcJavaRsaSignatureStringFull#Main.java/)
-| [PHP *1)](../RsaSignaturePssString/RsaSignaturePssStringFull.php) | :white_check_mark: | no online compiler available that runs with phpseclib version 3
-| [C#](../RsaSignaturePssString/RsaSignaturePssStringFull.cs) | :white_check_mark: | no online compiler available that runs with 'RSACng'
+| [Java](../RsaSignaturePssString/RsaSignaturePssStringFull.java) | :white_check_mark: | [repl.it CpcJavaRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcJavaRsaSignaturePssStringFull#Main.java/)
+| [PHP *1)](../RsaSignaturePssString/RsaSignaturePssStringFull.php) | :white_check_mark: | [repl.it CpcPhpRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcPhpRsaSignaturePssStringFull#main.php/)
+| [C#](../RsaSignaturePssString/RsaSignaturePssStringFull.cs)  (.net 5) | :white_check_mark: | [repl.it CpcCsharpRsaStringSignaturePssFull](https://dotnetfiddle.net/Zym1DU/)
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](../RsaSignaturePssString/RsaSignaturePssStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringFull#index.js/)
 | [NodeJS forge](../RsaSignaturePssString/RsaSignaturePssStringFullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringFull#index.js/)
@@ -87,6 +87,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Jan. 31st 2021
 
 Back to the main page: [readme.md](../readme.md)

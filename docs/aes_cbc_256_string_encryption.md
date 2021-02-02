@@ -52,6 +52,7 @@ The following links provide the solutions in code and an online compile that run
 | [Javascript CryptoJs](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)
 | [NodeJS Crypto](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256StringEncryptionFull#index.js/)
 | [NodeJS node-forge](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
+| [Python](../AesCbc256StringEncryption/AesCbc256StringEncryptionFull.py) | :white_check_mark: | [repl.it CpcPythonAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256StringEncryptionFull#main.py/)
 
 This is an output (as there are random elements your output will differ):
 
@@ -71,6 +72,6 @@ input is (Base64) iv : (Base64) ciphertext
 plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 02nd 2021
 
 Back to the main page: [readme.md](../readme.md)

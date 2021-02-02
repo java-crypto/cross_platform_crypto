@@ -34,7 +34,9 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS Crypto](../RsaSignatureString/RsaSignatureStringVerificationOnlyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaSignatureStringVerificationOnly#index.js/)
 | [NodeJS forge](../RsaSignatureString/RsaSignatureStringVerificationOnlyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaSignatureStringVerificationOnly](https://repl.it/@javacrypto/CpcNodeJsRsaSignatureStringVerificationOnly#index.js/)
 | [Webcrypto verify only](../RsaSignatureString/rsasignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
+| [Python](../RsaSignatureString/RsaSignatureStringFull.py) *1) | :x: | [see full version](https://repl.it/@javacrypto/CpcPythonRsaSignatureStringFull#main.py/)
 
+*1) you need the external library pycryptodome, version 3.9.9
 This is an output:
 
 ```plaintext
@@ -57,6 +59,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 02nd 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -4,7 +4,7 @@
 
 This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
 
-I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto** and **NodeJs node-forge**  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
+I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**  and **Python** (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
 
 Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the [**Libsodium**](#readme-libsodium) project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section. 
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
@@ -27,17 +27,17 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### AES string encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |  
-| [CBC-mode String Encryption](docs/aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
-| [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
-| [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
-| [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: |
-| [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: |
-| [CBC-mode passphrase String Encryption](docs/aes_cbc_256_passphrase_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: |
-| [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: |
-| [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
-| [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |    
+| [CBC-mode String Encryption](docs/aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
+| [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: |
+| [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
+| [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
+| [CBC-mode passphrase String Encryption](docs/aes_cbc_256_passphrase_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
+| [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :x: |
+| [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |  :soon: |
 
 #### AES CBC special: tampering
 | Solution | Java | Explanation |
@@ -46,21 +46,21 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### RSA encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | 
-| [RSA OEAP padding SHA-1 String](docs/rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
-| [RSA OEAP padding SHA-1 String decryption only](docs/rsa_decryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
-| [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | 
+| [RSA OEAP padding SHA-1 String](docs/rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA OEAP padding SHA-1 String decryption only](docs/rsa_decryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x:
+| [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 
 
 ### RSA signature with different padding modes ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
-| [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:
-| [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x:
-| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: |
+| [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :x: |
+| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### RSA keys ###
 
@@ -96,11 +96,11 @@ Note: you need external libraries for this feature!
 
 ### Elliptic curve signature ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
-| [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:|
-| [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark:
-| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:|
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: |
+| [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:| :white_check_mark: |
+| [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:|
 
 
 ### <a name="readme-libsodium"></a>Libsodium solutions
@@ -146,20 +146,22 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 
 | Language |  Online-compiler | framework version
 | ------ | :---: | ---- |
-| Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
-| PHP |  repl.it | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
-| PHP phpseclib |   | version 3
 | C# |  repl.it | Mono C# compiler version 6.8.0.123
 | C# |  dotnetfiddle.net | .NET 4.7.2
 | C# |  dotnetfiddle.net | .NET 5
 | C# |  Bouncy Castle | version 1.89
+| Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
 | Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
 | NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
 | NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
-| Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 | OpenSSL |  | version 1.1.1g Windows x64
+| PHP |  repl.it | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
+| PHP phpseclib |   | version 3
+| Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
+| Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Jan. 30th 2021
+
+Last update: Feb. 02nd 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

@@ -60,8 +60,11 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS Crypto](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [NodeJS node-forge](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [Webcrypto](../AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html)
+| [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :white_check_mark: | [repl.it CpcPythonAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
 
-An important note about the Webcrypto-program: the program is of **very poor quality** and should be used for demonstration purpose only. It has a lot of unnecessary conversions - **never ever use it as basis for your own (business) programs**.
+*1) you need the external library pycryptodome, version 3.9.9
+
+An important note about the WebCrypto-program: the program is of **very poor quality** and should be used for demonstration purpose only. It has a lot of unnecessary conversions - **never ever use it as basis for your own (business) programs**.
 
 This is an output (as there are random elements your output will differ):
 
@@ -99,6 +102,6 @@ Ciphertext is (Base64) salt : (Base64) iv : (Base64) ciphertext
 DecryptedtextCpc: The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 02nd 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -52,7 +52,9 @@ The following links provide the solutions in code and an online compile that run
 | [Javascript CryptoJs](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)
 | [NodeJS Crypto](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256StringEncryptionFull#index.js/)
 | [NodeJS node-forge](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
-| [Python](../AesCbc256StringEncryption/AesCbc256StringEncryptionFull.py) | :white_check_mark: | [repl.it CpcPythonAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256StringEncryptionFull#main.py/)
+| [Python](../AesCbc256StringEncryption/AesCbc256StringEncryptionFull.py) *1) | :white_check_mark: | [repl.it CpcPythonAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256StringEncryptionFull#main.py/)
+
+*1) you need the external library pycryptodome, version 3.9.9
 
 This is an output (as there are random elements your output will differ):
 

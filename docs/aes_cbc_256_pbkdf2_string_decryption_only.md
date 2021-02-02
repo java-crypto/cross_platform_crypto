@@ -38,6 +38,8 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS node-forge](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringDecryptionOnlyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2StringDecryptionOnly](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2StringDecryptionOnly#index.js/)
 | [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :x: | [see the full version](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
 
+*1) you need the external library pycryptodome, version 3.9.9
+
 This is an output (as there are random elements your output will differ):
 
 ```plaintext

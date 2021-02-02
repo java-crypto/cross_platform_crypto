@@ -66,10 +66,13 @@ The following links provide the solutions in code and an online compiler that ru
 |  [Webcrypto sign only](../EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) - does not work with Firefox 84
 | [Webcrypto verify only](../EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) | :white_check_mark: | [Your browser WebcryptoEcVerifyDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) 
 | [OpenSSL (file signature)](ecdsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [EC signature DER OpenSSL](ecdsa_signature_file_openssl.md)
+| [Python](../EcSignatureP256Sha256DerString/EcSignatureDerStringFull.py) *3) | :white_check_mark: | [repl.it CpcPythonEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcPythonEcSignatureP256DerStringFull#main.py/)
 
 ***1)** runs with .NET 4.7.2 and Bouncy Castle 1.89
 
 ***2)** Running the WebCrypto examples in my Browser I found that the Firefox Browser (tested with Version 84, x64 Windows) cannot run the **sign** example due to a long lasting bug - please use Chrome or Opera as they will sign.
+
+***3)** you need the external library pycryptodome, version 3.9.9
 
 Notes regarding the implementations: for this article I have choosen the **DER encoding** of the signature. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSA** and everything is fine. If you like need the example with [IEEE P1363 encoding see this article](ecdsa_signature_ieee_p1363_string.md).
 

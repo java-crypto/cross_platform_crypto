@@ -62,6 +62,9 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS forge](../RsaEncryptionOaepSha1String/RsaEncryptionOaepSha1NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaEncryptionOaepSha1String](https://repl.it/@javacrypto/CpcNodeJsRsaEncryptionOaepSha1String#index.js/)
 | [Webcrypto encryption only](../RsaEncryptionOaepSha1String/rsaencryptionoaepsha1.html) | :white_check_mark: | [your browser WebcryptoRsaEncryptOaepSha1String.html](https://java-crypto.github.io/cross_platform_crypto/RsaEncryptionOaepSha1String/rsaencryptionoaepsha1.html)
 | [Webcrypto decryption only](../RsaEncryptionOaepSha1String/rsadecryptionoaepsha1.html) | :white_check_mark: | [your browser WebcryptoRsaDecryptOaepSha1String.html](https://java-crypto.github.io/cross_platform_crypto/RsaEncryptionOaepSha1String/rsadecryptionoaepsha1.html)
+| [Python](../RsaEncryptionOaepSha1String/RsaEncryptionOaepSha1.py) *1) | :white_check_mark: | [repl.it CpcPythonRsaEncryptionOaepSha1String](https://repl.it/@javacrypto/CpcPythonRsaEncryptionOaepSha1String/#main.py)
+
+*1) you need the external library pycryptodome, version 3.9.9
 
 This is an output (your will differ because a random element):
 
@@ -78,6 +81,6 @@ decryptedtext: The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 29th 2021
+Last update: Feb. 02nd 2021
 
 Back to the main page: [readme.md](../readme.md)

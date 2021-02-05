@@ -19,7 +19,7 @@ function base64Decoding($input)
     return base64_decode($input);
 }
 
-function chacha20Poly1305EncryptToBase64($key, $data)
+function chacha2020Poly1305EncryptToBase64($key, $data)
 {
     $nonce = generateRandomNonce();
     $ciphertext = sodium_crypto_aead_chacha20poly1305_ietf_encrypt ($data , "" , $nonce, $key );
@@ -30,7 +30,7 @@ function chacha20Poly1305EncryptToBase64($key, $data)
     return base64Encoding($nonce) . ':' . base64Encoding($ciph) . ':' . base64Encoding($tag);
 }
 
-function chacha20Poly1305DecryptFromBase64($key, $data)
+function chacha2020Poly1305DecryptFromBase64($key, $data)
 {
     list($nonceBase64, $ciphertextBase64, $tagBase64) = explode(':', $data, 3);
     // append tag to ciphertext
@@ -41,7 +41,7 @@ function chacha20Poly1305DecryptFromBase64($key, $data)
     return sodium_crypto_aead_chacha20poly1305_ietf_decrypt($ciphertextComplete, "", $nonce, $key);
 }
 
-echo 'ChaCha20-Poly1305 String encryption with random key full' . PHP_EOL;
+echo 'ChaCha2020-Poly1305 String encryption with random key full' . PHP_EOL;
 
 $plaintext = 'The quick brown fox jumps over the lazy dog';
 echo 'plaintext: ' . $plaintext . PHP_EOL;

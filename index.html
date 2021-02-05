@@ -520,7 +520,7 @@ based on dark.css by Vladimir Epifanov
     <h1 id="cross-platform-cryptography">Cross-platform cryptography</h1>
 <h2 id="general-information-and-overview">General information and overview</h2>
 <p>This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be &quot;secure&quot; but explain how the crypto routines are compatible with other platforms.</p>
-<p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong> and <strong>NodeJs node-forge</strong>  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
+<p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>  and <strong>Python</strong> (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
 <p>Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the <a href="#readme-libsodium"><strong>Libsodium</strong></a> project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section.
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. &quot;CryptoJs&quot;, NodeJs has a built-in &quot;Crypto&quot; library or you can use &quot;node-forge&quot;).</p>
 <h3 id="general-routines">General routines</h3>
@@ -662,6 +662,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <th style="text-align: center;">NodeJS</th>
 <th style="text-align: center;">NodeJs forge</th>
 <th style="text-align: center;">WebCrypto</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -674,6 +675,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_string_decryption_only.md">CBC-mode String Decryption only</a></td>
@@ -684,9 +686,11 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_string_encryption.md">CBC-mode PBKDF2 String Encryption</a></td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -704,6 +708,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md">CBC-mode PBKDF2 HMAC String Encryption</a></td>
@@ -713,6 +718,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
@@ -724,6 +730,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_gcm_256_string_encryption.md">GCM-mode String Encryption</a></td>
@@ -734,6 +741,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_gcm_256_pbkdf2_string_encryption.md">GCM-mode PBKDF2 String Encryption</a></td>
@@ -741,6 +749,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -754,6 +763,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">🔜</td>
 </tr>
 </tbody>
 </table>
@@ -774,6 +784,35 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 </tr>
 </tbody>
 </table>
+<h3 id="chacha20-poly1305-encryption">ChaCha20-Poly1305 encryption</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th style="text-align: center;">Java</th>
+<th style="text-align: center;">PHP</th>
+<th style="text-align: center;">C#</th>
+<th style="text-align: center;">CryptoJS</th>
+<th style="text-align: center;">NodeJS</th>
+<th style="text-align: center;">NodeJs forge</th>
+<th style="text-align: center;">WebCrypto</th>
+<th style="text-align: center;">Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/chacha20poly1305_string_encryption.md">ChaCha20-Poly1305 String encryption with random key</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
 <h3 id="rsa-encryption">RSA encryption</h3>
 <table>
 <thead>
@@ -786,6 +825,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <th style="text-align: center;">NodeJS</th>
 <th style="text-align: center;">NodeJs forge</th>
 <th style="text-align: center;">WebCrypto</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -795,6 +835,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -808,26 +849,18 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td><a href="readme.md">RSA OEAP padding SHA-256 String</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-</tr>
-<tr>
-<td><a href="readme.md">RSA OEAP padding SHA-256 String decryption only</a></td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
-<td style="text-align: center;">🔜</td>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encryption_oaep_sha256_string.md">RSA OEAP padding SHA-256 String</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
@@ -844,6 +877,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <th style="text-align: center;">NodeJs forge</th>
 <th style="text-align: center;">WebCrypto</th>
 <th style="text-align: center;">OpenSSL</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -853,6 +887,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -868,6 +903,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_pss_string.md">RSA String Signature PSS (full)</a></td>
@@ -875,6 +911,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -993,6 +1030,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <th style="text-align: center;">NodeJs forge</th>
 <th style="text-align: center;">WebCrypto</th>
 <th style="text-align: center;">OpenSSL</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1006,6 +1044,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_der_string.md">ECDSA String Signature DER encoding </a></td>
@@ -1015,6 +1054,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
@@ -1027,6 +1067,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 </tr>
 </tbody>
@@ -1218,21 +1259,6 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 </thead>
 <tbody>
 <tr>
-<td>Java</td>
-<td style="text-align: center;">repl.it</td>
-<td>OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)</td>
-</tr>
-<tr>
-<td>PHP</td>
-<td style="text-align: center;">repl.it</td>
-<td>PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)</td>
-</tr>
-<tr>
-<td>PHP phpseclib</td>
-<td style="text-align: center;"></td>
-<td>version 3</td>
-</tr>
-<tr>
 <td>C#</td>
 <td style="text-align: center;">repl.it</td>
 <td>Mono C# compiler version 6.8.0.123</td>
@@ -1244,8 +1270,18 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 </tr>
 <tr>
 <td>C#</td>
+<td style="text-align: center;">dotnetfiddle.net</td>
+<td>.NET 5</td>
+</tr>
+<tr>
+<td>C#</td>
 <td style="text-align: center;">Bouncy Castle</td>
 <td>version 1.89</td>
+</tr>
+<tr>
+<td>Java</td>
+<td style="text-align: center;">repl.it</td>
+<td>OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)</td>
 </tr>
 <tr>
 <td>Javascript CryptoJs</td>
@@ -1263,18 +1299,33 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td>node v12.16.1, node-forge version 0.10.0</td>
 </tr>
 <tr>
-<td>Webcrypto</td>
-<td style="text-align: center;">modern browser</td>
-<td>tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119</td>
-</tr>
-<tr>
 <td>OpenSSL</td>
 <td style="text-align: center;"></td>
 <td>version 1.1.1g Windows x64</td>
 </tr>
+<tr>
+<td>PHP</td>
+<td style="text-align: center;">repl.it</td>
+<td>PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)</td>
+</tr>
+<tr>
+<td>PHP phpseclib</td>
+<td style="text-align: center;"></td>
+<td>version 3</td>
+</tr>
+<tr>
+<td>Python</td>
+<td style="text-align: center;">repl.it</td>
+<td>version 3.8.2 (default, Feb 26 2020, 02:56:10)</td>
+</tr>
+<tr>
+<td>Webcrypto</td>
+<td style="text-align: center;">modern browser</td>
+<td>tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119</td>
+</tr>
 </tbody>
 </table>
-<p>Last update: Jan. 29th 2021</p>
+<p>Last update: Feb. 05th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

@@ -55,22 +55,21 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../AesGcm256StringEncryption/AesGcm256StringEncryption.java) *1) | :white_check_mark: | [repl.it CpcJavaAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcJavaAesGcm256StringEncryption#Main.java/)
-| [PHP](../AesGcm256StringEncryption/AesGcm256StringEncryption.php) *2) | :white_check_mark: | [repl.it CpcPhpAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcPhpAesGcm256StringEncryption#main.php/)
-| [C#](../AesGcm256StringEncryption/AesGcm256StringEncryption.cs) *3) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpAesGCM256StringEncryption](https://dotnetfiddle.net/c91C0t/)
+| [Java](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.java) *1) | :white_check_mark: | [repl.it CpcJavaChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcJavaChaCha20Poly1305StringEncryption#Main.java/)
+| [PHP](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.php) *2) | :white_check_mark: | [repl.it CpcPhpChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcPhpChaCha20Poly1305StringEncryption#main.php/)
+| [C#](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.cs) *3) | :white_check_mark: | [dotnetfiddle.net  CpcCsharpChaCha20Poly1305StringEncryption](https://dotnetfiddle.net/LQZybS/)
 | Javascript CryptoJs | :x: | not available
-| [NodeJS Crypto](../AesGcm256StringEncryption/AesGcm256StringEncryptionNodeJsCrypto.js) *4) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256StringEncryption#index.js/)
+| [NodeJS Crypto](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryptionNodeJsCrypto.js) *4) | :white_check_mark: | [repl.it CpcNodeJsCryptoChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoChaCha20Poly1305StringEncryption#index.js/)
 | NodeJS node-forge | :x: | not available
-| [Webcrypto encryption & decryption](../RsaSignaturePssString/rsasignaturepsssign.html) | :white_check_mark: | [your browser WebcryptoChaCha20Poly105StringEncryption.html](http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/chacha20poly1305encryptionstring.html)
-| [Webcrypto verify only](R../saSignaturePssString/rsasignaturepssverification.html) | :white_check_mark: | [your browser WebcryptoRsaPssVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepssverification.html)
-| [Python](../RsaSignaturePssString/RsaSignaturePssStringFull.py) *6) | :white_check_mark: | [repl.it CpcPythonRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcPythonRsaSignaturePssStringFull#main.py/)
+| [Webcrypto encryption & decryption](../ChaCha20Poly1305StringEncryption/chacha20poly1305stringencryption.html) *5) | :white_check_mark: | [your browser WebcryptoChaCha20Poly105StringEncryption.html](http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/chacha20poly1305encryptionstring.html)
+| [Python](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.py) *6) | :white_check_mark: | [repl.it CpcPythonChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcPythonChaCha20Poly1305StringEncryption#main.py/)
 
 * *1) Java: runs in Java 11+ without external library
 * *2) PHP: runs in PHP 7.3+ without external library
 * *3) C# needs **dot.net 5** to run, so I changed my online compiler for this example. For encryption you need the NSec library (documentation: https://nsec.rocks/, code  https://github.com/ektrah/nsec)
 * *4) NodeJs's built in Crypto library runs the ChaCha20Poly15 algorithm
 * *5) Webcrypto needs the external library "sodium.js" (documentation: https://github.com/jedisct1/libsodium.js/, code: https://github.com/jedisct1/libsodium.js/blob/master/dist/browsers/sodium.js)
-* *6) 
+* *6) Python need the external library pycryptodome, version 3.9.9 (documentation: https://pypi.org/project/pycryptodome/, code: https://github.com/Legrandin/pycryptodome/)
 
 
 This is an output (as there are random elements your output will differ):

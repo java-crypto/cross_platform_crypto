@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ChaCha20-Poly1305 authenticated string encryption with a random key</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+	</style>
+</head>
+<body>
+<h1>ChaCha20-Poly1305 authenticated string encryption with a random key</h1>
+<hr><p>
+<b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/chacha20_poly1305_string_encryption.md"  target="_blank">
+my webpage <b>ChaCha20-Poly105 authenticated string encryption</b></a><br>
+</p><hr>
+<h2>Encryption</h2>
+<p>For encryption you need your encryption key in Base64 encoding.</p>
+<p>Insert your encryption key (in Base64 encoding):</p>
+<textarea name="encryptionKeyBase64" id="encryptionKeyBase64" rows="2" cols="40">c9cVXonI1GOHstGY8wUnAiNQ72bItMgcJTwv5Vjs95U=</textarea>
+<br>
+<p>or</p> <button onclick="generateKey()">generate a new encryption key</button>
+<p>Insert the string you like to encrypt:</p>
+<textarea name="plaintext" id="plaintext" rows="5" cols="40">The quick brown fox jumps over the lazy dog</textarea>
+<p>press the encrypt button to proceed:</p>
+<button onclick="encryptChaCha20()">encrypt</button> 
+<p>encrypted (ciphertext) in Base64 encoding:</p>
+<textarea name="ciphertextBase64" id="ciphertextBase64" rows="6" cols="40">the ciphertext comes here...</textarea><br>
+<p>The output is (Base64) nonce : (Base64) ciphertext</p>
+
+<h2>Decryption</h2>
+<p>For decryption you need encryption key in Base64 encoding.</p>
+<p>Insert your encryption key (in Base64 encoding):</p>
+<textarea name="decryptionKeyBase64" id="decryptionKeyBase64" rows="2" cols="40">c9cVXonI1GOHstGY8wUnAiNQ72bItMgcJTwv5Vjs95U=</textarea>
+<p>Insert the ciphertext you like to decrypt or press the "sample data" button:</p>
+<button onclick="sampledata()">sample data</button> 
+<br><br>
+<textarea name="ciphertextDecryptionBase64" id="ciphertextDecryptionBase64" rows="5" cols="40">the ciphertext comes here...</textarea><br>
+<p>The input is (Base64) nonce : (Base64) ciphertext</p>
+<p>press the decrypt button to proceed:</p>
+<button onclick="decryptChaCha20()">decrypt</button> 
+<p>decrypted plaintext:</p>
+<textarea name="decryptedtext" id="decryptedtext" rows="6" cols="40">the decryptedtext comes here...</textarea>
+<hr><p><b>Technical note: this program uses the ChaCha20 cipher for encryption and Poly1305 MAC for authenticated encryption.</b></p><hr>
+<script src="http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/sodium.js" async></script>
+<script>
+// code for sodium.js: https://github.com/jedisct1/libsodium.js/blob/master/dist/browsers/sodium.js
+window.sodium = {
+        onload: function (sodium) {
+            let h = sodium.crypto_generichash(64, sodium.from_string('test'));
+            console.log(sodium.to_hex(h));
+        }
+    };
+
+const newNonce = () => sodium.randombytes_buf(12);
+const newKey = () => sodium.randombytes_buf(32);
+
+function encryptChaCha20() {
+	var encryptionKeyBase64 = document.getElementById('encryptionKeyBase64').value;
+	var encryptionKey = sodium.from_base64(encryptionKeyBase64, sodium.base64_variants.ORIGINAL);
+	var nonce = newNonce();
+	var nonceBase64 = sodium.to_base64(nonce, sodium.base64_variants.ORIGINAL);
+	var plaintext = sodium.from_string(document.getElementById('plaintext').value);
+	var aad = sodium.from_string("");
+	var ciphertext = sodium.crypto_aead_chacha20poly1305_ietf_encrypt_detached(plaintext, aad, null, nonce, encryptionKey);
+	var ciphertextBase64 = sodium.to_base64(ciphertext.ciphertext, sodium.base64_variants.ORIGINAL);
+	var poly1305TagBase64 = sodium.to_base64(ciphertext.mac, sodium.base64_variants.ORIGINAL);
+	var returnstring = nonceBase64 + ':' + ciphertextBase64 + ':' + poly1305TagBase64;
+	document.getElementById('ciphertextBase64').value = returnstring;
+}
+
+function decryptChaCha20() {
+	var decryptionKeyBase64 = document.getElementById('decryptionKeyBase64').value;
+	var decryptionKey = sodium.from_base64(decryptionKeyBase64, sodium.base64_variants.ORIGINAL);
+	var ciphertextDecryptionBase64 = document.getElementById('ciphertextDecryptionBase64').value;
+	var dataSplit = ciphertextDecryptionBase64.split(":");
+	var nonce = sodium.from_base64(dataSplit[0], sodium.base64_variants.ORIGINAL);
+	var ciphertext = sodium.from_base64(dataSplit[1], sodium.base64_variants.ORIGINAL);
+	var poly1305Tag = sodium.from_base64(dataSplit[2], sodium.base64_variants.ORIGINAL);
+	var aad = sodium.from_string("");
+	var decryptedtext = sodium.crypto_aead_chacha20poly1305_ietf_decrypt_detached(null, ciphertext, poly1305Tag, aad, nonce, decryptionKey);
+	document.getElementById('decryptedtext').value = sodium.to_string(decryptedtext);
+}
+
+function sampledata() {
+	document.getElementById('decryptionKeyBase64').value = 'c9cVXonI1GOHstGY8wUnAiNQ72bItMgcJTwv5Vjs95U=';
+	document.getElementById('ciphertextDecryptionBase64').value = 'ptUIFjeEg24fCQNS:mhrPdKH8lF3rMK3Y2BIPhd299UBinlls6I4rIi9Wi4zIso8SeoQZ43355A==:5plHilDqoHbpYwpwaPIYyA==';
+}
+
+function generateKey() {
+	document.getElementById('encryptionKeyBase64').value = sodium.to_base64(newKey(), sodium.base64_variants.ORIGINAL);
+}
+</script>
+</body>
+</html>

@@ -44,6 +44,13 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | ------ | :------: | :----: |
 | [AES CBC-mode tampering](docs/aes_cbc_tampering.md) | :white_check_mark: | in Java as it is for demonstration only |
 
+### ChaCha20-Poly1305 encryption ###
+
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | 
+| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: |
+
+
 ### RSA encryption ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python |
@@ -161,7 +168,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
 
-Last update: Feb. 02nd 2021
+Last update: Feb. 05th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

@@ -61,7 +61,7 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | not available
 | [NodeJS Crypto](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryptionNodeJsCrypto.js) *4) | :white_check_mark: | [repl.it CpcNodeJsCryptoChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoChaCha20Poly1305StringEncryption#index.js/)
 | NodeJS node-forge | :x: | not available
-| [Webcrypto encryption & decryption](../ChaCha20Poly1305StringEncryption/chacha20poly1305stringencryption.html) *5) | :white_check_mark: | [your browser WebcryptoChaCha20Poly105StringEncryption.html](http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/chacha20poly1305encryptionstring.html)
+| [Webcrypto encryption & decryption](../ChaCha20Poly1305StringEncryption/chacha20poly1305encryptionstring.html) *5) | :white_check_mark: | [your browser WebcryptoChaCha20Poly105StringEncryption.html](http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/chacha20poly1305encryptionstring.html)
 | [Python](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.py) *6) | :white_check_mark: | [repl.it CpcPythonChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcPythonChaCha20Poly1305StringEncryption#main.py/)
 
 * *1) Java: runs in Java 11+ without external library

@@ -46,6 +46,7 @@ I do not provide a "decryption only" version as all functions are available in t
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Webcrypto / Browser](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryptionstring.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpcjs/secretbox/libsodiumsecretboxencryptionstring.html/)
+| [Python](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcPythonLibsodiumSecretboxEncryptionString#main.py/)
 
 This is an output (your will differ because a random element):
 
@@ -66,6 +67,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 23rd 2021
+Last update: Feb. 07th 2021
 
 Back to the main page: [readme.md](../readme.md)

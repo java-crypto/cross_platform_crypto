@@ -53,15 +53,15 @@ print("publicKeyB:  " + publicKeyBBase64)
 print("ciphertext:  " + ciphertextBase64)
 print("output is (Base64) ciphertext")
 
-print("\n* * * decryption * * *");
+print("\n* * * decryption * * *")
 # received ciphertext
-ciphertextReceivedBase64 = ciphertextBase64;
+ciphertextReceivedBase64 = ciphertextBase64
 # for decryption you need your private key (privateKeyB)
 privateKeyBBase64 = "yNmXR5tfBXA/uZjanND+IYgGXlrFnrdUiUXesI4fOlM="
 privateKeyB = nacl.encoding.Base64Encoder.decode(privateKeyBBase64)
 
-decryptedtext = sealedCryptoboxDecryptionFromBase64(privateKeyB, ciphertextReceivedBase64);
-print("ciphertext:  " + ciphertextReceivedBase64);
-print("input is (Base64) ciphertext");
-print("privateKeyB: " + privateKeyBBase64);
-print("decrypt.text:" + decryptedtext);
+decryptedtext = sealedCryptoboxDecryptionFromBase64(privateKeyB, ciphertextReceivedBase64)
+print("ciphertext:  " + ciphertextReceivedBase64)
+print("input is (Base64) ciphertext")
+print("privateKeyB: " + privateKeyBBase64)
+print("decrypt.text:" + decryptedtext)

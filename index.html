@@ -1083,12 +1083,14 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <th style="text-align: center;">C#</th>
 <th style="text-align: center;">NodeJS</th>
 <th style="text-align: center;">Browser</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_overview.md">Libsodium overview</a></td>
 <td>general information about Libsodium (&quot;NaCl&quot;, &quot;Sodium&quot;) cryptography</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1103,6 +1105,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/curve25519_key_generation.md">generate a curve 25519 key pair</a></td>
@@ -1112,6 +1115,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/x25519_public_key_generation.md">derive the curve X25519 public key from a secret key</a></td>
@@ -1121,10 +1125,12 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_ed25519_keypair.md">generate a curve ED25519 key pair</a></td>
 <td>generate a curve ED25519 private key and public key pair in Base64 encoding</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1139,6 +1145,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/argon2.md">Argon 2 password derivation function</a></td>
@@ -1148,6 +1155,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/argon2_parameter.md">Argon 2 parameter</a></td>
@@ -1157,6 +1165,17 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/chacha20_poly1305_string_encryption.md">ChaCha20-Poly1305 String encryption with random key</a></td>
+<td>encrypts a string on basis of a  <strong>randomly generated encryption key</strong>, using the <strong>ChaCha20 cipher</strong> for encryption and the <strong>Poly1305 MAC</strong> for authentication</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_secretbox_encryption_string.md">Libsodium authenticated string encryption with a random key</a></td>
@@ -1166,10 +1185,12 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_cryptobox_encryption_string.md">Libsodium crypto box authenticated hybrid string encryption</a></td>
 <td>encrypts a string on basis of a <strong>X25519 curve</strong> key exchange, using the <strong>XSalsa20 stream cipher</strong> for encryption and the <strong>Poly1305 MAC</strong> for authentication</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1184,10 +1205,12 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_signature_detached_string.md">Libsodium string signature (detached) with a private-public key</a></td>
 <td>uses an ED25519 curve signature</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1325,7 +1348,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 </tr>
 </tbody>
 </table>
-<p>Last update: Feb. 05th 2021</p>
+<p>Last update: Feb. 07th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

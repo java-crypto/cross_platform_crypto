@@ -53,6 +53,7 @@ There is something I'm proud of: for the first time I did starting the programmi
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Webcrypto](../LibsodiumCryptoboxEncryptionString/libsodiumcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpcjs/cryptobox/libsodiumcryptoboxencryptionfull.html/)
+| [Python](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPythonLibsodiumCryptoboxEncryptionString#main.py/)
 
 1) Java alternativly solution: uses the library xsalsa20poly1305-0.11.0.jar - this is not a full Libsodium compatible library so you can use it just in this case (Libsodium Cryptobox).
 
@@ -78,6 +79,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 26th 2021
+Last update: Feb. 07th 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -41,6 +41,7 @@ The following links provide the solutions in code and an online compiler that ru
 | [Browser](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpclibsodium/libsodiumsealedcryptoboxencryptionfull.html)
 | [Browser sample encryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampleencryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringSampleEncryption.html](http://javacrypto.bplaced.net/cpcjs/sealedcryptobox/libsodiumsealedcryptoboxencryptionsampleencryption.html)
 | [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringSampleDecryption.html](http://javacrypto.bplaced.net/cpcjs/sealedcryptobox/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
+| [Python](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.py) | :white_check_mark: | [repl.it CpcPythonSealedLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPythonLibsodiumSealedCryptoboxEncryptionString#main.py/)
 
 This is an output (your will differ because a random element):
 
@@ -62,6 +63,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 26th 2021
+Last update: Feb. 07th 2021
 
 Back to the main page: [readme.md](../readme.md)

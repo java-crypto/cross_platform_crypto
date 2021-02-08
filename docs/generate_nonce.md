@@ -20,6 +20,7 @@ The following links provide the solution in code and within an online compile th
 | [Javascript CryptoJs](../GenerateNonce/GenerateRandomNonceCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomNonce/)
 | [NodeJS Crypto](../GenerateNonce/GenerateRandomNonceNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsCryptoGenerateRandomNonce/)
 | [NodeJS forge](../GenerateNonce/GenerateRandomNonceNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomNonce/)
+| [Python](../GenerateNonce/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
 
 This is an output (as there is a random element your output will differ):
 
@@ -28,6 +29,6 @@ Generate a 12 byte long nonce for AES GCM
 generated nonce length: 12 base64: iK+wXGH26uFN+XFX
 ```
 
-Last update: Jan. 09th 2021
+Last update: Feb. 08th 2021
 
 Back to the main page: [readme.md](../readme.md)

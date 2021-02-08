@@ -22,6 +22,7 @@ The following links provide the solution in code and within an online compile th
 | [Javascript CryptoJs](../GenerateAesKey/GenerateRandomAesKeyCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomAesKey](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)
 | [NodeJS Crypto](../GenerateAesKey/GenerateRandomAesKeyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
 | [NodeJS forge](../GenerateAesKey/GenerateRandomAesKeyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
+| [Python](../GenerateAesKey/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
 
 This is an output (as there is a random element your output will differ):
 
@@ -30,6 +31,6 @@ Generate a 32 byte long AES key
 generated key length: 32 base64: a9VVidAcHk6mv09zGSfH6ZiWNWSsjt/gryi6UcnMdAg=
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 08th 2021
 
 Back to the main page: [readme.md](../readme.md)

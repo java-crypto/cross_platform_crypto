@@ -6,7 +6,7 @@ Many cryptographic algorithms need a (optimal random created) key, for AES 256 t
 
 #### What is wrong with this doing?
 
-The key will get (in cryptographic environments) weak as - in the end - you don't use a key of 32 bytes with a value of 0 to 255. Instead the only input would be the letters "a to z", "A to Z", "0 to 9" and some special characters e.g. "! to }" - counting them you will get about 80 different characters instead of 255 different ones when using a random key.
+The key will get (in cryptographicle environments) weak as - in the end - you don't use a key of 32 bytes with a value of 0 to 255. Instead the only input would be the letters "a to z", "A to Z", "0 to 9" and some special characters e.g. "! to }" - counting them you will get about 80 different characters instead of 255 different ones when using a random key.
 
 Talking in mathematic numbers the "key-space" is reduced from "256 to the power of 32" to "80 to the power of 32". Bring this to real numbers it's "1.1579209e+77" compared to "7.9228163e+60". That means you lower the (so called) **entrophy** to about "1.4615016e+16" what is much lower than the random one.
 
@@ -20,7 +20,7 @@ We are using a key derivation that uses a "salt" and run the function many times
 
 First: using a (random created) hash will produce a different key although the same password is used as input.
 
-Second: a high number of iteration will slow down the key generation. Why is that good? Have a look to the typical scenario - the user puts in a password a press an "submit" button, waits a second and he is logged in. The other scenario is the hacker that tries to check a lot of passwords if they will work. Using a modern machine the simple hashing will take milliseconds so he is been able to check thousands of password in a second - with the slowed down version there is only one check per second (I think it's good).
+Second: a high number of iteration will slow down the key generation. Why is that good? Have a look to the typical scenario - the user puts in a password and press a "submit" button, waits a second and he is logged in. The other scenario is the hacker that tries to check a lot of passwords if they will work. Using a modern machine the simple hashing will take milliseconds so he is been able to check thousands of passwords in a second - with the slowed down version there is only one check per second (I think it's good).
 
 Third: the clever algorithm will shuffle the low entrophy "password" to a high entrophy key.
 
@@ -35,7 +35,7 @@ My function does have three parameters as input:
 
 #### What should you avoid?
 
-Don't rely on default parameters when working with PBKDF2-functions on different platforms. The can change when framework updates are made and different frameworks may have different parameters.
+Don't rely on default parameters when working with PBKDF2-functions on different platforms. They can change when framework updates are made and different frameworks may have different parameters.
 
 #### Serious security note
 
@@ -56,6 +56,9 @@ The following links provide the solution in code and within an online compile th
 | [Javascript CryptoJs](../Pbkdf2/Pbkdf2CryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsPbkdf2](https://repl.it/@javacrypto/CpcCryptoJsPbkdf2#index.js/)
 | [NodeJS CryptoJs](../Pbkdf2/Pbkdf2NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoPbkdf2](https://repl.it/@javacrypto/CpcNodeJsCryptoPbkdf2#index.js/)
 | [NodeJS forge](../Pbkdf2/Pbkdf2NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsPbkdf2](https://repl.it/@javacrypto/CpcNodeJsPbkdf2#index.js/)
+| [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :white_check_mark: | [repl.it see AesCbc256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
+
+*1) There is not separate example in Python, see the full working code in AES CBC 256 PBKDF2  String Encryption 
 
 This is an output generated with "generateFixedSalt32Byte" for comparison reasons - don't do this in production!:
 
@@ -65,6 +68,6 @@ aesKeySha256 length:  32  data:  e1ea3e4b0376c0f9bf93b94fe71719a099317297b79108a
 aesKeySha1   length:  32  data:  d6bc1ae2aea28f5098826b555d7a0fe073e5bc7d8136d232e01d422ba2dd761e
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 08th 2021
 
 Back to the main page: [readme.md](../readme.md)

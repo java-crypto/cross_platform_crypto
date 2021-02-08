@@ -20,6 +20,7 @@ The following links provide the solution in code and within an online compile th
 | [Javascript CryptoJs](../GenerateInitvector/GenerateRandomInitvectorCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomInitvector/)
 | [NodeJS CryptoJs](../GenerateInitvector/GenerateRandomInitvectorNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
 | [NodeJS forge](../GenerateInitvector/GenerateRandomInitvectorNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
+| [Python](../GenerateInitvector/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
 
 This is an output (as there is a random element your output will differ):
 
@@ -28,6 +29,6 @@ Generate a 16 byte long Initialization vector (IV)
 generated iv length: 16 base64: PnujuygIgaMxwdQRWz9wvA==
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 08th 2021
 
 Back to the main page: [readme.md](../readme.md)

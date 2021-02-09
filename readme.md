@@ -19,7 +19,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [Base64 encoding & decoding](docs/base64_encoding_decoding.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [binary data to a hex string & back](docs/binary_data_hex_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [SHA256 hashing](docs/sha256_hash.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [HMAC 256 calculation](docs/hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
+| [HMAC 256 calculation](docs/hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [PBKDF2 key derivation](docs/pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [Generate RSA keys](docs/rsa_key_generation.md) | [see explanation](docs/rsa_key_generation.md) |
 [Generate Curve 25519 keys](docs/curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: |
@@ -33,7 +33,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: |
 | [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
-| [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
+| [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: |
 | [CBC-mode passphrase String Encryption](docs/aes_cbc_256_passphrase_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
 | [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :x: |
 | [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -169,7 +169,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
 
-Last update: Feb. 08th 2021
+Last update: Feb. 09th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

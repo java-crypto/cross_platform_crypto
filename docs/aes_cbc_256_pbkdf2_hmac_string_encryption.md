@@ -6,7 +6,7 @@ The standard encryption algorithm is **AES** after it got choosen and standardiz
 
 This version is the advanced version of [AES CBC mode 256 PBKDF2 string encryption](aes_cbc_256_pbkdf2_string_encryption.md) because it additionally secures the ciphertext with a value called **HMAC** ("keyed-hash message authentication code"). 
 
-#### Why is it neccessary to "secure" encrypted data?  
+#### Why is it necessary to "secure" encrypted data?  
 
 The answer is very easy: to get it secure. Encrypting data with AES in mode CBC is so secure that nobody can decrypt them without having access to the encryption key or putting in the right password for a PBKDF2-derived key.
 
@@ -65,6 +65,7 @@ The following links provide the solutions in code and an online compile that run
 | [Javascript CryptoJs](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256Pbkdf2HmacStringEncryption#index.js/)
 | [NodeJS Crypto](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256Pbkdf2HmacStringEncryption#index.js/)
 | [NodeJS node-forge](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2HmacStringEncryption#index.js/)
+| [Python](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.py) | :white_check_mark: | [repl.it CpcPythonAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2HmacStringEncryption#main.py/)
 
 This is an output (as there are random elements your output will differ):
 
@@ -83,6 +84,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 09th 2021
 
 Back to the main page: [readme.md](../readme.md)

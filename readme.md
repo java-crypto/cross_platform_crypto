@@ -88,9 +88,9 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 ### Curve 25519 key exchange ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |
-[Curve 25519 key exchange & AES CBC mode 256 string encryption](docs/curve25519_key_exchange_aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
+[Curve 25519 key exchange & AES CBC mode 256 string encryption](docs/curve25519_key_exchange_aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 
 Note: you need external libraries for this feature!
 

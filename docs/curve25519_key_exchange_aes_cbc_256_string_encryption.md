@@ -71,6 +71,7 @@ The following links provide the solutions in code and an online compile that run
 | [Javascript CryptoJs](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption#index.js/)
 | [NodeJS Crypto](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryp#index.js/)
 | NodeJS node-forge | :x: | please use the built-in Node Crypto-solution above
+| [Python](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.py) | :white_check_mark: | [repl.it CpcPythonCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcPythonCurve25519KeyExchangeAesCbc256StringEncryption#main.py/)
 
 ### What additional libraries do I need to run the examples?
 
@@ -81,6 +82,8 @@ The following links provide the solutions in code and an online compile that run
 | C# | Curve25519.cs | [https://github.com/hanswolff/curve25519](https://github.com/hanswolff/curve25519/) |
 | Javascript | axlsign.js | [https://github.com/wavesplatform/curve25519-js](https://github.com/wavesplatform/curve25519-js/) |
 | Javascript | buffer-to-uint8array.js | [https://github.com/substack/buffer-to-uint8array](https://github.com/substack/buffer-to-uint8array/) |
+| Python | pycryptodome version 3.9.9 | [https://www.pycryptodome.org](https://www.pycryptodome.org)
+| Python | donna25519 version 0.1.1 | [https://github.com/Muterra/donna25519](https://github.com/Muterra/donna25519)
 
 ### Java 11+ supports Curve25519, why do we use an external library?
 
@@ -110,6 +113,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Feb. 09th 2021
 
 Back to the main page: [readme.md](../readme.md)

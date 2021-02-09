@@ -519,7 +519,7 @@ based on dark.css by Vladimir Epifanov
     <!-- Markdown Monster Content -->
     <h1 id="cross-platform-cryptography">Cross-platform cryptography</h1>
 <h2 id="general-information-and-overview">General information and overview</h2>
-<p>This is a series of cryptography articles that will show how cryptography is done between different programming platforms. The sample programs do not attempt to be &quot;secure&quot; but explain how the crypto routines are compatible with other platforms.</p>
+<p>This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be &quot;secure&quot; but explain how the crypto routines are compatible with other platforms.</p>
 <p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>  and <strong>Python</strong> (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
 <p>Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the <a href="#readme-libsodium"><strong>Libsodium</strong></a> project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section.
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. &quot;CryptoJs&quot;, NodeJs has a built-in &quot;Crypto&quot; library or you can use &quot;node-forge&quot;).</p>
@@ -995,6 +995,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <th style="text-align: center;">CryptoJS</th>
 <th style="text-align: center;">NodeJS</th>
 <th style="text-align: center;">NodeJs forge</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -1006,6 +1007,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>

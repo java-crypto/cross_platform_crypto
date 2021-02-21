@@ -58,11 +58,11 @@ The following links provide the solutions in code and an online compile that run
 | [PHP](../JwtJwsRs256Signature/JwsRs256Signature.php) *) | :white_check_mark: | [repl.it CpcPhpJwsRs256Signature](https://repl.it/@javacrypto/CpcJPhpJwsRs256Signature#main.php/) |
 | [C#](../JwtJwsRs256Signature/JwsRs256Signature.cs) | :white_check_mark: | [dotnetfiddle.net CpcCsharpJwsRs256Signature](https://dotnetfiddle.net/rGnvVi/) |
 | Javascript CryptoJs | :x: | kindly use the pure nodeJs implementation |
-| [NodeJS Crypto](../JwtJwsRs256Signature/JwsRs256SignatureNodeJs.js) *) | :white_check_mark: | [repl.it CpcNodeJsJwsRs256Signature](CpcNodeJsJwsRs256Signature https://repl.it/@javacrypto/CpcNodeJsJwsRs256Signature#index.js/)
+| [NodeJS Crypto](../JwtJwsRs256Signature/JwsRs256SignatureNodeJs.js) *) | :white_check_mark: | [repl.it CpcNodeJsJwsRs256Signature](https://repl.it/@javacrypto/CpcNodeJsJwsRs256Signature#index.js/)
 | NodeJS forge | :x: | kindly use the pure nodeJs implementation |
 | [Webcrypto sign only](../JwtJwsRs256Signature/jwsrs256signaturessign.html) | :white_check_mark: | [your browser WebcryptoJwsRs256Sign.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsRs256Signature/jwsrs256signaturessign.html)
 | [Webcrypto verify only](../JwtJwsRs256Signature/jwsrs256signatureverification.html) | :white_check_mark: | [your browser WebcryptoJwsRs256Verify.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsRs256Signature/jwsrs256signatureverification.html)
-| [Python](../JwtJwsRs256Signature/JwsRs256Signature.py) *) | :white_check_mark: | [repl.it CpcPythonRsaStringSignatureFull](https://repl.it/@javacrypto/CpcPythonJwsRs256Signature#main.py/)
+| [Python](../JwtJwsRs256Signature/JwsRs256Signature.py) *) | :white_check_mark: | [repl.it CpcPythonJwsRs256Signature](https://repl.it/@javacrypto/CpcPythonJwsRs256Signature#main.py/)
 
 *) you need an external library
 

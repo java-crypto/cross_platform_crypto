@@ -38,17 +38,16 @@ Kindly note that there is not just one way of using but a lot (and different) on
 
 To start with your JWT experience I recommend that you read the article [structure of a JSON web token JWT](json_web_token_structure.md) as I'm explaining some basics.
 
-
 Here are my articles regarding JSON web token (JWT) themes:
 
 | Solution | Description | Java | PHP | C# | NodeJs | Browser | Python |
 | ------ | :------: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[structure of a JSON web token (JWT)](json_web_token_structure.md) | explains the general structure of a JWT | | | | | | |
 |JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
-|JSON web token JWK keys | standardized key format for JWT | | | | | | |
+|[JSON Web JWK keys](json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | |
 |[JSON web signature (JWS) using RS256 algorithm](json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|[JSON web signature (JWS) using PS256 algorithm](json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, SSA-PSS padding and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|[JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only)](json_web_token_jws_rs_ps_signature.md) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing |  :x: |  :x: | :x: | :x: | :white_check_mark: |   :x: | 
+|JSON web signature (JWS) using PS256 algorithm | sign a JWT with a RSA private key, SSA-PSS padding and SHA-256 hashing |  :soon: |  :soon: | :soon: | :soon: | :soon: |   :soon: | 
+|[JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only)](json_web_token_jws_rs_ps_signature.md) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing |  :x: |  :x: | :x: | :x: | :soon: |   :x: | 
 | JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | JSON web encryption (JWE) |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 

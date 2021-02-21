@@ -18,7 +18,7 @@ I tried to provide solutions that provide an exchangeable output but the verific
 
 ### Key generation: 
 
-Usually a JWT will use a **JWK** or **JSON web key** named key pair but in the end the are just other representations of a RSA private and public key. All of my sample programs will accept my well known RSA private and public key pair in **PEM format**. If you are interested in the JWK-format visit my article [JSON web token JWK keys](json_web_token_jwk_keys.md).
+Usually a JWT will use a **JWK** or **JSON web key** named key pair but in the end the are just other representations of a RSA private and public key. All of my sample programs will accept my well known RSA private and public key pair in **PEM format**. If you are interested in the JWK-format visit my article [JSON Web JWK keys](json_web_token_jwk_keys.md).
 
 All examples use pre-generated keys that are described on the page [RSA sample keys](rsa_sample_keypair.md). If you want to see how my keys got generated visit the page [RSA key generation](rsa_key_generation.md). 
 

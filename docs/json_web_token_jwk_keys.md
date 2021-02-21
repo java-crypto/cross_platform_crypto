@@ -1,6 +1,6 @@
 # Cross-platform cryptography
 
-## JSON web token JWK keys
+## JSON Web JWK keys
 
 At the moment I'm providing on this page just a sample JWK key pair. This key pair is "just" the JWK representation of the [sample RSA key pair](rsa_sample_keypair.md) used in other articles.
 

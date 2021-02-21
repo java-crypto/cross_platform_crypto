@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JWT RS256 signature RSA PKCS1-5 SHA-256 (signature only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+		select {font-size: 100%; }
+		
+	</style>	
+</head>
+<body>
+<h1>JWT RS256 signature RSA PKCS1-5 SHA-256 (signature only) manual</h1>
+<hr><p><b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md" target="_blank">
+my webpage <b>RSA string signature with PKCS#1.5 padding</b></a><br>
+</p><hr>	  
+<p>Insert your own Private Key (in PEM encoding):</p>
+<textarea name="privatekey-value" id="privatekey-value" form= "myform" rows="10" cols="40">-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDwSZYlRn86zPi9e1RTZL7QzgE/36zjbeCMyOhf6o/WIKeVxFwVbG2FAY3YJZIxnBH+9j1XS6f+ewjGFlJY4f2IrOpS1kPiO3fmOo5N4nc8JKvjwmKtUM0t63uFFPfs69+7mKJ4w3tk2mSN4gb8J9P9BCXtH6Q78SdOYvdCMspA1X8eERsdLb/jjHs8+gepKqQ6+XwZbSq0vf2BMtaAB7zTX/Dk+ZxDfwIobShPaB0mYmojE2YAQeRq1gYdwwO1dEGk6E5J2toWPpKY/IcSYsGKyFqrsmbw0880r1BwRDer4RFrkzp4zvY+kX3eDanlyMqDLPN+ghXT1lv8snZpbaBDAgMBAAECggEBAIVxmHzjBc11/73bPB2EGaSEg5UhdzZm0wncmZCLB453XBqEjk8nhDsVfdzIIMSEVEowHijYz1c4pMq9osXR26eHwCp47AI73H5zjowadPVluEAot/xgn1IdMN/boURmSj44qiI/DcwYrTdOi2qGA+jD4PwrUl4nsxiJRZ/x7PjLhMzRbvDxQ4/Q4ThYXwoEGiIBBK/iB3Z5eR7lFa8E5yAaxM2QP9PENBr/OqkGXLWVqA/YTxs3gAvkUjMhlScOi7PMwRX9HsrAeLKbLuC1KJv1p2THUtZbOHqrAF/uwHajygUblFaa/BTckTN7PKSVIhp7OihbD04bSRrh+nOilcECgYEA/8atV5DmNxFrxF1PODDjdJPNb9pzNrDF03TiFBZWS4Q+2JazyLGjZzhg5Vv9RJ7VcIjPAbMy2Cy5BUffEFE+8ryKVWfdpPxpPYOwHCJSw4Bqqdj0Pmp/xw928ebrnUoCzdkUqYYpRWx0T7YVRoA9RiBfQiVHhuJBSDPYJPoP34kCgYEA8H9wLE5L8raUn4NYYRuUVMa+1k4Q1N3XBixm5cccc/Ja4LVvrnWqmFOmfFgpVd8BcTGaPSsqfA4j/oEQp7tmjZqggVFqiM2mJ2YEv18cY/5kiDUVYR7VWSkpqVOkgiX3lK3UkIngnVMGGFnoIBlfBFF9uo02rZpC5o5zebaDImsCgYAE9d5wv0+nq7/STBj4NwKCRUeLrsnjOqRriG3GA/TifAsX+jw8XS2VF+PRLuqHhSkQiKazGr2Wsa9Y6d7qmxjEbmGkbGJBC+AioEYvFX9TaU8oQhvihgA6ZRNid58EKuZJBbe/3ek4/nR3A0oAVwZZMNGIH972P7cSZmb/uJXMOQKBgQCsFaQAL+4sN/TUxrkAkylqF+QJmEZ26l2nrzHZjMWROYNJcsn8/XkaEhD4vGSnazCu/B0vU6nMppmezF9Mhc112YSrw8QFK5GOc3NGNBoueqMYy1MG8Xcbm1aSMKVv8xbarh+BZQbxy6x61CpCfaT9hAoA6HaNdeoU6y05lBz1DQKBgAbYiIk56QZHeoZKiZxy4eicQS0sVKKRb24ZUd+04cNSTfeIuuXZrYJ48Jbr0fzjIM3EfHvLgh9rAZ+aHe/L84Ig17KiExe+qyYHjut/SC0wODDtzM/jtrpqyYa5JoEpPIaUSgPuTH/WhO3cDsx63PIW4/CddNs8mCSBOqTnoaxh
+-----END PRIVATE KEY-----</textarea>
+<section class="import-key spki">
+<p>Enter a subject:</p>
+<input type="text" id="subject" name="subject" size="50" value="JWT RS256 signature">
+<p>Enter an issuer:</p>
+<input type="text" id="issuer" name="issuer" size="50" value="https://java-crypto.github.io/cross_platform_crypto/">
+<p>Enter an expire time in seconds:</p>
+<input type="text" id="expireseconds" name="expireseconds" size="50" value="120">
+<p>press the generate payload button to proceed:</p>
+<button onclick="generatepayload()">generate payload</button> 
+<p>This is the payload to sign in JSON-encoding:</p>
+<textarea name="payload-value" id="payload-value" rows="6" cols="65" disabled>the payload comes here ...</textarea>
+<p>This is the JWT header in JSON-encoding:</p>
+<textarea name="header-value" id="header-value" rows="4" cols="65" disabled>the header comes here ...</textarea>
+<hr>
+<p>press the generate hash button to proceed:</p>
+<button id="generatehash" onclick="generatehash()">generate hash</button><br><br>
+<input type="text" id="jwtstring" name="jwtstring" size="150" value="the jwt string comes here ...">
+
+<hr>
+<p><b>Instructions:</b><br>
+1.: enter a subject, an issuer and the expiration time (in seconds)<br>
+2.: press the "generate payload" button<br>
+3.: press the "generate hash" button<br>
+4.: insert your own private and press the "Import key" button<br>
+5.: if the private key is valid the "Sign" button is enabled<br>
+6.: receive the token signature in Base64Url encoding
+</p><hr>
+<input class="import-key-button" type="button" value="Import Key">
+<input class="sign-button hidden" type="button" value="Sign" disabled>
+<hr>
+</section>
+<p>token (in Base64Url encoding):</p>
+<textarea name="tokenBase64" id="tokenBase64" rows="12" cols="65">the token in Base64Url encoding comes here...</textarea>
+</p>
+<hr><p><b>Technical note: this program uses the RSA signature algorithm with a 2048 bit long key and PKCS1-5 signature padding.</b></p><hr>
+</body>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+// https://blog.angular-university.io/angular-jwt/
+
+function b64tob64u(a){
+	a=a.replace(/\=/g,"");
+	a=a.replace(/\+/g,"-");
+	a=a.replace(/\//g,"_");
+	return a
+}
+
+const bufToB64 = buf =>
+	btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+
+/*
+The unwrapped signing key.
+*/
+let privatekey;
+const signButton = document.querySelector(".spki .sign-button");
+
+/*
+Convert a string into an ArrayBuffer
+from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+*/
+function str2ab(str) {
+	const buf = new ArrayBuffer(str.length);
+	const bufView = new Uint8Array(buf);
+	for (let i = 0, strLen = str.length; i < strLen; i++) {
+		bufView[i] = str.charCodeAt(i);
+	}
+	return buf;
+}
+
+/*
+Import a PEM encoded RSA private key, to use for RSA-PSS signing.
+Takes a string containing the PEM encoded key, and returns a Promise
+that will resolve to a CryptoKey representing the private key.
+*/
+function importPrivateKey(pem) {
+	// fetch the part of the PEM string between header and footer
+	const pemHeader = "-----BEGIN PRIVATE KEY-----";
+	const pemFooter = "-----END PRIVATE KEY-----";
+	const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+	// base64 decode the string to get the binary data
+	const binaryDerString = window.atob(pemContents);
+	// convert from a binary string to an ArrayBuffer
+	const binaryDer = str2ab(binaryDerString);
+	return window.crypto.subtle.importKey(
+		"pkcs8",
+		binaryDer,
+		{
+			name: "RSASSA-PKCS1-v1_5",
+			hash: "SHA-256"
+		},
+		true,
+		["sign"]
+	);
+}
+
+/*
+Fetch the contents of the "message" textbox, and encode it
+in a form we can use for the encrypt operation.
+*/
+function getMessageEncoding() {
+	const message = document.getElementById("jwtstring").value;
+	const enc = new TextEncoder();
+	return enc.encode(message);
+}
+  
+/*
+Get the encoded message-to-sign, sign it and display a representation
+of the first part of it in the "signature" element.
+*/
+async function signMessage() {
+	let encoded = getMessageEncoding();
+	signature = await window.crypto.subtle.sign(
+		"RSASSA-PKCS1-v1_5",
+		privateKey,
+		encoded
+	);
+	document.getElementById("tokenBase64").value = document.getElementById("jwtstring").value + "." + b64tob64u(bufToB64(new Uint8Array(signature)));
+}
+
+/*
+Show and enable the sign button.
+*/
+function enableSignButton() {
+	signButton.classList.add('fade-in');
+	signButton.addEventListener('animationend', () => {
+		signButton.classList.remove('fade-in');
+	});
+	signButton.removeAttribute("disabled");
+	signButton.classList.remove("hidden");
+}
+
+/*
+When the user clicks "Import Key"
+- import the key
+- enable the "Sign" button
+*/
+const importKeyButton = document.querySelector(".spki .import-key-button");
+	importKeyButton.addEventListener("click", async () => {
+		var pemEncodedKeyTextarea = document.getElementById("privatekey-value").value;
+		privateKey = await importPrivateKey(pemEncodedKeyTextarea);
+		enableSignButton();
+		const button2 = document.getElementById("generatehash");
+		button2.disabled =false;
+	});
+	signButton.addEventListener("click", signMessage);
+
+function generatehash() {
+	headerString = document.getElementById('header-value').value;
+	var headerBuffer = new TextEncoder("utf-8").encode(headerString);
+	headerBase64 = bufToB64(headerBuffer);
+	headerBase64Url = b64tob64u(headerBase64);
+	payloadString = document.getElementById('payload-value').value;
+	payloadBuffer = new TextEncoder("utf-8").encode(payloadString)
+	payloadBase64 = bufToB64(payloadBuffer);
+	payloadBase64Url = b64tob64u(payloadBase64);
+	string = headerBase64Url + "." + payloadBase64Url;
+	document.getElementById('jwtstring').value = string;
+}
+		
+function generatepayload() {
+	subject = document.getElementById('subject').value;
+	issuer =  document.getElementById('issuer').value;
+	expireseconds = document.getElementById('expireseconds').value;
+	unixtime = Math.floor(Date.now() / 1000);
+	expiredunixtime = unixtime + parseInt(expireseconds);
+	var obj = {sub:subject, iss:issuer, iat:unixtime, exp:expiredunixtime}
+	document.getElementById('payload-value').value = JSON.stringify(obj, null, 4);
+	// generate header
+	var header = {alg:"RS256", typ:"JWT"};
+	document.getElementById('header-value').value = JSON.stringify(header, null, 4);
+}		
+		
+</SCRIPT>	
+</html>

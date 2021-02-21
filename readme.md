@@ -7,6 +7,9 @@ This is a series of cryptography articles that will show show how cryptography i
 I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**  and **Python** (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
 
 Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the [**Libsodium**](#readme-libsodium) project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section. 
+
+Sometimes you may have read about a "JWT" or "JWT token", that is short form of a **JSON web token** or **JWT**. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some [**JWT web token**](#readme-jwt) solutions.
+
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
 
 ### General routines ###
@@ -137,12 +140,18 @@ Note: you need external libraries for this feature!
 [RSA file signature with PSS padding](docs/rsa_signature_pss_file_openssl.md) |   the signature and verification is compatible with solutions in  [RSA string signature with PSS padding](rsa_signature_pss_string.md)|
 [Elliptic curve file signature DER encoding](docs/ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) |
 
+### <a name="readme-jwt"></a>JWT JSON web token solutions ###
+| Solution | Description | Java | PHP | C# | NodeJS | Browser | Python |
+| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: |
+
+comming soon :soon:
+
 ### Elliptic curve encryption ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |
 | ------ | :------: | :----: | :---: | :--: | :--: |
 
-planned in future
+not planned in future
 
 ### Which platforms are supported at the moment?
 
@@ -168,8 +177,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-
-Last update: Feb. 09th 2021
+Last update: Feb. 21st 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

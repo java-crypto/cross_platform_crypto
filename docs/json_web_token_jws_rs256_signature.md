@@ -4,47 +4,45 @@
 
 The standard signature algorithm is **RSA** using a (RSA) Private-/ Public key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and the recipient is been able to check = verify the signature.
 
+To understand how a JWS token is constructed I strongly recommend my article [JSON web token (JWT) structure](json_web_token_structure.md) because in this article I'm focusing on the algorithm part.
 
-!!!!!!!!!!!!!!! not ready !!!!!!!!!!
+In total there are 12 signature algorithms "allowed", but from all of them I'm focusing on the **RS256** algorithm, that means a RSA private/public key based signature with a **RSASSA PKCS1 v1.5 padding** using a **SHA-256 hash**. The other algorithms will use different hashes ("SHA-256", "SHA-384" and "SHA-512" are in use), other padding ("RSASSA-PSS + MGF1") or keys based on an elliptic curve ("ECDSA using P-256 curve"). The last allowed signature type is constructed with a "HMAC" based on a symmetric key. 
 
-To get this to work in cross platform systems there are three parameters that have to been equal - that is the hash algorithm that is used. My programs are using **SHA256** for this task.
+As the **RSASSA PKCS1 v1.5 padding** is named as "not so secure as the RSASSA-PSS + MGF1 padding" I recommend to better use the **PS256** signature algorithm [later you will find an article about this as well].
 
-The second important data are the **keys** itself - it's easy not to recognize that "- Begin Private Key -" isn't the same as "- Begin RSA Private Key - ". Using the wrong keys will cause the the verification to fail.
+For a better understanding of the signature process itself I recommend my article [RSA signature of a string](rsa_signature_string.md).
 
-The third parameter is hidden in most implementations, it is the **padding**. The programs in this example use the **PKCS#1.5-padding** that is available platform wide but **not as secure as modern ones**.
+### A note about the programs in the different frameworks
 
-### Why is the PKCS#1.5 padding not so secure?
-
-An important parameter in cryptography is **randomness** - this prevents from easy textbook attacks. For a digital signature it means: the signature of the the same string and same (private) key results in the same value. Running my codes will always result in a (Base64 encoded) string beginning with "vCSB4744p30..", so an attacker may been able to "see" that a previous used signature is in use again.
-
-### What would be a (more) secure padding?
-
-A modern padding is the use of **PSS padding** (Probabilistic Signature Scheme) but this is not available "out of the box" and it will take some time to publish a solution here.
+I tried to provide solutions that provide an exchangeable output but the verification part will look like different and give different outputs. One important parameter in my payloads (the data inside the JSON token) is a timestamp with an **expire date**. This prohibits from use the token after the expiration date but that needs to get checked individually (depending on the library/implementation in use). Some libraries check the expiration parameter when verifying the signature, others need to start this part individually.
 
 ### Key generation: 
 
+Usually a JWT will use a **JWK** or **JSON web key** named key pair but in the end the are just other representations of a RSA private and public key. All of my sample programs will accept my well known RSA private and public key pair in **PEM format**. If you are interested in the JWK-format visit my article [JSON web token JWK keys](json_web_token_jwk_keys.md).
+
 All examples use pre-generated keys that are described on the page [RSA sample keys](rsa_sample_keypair.md). If you want to see how my keys got generated visit the page [RSA key generation](rsa_key_generation.md). 
 
-When comparing the programs you will notice that the keys for C# looking like different as they are not in the "PEM"-format ("---Begin...") but in a XML-format. As it is a little bit tricky to convert the keys between XML- and PEM-format I setup an own page for this point: [rsa_key_conversion.md](rsa_key_conversion.md)
+### Secure key management
 
 One note about the **key management** in my programs: usually the keys are (securely) stored in files or a key store and may have additional password protection. Both scenarios are unhandy in demonstration programs running in an online compiler. That's why I'm using <u>static, hard-coded</u> keys in my programs - **please do not do this in production environment! Never ever store a Private Key in the source!** The minimum is to load the keys from a secured device.
 
 ### steps in the program
 
 The program follows the usual sequence:
-1. generate a RSA key pair - here we are using a static, hard-coded key pair in form of a PEM encoded string (Java, PHP, CryptoJs and NodeJs) or a XML-file (C#)
-2. convert the data to sign into a binary format (e.g. a byte array)
+1. generate a RSA key pair - here we are using a static, hard-coded key pair in form of a PEM encoded string
+2. build a payload object
 3. start the signature process
 4. load the Private Key
-5. set the signature parameters
-6. sign the "data to sign" and show the result ("signature") in Base64 encoding
+5. set the signature parameters in the JWT header
+6. sign the payload and show the result ("jwtToken") in **Base64Url** encoding
 7. start the verification process
 8. load the Public Key
-9. Base64 decoding of the signature
-10. set the verification parameters (same as used for signing)
-11. verify the signature against the "data to sign" and show the result.
+9. read the jwtToken header to get the signature algorithm needed for verification
+10. set the verification parameters (same as used for signing, see 9)
+11. verify the signature against the payload and show the result.
+12. check the (possible) expiration of the signature
 
-If you like to see the **verification part only** see my separate article [RSA signature string verification only](rsa_signature_string_verification_only.md).
+I do not provide a "verification only" program as all program parts are available in the main program (except for Webcrypto programs, they have are "sign only" and "verification only").
 
 ## :warning: Security warning :warning:
 

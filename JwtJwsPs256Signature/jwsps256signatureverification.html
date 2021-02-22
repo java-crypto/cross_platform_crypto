@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JWT JWS PS256 RSA with RSASSA-PSS + MGF1 with SHA-256 padding and SHA-256 hashing (verification only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+	</style>	
+</head>
+<body>
+<h1>JWT JWS PS256 RSA with RSASSA-PSS + MGF1 with SHA-256 padding and SHA-256 hashing (verification only)</h1>
+<hr>
+<p><b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string_verification_only.md" target="_blank">
+my webpage <b>RSA string signature verification only with SSA-PSS padding</b></a><br>
+<p>Insert the Public Key you received (PEM encoding):</p>
+<textarea name="publickey-value" id="publickey-value" rows="10" cols="40">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8EmWJUZ/Osz4vXtUU2S+0M4BP9+s423gjMjoX+qP1iCnlcRcFWxthQGN2CWSMZwR/vY9V0un/nsIxhZSWOH9iKzqUtZD4jt35jqOTeJ3PCSr48JirVDNLet7hRT37Ovfu5iieMN7ZNpkjeIG/CfT/QQl7R+kO/EnTmL3QjLKQNV/HhEbHS2/44x7PPoHqSqkOvl8GW0qtL39gTLWgAe801/w5PmcQ38CKG0oT2gdJmJqIxNmAEHkatYGHcMDtXRBpOhOSdraFj6SmPyHEmLBishaq7Jm8NPPNK9QcEQ3q+ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb/LJ2aW2gQwIDAQAB
+-----END PUBLIC KEY-----</textarea>
+<section class="import-key spki">
+<hr>
+<p>Enter the token to verify (in Base64Url encoding):</p>
+<textarea name="spki-message" id="spki-message" rows="12" cols="65">ewogICAgImFsZyI6ICJQUzI1NiIsCiAgICAidHlwIjogIkpXVCIKfQ.ewogICAgInN1YiI6ICJKV1QgUFMyNTYgc2lnbmF0dXJlIiwKICAgICJpc3MiOiAiaHR0cHM6Ly9qYXZhLWNyeXB0by5naXRodWIuaW8vY3Jvc3NfcGxhdGZvcm1fY3J5cHRvLyIsCiAgICAiaWF0IjogMTYxMzUyMTUxNSwKICAgICJleHAiOiAxNjEzNTIxNjM1Cn0.bW7j69DMw86zGemJBTY-o24R4L5HZddOmgPY_XytoC7uRezmSvOAW1twhQeaNNrdKanY8bXLAaoZFrJPzPEeaeC-j0Xxt4XWYjeotDLanwN0DhLdF9-r_TYd4bsIO8XXYAp3yLppuGpbq2VzYpDtvW_K_4GWQCKdpJhupEjyrCXev73u8CvGyMIqLuk8PpYI4jdLYZNa8G60qNnpI4vfHnP4xIUCoM4_Z-ZOHBQHPSCsW4L3hgtlplV-072xF5GMVdKB-kQWQbF1MAA5VKyXer7nt0yHnfnDu-1pkiJbuAFmAwSHfrPoJPUqO2EoZlFKb0amB3xItU8E8BY_e4O9Eg</textarea>
+<hr>
+<p><b>Instructions:</b><br>
+1.: insert the received public key<br>
+2.: insert the JWT/JWS token in Base64Url encoding<br>
+3.: press the "Import key" button<br>
+4.: if the public key is valid the "Verify" button is enabled<br>
+5.: press the "Verify button"<br>
+6.: receive the verification status<br>
+7.: to see the decoded header, payload or expiration data press the named buttons
+</p><hr>
+<input class="import-key-button" type="button" value="Import Key">
+<input class="verify-button hidden" type="button" value="Verify" disabled>
+</section>
+<p>verification status:</p>
+<textarea name="verificationstatus" id="verificationstatus" form= "myform" rows="1" cols="50" readonly>verification status comes here...</textarea>
+<hr>
+<p>To show header, payload or expiration check press the following buttons:</p>
+<button id="showheader" onclick="showheader()">show header</button>  <button id="showpayload" onclick="showpayload()">show payload</button>  <button id="checkexpiration" onclick="checkexpiration()">check expiration</button>  
+<br><br>
+<textarea name="tokendata" id="tokendata" rows="7" cols="65" disabled>the token data comes here ...</textarea>
+<hr><p><b>Technical note: this program uses the RSA signature algorithm with a 2048 bit long key and SSA-PSS signature padding.</b></p><hr>
+</body>
+   <SCRIPT LANGUAGE="JavaScript">
+
+// https://blog.angular-university.io/angular-jwt/   
+
+const bufToStr = str => new TextDecoder().decode(str);
+
+var base64UrlDecode = function(input) {
+    // Replace non-url compatible chars with base64 standard chars
+    input = input
+    .replace(/-/g, '+')
+    .replace(/_/g, '/');
+    // Pad out with standard base64 required padding characters
+    var pad = input.length % 4;
+    if(pad) {
+		if(pad === 1) {
+			throw new Error('InvalidLengthError: Input base64url string is the wrong length to determine padding');
+		}
+		input += new Array(5-pad).join('=');
+    }
+    return input;
+}
+
+const b64ToBuf = b64 => {
+    const binstr = atob(b64),
+    buf = new Uint8Array(binstr.length);
+    Array.prototype.forEach.call(binstr, (ch, i) => {
+        buf[i] = ch.charCodeAt(0);
+    });
+    return buf;
+};
+      
+/*
+The unwrapped signing key.
+*/
+let publicKey;
+      
+const verifyButton = document.querySelector(".spki .verify-button");
+      
+/*
+Convert a string into an ArrayBuffer
+from https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+*/
+function str2ab(str) {
+	const buf = new ArrayBuffer(str.length);
+	const bufView = new Uint8Array(buf);
+	for (let i = 0, strLen = str.length; i < strLen; i++) {
+		bufView[i] = str.charCodeAt(i);
+	}
+	return buf;
+}
+		
+/*
+Import a PEM encoded RSA public key, to use for RSA-OAEP encryption.
+Takes a string containing the PEM encoded key, and returns a Promise
+that will resolve to a CryptoKey representing the public key.
+*/
+function importPublicKey(pem) {
+	// fetch the part of the PEM string between header and footer
+    const pemHeader = "-----BEGIN PUBLIC KEY-----";
+    const pemFooter = "-----END PUBLIC KEY-----";
+    const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+    // base64 decode the string to get the binary data
+    const binaryDerString = window.atob(pemContents);
+    // convert from a binary string to an ArrayBuffer
+    const binaryDer = str2ab(binaryDerString);
+    return window.crypto.subtle.importKey(
+		"spki",
+		binaryDer,
+		{
+			name: "RSA-PSS",
+			hash: "SHA-256"
+		},
+		true,
+		["verify"]
+    );
+}
+      		
+/*
+Fetch the encoded message-to-sign and verify it against the stored signature.
+* If it checks out, set the "valid" class on the signature.
+* Otherwise set the "invalid" class.
+*/
+async function verifyMessage() {
+	const tokenComplete = document.getElementById("spki-message").value;
+	// split the string
+	var dataSplit = tokenComplete.split(".");
+	var tokenHeader = dataSplit[0];
+	var tokenPayload = dataSplit[1];
+	var tokenSignature = dataSplit[2];
+	// rebuild the token of header and payload
+	var tokenForSignatureString = tokenHeader + "." + tokenPayload;
+	const enc = new TextEncoder();
+	var tokenForSignature = enc.encode(tokenForSignatureString);
+	const signatureValue = b64ToBuf(base64UrlDecode(tokenSignature));
+	let result = await window.crypto.subtle.verify(
+		{
+			name: "RSA-PSS",
+			saltLength: 32,
+		},
+		publicKey,
+		signatureValue,
+		tokenForSignature
+    );
+	document.getElementById("verificationstatus").value = result;
+}
+     
+/*
+Show and enable the verify button.
+*/
+function enableVerifyButton() {
+    verifyButton.classList.add('fade-in');
+    verifyButton.addEventListener('animationend', () => {
+		verifyButton.classList.remove('fade-in');
+    });
+    verifyButton.removeAttribute("disabled");
+    verifyButton.classList.remove("hidden");
+}
+      
+/*
+When the user clicks "Import Key"
+- import the key
+- enable the "Verify" button
+*/
+const importKeyButton = document.querySelector(".spki .import-key-button");
+	importKeyButton.addEventListener("click", async () => {
+    var pemEncodedKeyTextarea = document.getElementById("publickey-value").value;
+		publicKey = await importPublicKey(pemEncodedKeyTextarea);
+		enableVerifyButton();
+	});
+verifyButton.addEventListener("click", verifyMessage);		
+
+function showheader() {
+	const tokenComplete = document.getElementById("spki-message").value;
+	// split the string
+	var dataSplit = tokenComplete.split(".");
+	var tokenHeader = dataSplit[0];
+	var tokenPayload = dataSplit[1];
+	var tokenSignature = dataSplit[2];
+	var tokenHeaderBuffer = b64ToBuf(base64UrlDecode(tokenHeader));
+	document.getElementById("tokendata").value = "token header: \n" + bufToStr(tokenHeaderBuffer);
+}
+
+function showpayload() {
+	const tokenComplete = document.getElementById("spki-message").value;
+	// split the string
+	var dataSplit = tokenComplete.split(".");
+	var tokenHeader = dataSplit[0];
+	var tokenPayload = dataSplit[1];
+	var tokenSignature = dataSplit[2];
+	var tokenPayloadBuffer = b64ToBuf(base64UrlDecode(tokenPayload));
+	document.getElementById("tokendata").value = "token payload: \n" + bufToStr(tokenPayloadBuffer);
+}
+
+function checkexpiration() {
+	const tokenComplete = document.getElementById("spki-message").value;
+	// split the string
+	var dataSplit = tokenComplete.split(".");
+	var tokenHeader = dataSplit[0];
+	var tokenPayload = dataSplit[1];
+	var tokenSignature = dataSplit[2];
+	var tokenPayloadString = bufToStr(b64ToBuf(base64UrlDecode(tokenPayload)));
+	var objectValue = JSON.parse(tokenPayloadString);
+	const dateExpiration =  objectValue['exp'];
+	const dateNow = Math.floor(Date.now() / 1000);
+	var nowDate = new Date();
+	nowDate.setTime(dateNow * 1000);
+	dateNowString = nowDate.toUTCString();
+	var expDate = new Date();
+	expDate.setTime(dateExpiration * 1000);
+	dateExpirationString = expDate.toUTCString();
+	let tokenExpired;
+	if (dateExpiration > dateNow) {
+		tokenExpired = "false";
+	} else {
+		tokenExpired = "true";
+	}
+	document.getElementById("tokendata").value = "token expired: " + tokenExpired + "\n"
+	+ "\nactual time:     " + dateNowString
+	+ "\nexpiration time: " + dateExpirationString;
+}
+		
+</SCRIPT>	
+</html>

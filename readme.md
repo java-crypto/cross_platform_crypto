@@ -143,8 +143,14 @@ Note: you need external libraries for this feature!
 ### <a name="readme-jwt"></a>JWT JSON web token solutions ###
 | Solution | Description | Java | PHP | C# | NodeJS | Browser | Python |
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: |
-
-comming soon :soon:
+|[structure of a JSON web token (JWT)](json_web_token_structure.md) | explains the general structure of a JWT | | | | | | |
+|JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
+|[JSON Web JWK keys](json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | |
+|[JSON web signature (JWS) using RS256 algorithm](json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
+|[JSON web signature (JWS) using PS256 algorithm](json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
+|JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing |  :x: |  :x: | :x: | :x: | :soon: |   :x: | 
+| JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| JSON web encryption (JWE) |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 
 ### Elliptic curve encryption ###
 
@@ -177,7 +183,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Feb. 21st 2021
+Last update: Feb. 22nd 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

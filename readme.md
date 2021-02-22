@@ -143,6 +143,7 @@ Note: you need external libraries for this feature!
 ### <a name="readme-jwt"></a>JWT JSON web token solutions ###
 | Solution | Description | Java | PHP | C# | NodeJS | Browser | Python |
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: |
+|[JSON web token (JWT) overview](docs/json_web_token_overview.md) | general information about JSON web token | | | | | | |
 |[structure of a JSON web token (JWT)](docs/json_web_token_structure.md) | explains the general structure of a JWT | | | | | | |
 |JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
 |[JSON Web JWK keys](docs/json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | |

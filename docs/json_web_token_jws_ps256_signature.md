@@ -1,14 +1,14 @@
 # Cross-platform cryptography
 
-## JSON web signature JWS with algorithm RS256 [RSA with PKCS#1.5 padding and SHA-256 hashing]
+## JSON web signature JWS with algorithm PS256 [RSA with RSASSA-PSS + MGF1 with SHA-256 padding and SHA-256 hashing]
 
 The standard signature algorithm is **RSA** using a (RSA) Private-/ Public key pair. The <u>signature</u> is generated with the **Private key** of the signer. For the <u>verification</u> the **Public Key** of the signer is used - so in a typical environment the Public Key is provided to the recipient(s) of the signed data and the recipient is been able to check = verify the signature.
 
 To understand how a JWS token is constructed I strongly recommend my article [JSON web token (JWT) structure](json_web_token_structure.md) because in this article I'm focusing on the algorithm part.
 
-In total there are 12 signature algorithms "allowed", but from all of them I'm focusing on the **RS256** algorithm, that means a RSA private/public key based signature with a **RSASSA PKCS1 v1.5 padding** using a **SHA-256 hash**. The other algorithms will use different hashes ("SHA-256", "SHA-384" and "SHA-512" are in use), other padding ("RSASSA-PSS + MGF1") or keys based on an elliptic curve ("ECDSA using P-256 curve"). The last allowed signature type is constructed with a "HMAC" based on a symmetric key. 
+In total there are 12 signature algorithms "allowed", but from all of them I'm focusing on the **PS256** algorithm, that means a RSA private/public key based signature with a **RSASSA PSS +  MGF1 with SHA-256 padding** using a **SHA-256 hash**. The other algorithms will use different hashes ("SHA-256", "SHA-384" and "SHA-512" are in use), other padding ("RSASSA-PKCS1-v1_5") or keys based on an elliptic curve ("ECDSA using P-256 curve"). The last allowed signature type is constructed with a "HMAC" based on a symmetric key. 
 
-As the **RSASSA PKCS1 v1.5 padding** is named as "not so secure as the RSASSA-PSS + MGF1 padding" I recommend to better use the **PS256** signature algorithm [JSON web signature JWS with algorithm PS256](json_web_token_ps256_signature.md).
+As the **RSASSA-PSS + MGF1** is named as "more secure as the RSASSA PKCS1 v1.5 padding" I recommend to use the **PS256** signature algorithm.
 
 For a better understanding of the signature process itself I recommend my article [RSA signature of a string](rsa_signature_string.md).
 
@@ -52,34 +52,34 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../JwtJwsRs256Signature/JwsRs256Signature.java) *) | :white_check_mark: | [repl.it CpcJavaJwsRs256Signature](https://repl.it/@javacrypto/CpcJavaJwsRs256Signature#Main.java/) |
-| [PHP](../JwtJwsRs256Signature/JwsRs256Signature.php) *) | :white_check_mark: | [repl.it CpcPhpJwsRs256Signature](https://repl.it/@javacrypto/CpcJPhpJwsRs256Signature#main.php/) |
-| [C#](../JwtJwsRs256Signature/JwsRs256Signature.cs) | :white_check_mark: | [dotnetfiddle.net CpcCsharpJwsRs256Signature](https://dotnetfiddle.net/rGnvVi/) |
+| [Java](../JwtJwsPs256Signature/JwsPs256Signature.java) *) | :white_check_mark: | [repl.it CpcJavaJwsPs256Signature](https://repl.it/@javacrypto/CpcJavaJwsPs256Signature#Main.java/) |
+| [PHP](../JwtJwsPs256Signature/JwsPs256Signature.php) *) | :white_check_mark: | [repl.it CpcPhpJwsPs256Signature](https://repl.it/@javacrypto/CpcJPhpJwsPs256Signature#main.php/) |
+| [C#](../JwtJwsPs256Signature/JwsPs256Signature.cs) | :white_check_mark: | [dotnetfiddle.net CpcCsharpJwsPs256Signature](https://dotnetfiddle.net/rGnvVi/) |
 | Javascript CryptoJs | :x: | kindly use the pure nodeJs implementation |
-| [NodeJS Crypto](../JwtJwsRs256Signature/JwsRs256SignatureNodeJs.js) *) | :white_check_mark: | [repl.it CpcNodeJsJwsRs256Signature](https://repl.it/@javacrypto/CpcNodeJsJwsRs256Signature#index.js/)
+| [NodeJS Crypto](../JwtJwsPs256Signature/JwsPs256SignatureNodeJs.js) *) | :white_check_mark: | [repl.it CpcNodeJsJwsPs256Signature](https://repl.it/@javacrypto/CpcNodeJsJwsPs256Signature#index.js/)
 | NodeJS forge | :x: | kindly use the pure nodeJs implementation |
-| [Webcrypto sign only](../JwtJwsRs256Signature/jwsrs256signaturessign.html) | :white_check_mark: | [your browser WebcryptoJwsRs256Sign.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsRs256Signature/jwsrs256signaturessign.html)
-| [Webcrypto verify only](../JwtJwsRs256Signature/jwsrs256signatureverification.html) | :white_check_mark: | [your browser WebcryptoJwsRs256Verify.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsRs256Signature/jwsrs256signatureverification.html)
-| [Python](../JwtJwsRs256Signature/JwsRs256Signature.py) *) | :white_check_mark: | [repl.it CpcPythonJwsRs256Signature](https://repl.it/@javacrypto/CpcPythonJwsRs256Signature#main.py/)
+| [Webcrypto sign only](../JwtJwsPs256Signature/jwsps256signaturessign.html) | :white_check_mark: | [your browser WebcryptoJwsPs256Sign.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsPs256Signature/jwsps256signaturessign.html)
+| [Webcrypto verify only](../JwtJwsPs256Signature/jwsps256signatureverification.html) | :white_check_mark: | [your browser WebcryptoJwsPs256Verify.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsPs256Signature/jwsps256signatureverification.html)
+| [Python](../JwtJwsPs256Signature/JwsPs256Signature.py) *) | :white_check_mark: | [repl.it CpcPythonJwsPs256Signature](https://repl.it/@javacrypto/CpcPythonJwsPs256Signature#main.py/)
 
 *) you need an external library
 
 This is an output (Java version):
 
 ```plaintext
-JWT JWS RS256 RSA PKCS#1.5 signature with SHA-256
+JWT JWS PS256 RSA with RSASSA-PSS + MGF1 with SHA-256 padding and SHA-256 hashing
 
 * * * sign the payload object with the RSA private key * * *
-jwtClaimsSet: {"sub":"JWT RS256 signature","iss":"https:\/\/java-crypto.github.io\/cross_platform_crypto\/","exp":1613909603,"iat":1613909483}
+jwtClaimsSet: {"sub":"JWT PS256 signature","iss":"https:\/\/java-crypto.github.io\/cross_platform_crypto\/","exp":1613998119,"iat":1613997999}
 privateKey in jwk format:
 {"p":"_8atV5DmNxFrxF1PODDjdJPNb9pzNrDF03TiFBZWS4Q-2JazyLGjZzhg5Vv9RJ7VcIjPAbMy2Cy5BUffEFE-8ryKVWfdpPxpPYOwHCJSw4Bqqdj0Pmp_xw928ebrnUoCzdkUqYYpRWx0T7YVRoA9RiBfQiVHhuJBSDPYJPoP34k","kty":"RSA","q":"8H9wLE5L8raUn4NYYRuUVMa-1k4Q1N3XBixm5cccc_Ja4LVvrnWqmFOmfFgpVd8BcTGaPSsqfA4j_oEQp7tmjZqggVFqiM2mJ2YEv18cY_5kiDUVYR7VWSkpqVOkgiX3lK3UkIngnVMGGFnoIBlfBFF9uo02rZpC5o5zebaDIms","d":"hXGYfOMFzXX_vds8HYQZpISDlSF3NmbTCdyZkIsHjndcGoSOTyeEOxV93MggxIRUSjAeKNjPVzikyr2ixdHbp4fAKnjsAjvcfnOOjBp09WW4QCi3_GCfUh0w39uhRGZKPjiqIj8NzBitN06LaoYD6MPg_CtSXiezGIlFn_Hs-MuEzNFu8PFDj9DhOFhfCgQaIgEEr-IHdnl5HuUVrwTnIBrEzZA_08Q0Gv86qQZctZWoD9hPGzeAC-RSMyGVJw6Ls8zBFf0eysB4spsu4LUom_WnZMdS1ls4eqsAX-7AdqPKBRuUVpr8FNyRM3s8pJUiGns6KFsPThtJGuH6c6KVwQ","e":"AQAB","qi":"BtiIiTnpBkd6hkqJnHLh6JxBLSxUopFvbhlR37Thw1JN94i65dmtgnjwluvR_OMgzcR8e8uCH2sBn5od78vzgiDXsqITF76rJgeO639ILTA4MO3Mz-O2umrJhrkmgSk8hpRKA-5Mf9aE7dwOzHrc8hbj8J102zyYJIE6pOehrGE","dp":"BPXecL9Pp6u_0kwY-DcCgkVHi67J4zqka4htxgP04nwLF_o8PF0tlRfj0S7qh4UpEIimsxq9lrGvWOne6psYxG5hpGxiQQvgIqBGLxV_U2lPKEIb4oYAOmUTYnefBCrmSQW3v93pOP50dwNKAFcGWTDRiB_e9j-3EmZm_7iVzDk","dq":"rBWkAC_uLDf01Ma5AJMpahfkCZhGdupdp68x2YzFkTmDSXLJ_P15GhIQ-Lxkp2swrvwdL1OpzKaZnsxfTIXNddmEq8PEBSuRjnNzRjQaLnqjGMtTBvF3G5tWkjClb_MW2q4fgWUG8cusetQqQn2k_YQKAOh2jXXqFOstOZQc9Q0","n":"8EmWJUZ_Osz4vXtUU2S-0M4BP9-s423gjMjoX-qP1iCnlcRcFWxthQGN2CWSMZwR_vY9V0un_nsIxhZSWOH9iKzqUtZD4jt35jqOTeJ3PCSr48JirVDNLet7hRT37Ovfu5iieMN7ZNpkjeIG_CfT_QQl7R-kO_EnTmL3QjLKQNV_HhEbHS2_44x7PPoHqSqkOvl8GW0qtL39gTLWgAe801_w5PmcQ38CKG0oT2gdJmJqIxNmAEHkatYGHcMDtXRBpOhOSdraFj6SmPyHEmLBishaq7Jm8NPPNK9QcEQ3q-ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb_LJ2aW2gQw"}
 signed jwsToken:
-eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvamF2YS1jcnlwdG8uZ2l0aHViLmlvXC9jcm9zc19wbGF0Zm9ybV9jcnlwdG9cLyIsInN1YiI6IkpXVCBSUzI1NiBzaWduYXR1cmUiLCJleHAiOjE2MTM5MDk2MDMsImlhdCI6MTYxMzkwOTQ4M30.QUlazkdTZXwkRISb2j48UGzB3A1WOpWuL5oC7GvE28xVQw36oFmSYoAflJ7DWdq2HJqnl6X3R-ag-s9QyXCNGUXE3lZtHgohgfMALsLxfufcVaV7ZnJdkNpshSRy4ZO5Up5tGn0aUb8mKeUWqEketDiMa-Ny8cRyLZL-hWC9HZ7KPSh4_-kqLAvvShG0pTPQCMw0DNsQGsTJEwMiLV2ErXdBCgVg1DJ-x6PDCx7VceKpiPEVdSvvWSCsq9zHs82GZoDLk-rpmTgNnhJ1FwBB0E8sTjDAwTRQT_T6PKjgr2ZG6TU1Y1p23ptwTG22tB3XjS4cFMAXc1EmXmSqqd-Diw
+eyJ0eXAiOiJKV1QiLCJhbGciOiJQUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvamF2YS1jcnlwdG8uZ2l0aHViLmlvXC9jcm9zc19wbGF0Zm9ybV9jcnlwdG9cLyIsInN1YiI6IkpXVCBQUzI1NiBzaWduYXR1cmUiLCJleHAiOjE2MTM5OTgxMTksImlhdCI6MTYxMzk5Nzk5OX0.YN4DdCC6WBnst6hPsVdX9cS2I-_Cg65xf-M6KxFjIFAY0SvTCSMLquLW-L2ouayXNSFuV_aSgtQPdn5ZX5n74ytxj8uq_K2KP-GZpbOIjVnvdnwNVDeIabmfufseK3C3t4WmsrU5Sj3-0xj0BN8bKhfEupsTIWuW2HqjsC81cDH89ehV3vamI_Xd2VRpLhSE0vqgF_cJOaMTaUseAYm20JO89pQ1U05BfTOhTsDh9_bRlBx0Du4nR-eRfNK3hJGfxrWDRMtLN4Q9FoTaxtzC6v2Sz1fu0Au3lv5CEctcziF_Gs2Vyv0kY49OcahghChOnyvnrPbEBY8KppnBZnI0Ig
 
 * * * verify the jwsToken with the RSA public key * * *
 publicKey in jwk format:
 {"kty":"RSA","e":"AQAB","n":"8EmWJUZ_Osz4vXtUU2S-0M4BP9-s423gjMjoX-qP1iCnlcRcFWxthQGN2CWSMZwR_vY9V0un_nsIxhZSWOH9iKzqUtZD4jt35jqOTeJ3PCSr48JirVDNLet7hRT37Ovfu5iieMN7ZNpkjeIG_CfT_QQl7R-kO_EnTmL3QjLKQNV_HhEbHS2_44x7PPoHqSqkOvl8GW0qtL39gTLWgAe801_w5PmcQ38CKG0oT2gdJmJqIxNmAEHkatYGHcMDtXRBpOhOSdraFj6SmPyHEmLBishaq7Jm8NPPNK9QcEQ3q-ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb_LJ2aW2gQw"}
-payloadObject: {sub=JWT RS256 signature, iss=https://java-crypto.github.io/cross_platform_crypto/, exp=1613909603, iat=1613909483}
+payloadObject: {sub=JWT PS256 signature, iss=https://java-crypto.github.io/cross_platform_crypto/, exp=1613998119, iat=1613997999}
 
 check signature with matching public key
 the token's signature is verified: true

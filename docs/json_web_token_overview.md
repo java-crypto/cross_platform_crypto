@@ -46,7 +46,7 @@ Here are my articles regarding JSON web token (JWT) themes:
 |JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
 |[JSON Web JWK keys](json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | |
 |[JSON web signature (JWS) using RS256 algorithm](json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|[JSON web signature (JWS) using PS256 algorithm](json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
+|[JSON web signature (JWS) using PS256 algorithm](json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
 |[JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only)](json_web_token_jws_rs_ps_signature.md) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing |  :x: |  :x: | :x: | :x: | :soon: |   :x: | 
 | JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
 | JSON web encryption (JWE) |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |

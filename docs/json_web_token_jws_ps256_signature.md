@@ -58,7 +58,7 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | kindly use the pure nodeJs implementation |
 | [NodeJS Crypto](../JwtJwsPs256Signature/JwsPs256SignatureNodeJs.js) *) | :white_check_mark: | [repl.it CpcNodeJsJwsPs256Signature](https://repl.it/@javacrypto/CpcNodeJsJwsPs256Signature#index.js/)
 | NodeJS forge | :x: | kindly use the pure nodeJs implementation |
-| [Webcrypto sign only](../JwtJwsPs256Signature/jwsps256signaturessign.html) | :white_check_mark: | [your browser WebcryptoJwsPs256Sign.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsPs256Signature/jwsps256signaturesign.html)
+| [Webcrypto sign only](../JwtJwsPs256Signature/jwsps256signaturesign.html) | :white_check_mark: | [your browser WebcryptoJwsPs256Sign.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsPs256Signature/jwsps256signaturesign.html)
 | [Webcrypto verify only](../JwtJwsPs256Signature/jwsps256signatureverification.html) | :white_check_mark: | [your browser WebcryptoJwsPs256Verify.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsPs256Signature/jwsps256signatureverification.html)
 | [Python](../JwtJwsPs256Signature/JwsPs256Signature.py) *) | :white_check_mark: | [repl.it CpcPythonJwsPs256Signature](https://repl.it/@javacrypto/CpcPythonJwsPs256Signature#main.py/)
 

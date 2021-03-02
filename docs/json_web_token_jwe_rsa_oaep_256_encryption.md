@@ -90,15 +90,17 @@ The following links provide the solutions in code and an online compiler that ru
 
 | Language | available | Alg | Enc | Online-compiler
 | ------ | :---: | :----: | :---: | :----: |
-| [Java](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.java) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcJavaJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcJavaJweRsaOaep256Encryption#Main.java/)
-| [PHP](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.php) | :white_check_mark: |  RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcPhpJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcPhpJweRsaOaep256Encryption#main.php/)
-| [C#](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.cs) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [dotnetfiddle.net CpcCsharpJweRsaOaep256Encryption](https://dotnetfiddle.net/Z7fwAQ/)
+| [Java](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.java) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcJavaJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcJavaJweRsaOaep256Encryption#Main.java/) ***)** |
+| [PHP](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.php) | :white_check_mark: |  RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcPhpJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcPhpJweRsaOaep256Encryption#main.php/) |
+| [C#](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.cs) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [dotnetfiddle.net CpcCsharpJweRsaOaep256Encryption](https://dotnetfiddle.net/Z7fwAQ/) |
 | Javascript CryptoJs | :x: | | | kindly use the pure nodeJs implementation |
-| [NodeJS Crypto](../JwtJweRsaOaep256Encryption/JweRsaOaep256EncryptionNodeJsCrypto.js) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcNodeJsCryptoJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcNodeJsCryptoJweRsaOaep256Encryption#index.js/)
+| [NodeJS Crypto](../JwtJweRsaOaep256Encryption/JweRsaOaep256EncryptionNodeJsCrypto.js) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcNodeJsCryptoJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcNodeJsCryptoJweRsaOaep256Encryption#index.js/) |
 | NodeJS forge | :x: | | | kindly use the pure nodeJs implementation |
-| [Webcrypto encryption only](../JwtJweRsaOaep256Encryption/jwersaoaep256encryption.html) | :white_check_mark: | RSA-OAEP-256 | A256GCM | [your browser WebcryptoJweRsaOaep-256Encryption.html](https://java-crypto.github.io/cross_platform_crypto/JwtJweRsaOaep256Encryption/jwersaoaep256encryption.html)
-| [Webcrypto decryption only](../JwtJweRsaOaep256Encryption/jwersaoaep256decryption.html) | :white_check_mark: | RSA-OAEP-256 | A256GCM | [your browser WebcryptoJweRsaOaep-256Decryption.html](https://java-crypto.github.io/cross_platform_crypto/JwtJweRsaOaep256Encryption/jwersaoaep256decryption.html)
-| [Python](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.py) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcPythonJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcPythonJweRsaOaep256Encryption#main.py/)
+| [Webcrypto encryption only](../JwtJweRsaOaep256Encryption/jwersaoaep256encryption.html) | :white_check_mark: | RSA-OAEP-256 | A256GCM | [your browser WebcryptoJweRsaOaep-256Encryption.html](https://java-crypto.github.io/cross_platform_crypto/JwtJweRsaOaep256Encryption/jwersaoaep256encryption.html) |
+| [Webcrypto decryption only](../JwtJweRsaOaep256Encryption/jwersaoaep256decryption.html) | :white_check_mark: | RSA-OAEP-256 | A256GCM | [your browser WebcryptoJweRsaOaep-256Decryption.html](https://java-crypto.github.io/cross_platform_crypto/JwtJweRsaOaep256Encryption/jwersaoaep256decryption.html) |
+| [Python](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.py) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcPythonJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcPythonJweRsaOaep256Encryption#main.py/) ***)** |
+
+***)** kindly note that the online compiler has to rebuild all libraries and that takes some seconds before the programs is ready to run.
 
 This in a complete output of the Java program (the output will differ when comparing the frameworks):
 ```plaintext

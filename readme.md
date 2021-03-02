@@ -85,9 +85,9 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 ### RSA AES hybrid encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |
-| [RSA AES CBC 256 hybrid encryption](docs/rsa_aes_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
+| [RSA AES CBC 256 hybrid encryption](docs/rsa_aes_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### Curve 25519 key exchange ###
 

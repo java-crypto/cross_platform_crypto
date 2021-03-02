@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JWT JWE RSA-OAEP-256 & AES 256 GCM encryption (decryption only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+		select {font-size: 100%; }
+		
+	</style>	
+</head>
+<body>
+<h1>V5 ### JWT JWE RSA-OAEP-256 & AES 256 GCM encryption (decryption only)</h1>
+<hr><p><b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md" target="_blank">
+my webpage <b>RSA string signature with SSA-PSS padding</b></a><br>
+</p><hr>
+<p>insert the jweToken in Base64Url encoding:</p>
+<textarea name="jweTokenBase64Url" id="jweTokenBase64Url" rows="20" cols="40">ewogICAgImFsZyI6ICJSU0EtT0FFUC0yNTYiLAogICAgImVuYyI6ICJBMjU2R0NNIiwKICAgICJ0eXAiOiAiSldUIgp9.SFbnw0tAWPRs29UUtg2_0WjHliBRfRuL1rHB-nP_NPXKcurHlYI2vMEpksEnfQvP8aTk1S6O_BzuA7tw4zYEZNkIsuohi-AH6pmU-vNH3PUIU5-meiFYVGgfIGSb6B6uo7LCm_QW5P6qcpxKdcSXV6-O-lxwX-VI5it0UuyOiVsIj1tSPvXPwxddf2qMo1Grt7F11517Q7VBjcZmI600Pk6tUbka9q6ir-NSHUvX4tk8ZU6epVz6OIs0_iLdnaVankqrUkR0Y4li2n5qDgJs7ZRAFJddojMRQCfxAunSjkKpLfjpt6s-lFVeUrjlGPg7Y68zibaFlCeDSfdYa3jXkQ.-3fq0oKzzCKESpQ9.wl04zuHI_LHr_Bfx13niPBOwfuThELjR80_8qcK62bKgHzGYGnmYFTMfZHQufHiq0tTkhbv4WeQZ2AermLxQ6zYKfilQY1qNToRfe4YcaOO2FjqdJ3GPgVLwTmmMKbQymbGVC7ZYGpajrAABRPxd6blPoUEVrLi8nGqM-xdgEPjMVyBlQP3A_Lh7_EEZXVHmhOUHI2TbwmBddygaeORhviSNhv4_OvvjEwTmQoRHtMuR1wNrrnzBhW8d6LUOU5zUMAD3e0whVu7j6mplTPyAJQw4toCNbteFH5PRnbs.XTfDVtRzq7_b91QyE7LXfw</textarea><br>
+<button id="sampleJweToken" onclick="sampleJweToken()">insert a sample JWE token</button><br><br>
+<hr>
+<p>Insert the Private Key (PEM encoding):</p>
+<textarea name="privatekey-value" id="privatekey-value" rows="20" cols="40">-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDwSZYlRn86zPi9e1RTZL7QzgE/36zjbeCMyOhf6o/WIKeVxFwVbG2FAY3YJZIxnBH+9j1XS6f+ewjGFlJY4f2IrOpS1kPiO3fmOo5N4nc8JKvjwmKtUM0t63uFFPfs69+7mKJ4w3tk2mSN4gb8J9P9BCXtH6Q78SdOYvdCMspA1X8eERsdLb/jjHs8+gepKqQ6+XwZbSq0vf2BMtaAB7zTX/Dk+ZxDfwIobShPaB0mYmojE2YAQeRq1gYdwwO1dEGk6E5J2toWPpKY/IcSYsGKyFqrsmbw0880r1BwRDer4RFrkzp4zvY+kX3eDanlyMqDLPN+ghXT1lv8snZpbaBDAgMBAAECggEBAIVxmHzjBc11/73bPB2EGaSEg5UhdzZm0wncmZCLB453XBqEjk8nhDsVfdzIIMSEVEowHijYz1c4pMq9osXR26eHwCp47AI73H5zjowadPVluEAot/xgn1IdMN/boURmSj44qiI/DcwYrTdOi2qGA+jD4PwrUl4nsxiJRZ/x7PjLhMzRbvDxQ4/Q4ThYXwoEGiIBBK/iB3Z5eR7lFa8E5yAaxM2QP9PENBr/OqkGXLWVqA/YTxs3gAvkUjMhlScOi7PMwRX9HsrAeLKbLuC1KJv1p2THUtZbOHqrAF/uwHajygUblFaa/BTckTN7PKSVIhp7OihbD04bSRrh+nOilcECgYEA/8atV5DmNxFrxF1PODDjdJPNb9pzNrDF03TiFBZWS4Q+2JazyLGjZzhg5Vv9RJ7VcIjPAbMy2Cy5BUffEFE+8ryKVWfdpPxpPYOwHCJSw4Bqqdj0Pmp/xw928ebrnUoCzdkUqYYpRWx0T7YVRoA9RiBfQiVHhuJBSDPYJPoP34kCgYEA8H9wLE5L8raUn4NYYRuUVMa+1k4Q1N3XBixm5cccc/Ja4LVvrnWqmFOmfFgpVd8BcTGaPSsqfA4j/oEQp7tmjZqggVFqiM2mJ2YEv18cY/5kiDUVYR7VWSkpqVOkgiX3lK3UkIngnVMGGFnoIBlfBFF9uo02rZpC5o5zebaDImsCgYAE9d5wv0+nq7/STBj4NwKCRUeLrsnjOqRriG3GA/TifAsX+jw8XS2VF+PRLuqHhSkQiKazGr2Wsa9Y6d7qmxjEbmGkbGJBC+AioEYvFX9TaU8oQhvihgA6ZRNid58EKuZJBbe/3ek4/nR3A0oAVwZZMNGIH972P7cSZmb/uJXMOQKBgQCsFaQAL+4sN/TUxrkAkylqF+QJmEZ26l2nrzHZjMWROYNJcsn8/XkaEhD4vGSnazCu/B0vU6nMppmezF9Mhc112YSrw8QFK5GOc3NGNBoueqMYy1MG8Xcbm1aSMKVv8xbarh+BZQbxy6x61CpCfaT9hAoA6HaNdeoU6y05lBz1DQKBgAbYiIk56QZHeoZKiZxy4eicQS0sVKKRb24ZUd+04cNSTfeIuuXZrYJ48Jbr0fzjIM3EfHvLgh9rAZ+aHe/L84Ig17KiExe+qyYHjut/SC0wODDtzM/jtrpqyYa5JoEpPIaUSgPuTH/WhO3cDsx63PIW4/CddNs8mCSBOqTnoaxh
+-----END PRIVATE KEY-----</textarea>
+<hr>
+<p>press the decrypt button to proceed:</p>
+<button id="decryptJweToken" onclick="decryptJweToken()">decrypt</button><br><br	
+<hr>
+<p>This is the decrypted payload in JSON-encoding:</p>
+<textarea name="payload-value" id="payload-value" rows="7" cols="65" disabled>the payload comes here ...</textarea>
+<p>This is the JWT header in JSON-encoding:</p>
+<textarea name="header-value" id="header-value" rows="5" cols="65" disabled>the header comes here ...</textarea>
+<hr><p><b>Technical note: this program uses the RSA OAEP-256 key encryption algorithm with a 2048 bit long key and an AES-256-GCM payload encryption.</b></p><hr>
+</body>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+let rawEncryptionKey; // the randomly generated aes gcm key
+let encryptionKey; // encryptionKey after import
+let publicKeyInternal; // rsa public key after import
+let privateKeyInternal; // rsa private key after import
+let jweHeaderObjectBase64Url;
+let jweIvBase64Url;
+let jweCiphertextBase64Url;
+let jweGcmTagBase64Url;
+
+function decryptJweToken(){
+	// step 1 import the private key
+	importPrivateKey();
+}
+
+// step 1
+function importPrivateKey(){
+	var pem = document.getElementById('privatekey-value').value;
+	// fetch the part of the PEM string between header and footer
+    const pemHeader = "-----BEGIN PRIVATE KEY-----";
+    const pemFooter = "-----END PRIVATE KEY-----";
+    const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+    const binaryDerString = window.atob(pemContents);
+    const binaryDer = str2ab(binaryDerString);
+	window.crypto.subtle.importKey(
+		"pkcs8",
+		binaryDer,
+		{
+			name: "RSA-OAEP",
+			hash: "SHA-256"
+		},
+		true,
+		["decrypt"]
+	)
+	.then(function(privateKey){
+		privateKeyInternal = privateKey;
+		// step 2
+		decryptKey();
+	})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+// step 2
+function decryptKey() {
+	var jweTokenString = document.getElementById('jweTokenBase64Url').value;
+	// split string
+	var dataSplit = jweTokenString.split(".");
+	var encryptedKey = b64ToBuf(base64UrlDecode(dataSplit[1]));
+	// note: this program does not check for the header and the alg parameter
+	// it uses hard coded RSA OAEP-256 decryption
+	//var keyToEncrypt = rawEncryptionKey;
+	window.crypto.subtle.decrypt(
+		{
+			name: "RSA-OAEP",
+		},
+		privateKeyInternal,
+		encryptedKey 
+	)
+	.then(function(decryptedKey){
+		rawEncryptionKey = decryptedKey;
+		// step 3
+		importAesGcmKey();
+	})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+// step 3
+function importAesGcmKey() {
+	key = rawEncryptionKey;
+	window.crypto.subtle.importKey(
+		"raw", 
+		key, 
+		{ name: "AES-GCM"}, 
+		true, 
+		["encrypt", "decrypt"])
+		.then(function(encrKey) {
+			encryptionKey = encrKey;
+			decryptPayload();
+		})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+// step 4
+function decryptPayload(){
+	var jweTokenString = document.getElementById('jweTokenBase64Url').value;
+	// split string
+	var dataSplit = jweTokenString.split(".");
+	var headerObjectBase64Url = dataSplit[0];
+	var iv = b64ToBuf(base64UrlDecode(dataSplit[2]));
+	var ciphertext = b64ToBuf(base64UrlDecode(dataSplit[3]));
+	var gcmTag = b64ToBuf(base64UrlDecode(dataSplit[4]));
+	var ciphertextWithGcmTag = concatBuffer(ciphertext, gcmTag);
+	var aadBuffer = str2ab(headerObjectBase64Url);
+	var key = encryptionKey;
+	window.crypto.subtle.decrypt(
+    {
+        name: "AES-GCM",
+        iv: iv,
+        //Additional authentication data (optional)
+        additionalData: aadBuffer,
+        tagLength: 128,
+    },
+		key,
+		ciphertextWithGcmTag
+	)
+	.then(function(decryptedPayload){
+		document.getElementById('payload-value').value = bufToStr(decryptedPayload);
+		document.getElementById('header-value').value = bufToStr(b64ToBuf(base64UrlDecode(headerObjectBase64Url)));
+	})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+function str2ab(str) {
+	const buf = new ArrayBuffer(str.length);
+	const bufView = new Uint8Array(buf);
+	for (let i = 0, strLen = str.length; i < strLen; i++) {
+		bufView[i] = str.charCodeAt(i);
+	}
+	return buf;
+}
+
+const bufToB64 = buf =>
+	btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+
+const b64ToBuf = b64 => {
+	const binstr = atob(b64),
+	buf = new Uint8Array(binstr.length);
+	Array.prototype.forEach.call(binstr, (ch, i) => {
+		buf[i] = ch.charCodeAt(0);
+	});
+	return buf;
+};
+
+const bufToStr = str => new TextDecoder().decode(str);
+
+function b64ToB64Url(a){
+	a=a.replace(/\=/g,"");
+	a=a.replace(/\+/g,"-");
+	a=a.replace(/\//g,"_");
+	return a
+}
+
+var base64UrlDecode = function(input) {
+    // Replace non-url compatible chars with base64 standard chars
+    input = input
+    .replace(/-/g, '+')
+    .replace(/_/g, '/');
+    // Pad out with standard base64 required padding characters
+    var pad = input.length % 4;
+    if(pad) {
+		if(pad === 1) {
+			throw new Error('InvalidLengthError: Input base64url string is the wrong length to determine padding');
+		}
+		input += new Array(5-pad).join('=');
+    }
+    return input;
+}
+
+function arrayBufferToBase64(buffer) {
+    var binary = '';
+    var bytes = new Uint8Array( buffer );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    return window.btoa( binary );
+}
+
+function b64tob64u(a){
+	a=a.replace(/\=/g,"");
+	a=a.replace(/\+/g,"-");
+	a=a.replace(/\//g,"_");
+	return a
+}
+	
+var concatBuffer = function(buffer1, buffer2) {
+	var tmp = new Uint8Array(buffer1.byteLength + buffer2.byteLength);
+	tmp.set(new Uint8Array(buffer1), 0);
+	tmp.set(new Uint8Array(buffer2), buffer1.byteLength);
+	return tmp.buffer;
+};	
+
+function sampleJweToken(){
+	document.getElementById('jweTokenBase64Url').value = 'ewogICAgImFsZyI6ICJSU0EtT0FFUC0yNTYiLAogICAgImVuYyI6ICJBMjU2R0NNIiwKICAgICJ0eXAiOiAiSldUIgp9.SFbnw0tAWPRs29UUtg2_0WjHliBRfRuL1rHB-nP_NPXKcurHlYI2vMEpksEnfQvP8aTk1S6O_BzuA7tw4zYEZNkIsuohi-AH6pmU-vNH3PUIU5-meiFYVGgfIGSb6B6uo7LCm_QW5P6qcpxKdcSXV6-O-lxwX-VI5it0UuyOiVsIj1tSPvXPwxddf2qMo1Grt7F11517Q7VBjcZmI600Pk6tUbka9q6ir-NSHUvX4tk8ZU6epVz6OIs0_iLdnaVankqrUkR0Y4li2n5qDgJs7ZRAFJddojMRQCfxAunSjkKpLfjpt6s-lFVeUrjlGPg7Y68zibaFlCeDSfdYa3jXkQ.-3fq0oKzzCKESpQ9.wl04zuHI_LHr_Bfx13niPBOwfuThELjR80_8qcK62bKgHzGYGnmYFTMfZHQufHiq0tTkhbv4WeQZ2AermLxQ6zYKfilQY1qNToRfe4YcaOO2FjqdJ3GPgVLwTmmMKbQymbGVC7ZYGpajrAABRPxd6blPoUEVrLi8nGqM-xdgEPjMVyBlQP3A_Lh7_EEZXVHmhOUHI2TbwmBddygaeORhviSNhv4_OvvjEwTmQoRHtMuR1wNrrnzBhW8d6LUOU5zUMAD3e0whVu7j6mplTPyAJQw4toCNbteFH5PRnbs.XTfDVtRzq7_b91QyE7LXfw';
+}
+	
+</SCRIPT>	
+</html>

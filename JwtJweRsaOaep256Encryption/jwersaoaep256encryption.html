@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>JWT JWE RSA-OAEP-256 & AES 256 GCM encryption (encryption only)</title>
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		h2 {font-size: 200%;}
+		p {font-size: 150%; }
+		button {height: 100%; font-size: 150%;}
+		textarea {font-size: 150%;}
+		input[type="text"] {font-size: 100%; }
+		input[type="button"] {font-size: 100%; }
+		select {font-size: 100%; }
+		
+	</style>	
+</head>
+<body>
+<h1>V5 ### JWT JWE RSA-OAEP-256 & AES 256 GCM encryption (encryption only)</h1>
+<hr><p><b>Important note: this program is doing what it promises but the programming itself is of very poor quality and for demonstration purposes only. Never ever use this program as source for your own programs because there are a lot of conversions to get it run.</b>
+<br><br>Get more information about this program on <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md" target="_blank">
+my webpage <b>RSA string signature with SSA-PSS padding</b></a><br>
+</p><hr>	
+<p>collecting data for the payload:</p>
+<p>Enter a subject:</p>
+<input type="text" id="subject" name="subject" size="50" value="JWE RSA-OAEP & AES GCM encryption">
+<p>Enter an issuer:</p>
+<input type="text" id="issuer" name="issuer" size="50" value="https://java-crypto.github.io/cross_platform_crypto/">
+<p>Enter the data to encrypt:</p>
+<input type="text" id="dataToEncrypt" name="dataToEncrypt" size="50" value="The quick brown fox jumps over the lazy dog">
+<p>Enter an expire time in seconds:</p>
+<input type="text" id="expireSeconds" name="expireSeconds" size="50" value="120">
+<hr>
+<p>collecting data for the payload:</p>
+<p>Enter the key algorithm:</p>
+<input type="text" id="keyAlgorithm" name="keyAlgorithm" size="50" value="RSA-OAEP-256" disabled>
+<p>Enter the encryption algorithm:</p>
+<input type="text" id="encryptionAlgorithm" name="encryptionAlgorithm" size="50" value="A256GCM" disabled>
+<hr>
+<p>Insert the Public Key you received (PEM encoding):</p>
+<textarea name="publickey-value" id="publickey-value" rows="10" cols="40">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8EmWJUZ/Osz4vXtUU2S+0M4BP9+s423gjMjoX+qP1iCnlcRcFWxthQGN2CWSMZwR/vY9V0un/nsIxhZSWOH9iKzqUtZD4jt35jqOTeJ3PCSr48JirVDNLet7hRT37Ovfu5iieMN7ZNpkjeIG/CfT/QQl7R+kO/EnTmL3QjLKQNV/HhEbHS2/44x7PPoHqSqkOvl8GW0qtL39gTLWgAe801/w5PmcQ38CKG0oT2gdJmJqIxNmAEHkatYGHcMDtXRBpOhOSdraFj6SmPyHEmLBishaq7Jm8NPPNK9QcEQ3q+ERa5M6eM72PpF93g2p5cjKgyzzfoIV09Zb/LJ2aW2gQwIDAQAB
+-----END PUBLIC KEY-----</textarea>
+<hr>
+<p>press the encrypt button to proceed:</p>
+<button id="encryptPayload" onclick="encryptPayload()">encrypt</button><br><br>
+<textarea name="jweTokenBase64Url" id="jweTokenBase64Url" rows="20" cols="40">the jwe token comes here ...</textarea>
+<hr>
+<p>This is the payload to encrypt in JSON-encoding:</p>
+<textarea name="payload-value" id="payload-value" rows="7" cols="65" disabled>the payload comes here ...</textarea>
+<p>This is the JWT header in JSON-encoding:</p>
+<textarea name="header-value" id="header-value" rows="5" cols="65" disabled>the header comes here ...</textarea>
+
+<hr><p><b>Technical note: this program uses the RSA OAEP-256 key encryption algorithm with a 2048 bit long key and an AES-256-GCM payload encryption.</b></p><hr>
+</body>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+let rawEncryptionKey; // the randomly generated aes gcm key
+let encryptionKey; // encryptionKey after import
+let publicKeyInternal; // rsa public key after import
+let jweHeaderObjectBase64Url;
+let jweIvBase64Url;
+let jweCiphertextBase64Url;
+let jweGcmTagBase64Url;
+
+function encryptPayload(){
+	// step 1: generate header & payload
+	generateHeaderPayload();
+	// step 2: encrypt the payload with encryptionAlgorithm
+	var randomKey = crypto.getRandomValues(new Uint8Array(32)); // aes-256
+	rawEncryptionKey = randomKey;
+	importAesGcmKey(randomKey);
+}
+
+// step 1
+function importAesGcmKey(randomKey) {
+	window.crypto.subtle.importKey(
+		"raw", 
+		randomKey, 
+		{ name: "AES-GCM"}, 
+		true, 
+		["encrypt", "decrypt"])
+		.then(function(key) {
+			encryptionKey = key;
+			encryptAesGcmToBase64Url();
+		})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+// step 2
+function encryptAesGcmToBase64Url(){
+	var key = encryptionKey;
+	var headerObject = document.getElementById('header-value').value;
+	var payloadObject = document.getElementById('payload-value').value;
+	var iv = window.crypto.getRandomValues(new Uint8Array(12));
+	var data = str2ab(payloadObject);
+	var aadBase64Url = b64ToB64Url(arrayBufferToBase64(str2ab(headerObject)));
+	var aadBuffer = str2ab(aadBase64Url);
+	window.crypto.subtle.encrypt(
+    {
+        name: "AES-GCM",
+        iv: iv,
+        //Additional authentication data (optional)
+        additionalData: aadBuffer,
+        tagLength: 128,
+    },
+		key,
+		data
+	)
+	.then(function(encrypted){
+		var ciphertextBase64Url = b64ToB64Url(bufToB64(new Uint8Array(encrypted)));
+		var ivBase64Url = b64ToB64Url(bufToB64(iv));
+		var dataCiphertext = new Uint8Array(encrypted.slice(0, (encrypted.byteLength-16)));
+		var dataGcmTag = new Uint8Array(encrypted.slice((encrypted.byteLength-16), encrypted.byteLength));
+		var dataCiphertextBase64Url = b64ToB64Url(bufToB64(dataCiphertext));
+		var dataGcmTagBase64Url = b64ToB64Url(bufToB64(dataGcmTag));
+		var encryptedBase64Url = b64ToB64Url(bufToB64(new Uint8Array(encrypted)));
+		var headerObjectBase64Url = b64ToB64Url(arrayBufferToBase64(str2ab(headerObject)));
+		// save data for final step
+		jweHeaderObjectBase64Url = headerObjectBase64Url;
+		jweIvBase64Url = ivBase64Url;
+		jweCiphertextBase64Url = dataCiphertextBase64Url;
+		jweGcmTagBase64Url = dataGcmTagBase64Url;
+		// step 3
+		importPublicKey();
+		
+	})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+// step 3
+function importPublicKey(){
+	var pem = document.getElementById('publickey-value').value;
+	// fetch the part of the PEM string between header and footer
+    const pemHeader = "-----BEGIN PUBLIC KEY-----";
+    const pemFooter = "-----END PUBLIC KEY-----";
+    const pemContents = pem.substring(pemHeader.length, pem.length - pemFooter.length);
+    const binaryDerString = window.atob(pemContents);
+    const binaryDer = str2ab(binaryDerString);
+	window.crypto.subtle.importKey(
+		"spki",
+		binaryDer,
+		{
+			name: "RSA-OAEP",
+			hash: "SHA-256"
+		},
+		true,
+		["encrypt"]
+	)
+	.then(function(publicKey){
+		publicKeyInternal = publicKey;
+		// step 4
+		encryptKey();
+	})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+// step 4
+function encryptKey() {
+	var keyToEncrypt = rawEncryptionKey;
+	window.crypto.subtle.encrypt(
+		{
+			name: "RSA-OAEP",
+		},
+		publicKeyInternal,
+		keyToEncrypt 
+	)
+	.then(function(encrypted){
+		var encryptedKeyBase64Url = b64ToB64Url(bufToB64(new Uint8Array(encrypted)));
+		var jweTokenString = 
+			jweHeaderObjectBase64Url + '.'
+			+ encryptedKeyBase64Url + '.'
+			+ jweIvBase64Url + "."
+			+ jweCiphertextBase64Url + "."
+			+ jweGcmTagBase64Url;
+		document.getElementById('jweTokenBase64Url').value = jweTokenString;
+	})
+	.catch(function(err){
+		console.error(err);
+	});
+}
+
+function generateHeaderPayload() {
+	subject = document.getElementById('subject').value;
+	issuer =  document.getElementById('issuer').value;
+	dataToEncrypt = document.getElementById('dataToEncrypt').value;
+	expireseconds = document.getElementById('expireSeconds').value;
+	unixtime = Math.floor(Date.now() / 1000);
+	expiredunixtime = unixtime + parseInt(expireseconds);
+	var obj = {sub:subject, iss:issuer, dat:dataToEncrypt, iat:unixtime, exp:expiredunixtime}
+	document.getElementById('payload-value').value = JSON.stringify(obj, null, 4);
+	// generate header
+	var header = {alg:"RSA-OAEP-256", enc:"A256GCM", typ:"JWT"};
+	document.getElementById('header-value').value = JSON.stringify(header, null, 4);
+}		
+
+function str2ab(str) {
+	const buf = new ArrayBuffer(str.length);
+	const bufView = new Uint8Array(buf);
+	for (let i = 0, strLen = str.length; i < strLen; i++) {
+		bufView[i] = str.charCodeAt(i);
+	}
+	return buf;
+}
+
+const bufToB64 = buf =>
+	btoa(Array.prototype.map.call(buf, ch => String.fromCharCode(ch)).join(""));
+
+function b64ToB64Url(a){
+	a=a.replace(/\=/g,"");
+	a=a.replace(/\+/g,"-");
+	a=a.replace(/\//g,"_");
+	return a
+}
+
+function arrayBufferToBase64(buffer) {
+    var binary = '';
+    var bytes = new Uint8Array( buffer );
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+        binary += String.fromCharCode( bytes[ i ] );
+    }
+    return window.btoa( binary );
+}
+
+function b64tob64u(a){
+	a=a.replace(/\=/g,"");
+	a=a.replace(/\+/g,"-");
+	a=a.replace(/\//g,"_");
+	return a
+}
+	
+function generatepayload() {
+	subject = document.getElementById('subject').value;
+	issuer =  document.getElementById('issuer').value;
+	dataToEncrypt = document.getElementById('dataToEncrypt').value;
+	expireseconds = document.getElementById('expireseconds').value;
+	unixtime = Math.floor(Date.now() / 1000);
+	expiredunixtime = unixtime + parseInt(expireseconds);
+	var obj = {sub:subject, iss:issuer, dat:dataToEncrypt, iat:unixtime, exp:expiredunixtime}
+	document.getElementById('payload-value').value = JSON.stringify(obj, null, 4);
+	// generate header
+	var header = {alg:"RSA-OAEP-256", enc:"A256GCM", typ:"JWT"};
+	document.getElementById('header-value').value = JSON.stringify(header, null, 4);
+}		
+		
+</SCRIPT>	
+</html>

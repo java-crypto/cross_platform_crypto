@@ -8,7 +8,7 @@ To understand how a JWS token is constructed I strongly recommend my article [JS
 
 In total there are 12 signature algorithms "allowed", but from all of them I'm focusing on the **RS256** algorithm, that means a RSA private/public key based signature with a **RSASSA PKCS1 v1.5 padding** using a **SHA-256 hash**. The other algorithms will use different hashes ("SHA-256", "SHA-384" and "SHA-512" are in use), other padding ("RSASSA-PSS + MGF1") or keys based on an elliptic curve ("ECDSA using P-256 curve"). The last allowed signature type is constructed with a "HMAC" based on a symmetric key. 
 
-As the **RSASSA PKCS1 v1.5 padding** is named as "not so secure as the RSASSA-PSS + MGF1 padding" I recommend to better use the **PS256** signature algorithm [JSON web signature JWS with algorithm PS256](json_web_token_ps256_signature.md).
+As the **RSASSA PKCS1 v1.5 padding** is named as "not so secure as the RSASSA-PSS + MGF1 padding" I recommend to better use the **PS256** signature algorithm [JSON web signature JWS with algorithm PS256](json_web_token_jws_ps256_signature.md).
 
 For a better understanding of the signature process itself I recommend my article [RSA signature of a string](rsa_signature_string.md).
 

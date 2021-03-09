@@ -56,7 +56,7 @@ The following table just gives a very <u>shortened overview</u> and I strongly r
 | key exchange (KEM) | Diffie-Hellman EC | :white_check_mark: | :x: | the KEM **will get broken** with QC |
 | key exchange (KEM) | X25519 curve | :white_check_mark: | :question: | no information available |
 | key exchange (KEM) | CRYSTALS-KYBER | :white_check_mark: | :white_check_mark: | NIST round 3 candidate |
-
+| key exchange (KEM) | Sike | :white_check_mark: | :white_check_mark: | NIST round 3 candidate |
 
 ### What algorithms do you offer here?
 
@@ -65,6 +65,7 @@ The following table just gives a very <u>shortened overview</u> and I strongly r
 | Public key encryption | [McEliece](pqc_mcelice_encryption.md) | Java | [PqcMcElieceEncryption.java](../PostQuantumCryptography/McElieceEncryption/PqcMcElieceEncryption.java) | [repl.it PqcJavaMcElieceEncryption](https://repl.it/@javacrypto/PqcJavaMcElieceEncryption#Main.java/) |
 | | | |
 | key exchange (KEM) | [Chrystals-Kyber](pqc_chrystalskyber_kem.md) | NodeJs | [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChrystalsKyberKemNodeJs.js)  | [repl.it PqcNodeJsChrystalsKyberKem ](https://repl.it/@javacrypto/PqcNodeJsChrystalsKyberKem#index.js) |
+| key exchange (KEM) | [Sike](pqc_sike_kem.md) | Java | [PqcSikeKem.java](../PostQuantumCryptography/SikeKem/PqcJavaSikeKem.java) | [repl.it PqcJavaSikeKem](https://repl.it/@javacrypto/PqcJavaSikeKem#Main.java/)
 | | | |
 | signature | [FALCON](pqc_falcon_signature.md) | Python | [PqcFalconSignature.py](../PostQuantumCryptography/FalconSignature/PqcFalconSignature.py) | [repl.it PqcFalconSignature](https://repl.it/@javacrypto/PQCPythonFalconSignature#main.py/)
 | signature | [Rainbow](pqc_rainbow_signature.md) | Java | [PqcRainbowSignature.java](../PostQuantumCryptography/RainbowSignature/PqcRainbowSignature.java)| [repl.it PqcRainbowSignature](https://repl.it/@javacrypto/PqcRainbowSignature#Main.java/) |
@@ -72,6 +73,9 @@ The following table just gives a very <u>shortened overview</u> and I strongly r
 
 For all of them you find an online running implementation - take them as a **case study**. Keep in mind that I could not check the correctness of the algorithms and results so **please do not rely on the programs**.
 
+### Why don't you use the Open Quantum Safe (OQS) library?
+
+If you are looking for a cross-platform library that is capable of all round 3 candidates then I'm recommending to visit the [Open Quantum Safe (OQS) project](https://openquantumsafe.org/) and the GitHub repository [https://github.com/open-quantum-safe](https://github.com/open-quantum-safe). The libraries could be perfect for my Cross platform cryptography project but unfortunately they do not provide any libraries in compiled form. My limited resources do not allow me to investigate in the compiling and binding technology so I have to leave out this great opportunity.
 
 Last update: Mar. 09th 2021
 

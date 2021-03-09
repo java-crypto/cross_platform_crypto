@@ -164,7 +164,7 @@ Note: you need external libraries for this feature!
 | | |
 | Public key encryption | [McEliece](docs/pqc_mceliece_encryption.md) | Java |
 | | | |
-| key exchange (KEM) | [Christals-Kyber](docs/pqc_christalskyber_kem.md) | NodeJs |
+| key exchange (KEM) | [Chrystals-Kyber](docs/pqc_chrystalskyber_kem.md) | NodeJs |
 | | | |
 | signature | [FALCON](docs/pqc_falcon_signature.md) | Python |
 | signature | [Rainbow](docs/pqc_rainbow_signature.md) | Java |

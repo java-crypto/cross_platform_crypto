@@ -61,7 +61,8 @@ PQC Chrystals-Kyber key encapsulation mechanism (KEM)
 * # # SERIOUS SECURITY WARNING # # *
 * This program is a CONCEPT STUDY  *
 * for the algorithm                *
-* McEliece [public key encryption] *
+* Christals-Kyber                  *
+* [public key encryption]          *
 * The program is using an OUTDATED *
 * parameter set and I cannot       *
 * check for the correctness of the *

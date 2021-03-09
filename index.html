@@ -523,7 +523,8 @@ based on dark.css by Vladimir Epifanov
 <p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>  and <strong>Python</strong> (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
 <p>Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the <a href="#readme-libsodium"><strong>Libsodium</strong></a> project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section.</p>
 <p>Sometimes you may have read about a &quot;JWT&quot; or &quot;JWT token&quot;, that is short form of a <strong>JSON web token</strong> or <strong>JWT</strong>. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some <a href="#readme-jwt"><strong>JWT web token</strong></a> solutions.</p>
-<p>A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. &quot;CryptoJs&quot;, NodeJs has a built-in &quot;Crypto&quot; library or you can use &quot;node-forge&quot;).</p>
+<p>A special chapter deals with the future of cryptography; and that is the <strong>Post Quantum Cryptography</strong>. Although the quantum computers are not on the market at the moment they will be there and cause catastrophic impacts on cryptography as they may been able to solve the RSA- and EC-curve problems and subsequently all RSA- and EC-curve encryption and signature become worthless. Visit the chapter <a href="#readme-pqc"><strong>PQC Post Quantum Cryptography</strong></a> at the end.</p>
+<p>A lot of solutions run with the built-in cryptographic modules but especially the Python and  Javascript-ones may need external libraries (pure Javascript will need e.g. &quot;CryptoJs&quot;, NodeJs has a built-in &quot;Crypto&quot; library or you can use &quot;node-forge&quot;).</p>
 <h3 id="general-routines">General routines</h3>
 <table>
 <thead>
@@ -971,6 +972,8 @@ based on dark.css by Vladimir Epifanov
 <th style="text-align: center;">CryptoJS</th>
 <th style="text-align: center;">NodeJS Crypto</th>
 <th style="text-align: center;">NodeJs forge</th>
+<th style="text-align: center;">Browser</th>
+<th style="text-align: center;">Python</th>
 </tr>
 </thead>
 <tbody>
@@ -980,6 +983,19 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_aes_gcm_hybrid_encryption_string.md">RSA AES GCM 256 hybrid encryption</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
@@ -1366,6 +1382,58 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
+<h3 id="pqc-post-quantum-cryptography"><a name="readme-pqc"></a>PQC Post Quantum Cryptography</h3>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th style="text-align: center;">algorithm</th>
+<th style="text-align: center;">Language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overview</td>
+<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_overview.md">PQC overview</a></td>
+<td style="text-align: center;">several</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Public key encryption</td>
+<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_mcelice_encryption.md">McEliece</a></td>
+<td style="text-align: center;">Java</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>key exchange (KEM)</td>
+<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_christalskyber_kem.md">Christals-Kyber</a></td>
+<td style="text-align: center;">NodeJs</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>signature</td>
+<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_falcon_signature.md">FALCON</a></td>
+<td style="text-align: center;">Python</td>
+</tr>
+<tr>
+<td>signature</td>
+<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_rainbow_signature.md">Rainbow</a></td>
+<td style="text-align: center;">Java</td>
+</tr>
+</tbody>
+</table>
 <h3 id="elliptic-curve-encryption">Elliptic curve encryption</h3>
 <table>
 <thead>
@@ -1460,7 +1528,7 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
-<p>Last update: Mar. 02nd 2021</p>
+<p>Last update: Mar. 09th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

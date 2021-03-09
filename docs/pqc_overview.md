@@ -64,7 +64,7 @@ The following table just gives a very <u>shortened overview</u> and I strongly r
 | ------ | :------: | :--: | :--: | :--: |
 | Public key encryption | [McEliece](pqc_mcelice_encryption.md) | Java | [PqcMcElieceEncryption.java](../PostQuantumCryptography/McElieceEncryption/PqcMcElieceEncryption.java) | [repl.it PqcJavaMcElieceEncryption](https://repl.it/@javacrypto/PqcJavaMcElieceEncryption#Main.java/) |
 | | | |
-| key exchange (KEM) | [Christals-Kyber](pqc_christalskyber_kem.md) | NodeJs | [PqcChristalsKyberKemNodeJs.js](../PostQuantumCryptography/ChristalsKyberKem/PqcChristalsKyberKemNodeJs.js)  | [repl.it PqcNodeJsChristalsKyberKem ](https://repl.it/@javacrypto/PqcNodeJsChristalsKyberKem#index.js) |
+| key exchange (KEM) | [Chrystals-Kyber](pqc_chrystalskyber_kem.md) | NodeJs | [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChrystalsKyberKemNodeJs.js)  | [repl.it PqcNodeJsChrystalsKyberKem ](https://repl.it/@javacrypto/PqcNodeJsChrystalsKyberKem#index.js) |
 | | | |
 | signature | [FALCON](pqc_falcon_signature.md) | Python | [PqcFalconSignature.py](../PostQuantumCryptography/FalconSignature/PqcFalconSignature.py) | [repl.it PqcFalconSignature](https://repl.it/@javacrypto/PQCPythonFalconSignature#main.py/)
 | signature | [Rainbow](pqc_rainbow_signature.md) | Java | [PqcRainbowSignature.java](../PostQuantumCryptography/RainbowSignature/PqcRainbowSignature.java)| [repl.it PqcRainbowSignature](https://repl.it/@javacrypto/PqcRainbowSignature#Main.java/) |

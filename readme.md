@@ -162,7 +162,7 @@ Note: you need external libraries for this feature!
 | ------ | :------: | :--: |
 | overview | [PQC overview](docs/pqc_overview.md) | several |
 | | |
-| Public key encryption | [McEliece](docs/pqc_mcelice_encryption.md) | Java |
+| Public key encryption | [McEliece](docs/pqc_mceliece_encryption.md) | Java |
 | | | |
 | key exchange (KEM) | [Christals-Kyber](docs/pqc_christalskyber_kem.md) | NodeJs |
 | | | |

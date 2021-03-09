@@ -10,7 +10,10 @@ Wouldn't it be nice having a library that could be used cross-platform wide to g
 
 Sometimes you may have read about a "JWT" or "JWT token", that is short form of a **JSON web token** or **JWT**. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some [**JWT web token**](#readme-jwt) solutions.
 
-A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
+A special chapter deals with the future of cryptography; and that is the **Post Quantum Cryptography**. Although the quantum computers are not on the market at the moment they will be there and cause catastrophic impacts on cryptography as they may been able to solve the RSA- and EC-curve problems and subsequently all RSA- and EC-curve encryption and signature become worthless. Visit the chapter [**PQC Post Quantum Cryptography**](#readme-pqc) at the end.
+
+
+A lot of solutions run with the built-in cryptographic modules but especially the Python and  Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
 
 ### General routines ###
 
@@ -85,9 +88,10 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 
 ### RSA AES hybrid encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | Python |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: |
-| [RSA AES CBC 256 hybrid encryption](docs/rsa_aes_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | Browser | Python |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
+| [RSA AES CBC 256 hybrid encryption](docs/rsa_aes_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
+| [RSA AES GCM 256 hybrid encryption](docs/rsa_aes_gcm_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### Curve 25519 key exchange ###
 
@@ -152,6 +156,19 @@ Note: you need external libraries for this feature!
 |JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing | :x: |  :x: | :x: | :x: | :soon: |   :x: | 
 | [JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm](docs/json_web_token_jwe_rsa_oaep_256_encryption.md) | encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
 
+### <a name="readme-pqc"></a>PQC Post Quantum Cryptography ###
+
+| Purpose | algorithm | Language |
+| ------ | :------: | :--: |
+| overview | [PQC overview](docs/pqc_overview.md) | several |
+| | |
+| Public key encryption | [McEliece](docs/pqc_mcelice_encryption.md) | Java |
+| | | |
+| key exchange (KEM) | [Christals-Kyber](docs/pqc_christalskyber_kem.md) | NodeJs |
+| | | |
+| signature | [FALCON](docs/pqc_falcon_signature.md) | Python |
+| signature | [Rainbow](docs/pqc_rainbow_signature.md) | Java |
+
 ### Elliptic curve encryption ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |
@@ -183,7 +200,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Mar. 02nd 2021
+Last update: Mar. 09th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

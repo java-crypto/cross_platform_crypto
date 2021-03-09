@@ -47,7 +47,7 @@ Yes, you need the Bouncy Castle library (tested with version 1.68), get it here 
 
 View the source code: [PqcRainbowSignature.java](../PostQuantumCryptography/RainbowSignature/PqcRainbowSignature.java)
 
-Run the program online: [repl.it PqcRainbowSignature](https://repl.it/@javacrypto/PqcRainbowSignature#Main.java/)
+Run the program online: [repl.it PqcJavaRainbowSignature](https://repl.it/@javacrypto/PqcJavaRainbowSignature#Main.java/)
 
 This is an output (your will differ because of a random element):
 

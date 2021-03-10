@@ -30,7 +30,7 @@ public class PqcJavaSikeKem {
                 "* output and other details         *\n" +
                 "*                                  *\n" +
                 "*    DO NOT USE THE PROGRAM IN     *\n" +
-                "*    ANY PRODUCTION ENVIRONENT     *\n" +
+                "*    ANY PRODUCTION ENVIRONMENT    *\n" +
                 "************************************");
 
         // data to encrypt is usually a 32 bytes long (randomly generated) AES key

@@ -39,7 +39,7 @@ public class PqcMcElieceEncryption {
                 "* output and other details         *\n" +
                 "*                                  *\n" +
                 "*     DO NOT USE THE PROGRAM IN    *\n" +
-                "*     ANY PRODUCTION ENVIRONENT    *\n" +
+                "*     ANY PRODUCTION ENVIRONMENT   *\n" +
                 "************************************");
 
 

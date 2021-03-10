@@ -32,7 +32,7 @@ public class PqcRainbowSignature {
                 "* output and other details         *\n" +
                 "*                                  *\n" +
                 "*    DO NOT USE THE PROGRAM IN     *\n" +
-                "*    ANY PRODUCTION ENVIRONENT     *\n" +
+                "*    ANY PRODUCTION ENVIRONMENT    *\n" +
                 "************************************");
 
         String dataToSignString = "The quick brown fox jumps over the lazy dog";

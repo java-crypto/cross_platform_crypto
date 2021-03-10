@@ -69,7 +69,7 @@ PQC Chrystals-Kyber key encapsulation mechanism (KEM)
 * output and other details         *
 *                                  *
 *     DO NOT USE THE PROGRAM IN    *
-*     ANY PRODUCTION ENVIRONENT    *
+*     ANY PRODUCTION ENVIRONMENT   *
 ************************************
 
 generated private key length: 2400
@@ -86,6 +86,6 @@ keyToDecrypt Base64: rpsVGbkwZhn/uw9JgO2inwwXAyr2VHacUpQhZWgmvBg=
 
 ```
 
-Last update: Mar. 09th 2021
+Last update: Mar. 10th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

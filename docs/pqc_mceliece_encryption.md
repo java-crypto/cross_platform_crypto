@@ -63,7 +63,7 @@ PQC McEliece public key encryption
 * output and other details         *
 *                                  *
 *     DO NOT USE THE PROGRAM IN    *
-*     ANY PRODUCTION ENVIRONENT    *
+*     ANY PRODUCTION ENVIRONMENT   *
 ************************************
 
 generated private key length: 289997
@@ -79,6 +79,6 @@ decryptedtext equals to keyToEncrypt: true
 
 ```
 
-Last update: Mar. 08th 2021
+Last update: Mar. 10th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

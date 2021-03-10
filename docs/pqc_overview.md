@@ -64,12 +64,12 @@ The following table just gives a very <u>shortened overview</u> and I strongly r
 | ------ | :------: | :--: | :--: | :--: |
 | Public key encryption | [McEliece](pqc_mcelice_encryption.md) | Java | [PqcMcElieceEncryption.java](../PostQuantumCryptography/McElieceEncryption/PqcMcElieceEncryption.java) | [repl.it PqcJavaMcElieceEncryption](https://repl.it/@javacrypto/PqcJavaMcElieceEncryption#Main.java/) |
 | | | |
-| key exchange (KEM) | [Chrystals-Kyber](pqc_chrystalskyber_kem.md) | NodeJs | [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChrystalsKyberKemNodeJs.js)  | [repl.it PqcNodeJsChrystalsKyberKem ](https://repl.it/@javacrypto/PqcNodeJsChrystalsKyberKem#index.js) |
+| key exchange (KEM) | [Chrystals-Kyber](pqc_chrystalskyber_kem.md) | NodeJs | [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChristalsKyberKemNodeJs.js)  | [repl.it PqcNodeJsChrystalsKyberKem ](https://repl.it/@javacrypto/PqcNodeJsChrystalsKyberKem#index.js) |
 | key exchange (KEM) | [Sike](pqc_sike_kem.md) | Java | [PqcSikeKem.java](../PostQuantumCryptography/SikeKem/PqcJavaSikeKem.java) | [repl.it PqcJavaSikeKem](https://repl.it/@javacrypto/PqcJavaSikeKem#Main.java/)
 | | | |
 | signature | [FALCON](pqc_falcon_signature.md) | Python | [PqcFalconSignature.py](../PostQuantumCryptography/FalconSignature/PqcFalconSignature.py) | [repl.it PqcFalconSignature](https://repl.it/@javacrypto/PQCPythonFalconSignature#main.py/)
-| signature | [Rainbow](pqc_rainbow_signature.md) | Java | [PqcRainbowSignature.java](../PostQuantumCryptography/RainbowSignature/PqcRainbowSignature.java)| [repl.it PqcRainbowSignature](https://repl.it/@javacrypto/PqcRainbowSignature#Main.java/) |
-
+| signature | [Rainbow](pqc_rainbow_signature.md) | Java | [PqcRainbowSignature.java](../PostQuantumCryptography/RainbowSignature/PqcRainbowSignature.java)| [repl.it PqcRainbowSignature](https://repl.it/@javacrypto/PqcJavaRainbowSignature#Main.java/) |
+| signature | [Sphincs](pqc_sphincs_signature.md) | Java | [PqcSphincsSignature.java](../PostQuantumCryptography/SphincsSignature/PqcSphincsSignature.java)| [repl.it PqcSphincsSignature](https://repl.it/@javacrypto/PqcJavaSphincsSignature#Main.java/) |
 
 For all of them you find an online running implementation - take them as a **case study**. Keep in mind that I could not check the correctness of the algorithms and results so **please do not rely on the programs**.
 

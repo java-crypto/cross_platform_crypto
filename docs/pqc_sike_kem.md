@@ -68,7 +68,7 @@ PQC Sike key encapsulation mechanism (KEM)
 * output and other details         *
 *                                  *
 *    DO NOT USE THE PROGRAM IN     *
-*    ANY PRODUCTION ENVIRONENT     *
+*    ANY PRODUCTION ENVIRONMENT    *
 ************************************
 
 generated private key length: 126
@@ -83,6 +83,6 @@ sharedSecretRecipient length: 32 data: 3e5b719dba9a8f7c9f1f1dc2a5942280e86e6925f
 
 ```
 
-Last update: Mar. 09th 2021
+Last update: Mar. 10th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

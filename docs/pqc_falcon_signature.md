@@ -29,11 +29,11 @@ I'm sorry, but as there is no "official" Java implementation I do not want to ru
 
 The following table gives an overview about the key- and signature lengths for RSA-, EC- and FALCON signature schemes (all data are for "PKCS#8 encoded data") when signing the dataToSign "The quick brown fox jumps over the lazy dog": 
 
-| Encryption scheme | key parameter | Private key length | Public key length | signature length |
+| Signature scheme | key parameter | Private key length | Public key length | signature length |
 | ------ | :---: | :----: | :---: | :----: |
 | RSA PKCS#1.5 padding| 2.048 bit | 1218 | 294 | 256 |
 | RSA PSS padding| 2.048 bit | 1218 | 294 | 256 |
-| ECIES  | curve P-256 | 67 | 91 | 71 |
+| ECDSA  | curve P-256 | 67 | 91 | 72 |
 | FALCON | 512 | 180240 | 180347 | 666 |
 | FALCON | 1024 | 384743 | 384850 | 1280 |
 
@@ -71,7 +71,7 @@ PQC FALCON signature
 * output and other details         *
 *                                  *
 *    DO NOT USE THE PROGRAM IN     *
-*    ANY PRODUCTION ENVIRONENT     *
+*    ANY PRODUCTION ENVIRONMENT     *
 ************************************
 
 the generation of the private key will take some seconds... please wait...
@@ -88,6 +88,6 @@ signature verified: True
 
 ```
 
-Last update: Mar. 09th 2021
+Last update: Mar. 10th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

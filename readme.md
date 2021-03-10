@@ -169,6 +169,7 @@ Note: you need external libraries for this feature!
 | | | |
 | signature | [FALCON](docs/pqc_falcon_signature.md) | Python |
 | signature | [Rainbow](docs/pqc_rainbow_signature.md) | Java |
+| signature | [Sphincs](docs/pqc_sphincs_signature.md) | Java |
 
 ### Elliptic curve encryption ###
 
@@ -201,7 +202,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Mar. 09th 2021
+Last update: Mar. 10th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

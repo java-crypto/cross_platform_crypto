@@ -14,7 +14,7 @@ This article just gives an overview about the algorithm facts I have published i
 | key exchange (KEM) | Chrystals-Kyber | not specified | 2400 | 1184 | 1088 |
 | key exchange (KEM) | Sike | P751 | 126 | 564 | 596 |
 
-| type| Sgignature scheme | key parameter | Private key length | Public key length | signature length |
+| type| Signature scheme | key parameter | Private key length | Public key length | signature length |
 | :----: | ------ | :---: | :----: | :---: | :----: |
 | signature | RSA PKCS#1.5 padding| 2.048 bit | 1218 | 294 | 256 |
 | signature | RSA PSS padding| 2.048 bit | 1218 | 294 | 256 |

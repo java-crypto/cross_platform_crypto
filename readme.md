@@ -161,7 +161,7 @@ Note: you need external libraries for this feature!
 | Purpose | algorithm | Language |
 | ------ | :------: | :--: |
 | overview | [PQC overview](docs/pqc_overview.md) | several |
-| algorithms facts overview | [algorithms facts overview](pqc_overview_algorithm_facts.md) | several |
+| algorithms facts overview | [algorithms facts overview](docs/pqc_overview_algorithm_facts.md) | several |
 | | |
 | Public key encryption | [McEliece](docs/pqc_mceliece_encryption.md) | Java |
 | Public key encryption | [NTRU](docs/pqc_ntru_encryption.md) | Java |

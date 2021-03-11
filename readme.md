@@ -161,8 +161,10 @@ Note: you need external libraries for this feature!
 | Purpose | algorithm | Language |
 | ------ | :------: | :--: |
 | overview | [PQC overview](docs/pqc_overview.md) | several |
+| algorithms facts overview | [algorithms facts overview](pqc_overview_algorithm_facts.md) | several |
 | | |
 | Public key encryption | [McEliece](docs/pqc_mceliece_encryption.md) | Java |
+| Public key encryption | [NTRU](docs/pqc_ntru_encryption.md) | Java |
 | | | |
 | key exchange (KEM) | [Chrystals-Kyber](docs/pqc_chrystalskyber_kem.md) | NodeJs |
 | key exchange (KEM) | [Sike](docs/pqc_sike_kem.md) | Java |
@@ -202,7 +204,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 
-Last update: Mar. 10th 2021
+Last update: Mar. 11th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

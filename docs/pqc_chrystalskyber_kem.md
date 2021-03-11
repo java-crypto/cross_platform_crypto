@@ -36,6 +36,8 @@ The following table gives an overview about the key- and ciphertext lengths for 
 | ECIES  | curve P-256 | 67 | 91 | 128 |
 | Chrystals-Kyber | not specified | 2400 | 1184 | 1088 |
 
+If you like to get a general overview about the sizes compared to other algorithms visit my page [PQC algorithms facts overview](pqc_overview_algorithm_facts.md).
+
 ### Do I need an additional library?
 
 Yes, you need 2 libraries:
@@ -86,6 +88,6 @@ keyToDecrypt Base64: rpsVGbkwZhn/uw9JgO2inwwXAyr2VHacUpQhZWgmvBg=
 
 ```
 
-Last update: Mar. 10th 2021
+Last update: Mar. 11th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

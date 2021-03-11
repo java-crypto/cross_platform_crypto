@@ -38,6 +38,7 @@ The following table gives an overview about the key- and signature lengths for R
 | ECDSA  | curve P-256 | 67 | 91 | 72 |
 | Sphincs | SHA3-256 | 1088 | 1056 | 41000 |
 
+If you like to get a general overview about the sizes compared to other algorithms visit my page [PQC algorithms facts overview](pqc_overview_algorithm_facts.md).
 
 ### Do I need an additional library?
 
@@ -81,6 +82,6 @@ the signature is verified: true
 
 ```
 
-Last update: Mar. 10th 2021
+Last update: Mar. 11th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

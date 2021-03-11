@@ -37,6 +37,7 @@ The following table gives an overview about the key- and signature lengths for R
 | FALCON | 512 | 180240 | 180347 | 666 |
 | FALCON | 1024 | 384743 | 384850 | 1280 |
 
+If you like to get a general overview about the sizes compared to other algorithms visit my page [PQC algorithms facts overview](pqc_overview_algorithm_facts.md).
 
 ### Do I need an additional library?
 
@@ -88,6 +89,6 @@ signature verified: True
 
 ```
 
-Last update: Mar. 10th 2021
+Last update: Mar. 11th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

@@ -62,7 +62,9 @@ The following table just gives a very <u>shortened overview</u> and I strongly r
 
 | Purpose | algorithm description | Language | source code | Online compiler |
 | ------ | :------: | :--: | :--: | :--: |
+| [algorithms facts overview](pqc_overview_algorithm_facts.md) | information about key, ciphertext & signature sizes | | | |
 | Public key encryption | [McEliece](pqc_mcelice_encryption.md) | Java | [PqcMcElieceEncryption.java](../PostQuantumCryptography/McElieceEncryption/PqcMcElieceEncryption.java) | [repl.it PqcJavaMcElieceEncryption](https://repl.it/@javacrypto/PqcJavaMcElieceEncryption#Main.java/) |
+| Public key encryption | [NTRU](pqc_ntru_encryption.md) | Java | [PqcNtruEncryption.java](../PostQuantumCryptography/NtruEncryption/PqcNtruEncryption.java) |  [repl.it PqcJavaNtruEncryption](https://repl.it/@javacrypto/PqcJavaNtruEncryption#Main.java/) |
 | | | |
 | key exchange (KEM) | [Chrystals-Kyber](pqc_chrystalskyber_kem.md) | NodeJs | [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChristalsKyberKemNodeJs.js)  | [repl.it PqcNodeJsChrystalsKyberKem ](https://repl.it/@javacrypto/PqcNodeJsChrystalsKyberKem#index.js) |
 | key exchange (KEM) | [Sike](pqc_sike_kem.md) | Java | [PqcSikeKem.java](../PostQuantumCryptography/SikeKem/PqcJavaSikeKem.java) | [repl.it PqcJavaSikeKem](https://repl.it/@javacrypto/PqcJavaSikeKem#Main.java/)
@@ -77,6 +79,6 @@ For all of them you find an online running implementation - take them as a **cas
 
 If you are looking for a cross-platform library that is capable of all round 3 candidates then I'm recommending to visit the [Open Quantum Safe (OQS) project](https://openquantumsafe.org/) and the GitHub repository [https://github.com/open-quantum-safe](https://github.com/open-quantum-safe). The libraries could be perfect for my Cross platform cryptography project but unfortunately they do not provide any libraries in compiled form. My limited resources do not allow me to investigate in the compiling and binding technology so I have to leave out this great opportunity.
 
-Last update: Mar. 09th 2021
+Last update: Mar. 11th 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -36,6 +36,8 @@ The following table gives an overview about the key- and ciphertext lengths for 
 | ECIES  | curve P-256 | 67 | 91 | 128 |
 | Sike | P751 | 126 | 564 | 596 |
 
+If you like to get a general overview about the sizes compared to other algorithms visit my page [PQC algorithms facts overview](pqc_overview_algorithm_facts.md).
+
 ### Do I need an additional library?
 
 Yes, you need 2 libraries:
@@ -83,6 +85,6 @@ sharedSecretRecipient length: 32 data: 3e5b719dba9a8f7c9f1f1dc2a5942280e86e6925f
 
 ```
 
-Last update: Mar. 10th 2021
+Last update: Mar. 11th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

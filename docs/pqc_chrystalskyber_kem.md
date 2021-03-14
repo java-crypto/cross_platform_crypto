@@ -50,7 +50,7 @@ Yes, you need 2 libraries:
 
 **This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
-View the source code: [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChristalsKyberKemNodeJs.js)
+View the source code: [PqcChrystalsKyberKemNodeJs.js](../PostQuantumCryptography/ChrystalsKyberKem/PqcChrystalsKyberKemNodeJs.js)
 
 Run the program online: [repl.it PqcNodeJsChrystalsKyberKem](https://repl.it/@javacrypto/PqcNodeJsChrystalsKyberKem#index.js/)
 
@@ -88,6 +88,6 @@ keyToDecrypt Base64: rpsVGbkwZhn/uw9JgO2inwwXAyr2VHacUpQhZWgmvBg=
 
 ```
 
-Last update: Mar. 11th 2021
+Last update: Mar. 14th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

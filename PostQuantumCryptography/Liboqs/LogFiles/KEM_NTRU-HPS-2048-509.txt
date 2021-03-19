@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: NTRU-HPS-2048-509
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 935
+generated public key length:  699
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 699
+encryptedKey length: 699 data: f2c6b04851a4a16b50c17aed73d29893e74a01615a7f786fdbd40165ae4bc69a94d7347b84872e70119c654ade65cf6b8806375f73a4dfd4eb1ed894da49a44ccc8f815aabeb21111d8a6fb311c5bbd9c796b4378de06c1acee895150c31fb2be1a4847fd18f0ebc906ba87aab6537183d4551c3c57d7bcc3c159226e34923f5e3c8dd5a4e78546b071c355dd1689175ed5cfa99813fc22fbce9d00f433c220762f549929cfe71688fcebc984f78700d7ecb37062f4f0dd92344c265b159879add021c008de0ea41641a07c02f7ea22f9ca364cd296420046d35156ebdee33e0ca3cef5196aa70ebec22f0cb9f05ef03e429adfaef2b6a7d01a5acc09f03dfa687c7011bb68525162b041a463239754d8266be21275e60470df26e24c2be1c53264e03f053da1636a20fd99af62fb90dd3720c828a8d215a4b651cbfc6c18a4746f9280030f666245a0d16661551939a1ed811576c337da2a27e20bc42575c7c4052f34ac0c4c8a59dea0e63eb776c9eeef41c64565e7b0c1264abf63fee63eab0da87d2e2798a451dd73f5ca618c1b3dd2ed393549dcf90ff853d397761988cb00b0d4507e9f05aeca76192ba18a065b03001b3fcf01b7601d56fab88ebb24e37e9a924c40ddd3173d862e736c51b7361d865e0d5cf7fb50e9ff75204ae630ebc0509718c192becbd8aad03d40cd55578ea62e7668f2e560bd754c24572837bbb8a9ddfbdc838a15582ad65b730b4dae8c1bd1d733c385942dde977cf4949b69525ae834d219f495b3520982541cfd572a063dff5025333fccc0c22221bc21f3a252742ce65a2fcdcdb3e46731963b35ff29e494baf61d3a09b9e9e181370803cd0966df9d2aa2f1ccdd533fbd7d8a3ec65552670d0b4f1891cef7b43a7490e37dadb3c216e2c9e1059b5e51c7786d8928e6a1914a4db62e5d05da2762b6176343f8c50daf2f3090a71329953d13e751344d932e305c932aa2f04
+sharedSecretServer length: 32 data: 70ce6ce82e6b8935b8ae1385c31eef9a257ff75370cac168e5dca0176ee65a5e
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 32 data: 70ce6ce82e6b8935b8ae1385c31eef9a257ff75370cac168e5dca0176ee65a5e
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: NTRU-HPS-2048-509
+  Version: https://github.com/jschanck/ntru/tree/a43a4457 reference implementation
+  Claimed NIST level: 1
+  Is IND-CCA: true
+  Length public key (bytes): 699
+  Length secret key (bytes): 935
+  Length ciphertext (bytes): 699
+  Length shared secret (bytes): 32

@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: SIDH-p434-compressed
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 28
+generated public key length:  197
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 197
+encryptedKey length: 197 data: 9c3234cadbf3a3ef380be87377a76ff1985ecbfd7c9e4810c6bc8fd342f7733367e028607e148c68545dac7f33f41f8e7674f87e8af733f040b445a25712e77c85f5e92ab9fb4b09fbbf7079c76a22ab73bc836cd1abdbcd761b41e407192ef6e3d1ea57ba87e6a78156f605547c185126d8005b3c7d35a89d4d93dceab9515c36707aab1f01e0005853441b61fc414373ad90204eb3ed7074aa4696c50df75ddf1f3057e2e98fdccc141c74cad8fadffe76330887d657c80189a00d1f7800010100000000
+sharedSecretServer length: 110 data: 78752c2b3acd6f904dee23a6591b2bfb5354e6af48fae18e4bf81df5d0d056a3bfccd2f9ffb336bd33db9d9a3a43623b1b2bd8698207019dcd8c6e2682e8658a6dc3a2b708f3c0d58da2d95f5ba0ca2c57bc7fc0586d7931e2f1a6f84bf0091190216c1a5e08b9e6cc838ecac300
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 110 data: 78752c2b3acd6f904dee23a6591b2bfb5354e6af48fae18e4bf81df5d0d056a3bfccd2f9ffb336bd33db9d9a3a43623b1b2bd8698207019dcd8c6e2682e8658a6dc3a2b708f3c0d58da2d95f5ba0ca2c57bc7fc0586d7931e2f1a6f84bf0091190216c1a5e08b9e6cc838ecac300
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: SIDH-p434-compressed
+  Version: https://github.com/microsoft/PQCrypto-SIDH/tree/v3.4
+  Claimed NIST level: 1
+  Is IND-CCA: false
+  Length public key (bytes): 197
+  Length secret key (bytes): 28
+  Length ciphertext (bytes): 197
+  Length shared secret (bytes): 110

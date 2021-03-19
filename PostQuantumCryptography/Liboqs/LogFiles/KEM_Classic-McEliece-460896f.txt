@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: Classic-McEliece-460896f
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 13568
+generated public key length:  524160
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 524160
+encryptedKey length: 188 data: 39a4a71df133d737e42c4f91f73d9366564ce92cb8fb6eb07fd920c15ecbe63c3996978ed7715f4203bae5e83a557726eba04cb0a273cb9e8ac2013cf088533599959a3c4d44196385a2e098ffd96ae5ba09d983a1746d9936ac1eed2374ac21c54a612235830e6092601afa57ff63214762595c586582046097a8e46368d95b4f123f7897c3598006251a422bc63fb0201225367384ff1063244701cd5466ccf95ea290e15b5d84a9ca2224df08ca65ffae78a89f41b6e3375fc854
+sharedSecretServer length: 32 data: 07302de787201fdc191da4b480588222300457ac0343665956eec35ad937c31f
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 32 data: 07302de787201fdc191da4b480588222300457ac0343665956eec35ad937c31f
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: Classic-McEliece-460896f
+  Version: SUPERCOP-20191221
+  Claimed NIST level: 3
+  Is IND-CCA: true
+  Length public key (bytes): 524160
+  Length secret key (bytes): 13568
+  Length ciphertext (bytes): 188
+  Length shared secret (bytes): 32

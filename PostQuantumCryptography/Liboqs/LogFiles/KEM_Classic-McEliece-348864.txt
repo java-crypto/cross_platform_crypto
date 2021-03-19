@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: Classic-McEliece-348864
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 6452
+generated public key length:  261120
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 261120
+encryptedKey length: 128 data: bad0a19032bcf8faa200ad1ec420c4ddcb579eb2397d58605ba180b058f2ffe9ee8814f11c08b4c1d0defa289d413649ff087914e4f3fa976e204731c7dd2270b5d4b67f82289a8a5c3c670b6cbfa50ab6d69000759e95ae9538bd04506f1584d0cf4447a65a76dee481dd8e2127671b9a64d5f6e0f637ca7292d02fc0f3dbc3
+sharedSecretServer length: 32 data: f8284e939e3ebc664f21cc93e9e6241c63360e59a87e5eb942eb4ae26ba56caf
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 32 data: f8284e939e3ebc664f21cc93e9e6241c63360e59a87e5eb942eb4ae26ba56caf
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: Classic-McEliece-348864
+  Version: SUPERCOP-20191221
+  Claimed NIST level: 1
+  Is IND-CCA: true
+  Length public key (bytes): 261120
+  Length secret key (bytes): 6452
+  Length ciphertext (bytes): 128
+  Length shared secret (bytes): 32

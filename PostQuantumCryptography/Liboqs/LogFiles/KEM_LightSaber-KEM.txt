@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: LightSaber-KEM
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 1568
+generated public key length:  672
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 672
+encryptedKey length: 736 data: da0c690b5adabfb659b69e38b6cc926b3d89395c4cda372b0e8f71817d3b69b17a8894918f51d2428876d73c945a0d7c9ecbd506e7c56d8abeda5148f4563ec67c604116c849866b8481bd789b06d677695e5f5f3e75187c60f09b079ae525ce36394cec8e9fff4118ac5761410490db083fe5374c18ee2b1c57f035d922d79f762e7f555bedccf192817a548d8c2fdca7722f0f2554af6bc465ec3521159ab73f3729e1d4f2ebacff8e919dbe7e87f059747915588b5f71178b813c478151e61a7842b7ebeed0833b4b74f9ac08e4cdbd06acbf4a2d3e7482a528eab5c9957884124544b36129b3ff0e9ddebc23123bcc7e9a20d5bb7eb786f5dbfcb95ca03d8fcc3a04e38a1a4f40243f100eb00f7a78509502358917e6725cad786432c3e5d3f5afba0b16c4a0b8a8e8497de02aa6c6ac94dabdbb4a096c81a20bc9e4e3d230c8b76b08842b1cdaa1846f41bda283db90a835055ce11341ee5adda9a210c8030a1076ef77c77f9cd80dd0df6234e912217f79a788ce0ecb93c9a42243a88cfe5e59517949f9ee34df7261c59ba73eee2faf3f33934a8e507c22a3c25c9bde0e5f9e77f085cefc051c120ba5d72778e48e37efd75a5848d6ed9a0bf6ed6622f271741ed5de0932160676561e48c326dc53b9b5d1a733cdab2892c681d4da557783684e2e2be8f9e651c3f67446d54b1aa9174728b7140b852ed2ec1d0d4def2c3678f760a03f3b226e838bd86fc3e613bdd2477c315f99d21d9698731c75e0692f6d0c638cab41e21d1a15332900d6551a5d375aee81eb3703616b079b1cf21fe04b7d95329a12a9f376200bca925b3def569426217c18d73ad7b6e6a2b1e7ab967a8fd880f38902ab3bc2be540b2a53fb8000a2e1beaa32cffb1eb6c63c176e330f0d44254966fb749f42b58598c8d5655b96fd5e83ff5d37ac2aa3a1a60b2af9f9c5eb06083df352e628bad3bd3e19cfd7cb2a4c3eb7fee83b525ad5951f851d16d1d0b2554d1ef5924f1ef8cfd8920c67ad1498bd5ff5de4e65fac213f2
+sharedSecretServer length: 32 data: 6bc283ff17c5c0f0911e502738ea3273fd17a25e61c6f9a4274d8a7dc77fbd0a
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 32 data: 6bc283ff17c5c0f0911e502738ea3273fd17a25e61c6f9a4274d8a7dc77fbd0a
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: LightSaber-KEM
+  Version: https://github.com/KULeuven-COSIC/SABER/tree/509cc5ec3a7e12a751ccdd2ef5bd6e54e00bd350 via https://github.com/jschanck/package-pqclean/tree/1ae84c3c/saber
+  Claimed NIST level: 1
+  Is IND-CCA: true
+  Length public key (bytes): 672
+  Length secret key (bytes): 1568
+  Length ciphertext (bytes): 736
+  Length shared secret (bytes): 32

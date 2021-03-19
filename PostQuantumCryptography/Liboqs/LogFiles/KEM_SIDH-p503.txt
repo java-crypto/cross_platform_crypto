@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: SIDH-p503
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 32
+generated public key length:  378
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 378
+encryptedKey length: 378 data: ac7aa78ea5767eabf09cc847e2cc928f9c95989c507b0003650a652cf70a2bb9f0079b6e72cc96117510e34e735b36e28dd0b8b1337627ccf65fc42878920f221d50a5cdd2dc8e522adcb5a8d5ecfcd3fdfe012813036f1dc266fa08e77bfd4f852f643e5dc8d7fba0de6511381731f76753bad79fb92072e7654d2a3d13509563bfa26a7c6ec589bea3e60fb86ef2ebed6b8b7b7a955901436ec123fa59e9128e999f9fba757d822c278c9b85dab363d98d9896df0b21d6b31982e21d71e3368bcaabc02913fb27705717b04dec07b4e1f1160f0564d14b6b2a6769f6e7c75d2c95d1a37307268ad364b20db2b18f327c7655457ef69f8054a8523bd98c1e9d891702e89f1851951590a42843e73cfafbab84567b5c2d9f92a86619028924c43c07c66c2552f388f26345a7f06d4bf9fe939457239ce6989e442594b4a649b9660af19f1407ea60ae72fc644edfef1732ee1bb3af4529e80dc7370db3d53fc81e8d7a6c6925970ecafb41d90a03391bb74e2dc1b9ca8418eb17
+sharedSecretServer length: 126 data: 16afe1e19b4cd1e5e73a07a496d5bfc993d1e0e6cb3f006fc4b4737cdbf37025fa2edd9773d74c1939ba30d2cb0046ea6d12b0d2e5e55b4b8badc96a2e66297f03757a1f6ee5d4e90da688ad83041e555c0dc8725c9011a32b6acd08970ec81414f28e49757d228dd4f551b7373ed1f73588101a7dc7c1f98135739ccf0e
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 126 data: 16afe1e19b4cd1e5e73a07a496d5bfc993d1e0e6cb3f006fc4b4737cdbf37025fa2edd9773d74c1939ba30d2cb0046ea6d12b0d2e5e55b4b8badc96a2e66297f03757a1f6ee5d4e90da688ad83041e555c0dc8725c9011a32b6acd08970ec81414f28e49757d228dd4f551b7373ed1f73588101a7dc7c1f98135739ccf0e
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: SIDH-p503
+  Version: https://github.com/microsoft/PQCrypto-SIDH/tree/v3.4
+  Claimed NIST level: 2
+  Is IND-CCA: false
+  Length public key (bytes): 378
+  Length secret key (bytes): 32
+  Length ciphertext (bytes): 378
+  Length shared secret (bytes): 126

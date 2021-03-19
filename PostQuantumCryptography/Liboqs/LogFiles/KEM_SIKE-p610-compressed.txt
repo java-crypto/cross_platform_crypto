@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: SIKE-p610-compressed
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 491
+generated public key length:  274
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 274
+encryptedKey length: 336 data: 5047c743b05f200022b73391dfa4b7c3db99cbf41a7a189e8ba4d90221ff4963d203020ba3d701e79b2074569474fdb9049a951d50aac8f246f42e452971ab86cda2dc87d9cc5e184cd1fc2b460061787b4665576b9fa3b375649bc28cb99c7fd99c1777f0476ba2da4932a0200cd6b65c5c59ef01e7e89ff0082271156f81d12a17d058acf669da353dd4539f84c1f7e36efdc9b535a830841bf300029d81ca69897f0ed1744524653ce4a07806b476461091c68152c4c88ff28580a5fb81f67159dcabc04c9869ef7446ccaa1a1631a424853e48deee7ae800b599b5c99f8b687ab464a213140e01cbe92bc09f7bd78b5fb0064a06bf1ea2681434d27728102c7b3b7c7c3ed402476a69da83c2d6dc4a003f4f5d98bff50eac2659e9af099b68b7d94472344f20c59a5b36de1b7f925ffcfba4e1010000d59045aa4338b320ea61534a7531e31ec8a277ae587e74ca
+sharedSecretServer length: 24 data: edb7d54efb3b7fc2633747716faeb4f90ca9b7b1c81d2db4
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 24 data: edb7d54efb3b7fc2633747716faeb4f90ca9b7b1c81d2db4
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: SIKE-p610-compressed
+  Version: https://github.com/microsoft/PQCrypto-SIDH/tree/v3.4
+  Claimed NIST level: 3
+  Is IND-CCA: true
+  Length public key (bytes): 274
+  Length secret key (bytes): 491
+  Length ciphertext (bytes): 336
+  Length shared secret (bytes): 24

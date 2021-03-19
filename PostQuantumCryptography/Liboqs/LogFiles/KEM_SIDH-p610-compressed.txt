@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: SIDH-p610-compressed
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 39
+generated public key length:  274
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 274
+encryptedKey length: 274 data: 96f940a3820150669bade1c30c3c9b7e419a9262cad7b21125b006d7bccdbe5e1049a46fc641018b7157a29095f57bd98dfd210314cc5e134a319d0c88e0e9427ba1124581f2b961f6c923e10401db53e1dde30fcb8dff3b072684bd14df2a4e520c807c4b2e85e4dcfb6948d30387f73844ce8f01d65c572b21adf971c8a24cf1a53756a7867740d8706e85d48421aa55e31a391174074583e5eba9cbff4092320d0e640c422c45fc90f969c69768f61a10dffdf1e2cf8e529b9947a850b432930151f35c7c3ddc90cad79861238c5b3f659a34e55f9b480ce3f2ff46dcfe7eb81ced99e60462b8dd2b525b1bbfac7e277cf279995c0c194a20a2523da9fdac46b0c2c527f41d0bbdb2a39a431c02800000
+sharedSecretServer length: 154 data: 86c2ee03f3c8019f6b16830ab071cad37e9ea0a4f9477a050f12acc43a236d98608efbab1d93af8a5541e0296d9c053570e874ad1bbfff29c1a2c55d46f1ca0ab0d135d3313a2e7ea656689f00616511bc80b35ff7eae9f1c211194a9693ca2369dfe86468ca4da93911e70cb855aea31847fd7991a15f814ad52c75f68147e2ecd1a1c69d694d5af26cd2b4e9102ea64bee6310e09e027cf000
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 154 data: 86c2ee03f3c8019f6b16830ab071cad37e9ea0a4f9477a050f12acc43a236d98608efbab1d93af8a5541e0296d9c053570e874ad1bbfff29c1a2c55d46f1ca0ab0d135d3313a2e7ea656689f00616511bc80b35ff7eae9f1c211194a9693ca2369dfe86468ca4da93911e70cb855aea31847fd7991a15f814ad52c75f68147e2ecd1a1c69d694d5af26cd2b4e9102ea64bee6310e09e027cf000
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: SIDH-p610-compressed
+  Version: https://github.com/microsoft/PQCrypto-SIDH/tree/v3.4
+  Claimed NIST level: 3
+  Is IND-CCA: false
+  Length public key (bytes): 274
+  Length secret key (bytes): 39
+  Length ciphertext (bytes): 274
+  Length shared secret (bytes): 154

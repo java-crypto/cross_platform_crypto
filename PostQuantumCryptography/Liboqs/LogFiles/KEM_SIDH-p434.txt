@@ -1,0 +1,27 @@
+PQC key encapsulation mechanism (KEM) using
+OpenQuantumSafe.org liboqs-java library
+KEM algorithm: SIDH-p434
+
+*** generate a key pair for client=receiver and server=sender ***
+generated private key length: 28
+generated public key length:  330
+private and public key for server and client saved to file
+
+* * * generate the keyToEncrypt with the public key of the recipient * * *
+length of the received clientPublicKey: 330
+encryptedKey length: 330 data: 8e161015ea06d5b81f54b2702b9f19da1185a02f7d077f8ba09d280b7881144de30afa8788b261e61f04597705c4a51408b6d4a61e2601445d2358a750505b7b3d8188c050cdec563a2f9c28e25b30221d10e7b05c2c7893b65128d54e75a01fbe9a4f09d50b74bebbbf464c1202d7cc964c415e29225b6705c8762b8c90eb66bc3b387dfc5845c88b6399e215e1f8b4fc395eb92848e8278e1a77a258c8245b15a273b500d2435deaa1392d81e09fa05d5e4250779e9b8480361a8987aa5720c9dcae2fcf923db85477645dfc6d19e3e5d4ee378ecc0239a76916023da9b841a12b5913b7152de7859752d2cb7889fd89e0459444716a89f278eedb599e42b96db0d175c5b9f87ecad1276aad7a5c48989e0165b00fab1566a575287f1fd8feb145fc9fb4fb64cff0958618dc473833974339646aaefb89e4015d45e9c5048116e91dfb8d66d8100c02
+sharedSecretServer length: 110 data: 359845e5f1cdb050126d40ec5486acbe9a50fcb911be07f1ec9d45646b30612de12aa2b0c5678375dc277a31861eb2aac5cdc165f91b018f0d3c3a3bb887f8e596061a9f4e1e524ab842925e53de9f2d56b3e32427b76352b5ed60100ecf1e2243d55b40e7006daf80ab90a1bf01
+
+* * * decapsulate the keyToEncrypt with the private key of the recipient * * *
+sharedSecretClient length: 110 data: 359845e5f1cdb050126d40ec5486acbe9a50fcb911be07f1ec9d45646b30612de12aa2b0c5678375dc277a31861eb2aac5cdc165f91b018f0d3c3a3bb887f8e596061a9f4e1e524ab842925e53de9f2d56b3e32427b76352b5ed60100ecf1e2243d55b40e7006daf80ab90a1bf01
+
+information from Liboqs about used algorithm:
+KEM Details:
+  Name: SIDH-p434
+  Version: https://github.com/microsoft/PQCrypto-SIDH/tree/v3.4
+  Claimed NIST level: 1
+  Is IND-CCA: false
+  Length public key (bytes): 330
+  Length secret key (bytes): 28
+  Length ciphertext (bytes): 330
+  Length shared secret (bytes): 110

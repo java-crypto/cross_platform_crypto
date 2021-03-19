@@ -6,11 +6,13 @@ The Sike algorithm is a **key exchange** algorithm that is used to generate a ke
 
 **Before going on it is important that you understand that this implementation is running but not tested against "official" values (e.g. test vectors). For that reason the program will print out a "serious warning" - kindly take this program as case study to see how the algorithm is working.**
 
+For comparison purpose I provide a second Sike implementation on basis of the **OpenQuantumSafe Liboqs** library - visit [PQC Sike key exchange mechanism (KEM) using Liboqs library](pqc_sike_liboqs_kem.md).
+
 ### What are the steps in the program?
 
 1. the program generates a Sike key pair
 2. to check that the keys could get stored in text (Base64 encoded) form I'm converting the keys to a Base64 encoded string and vice versa (you need this for publishing or sending the public key to the person who has to encrypt data for you)
-3. on sender's side a 32 byte long encryption key is generated (this could be used for encryption with AES, not shown here with the public key
+3. on sender's side a 32 byte long encryption key is generated (this could be used for encryption with AES, not shown here) with the public key
 4. an encapsulated key is generated that needs to get transported to the recipient along with the ciphertext
 5. the recipient generates the decryption key with the encapsulated key and his private key - with this key you can decrypt the ciphertext (not shown here)
 
@@ -85,6 +87,6 @@ sharedSecretRecipient length: 32 data: 3e5b719dba9a8f7c9f1f1dc2a5942280e86e6925f
 
 ```
 
-Last update: Mar. 11th 2021
+Last update: Mar. 18th 2021
 
 Back to the [PQC overview page](pqc_overview.md) or the main page: [readme.md](../readme.md)

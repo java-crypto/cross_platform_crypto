@@ -1,0 +1,25 @@
+PQC signature using
+OpenQuantumSafe.org liboqs-java library
+SIG algorithm: picnic_L1_FS
+
+*** generate a key pair for signer ***
+generated private key length: 49
+generated public key length:  33
+private and public key for signer saved to file
+
+* * * sign the plaintext with the private key * * *
+signature length: 32848 data: in a separate file
+
+* * * verify the signature against the plaintext with the public key * * *
+
+signature is verified: true
+
+information from Liboqs about used algorithm:
+Signature Details:
+  Name: picnic_L1_FS
+  Version: https://github.com/IAIK/Picnic/tree/v3.0.4
+  Claimed NIST level: 1
+  Is IND-CCA: true
+  Length public key (bytes): 33
+  Length secret key (bytes): 49
+  Maximum length signature (bytes): 34036

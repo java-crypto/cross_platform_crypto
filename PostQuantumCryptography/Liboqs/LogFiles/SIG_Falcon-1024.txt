@@ -1,0 +1,25 @@
+PQC signature using
+OpenQuantumSafe.org liboqs-java library
+SIG algorithm: Falcon-1024
+
+*** generate a key pair for signer ***
+generated private key length: 2305
+generated public key length:  1793
+private and public key for signer saved to file
+
+* * * sign the plaintext with the private key * * *
+signature length: 1266 data: in a separate file
+
+* * * verify the signature against the plaintext with the public key * * *
+
+signature is verified: true
+
+information from Liboqs about used algorithm:
+Signature Details:
+  Name: Falcon-1024
+  Version: supercop-20201018 via https://github.com/jschanck/package-pqclean/tree/cea1fa5a/falcon
+  Claimed NIST level: 5
+  Is IND-CCA: true
+  Length public key (bytes): 1793
+  Length secret key (bytes): 2305
+  Maximum length signature (bytes): 1330

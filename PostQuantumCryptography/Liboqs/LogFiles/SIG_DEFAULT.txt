@@ -1,0 +1,25 @@
+PQC signature using
+OpenQuantumSafe.org liboqs-java library
+SIG algorithm: DEFAULT
+
+*** generate a key pair for signer ***
+generated private key length: 2528
+generated public key length:  1312
+private and public key for signer saved to file
+
+* * * sign the plaintext with the private key * * *
+signature length: 2420 data: in a separate file
+
+* * * verify the signature against the plaintext with the public key * * *
+
+signature is verified: true
+
+information from Liboqs about used algorithm:
+Signature Details:
+  Name: Dilithium2
+  Version: https://github.com/pq-crystals/dilithium/commit/d9c885d3f2e11c05529eeeb7d70d808c972b8409
+  Claimed NIST level: 2
+  Is IND-CCA: true
+  Length public key (bytes): 1312
+  Length secret key (bytes): 2528
+  Maximum length signature (bytes): 2420

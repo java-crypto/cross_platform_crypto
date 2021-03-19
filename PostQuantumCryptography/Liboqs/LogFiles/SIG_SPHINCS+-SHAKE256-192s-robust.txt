@@ -1,0 +1,25 @@
+PQC signature using
+OpenQuantumSafe.org liboqs-java library
+SIG algorithm: SPHINCS+-SHAKE256-192s-robust
+
+*** generate a key pair for signer ***
+generated private key length: 96
+generated public key length:  48
+private and public key for signer saved to file
+
+* * * sign the plaintext with the private key * * *
+signature length: 17064 data: in a separate file
+
+* * * verify the signature against the plaintext with the public key * * *
+
+signature is verified: true
+
+information from Liboqs about used algorithm:
+Signature Details:
+  Name: SPHINCS+-SHAKE256-192s-robust
+  Version: https://github.com/sphincs/sphincsplus/commit/77755c94d0bc744478044d6efbb888dc13156441
+  Claimed NIST level: 3
+  Is IND-CCA: true
+  Length public key (bytes): 48
+  Length secret key (bytes): 96
+  Maximum length signature (bytes): 17064

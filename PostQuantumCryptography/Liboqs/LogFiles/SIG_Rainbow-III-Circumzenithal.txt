@@ -1,0 +1,25 @@
+PQC signature using
+OpenQuantumSafe.org liboqs-java library
+SIG algorithm: Rainbow-III-Circumzenithal
+
+*** generate a key pair for signer ***
+generated private key length: 626048
+generated public key length:  264608
+private and public key for signer saved to file
+
+* * * sign the plaintext with the private key * * *
+signature length: 164 data: in a separate file
+
+* * * verify the signature against the plaintext with the public key * * *
+
+signature is verified: true
+
+information from Liboqs about used algorithm:
+Signature Details:
+  Name: Rainbow-III-Circumzenithal
+  Version: https://github.com/fast-crypto-lab/rainbow-submission-round2/commit/173ada0e077e1b9dbd8e4a78994f87acc0c92263
+  Claimed NIST level: 3
+  Is IND-CCA: true
+  Length public key (bytes): 264608
+  Length secret key (bytes): 626048
+  Maximum length signature (bytes): 164

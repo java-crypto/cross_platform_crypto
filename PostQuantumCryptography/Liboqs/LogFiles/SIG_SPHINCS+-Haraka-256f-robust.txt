@@ -1,0 +1,25 @@
+PQC signature using
+OpenQuantumSafe.org liboqs-java library
+SIG algorithm: SPHINCS+-Haraka-256f-robust
+
+*** generate a key pair for signer ***
+generated private key length: 128
+generated public key length:  64
+private and public key for signer saved to file
+
+* * * sign the plaintext with the private key * * *
+signature length: 49216 data: in a separate file
+
+* * * verify the signature against the plaintext with the public key * * *
+
+signature is verified: true
+
+information from Liboqs about used algorithm:
+Signature Details:
+  Name: SPHINCS+-Haraka-256f-robust
+  Version: https://github.com/sphincs/sphincsplus/commit/77755c94d0bc744478044d6efbb888dc13156441
+  Claimed NIST level: 5
+  Is IND-CCA: true
+  Length public key (bytes): 64
+  Length secret key (bytes): 128
+  Maximum length signature (bytes): 49216

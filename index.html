@@ -520,7 +520,7 @@ based on dark.css by Vladimir Epifanov
     <h1 id="cross-platform-cryptography">Cross-platform cryptography</h1>
 <h2 id="general-information-and-overview">General information and overview</h2>
 <p>This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be &quot;secure&quot; but explain how the crypto routines are compatible with other platforms.</p>
-<p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>  and <strong>Python</strong> (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
+<p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>, <strong>Python</strong> (for selected programs) and <strong>Golang</strong> (for selected programs)  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
 <p>Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the <a href="#readme-libsodium"><strong>Libsodium</strong></a> project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section.</p>
 <p>Sometimes you may have read about a &quot;JWT&quot; or &quot;JWT token&quot;, that is short form of a <strong>JSON web token</strong> or <strong>JWT</strong>. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some <a href="#readme-jwt"><strong>JWT web token</strong></a> solutions.</p>
 <p>A special chapter deals with the future of cryptography; and that is the <strong>Post Quantum Cryptography</strong>. Although the quantum computers are not on the market at the moment they will be there and cause catastrophic impacts on cryptography as they may been able to solve the RSA- and EC-curve problems and subsequently all RSA- and EC-curve encryption and signature become worthless. Visit the chapter <a href="#readme-pqc"><strong>PQC Post Quantum Cryptography</strong></a> at the end.</p>
@@ -538,6 +538,7 @@ based on dark.css by Vladimir Epifanov
 <th style="text-align: center;">NodeJs forge</th>
 <th style="text-align: center;">WebCrypto</th>
 <th style="text-align: center;">Python</th>
+<th style="text-align: center;">Go</th>
 </tr>
 </thead>
 <tbody>
@@ -551,6 +552,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_initvector.md">generate a 16 byte long initvector</a></td>
@@ -562,6 +564,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_nonce.md">generate a 12 byte long nonce</a></td>
@@ -573,6 +576,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/base64_encoding_decoding.md">Base64 encoding &amp; decoding</a></td>
@@ -584,6 +588,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/binary_data_hex_string.md">binary data to a hex string &amp; back</a></td>
@@ -595,6 +600,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/sha256_hash.md">SHA256 hashing</a></td>
@@ -606,6 +612,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/hmac_256_calculation.md">HMAC 256 calculation</a></td>
@@ -617,6 +624,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pbkdf2.md">PBKDF2 key derivation</a></td>
@@ -628,10 +636,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_generation.md">Generate RSA keys</a></td>
 <td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_generation.md">see explanation</a></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -650,10 +660,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_key_generation.md">Generate Elliptic keys</a></td>
 <td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_key_generation.md">see explanation</a></td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -677,6 +689,7 @@ based on dark.css by Vladimir Epifanov
 <th style="text-align: center;">NodeJs forge</th>
 <th style="text-align: center;">WebCrypto</th>
 <th style="text-align: center;">Python</th>
+<th style="text-align: right;">Go</th>
 </tr>
 </thead>
 <tbody>
@@ -690,6 +703,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: right;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_string_decryption_only.md">CBC-mode String Decryption only</a></td>
@@ -701,6 +715,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: right;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_string_encryption.md">CBC-mode PBKDF2 String Encryption</a></td>
@@ -712,6 +727,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_string_decryption_only.md">CBC-mode PBKDF2 String Decryption only</a></td>
@@ -723,6 +739,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: right;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md">CBC-mode PBKDF2 HMAC String Encryption</a></td>
@@ -734,6 +751,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_passphrase_string_encryption.md">CBC-mode passphrase String Encryption</a></td>
@@ -745,6 +763,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_gcm_256_string_encryption.md">GCM-mode String Encryption</a></td>
@@ -756,6 +775,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: right;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_gcm_256_pbkdf2_string_encryption.md">GCM-mode PBKDF2 String Encryption</a></td>
@@ -767,6 +787,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: right;">✅</td>
 </tr>
 <tr>
 <td><a href="readme.md">GCM-mode PBKDF2 AAD String Encryption</a></td>
@@ -778,6 +799,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">🔜</td>
+<td style="text-align: right;"></td>
 </tr>
 </tbody>
 </table>
@@ -1408,7 +1430,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_overview_algorithm_facts.md">liboqs algorithms facts overview</a></td>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_overview_liboqs_algorithm_facts.md">liboqs algorithms facts overview</a></td>
 <td style="text-align: center;">information about key, ciphertext &amp; signature sizes</td>
 <td style="text-align: center;">Java binding</td>
 </tr>
@@ -1566,9 +1588,14 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">modern browser</td>
 <td>tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119</td>
 </tr>
+<tr>
+<td>Go</td>
+<td style="text-align: center;">repl.it</td>
+<td>version go1.14 linux/amd64</td>
+</tr>
 </tbody>
 </table>
-<p>Last update: Mar. 19th 2021</p>
+<p>Last update: Mar. 21st 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

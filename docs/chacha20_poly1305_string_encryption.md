@@ -63,6 +63,7 @@ The following links provide the solutions in code and an online compile that run
 | NodeJS node-forge | :x: | not available
 | [Webcrypto encryption & decryption](../ChaCha20Poly1305StringEncryption/chacha20poly1305encryptionstring.html) *5) | :white_check_mark: | [your browser WebcryptoChaCha20Poly105StringEncryption.html](http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/chacha20poly1305encryptionstring.html)
 | [Python](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.py) *6) | :white_check_mark: | [repl.it CpcPythonChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcPythonChaCha20Poly1305StringEncryption#main.py/)
+| [Go](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.go) | :white_check_mark: | [repl.it CpcGoChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcGoChaCha20Poly1305StringEncryption#main.go/)
 
 * *1) Java: runs in Java 11+ without external library
 * *2) PHP: runs in PHP 7.3+ without external library
@@ -92,6 +93,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Feb. 05th 2021
+Last update: Mar. 21st 2021
 
 Back to the main page: [readme.md](../readme.md)

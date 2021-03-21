@@ -4,7 +4,7 @@
 
 This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
 
-I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**  and **Python** (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
+I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**, **Python** (for selected programs) and **Golang** (for selected programs)  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
 
 Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the [**Libsodium**](#readme-libsodium) project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section. 
 
@@ -17,8 +17,8 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### General routines ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge | WebCrypto | Python |
-| ------ | :---: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | 
+| Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge | WebCrypto | Python | Go |
+| ------ | :---: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | 
 | [generate a 32 byte long AES key](docs/generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [generate a 16 byte long initvector](docs/generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [generate a 12 byte long nonce](docs/generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
@@ -33,16 +33,16 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### AES string encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |    
-| [CBC-mode String Encryption](docs/aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
-| [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: |
-| [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python | Go |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | --: |
+| [CBC-mode String Encryption](docs/aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
+| [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: |
+| [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+| [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: | :x: |
 | [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: |
 | [CBC-mode passphrase String Encryption](docs/aes_cbc_256_passphrase_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
-| [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :x: |
-| [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :x: | :white_check_mark: |
+| [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |  :soon: |
 
 #### AES CBC special: tampering
@@ -163,7 +163,7 @@ Note: you need external libraries for this feature!
 | [PQC overview](docs/pqc_overview.md) |  | several |
 | [algorithms facts overview](docs/pqc_overview_algorithm_facts.md) |  | several |
 | [PQC with Liboqs library overview](docs/pqc_liboqs_overview.md)| general overview about the OpenQuantumSafe library | 
-| [liboqs algorithms facts overview](docs/pqc_overview_algorithm_facts.md) | information about key, ciphertext & signature sizes | Java binding | 
+| [liboqs algorithms facts overview](docs/pqc_overview_liboqs_algorithm_facts.md) | information about key, ciphertext & signature sizes | Java binding | 
 | | |
 | Public key encryption | [McEliece](docs/pqc_mceliece_encryption.md) | Java |
 | Public key encryption | [NTRU](docs/pqc_ntru_encryption.md) | Java |
@@ -207,8 +207,9 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | PHP phpseclib |   | version 3
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
+| Go | repl.it | version go1.14 linux/amd64
 
-Last update: Mar. 19th 2021
+Last update: Mar. 21st 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

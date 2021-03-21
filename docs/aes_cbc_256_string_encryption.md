@@ -53,6 +53,7 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS Crypto](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256StringEncryptionFull#index.js/)
 | [NodeJS node-forge](../AesCbc256StringEncryption/AesCbc256StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
 | [Python](../AesCbc256StringEncryption/AesCbc256StringEncryptionFull.py) *1) | :white_check_mark: | [repl.it CpcPythonAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256StringEncryptionFull#main.py/)
+| [Go](../AesCbc256StringEncryption/AesCbc256StringEncryptionFull.go) | :white_check_mark: | [repl.it CpcGoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcGoAesCbc256StringEncryptionFull#main.go/)
 
 *1) you need the external library pycryptodome, version 3.9.9
 
@@ -74,6 +75,6 @@ input is (Base64) iv : (Base64) ciphertext
 plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Feb. 02nd 2021
+Last update: Mar. 21st 2021
 
 Back to the main page: [readme.md](../readme.md)

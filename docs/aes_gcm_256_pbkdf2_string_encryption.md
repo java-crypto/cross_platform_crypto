@@ -62,6 +62,7 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS node-forge](../AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256Pbkdf2StringEncryption#index.js/)
 | [Webcrypto](../AesGcm256Pbkdf2StringEncryption/aesgcm256pbkdf2stringencryptionwebcrypto.html) | :white_check_mark: | [your browser AesGcm256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesGcm256Pbkdf2StringEncryption/aesgcm256pbkdf2stringencryptionwebcrypto.html)
 | [Python](../AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.py) *1) | :white_check_mark: | [repl.it CpcPythonAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcPythonAesGcm256Pbkdf2StringEncryption#main.py/)
+| [Go](../AesGcm256Pbkdf2StringEncryption/AesGcm256Pbkdf2StringEncryption.go) | :white_check_mark: | [repl.it CpcGoAesGcm256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcGoAesGcm256Pbkdf2StringEncryption#main.go/)
 
 *1) you need the external library pycryptodome, version 3.9.9
 
@@ -100,6 +101,6 @@ Ciphertext is (Base64) salt : (Base64) nonce : (Base64) ciphertext : (Base64) gc
 DecryptedtextCpc: The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Feb. 02nd 2021
+Last update: Mar. 21st 2021
 
 Back to the main page: [readme.md](../readme.md)

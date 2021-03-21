@@ -52,9 +52,9 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### ChaCha20-Poly1305 encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | 
-| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python | Go |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |  
+| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 
 ### RSA encryption ###

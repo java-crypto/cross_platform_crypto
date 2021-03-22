@@ -33,6 +33,8 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS Crypto](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaAesCbcHybridStringEncryption#index.js/)
 | [NodeJS forge](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesCbcHybridStringEncryption#index.js/)
 | [Python](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.py) | :white_check_mark: | [repl.it CpcPythonRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcPythonRsaAesCbcHybridStringEncryption#Main.py/)
+| [Go](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.go) | :white_check_mark: | [repl.it CpcGoRsaAesCbcHybridStringEncryption](https://replit.com/@javacrypto/CpcGoRsaAesCbcHybridStringEncryption#main.go/)
+
 
 This is an output (your will differ because a random element):
 
@@ -54,6 +56,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 02nd 2021
+Last update: Mar. 22nd 2021
 
 Back to the main page: [readme.md](../readme.md)

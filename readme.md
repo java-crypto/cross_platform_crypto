@@ -66,7 +66,6 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 
-
 ### RSA signature with different padding modes ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python | Go |

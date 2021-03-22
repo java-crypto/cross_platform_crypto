@@ -56,11 +56,12 @@ The following links provide the solutions in code and an online compile that run
 | [Webcrypto sign only](../RsaSignaturePssString/rsasignaturepsssign.html) | :white_check_mark: | [your browser WebcryptoRsaPssSignString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepsssign.html)
 | [Webcrypto verify only](R../saSignaturePssString/rsasignaturepssverification.html) | :white_check_mark: | [your browser WebcryptoRsaPssVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignaturePssString/rsasignaturepssverification.html)
 | [OpenSSL (file signature)](rsa_signature_pss_file_openssl.md) | :white_check_mark: | see explanation here: [RSA signature PSS OpenSSL](rsa_signature_pss_file_openssl.md)
-| [Python](../RsaSignaturePssString/RsaSignaturePssStringFull.py) *1) | :white_check_mark: | [repl.it CpcPythonRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcPythonRsaSignaturePssStringFull#main.py/)
-
-*1) you need the external library pycryptodome, version 3.9.9
+| [Python](../RsaSignaturePssString/RsaSignaturePssStringFull.py) *2) | :white_check_mark: | [repl.it CpcPythonRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcPythonRsaSignaturePssStringFull#main.py/)
+| [Go](../RsaSignaturePssString/RsaSignaturePssStringFull.go) | :white_check_mark: | [repl.it CpcGoRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcGoRsaSignaturePssStringFull#main.go/)
 
 PHP *1): you need the library phpseclib version 3 to run this program
+
+Python *2) you need the external library pycryptodome, version 3.9.9
 
 This is an output:
 
@@ -90,6 +91,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Feb. 02nd 2021
+Last update: Mar. 22nd 2021
 
 Back to the main page: [readme.md](../readme.md)

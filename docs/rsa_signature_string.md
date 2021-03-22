@@ -61,6 +61,7 @@ The following links provide the solutions in code and an online compile that run
 | [Webcrypto verify only](../RsaSignatureString/rsasignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoRsaVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/RsaSignatureString/rsasignaturestringverification.html)
 | [OpenSSL (file signature)](rsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [RSA signature OpenSSL](rsa_signature_file_openssl.md)
 | [Python](../RsaSignatureString/RsaSignatureStringFull.py) *1) | :white_check_mark: | [repl.it CpcPythonRsaStringSignatureFull](https://repl.it/@javacrypto/CpcPythonRsaSignatureStringFull#main.py/)
+| [Go](../RsaSignatureString/RsaSignatureStringFull.go) | :white_check_mark: | [repl.it CpcGoRsaStringSignatureFull](https://repl.it/@javacrypto/CpcGoRsaSignatureStringFull#main.go/)
 
 *1) you need the external library pycryptodome, version 3.9.9
 
@@ -94,6 +95,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Feb. 02nd 2021
+Last update: Mar. 22nd 2021
 
 Back to the main page: [readme.md](../readme.md)

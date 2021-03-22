@@ -34,7 +34,7 @@ func main() {
   decryptionKey := []byte(Base64Decoding(decryptionKeyBase64))
   fmt.Printf("ciphertext: " + ciphertextDecryptionBase64 + "\n");
   fmt.Printf("input is (Base64) nonce : (Base64) ciphertext : (Base64) gcmTag\n");
-  decryptedtext := string(aesGcmDecryptFromBase64(decryptionKey, ciphertextDecryptionBase64))
+  decryptedtext := string(AesGcmDecryptFromBase64(decryptionKey, ciphertextDecryptionBase64))
   fmt.Printf("decryptedtext: " + decryptedtext)
 }
 
@@ -60,7 +60,7 @@ func AesGcmEncryptToBase64(key []byte, data string)(string) {
   return ciphertextCompleteBase64
 }
 
-func aesGcmDecryptFromBase64(encryptionKey []byte, ciphertextCompleteBase64 string)(string) {
+func AesGcmDecryptFromBase64(encryptionKey []byte, ciphertextCompleteBase64 string)(string) {
   data := strings.Split(ciphertextCompleteBase64, ":") 
   nonce := []byte(Base64Decoding(data[0]))
   ciphertext := []byte(Base64Decoding(data[1]))

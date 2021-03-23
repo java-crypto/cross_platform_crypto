@@ -53,9 +53,12 @@ The following links provide the solutions in code and an online compile that run
 | Javascript CryptoJs | :x: | not available
 | [NodeJS Crypto](../AesGcm256StringEncryption/AesGcm256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesGcm256StringEncryption#index.js/)
 | [NodeJS node-forge](../AesGcm256StringEncryption/AesGcm256StringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256StringEncryption#index.js/)
+| [Python](../AesGcm256StringEncryption/AesGcm256StringEncryption.py) *2) | :white_check_mark: | [repl.it CpcPythonAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcPythonAesGcm256StringEncryption#main.py/)
 | [Go](../AesGcm256StringEncryption/AesGcm256StringEncryption.go) | :white_check_mark: | [repl.it CpcGoAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcGoAesGcm256StringEncryption#main.go/)
 
 *1) C# needs **dot.net 5** to run, so I changed my online compiler for this example.
+
+*2) Python needs PyCryptodome
 
 This is an output (as there are random elements your output will differ):
 
@@ -76,6 +79,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 21st 2021
+Last update: Mar. 23rd 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -90,7 +90,7 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | Browser | Python | Go |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: |
 | [RSA AES CBC 256 hybrid encryption](docs/rsa_aes_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
-| [RSA AES GCM 256 hybrid encryption](docs/rsa_aes_gcm_hybrid_encryption_string.md) | :soon: | :soon: | :soon: | :x: | :soon: | :soon: | :soon: | :soon: | :soon: |
+| [RSA AES GCM 256 hybrid encryption](docs/rsa_aes_gcm_hybrid_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### Curve 25519 key exchange ###
 

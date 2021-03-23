@@ -31,9 +31,9 @@ The following links provide the solutions in code and an online compile that run
 | [C#](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionPem.cs) using PEM keys | :white_check_mark: | [dotnetfiddle.net CpcPhpRsaAesGcmHybridStringEncryptionPem](https://dotnetfiddle.net/Sh02O0/) |
 | [C#](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionXml.cs) using XML keys | :white_check_mark: | [dotnetfiddle.net CpcPhpRsaAesGcmHybridStringEncryptionXml](https://dotnetfiddle.net/5ft6sd/) |
 | Javascript CryptoJs | :x: | the encryption functionality is not available in CryptoJs
-| [NodeJS Crypto](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaAesGcmHybridStringEncryption#index.js/)
+| [NodeJS Crypto](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaAesGcmHybridStringEncryption](https://replit.com/@javacrypto/CpcNodeJsCryptoRsaAesGcmHybridStringEncryption#index.js/)
 | [NodeJS forge](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesGcmHybridStringEncryption#index.js/)
-| [Python](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.py) | :white_check_mark: | [repl.it CpcPythonRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcPythonRsaAesGcmHybridStringEncryption#Main.py/)
+| [Python](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.py) | :white_check_mark: | [repl.it CpcPythonRsaAesGcmHybridStringEncryption](https://replit.com/@javacrypto/CpcPythonRsaAesGcmHybridStringEncryption#Main.py/)
 | [Go](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.go) | :white_check_mark: | [repl.it CpcGoRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcGoRsaAesGcmHybridStringEncryption#main.go/)
 
 This is an output (your will differ because a random element):

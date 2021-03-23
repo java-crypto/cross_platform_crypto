@@ -28,8 +28,8 @@ The following links provide the solutions in code and an online compile that run
 | ------ | :---: | :----: |
 | [Java](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.java) | :white_check_mark: | [repl.it CpcJavaRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcJavaRsaAesGcmHybridStringEncryption#Main.java/)
 | [PHP](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.php) | :white_check_mark: | [repl.it CpcPhpRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcPhpRsaAesGcmHybridStringEncryption#main.php/)
-| [C#](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionPem.cs) using PEM keys | :white_check_mark: | 
-| [C#](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionXml.cs) using XML keys | :white_check_mark: | 
+| [C#](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionPem.cs) using PEM keys | :white_check_mark: | [dotnetfiddle.net CpcPhpRsaAesGcmHybridStringEncryptionPem](https://dotnetfiddle.net/Sh02O0/) |
+| [C#](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionXml.cs) using XML keys | :white_check_mark: | [dotnetfiddle.net CpcPhpRsaAesGcmHybridStringEncryptionXml](https://dotnetfiddle.net/5ft6sd/) |
 | Javascript CryptoJs | :x: | the encryption functionality is not available in CryptoJs
 | [NodeJS Crypto](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoRsaAesGcmHybridStringEncryption#index.js/)
 | [NodeJS forge](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesGcmHybridStringEncryption#index.js/)

@@ -109,16 +109,16 @@ Note: you need external libraries for this feature!
 
 ### Elliptic curve signature ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: |
-| [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:| :white_check_mark: |
-| [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python | Go |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: |
+| [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:|
 
 
 ### <a name="readme-libsodium"></a>Libsodium solutions
-| Solution | Description | Java | PHP | C# | NodeJS | Browser | Python |
-| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: |
+| Solution | Description | Java | PHP | C# | NodeJS | Browser | Python | Go |
+| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |
 [generate a random key](docs/libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](docs/libsodium_secretbox_encryption_string.md) | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  
 [generate a curve 25519 key pair](docs/curve25519_key_generation.md) | generate a curve X25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :x: |  
@@ -128,7 +128,7 @@ Note: you need external libraries for this feature!
 | [Argon 2 password derivation function](docs/argon2.md) | derives a password from a passphrase using the "modern" Argon2id algorithm | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |[Argon 2 parameter](docs/argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
 | [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | encrypts a string on basis of a  **randomly generated encryption key**, using the **ChaCha20 cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
-| [Libsodium authenticated string encryption with a random key](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Libsodium authenticated string encryption with a random key (secret box)](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |[Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication but without key exchange between the two partners |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 [Libsodium string signature (detached) with a private-public key](docs/libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: |  
@@ -206,9 +206,10 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | PHP phpseclib |   | version 3
 | Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
-| Go | repl.it | version go1.14 linux/amd64
+| Go | repl.it | version go 1.14 linux/amd64
+| Go | goplay.space | version go 1.16.2 
 
-Last update: Mar. 23rd 2021
+Last update: Mar. 24th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

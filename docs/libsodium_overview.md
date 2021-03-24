@@ -26,8 +26,8 @@ But the good news are: there are bindings available for Java, PHP (built-in sinc
 
 Here are my articles regarding Libsodium themes:
 
-| Solution | Description | Java | PHP | C# | NodeJs | Browser | Python |
-| ------ | :------: | :--: | :--: | :--: | :--: | :--: | :--: |
+| Solution | Description | Java | PHP | C# | NodeJs | Browser | Python | Go |
+| ------ | :------: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[generate a random key](libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |   
 |[generate a curve 25519 key pair](curve25519_key_generation.md) | generate a curve X25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :x: |  
 |[derive the curve X25519 public key from a secret key](x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding | :soon: | :soon: | :soon: |  :soon: | :white_check_mark: |  
@@ -36,12 +36,11 @@ Here are my articles regarding Libsodium themes:
 | [Argon 2 parameter](argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
 | [Argon 2 password derivation function](argon2.md) | derives an encryption key from a passphrase | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
 |[ChaCha20-Poly1305 authenticated string encryption with a random key](chacha20_poly1305_string_encryption.md) | uses ChaCha20-Poly1305 | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|[authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | uses "secret boxes" | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|[authenticated string encryption with a random key](libsodium_secretbox_encryption_string.md) | uses "secret boxes" | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |authenticated string encryption with a passphrase | uses "secret boxes" | :soon: | :soon: |  :soon: | :soon: | :soon: | :soon: | 
 |[authenticated hybrid string encryption with a private-public key exchange](libsodium_cryptobox_encryption_string.md) | uses "crypto boxes" | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: |
 |[anonymizised authenticated string hybrid encryption with a private-public key](libsodium_sealedcryptobox_encryption_string.md) | uses "sealed boxes" | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  
 |[sign a string with a private-public key](libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: |  
-
 
 ### What additional libraries do I need to get the stuff working?
 
@@ -66,6 +65,6 @@ Below I'm providing the names and download links of all libraries I have used to
 | Python | pycryptodome version 3.9.9  | used in [ChaCha20-Poly1305 authenticated string encryption with a random key](chacha20_poly1305_string_encryption.md) documentation https://www.pycryptodome.org/  | [https://github.com/Legrandin/pycryptodome](https://github.com/Legrandin/pycryptodome) |
 
 
-Last update: Feb. 07th 2021
+Last update: Mar. 24th 2021
 
 Back to the main page: [readme.md](../readme.md)

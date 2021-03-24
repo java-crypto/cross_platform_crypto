@@ -67,6 +67,7 @@ The following links provide the solutions in code and an online compiler that ru
 | [Webcrypto verify only](../EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) | :white_check_mark: | [Your browser WebcryptoEcVerifyDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) 
 | [OpenSSL (file signature)](ecdsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [EC signature DER OpenSSL](ecdsa_signature_file_openssl.md)
 | [Python](../EcSignatureP256Sha256DerString/EcSignatureDerStringFull.py) *3) | :white_check_mark: | [repl.it CpcPythonEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcPythonEcSignatureP256DerStringFull#main.py/)
+| [Go](../EcSignatureP256Sha256DerString/EcSignatureDerStringFull.go) *4) | :white_check_mark: | [goplay.space CpcGoEcSignatureDerStringFull](https://goplay.space/#3hX0TzKKfBJ/)
 
 ***1)** runs with .NET 4.7.2 and Bouncy Castle 1.89
 
@@ -74,7 +75,11 @@ The following links provide the solutions in code and an online compiler that ru
 
 ***3)** you need the external library pycryptodome, version 3.9.9
 
-Notes regarding the implementations: for this article I have choosen the **DER encoding** of the signature. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSA** and everything is fine. If you like need the example with [IEEE P1363 encoding see this article](ecdsa_signature_ieee_p1363_string.md).
+***4)** you need a relativly new version of Golang (my program runs with Golang 15.x)
+
+### Notes regarding the implementations: 
+
+For this article I have choosen the **DER encoding** of the signature. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSA** and everything is fine. If you like need the example with [IEEE P1363 encoding see this article](ecdsa_signature_ieee_p1363_string.md).
 
 If you need to convert the signature format types (DER to IEEE P1363 and vice versa) see my article [ecdsa signature conversion](ecdsa_signature_conversion.md).
 
@@ -106,6 +111,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Jan. 08th 2021
+Last update: Mar. 23rd 2021
 
 Back to the main page: [readme.md](../readme.md)

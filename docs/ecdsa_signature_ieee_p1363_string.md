@@ -67,10 +67,13 @@ The following links provide the solutions in code and an online compiler that ru
 | [Webcrypto verify only](../EcSignatureP256Sha256String/ecsignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoEcVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringverification.html)
 | OpenSSL | :x: | not available
 | [Python](../EcSignatureP256Sha256String/EcSignatureStringFull.py) *1) | :white_check_mark: | [repl.it CpcPythonEcSignatureStringFull](https://repl.it/@javacrypto/CpcPythonEcSignatureP256StringFull#main.py/)
+| [Go](../EcSignatureP256Sha256String/EcSignatureStringFull.go) | :white_check_mark: | [repl.it CpcGoEcStringSignatureFull](https://repl.it/@javacrypto/CpcGoEcSignatureP256StringFull#main.go/)
 
 Python *1) you need the external library pycryptodome, version 3.9.9
 
-Notes regarding the implementations: to get a most cross platform wide implementation I have choosen the **IEEE-P1363 encoding** of the signature. This encoding is easy to detect as the signature is 64 bytes long and consist of 2 concatenated values (R | S) of each 32 bytes long. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSAinP1363format** and everything is fine. Other platforms like PHP do need a programmatical code to achive this encoding. Whenever I used sources from other people I added a note. If you like need the example with [DER encoding see this  article](ecdsa_signature_der_string.md).
+### Notes regarding the implementations: 
+
+To get a most cross platform wide implementation I have choosen the **IEEE-P1363 encoding** of the signature. This encoding is easy to detect as the signature is 64 bytes long and consist of 2 concatenated values (R | S) of each 32 bytes long. Some frameworks support this kind of encoding "out of the box", e.g. in Java we choose the algorithm **SHA256withECDSAinP1363format** and everything is fine. Other platforms like PHP do need a programmatical code to achive this encoding. Whenever I used sources from other people I added a note. If you like need the example with [DER encoding see this  article](ecdsa_signature_der_string.md).
 
 If you need to convert the signature format types (DER to IEEE P1363 and vice versa) see my article [ecdsa signature conversion](ecdsa_signature_conversion.md).
 
@@ -104,6 +107,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Feb. 02nd 2021
+Last update: Mar. 24th 2021
 
 Back to the main page: [readme.md](../readme.md)

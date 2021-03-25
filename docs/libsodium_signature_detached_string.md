@@ -87,4 +87,4 @@ signature (Base64) verified: true
 
 Last update: Feb. 07th 2021
 
-Back to the main page: [readme.md](../readme.md)
+Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

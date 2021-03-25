@@ -68,6 +68,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 24th 2021
+Last update: Mar. 25th 2021
 
-Back to the main page: [readme.md](../readme.md)
+Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

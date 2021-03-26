@@ -93,6 +93,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 21st 2021
+Last update: Mar. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

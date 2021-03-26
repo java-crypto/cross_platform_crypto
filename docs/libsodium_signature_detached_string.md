@@ -66,7 +66,8 @@ I do not provide a "verification only" version as all functions are available in
 | NodeJS Crypto | :x: | use above Javascript / NodeJs solution
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Webcrypto / Browser](../LibsodiumSignatureDetachedString/libsodiumsignaturedetachedstring.html) | :white_check_mark: | [your browser LibsodiumSignatureDetachedString.html](http://javacrypto.bplaced.net/cpcjs/signature/libsodiumsignaturedetachedstring.html)
-| [Python](../LibsodiumSignatureDetachedString/LibsodiumSignatureDetachedString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumSignatureDetachedString](https://repl.it/@javacrypto/CpcPythonLibsodiumSignatureDetachedString#Main.java/)
+| [Python](../LibsodiumSignatureDetachedString/LibsodiumSignatureDetachedString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumSignatureDetachedString](https://repl.it/@javacrypto/CpcPythonLibsodiumSignatureDetachedString#Main.py/)
+| [Go](../LibsodiumSignatureDetachedString/LibsodiumSignatureDetachedString.go) | :white_check_mark: | [repl.it CpcGoLibsodiumSignatureDetachedString](https://replit.com/@javacrypto/CpcGoLibsodiumSignatureDetachedString#main.go/)
 
 note 1) at the time of writing the online-compiler dotnetfiddle.net does not work properly and claims about less resources - the code is running correctly but not online, sorry.
 
@@ -85,6 +86,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Feb. 07th 2021
+Last update: Mar. 26th 2021
 
 Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

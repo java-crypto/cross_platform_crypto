@@ -130,8 +130,8 @@ Note: you need external libraries for this feature!
 | [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | encrypts a string on basis of a  **randomly generated encryption key**, using the **ChaCha20 cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: |
 | [Libsodium authenticated string encryption with a random key (secret box)](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |[Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication but without key exchange between the two partners |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-[Libsodium string signature (detached) with a private-public key](docs/libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: |  
+| [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication but without key exchange between the two partners |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+[Libsodium string signature (detached) with a private-public key](docs/libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### <a name="readme-openssl"></a>OpenSSL solutions ###
 | Solution | Description |
@@ -209,7 +209,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | repl.it | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
 
-Last update: Mar. 24th 2021
+Last update: Mar. 26th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

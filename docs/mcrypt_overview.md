@@ -80,19 +80,19 @@ For that reason you should **never use "zero padding" when working with binary d
 Here are my articles regarding MCRYPT migration themes:
 
 | Solution | mode | PHP OpenSSL | PHP phpseclib 3 | 
-| ------ | :------: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| ------ | :------: | :--: | :--: | 
 |[MCRYPT Rijndael-128 ECB](mcrypt_rijndael128.md) | ECB mode | :white_check_mark: | :white_check_mark: |
 |[MCRYPT Rijndael-128 CBC](mcrypt_rijndael128.md) | CBC mode | :white_check_mark: | :white_check_mark: |
 |[MCRYPT Rijndael-128 CTR](mcrypt_rijndael128.md) | CTR mode | :white_check_mark: | :white_check_mark: |
-| | | |
+| | | | |
 |[MCRYPT Rijndael-256 ECB](mcrypt_rijndael256.md) | ECB mode | :x: | :white_check_mark: |
 |[MCRYPT Rijndael-256 CBC](mcrypt_rijndael256.md) | CBC mode | :x: | :white_check_mark: |
 |[MCRYPT Rijndael-256 CTR](mcrypt_rijndael256.md) | CTR mode | :x: | :white_check_mark: |
-| | | |
+| | | | |
 |[MCRYPT DES ECB](mcrypt_des.md) | ECB mode | :white_check_mark: | :white_check_mark: |
 |[MCRYPT DES CBC](mcrypt_des.md) | CBC mode | :white_check_mark: | :white_check_mark: |
 |[MCRYPT DES CTR](mcrypt_des.md) | CTR mode | :x: | :white_check_mark: |
-| | | |
+| | | | |
 |[MCRYPT TDES ECB](mcrypt_tdes.md) | ECB mode | :white_check_mark: | :white_check_mark: |
 |[MCRYPT TDES CBC](mcrypt_tdes.md) | CBC mode | :white_check_mark: | :white_check_mark: |
 |[MCRYPT TDES CTR](mcrypt_tdes.md) | CTR mode | :x: | :white_check_mark: |

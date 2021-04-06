@@ -6,6 +6,8 @@ This page informs you about the migration of **Rijndael-128** (a.k.a. "AES") in 
 
 Rijndael-128 has a block length of 128 bit (= 16 byte) and the key length has to be exact 16, 24 or 32 bytes. The ECB mode does not require an initialization vector (IV) but CBC and CTR mode do.
 
+If you need a MCRYPT migration using Rijndael-256 visit the page [MCRYPT migration of Rijndael-256](mcrypt_rijndael256.md).
+
 I'm supporting the two padding modes **zero padding** (MCRYPT default) and **PKCS#7 padding** (OpenSSL and phpseclib default).
 
 ### Codes for ECB mode ZERO PADDING
@@ -73,9 +75,9 @@ function pkcs7Unpadding($data, $blocklen) {
     return substr($data,0,strlen($data) - $packing);
 }
 encryption:
-$ciphertext = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $plaintext, MCRYPT_MODE_ECB);
+$ciphertext = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, pkcs7Padding($plaintext, 16), MCRYPT_MODE_ECB);
 decryption:
-$decryptedtext = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $ciphertext, MCRYPT_MODE_ECB);
+$decryptedtext = pkcs7Unpadding(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $ciphertext, MCRYPT_MODE_ECB));
 ```
 
 OpenSSL code for Rijndael-128 ECB mode PKCS#7 padding:
@@ -113,7 +115,7 @@ $decryptedtext = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $ciphertext, MCRYPT_M
 
 PKCS#7 padding:
 $ciphertext = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, pkcs7Padding($plaintext, 16), MCRYPT_MODE_CBC, iv);
-$decryptedtext = mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $ciphertext, MCRYPT_MODE_CBC, iv);
+$decryptedtext = pkcs7Unpadding(mcrypt_decrypt(MCRYPT_RIJNDAEL_128, $key, $ciphertext, MCRYPT_MODE_CBC, iv));
 ```
 
 OpenSSL code for Rijndael-128 CBC mode zero padding and PKCS#7 padding:
@@ -123,6 +125,7 @@ zero padding:
 $algorithmName = "aes-128-cbc"; // or aes-192-cbc or aes-256-cbc
 $ciphertext = openssl_encrypt(zeroPadding($plaintext,16), $algorithmName, $key, OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING, iv);
 $decryptedtext = openssl_decrypt($ciphertext, $algorithmName, $key, OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING, iv);
+$decryptedtext = rtrim($decryptedtext);
 
 PKCS#7 padding:
 $algorithmName = "aes-128-cbc"; // or aes-192-cbc or aes-256-cbc
@@ -140,6 +143,7 @@ $cipher->setKey($key);
 $cipher->disablePadding();
 $ciphertext = $cipher->encrypt(zeroPadding($plaintext,16));
 $decryptedtext = $cipher->decrypt($ciphertext);
+$decryptedtext = rtrim($decryptedtext);
 
 PKCS#7 padding:
 $cipher = new AES('cbc');

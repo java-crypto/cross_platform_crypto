@@ -524,6 +524,7 @@ based on dark.css by Vladimir Epifanov
 <p>Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the <a href="#readme-libsodium"><strong>Libsodium</strong></a> project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section.</p>
 <p>Sometimes you may have read about a &quot;JWT&quot; or &quot;JWT token&quot;, that is short form of a <strong>JSON web token</strong> or <strong>JWT</strong>. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some <a href="#readme-jwt"><strong>JWT web token</strong></a> solutions.</p>
 <p>A special chapter deals with the future of cryptography; and that is the <strong>Post Quantum Cryptography</strong>. Although the quantum computers are not on the market at the moment they will be there and cause catastrophic impacts on cryptography as they may been able to solve the RSA- and EC-curve problems and subsequently all RSA- and EC-curve encryption and signature become worthless. Visit the chapter <a href="#readme-pqc"><strong>PQC Post Quantum Cryptography</strong></a> at the end.</p>
+<p>I'm providing a special article series about the migration of the (former) standard encryption module <strong>MCRYPT</strong> in PHP, that was available until version 5.6.x of PHP - newer versions of PHP come with OpenSSL as standard cryptography module. I'm giving examples how to migrate the algorithms <strong>Rijndael-128</strong> (better known as &quot;AES&quot;), <strong>Rijndael-256</strong>, <strong>DES</strong> and <strong>Triple DES</strong> using the modes <strong>ECB</strong>, <strong>CBC</strong> and <strong>CTR</strong> and the <strong>zero padding</strong> or <strong>PKCS#7 padding</strong>. Visit the chapter <a href="#readme-mcrypt"><strong>MCRYPT migration</strong></a> at the end.</p>
 <p>A lot of solutions run with the built-in cryptographic modules but especially the Python and  Javascript-ones may need external libraries (pure Javascript will need e.g. &quot;CryptoJs&quot;, NodeJs has a built-in &quot;Crypto&quot; library or you can use &quot;node-forge&quot;).</p>
 <h3 id="general-routines">General routines</h3>
 <table>
@@ -1255,7 +1256,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_secretbox_encryption_string.md">Libsodium authenticated string encryption with a random key (secret box)</a></td>
@@ -1527,6 +1528,121 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
+<h3 id="mcrypt-migration"><a name="readme-mcrypt"></a>MCRYPT migration</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th style="text-align: center;">mode</th>
+<th style="text-align: center;">PHP OpenSSL</th>
+<th style="text-align: center;">PHP phpseclib 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_overview.md">MCRYPT migration overview</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 ECB</a></td>
+<td style="text-align: center;">ECB mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 CBC</a></td>
+<td style="text-align: center;">CBC mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 CTR</a></td>
+<td style="text-align: center;">CTR mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 ECB</a></td>
+<td style="text-align: center;">ECB mode</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 CBC</a></td>
+<td style="text-align: center;">CBC mode</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 CTR</a></td>
+<td style="text-align: center;">CTR mode</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_des.md">MCRYPT DES ECB</a></td>
+<td style="text-align: center;">ECB mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_des.md">MCRYPT DES CBC</a></td>
+<td style="text-align: center;">CBC mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_des.md">MCRYPT DES CTR</a></td>
+<td style="text-align: center;">CTR mode</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_tdes.md">MCRYPT TDES ECB</a></td>
+<td style="text-align: center;">ECB mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_tdes.md">MCRYPT TDES CBC</a></td>
+<td style="text-align: center;">CBC mode</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_tdes.md">MCRYPT TDES CTR</a></td>
+<td style="text-align: center;">CTR mode</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
 <h3 id="elliptic-curve-encryption">Elliptic curve encryption</h3>
 <table>
 <thead>
@@ -1631,7 +1747,7 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
-<p>Last update: Mar. 26th 2021</p>
+<p>Last update: Apr. 07th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

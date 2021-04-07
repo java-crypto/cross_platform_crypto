@@ -12,6 +12,7 @@ Sometimes you may have read about a "JWT" or "JWT token", that is short form of 
 
 A special chapter deals with the future of cryptography; and that is the **Post Quantum Cryptography**. Although the quantum computers are not on the market at the moment they will be there and cause catastrophic impacts on cryptography as they may been able to solve the RSA- and EC-curve problems and subsequently all RSA- and EC-curve encryption and signature become worthless. Visit the chapter [**PQC Post Quantum Cryptography**](#readme-pqc) at the end.
 
+I'm providing a special article series about the migration of the (former) standard encryption module **MCRYPT** in PHP, that was available until version 5.6.x of PHP - newer versions of PHP come with OpenSSL as standard cryptography module. I'm giving examples how to migrate the algorithms **Rijndael-128** (better known as "AES"), **Rijndael-256**, **DES** and **Triple DES** using the modes **ECB**, **CBC** and **CTR** and the **zero padding** or **PKCS#7 padding**. Visit the chapter [**MCRYPT migration**](#readme-mcrypt) at the end.
 
 A lot of solutions run with the built-in cryptographic modules but especially the Python and  Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" library or you can use "node-forge").
 
@@ -176,6 +177,29 @@ Note: you need external libraries for this feature!
 | signature | [Rainbow](docs/pqc_rainbow_signature.md) | Java |
 | signature | [Sphincs](docs/pqc_sphincs_signature.md) | Java |
 
+### <a name="readme-mcrypt"></a>MCRYPT migration ###
+
+| Solution | mode | PHP OpenSSL | PHP phpseclib 3 | 
+| ------ | :------: | :--: | :--: | 
+| [MCRYPT migration overview](docs/mcrypt_overview.md) | | | |
+| | | | |
+|[MCRYPT Rijndael-128 ECB](docs/mcrypt_rijndael128.md) | ECB mode | :white_check_mark: | :white_check_mark: |
+|[MCRYPT Rijndael-128 CBC](docs/mcrypt_rijndael128.md) | CBC mode | :white_check_mark: | :white_check_mark: |
+|[MCRYPT Rijndael-128 CTR](docs/mcrypt_rijndael128.md) | CTR mode | :white_check_mark: | :white_check_mark: |
+| | | | |
+|[MCRYPT Rijndael-256 ECB](docs/mcrypt_rijndael256.md) | ECB mode | :x: | :white_check_mark: |
+|[MCRYPT Rijndael-256 CBC](docs/mcrypt_rijndael256.md) | CBC mode | :x: | :white_check_mark: |
+|[MCRYPT Rijndael-256 CTR](docs/mcrypt_rijndael256.md) | CTR mode | :x: | :white_check_mark: |
+| | | | |
+|[MCRYPT DES ECB](docs/mcrypt_des.md) | ECB mode | :white_check_mark: | :white_check_mark: |
+|[MCRYPT DES CBC](docs/mcrypt_des.md) | CBC mode | :white_check_mark: | :white_check_mark: |
+|[MCRYPT DES CTR](docs/mcrypt_des.md) | CTR mode | :x: | :white_check_mark: |
+| | | | |
+|[MCRYPT TDES ECB](docs/mcrypt_tdes.md) | ECB mode | :white_check_mark: | :white_check_mark: |
+|[MCRYPT TDES CBC](docs/mcrypt_tdes.md) | CBC mode | :white_check_mark: | :white_check_mark: |
+|[MCRYPT TDES CTR](docs/mcrypt_tdes.md) | CTR mode | :x: | :white_check_mark: |
+
+
 ### Elliptic curve encryption ###
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |
@@ -209,7 +233,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | repl.it | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
 
-Last update: Mar. 26th 2021
+Last update: Apr. 07th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

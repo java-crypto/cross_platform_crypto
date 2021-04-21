@@ -62,7 +62,7 @@ The following links provide the solutions in code and an online compile that run
 | [C#](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15Pem.cs) PEM keys | :white_check_mark: | [dotnetfiddle CpcCsharpRsaEncryptionPkcs15String PEM](https://dotnetfiddle.net/vHMU1k/)
 | Javascript CryptoJs | :x: | the encryption functionality is not available in CryptoJs
 | [NodeJS Crypto](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15NodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoRsaEncryptionPkcs15String](https://replit.com/@javacrypto/CpcNodeJsCryptoRsaEncryptionPkcs15String#index.js/)
-| [NodeJS forge](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15.js) | :white_check_mark: | [replit.com CpcNodeJsRsaEncryptionPkcs15String](https://replit.com/@javacrypto/CpcNodeJsRsaEncryptionPkcs15String#index.js/)
+| [NodeJS forge](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15NodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsRsaEncryptionPkcs15String](https://replit.com/@javacrypto/CpcNodeJsRsaEncryptionPkcs15String#index.js/)
 | Webcrypto encryption only | :x: | the PKCS 1.5 padding is not available
 | Webcrypto decryption only | :x: | the PKCS 1.5 padding is not available
 | [Python](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15.py) *1) | :white_check_mark: | [replit.com CpcPythonRsaEncryptionPkcs15String](https://replit.com/@javacrypto/CpcPythonRsaEncryptionPkcs15String/#main.py)

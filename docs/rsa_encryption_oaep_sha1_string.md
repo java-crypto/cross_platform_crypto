@@ -17,7 +17,7 @@ maximum plaintext to encrypt = 256 - 42 = 214 byte
 
 This size is good for short strings or - that is the way it should be done for larger sizes - using a [**hybrid encryption scheme**](rsa_aes_hybrid_encryption_string.md). In short it uses a randomly created AES key of 32 byte, encrypts the data with this key in AES CBC- or (better) GCM- mode and encrypts the key with the RSA public key (and vice versa with the RSA private key for decryption).
 
-Using the RSA encryption there are three padding modes: "no padding", "PKCS1 padding" or "OAEP padding". As the first two named are very vulnerable please don't use them, instead use an **OAEP padding** because it adds a random parameter so the ciphertext will differ each time you encrypt (even with an equal key and plaintext).
+Using the RSA encryption there are three padding modes: "no padding", "PKCS1.5 padding" or "OAEP padding". As the first two named are very vulnerable please don't use them, instead use an **OAEP padding** because it adds a random parameter so the ciphertext will differ each time you encrypt (even with an equal key and plaintext).
 
 The OAEP-padding includes a hashing algorithm that is not always named by the algorithm name so there is a high chance that the Cross platform cryptography will fail. For this example I'm using the "OAEP with SHA-1" as it is available on all platforms (except for CryptoJs where RSA is not available at all). 
 
@@ -32,7 +32,7 @@ One note about the **key management** in my programs: usually the keys are (secu
 ### steps in the program
 
 The program follows the usual sequence:
-1. generate a RSA key pair - here we are using a static, hard-coded key pair in form of a PEM encoded string (Java, PHP and NodeJs) or a XML-file (C#)
+1. generate a RSA key pair - here we are using a static, hard-coded key pair in form of a PEM encoded string (Java, PHP, NodeJs, Python, Go) or a XML-file (C#)
 2. convert the data to encrypt into a binary format (e.g. a byte array)
 3. start the encryption process
 4. load the Public key
@@ -82,6 +82,6 @@ decryptedtext: The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 22nd 2021
+Last update: Apr. 21st 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -62,6 +62,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python | Go |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |
+| [RSA PKCS 1.5 padding String](docs/rsa_encryption_pkcs15_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
 | [RSA OEAP padding SHA-1 String](docs/rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [RSA OEAP padding SHA-1 String decryption only](docs/rsa_decryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | |  |
 | [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -233,7 +234,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | repl.it | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
 
-Last update: Apr. 07th 2021
+Last update: Apr. 21st 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

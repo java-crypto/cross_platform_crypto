@@ -72,10 +72,10 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 | Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python | Go |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |  |  | |
+| [RSA String Signature PKCS#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA String Signature PKCS#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |  |  | |
 | [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted private key_example_signature_string.md) | example for the practical usage of encrypted keys similar to [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) |
+| [RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted_private_key_example_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :white_check_mark: |
 
 ### RSA keys ###
 
@@ -88,7 +88,7 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 [RSA sample keys](docs/rsa_sample_keypair.md) | for my encryption and signature examples I'm using these keys |
 [RSA key formats](docs/rsa_key_formats.md) | explanation of the most used key formats |
 [RSA encrypted private key](docs/rsa_sample_encrypted_private_key.md) | as you should protect your keys I recommend to work with encrypted private keys |
-[RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted private key_example_signature_string.md) | example for the practical usage of encrypted keys |
+[RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted_private_key_example_signature_string.md) | example for the practical usage of encrypted keys |
 [RSA encrypted private key - decrypt manually](docs/rsa_sample_encrypted_private_key_manual.md) | how to parse an encrypted private key |
 
 ### RSA AES hybrid encryption ###

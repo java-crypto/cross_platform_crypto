@@ -75,6 +75,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [RSA String Signature PKSC#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |  |  | |
 | [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted private key_example_signature_string.md) | example for the practical usage of encrypted keys similar to [RSA String Signature PKSC#1.5 (full)](docs/rsa_signature_string.md) |
 
 ### RSA keys ###
 
@@ -84,8 +85,11 @@ Working with RSA key pairs can get tricky sometimes so I'm providing some more i
 | ------ | :------: |
 [How to generate RSA key pairs](docs/rsa_key_generation.md) | creation of RSA key pairs with OpenSSL |
 [How to convert RSA keys](docs/rsa_key_conversion.md) | convert keys between XML- and PEM-format |
-[RSA sample keys](docs/rsa_sample_keypair.md) | for my encryption and signature examples I used these keys |
+[RSA sample keys](docs/rsa_sample_keypair.md) | for my encryption and signature examples I'm using these keys |
 [RSA key formats](docs/rsa_key_formats.md) | explanation of the most used key formats |
+[RSA encrypted private key](docs/rsa_sample_encrypted_private_key.md) | as you should protect your keys I recommend to work with encrypted private keys |
+[RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted private key_example_signature_string.md) | example for the practical usage of encrypted keys |
+[RSA encrypted private key - decrypt manually](docs/rsa_sample_encrypted_private_key_manual.md) | how to parse an encrypted private key |
 
 ### RSA AES hybrid encryption ###
 
@@ -234,7 +238,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | repl.it | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
 
-Last update: Apr. 21st 2021
+Last update: Apr. 25th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

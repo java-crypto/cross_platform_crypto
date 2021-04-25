@@ -28,12 +28,12 @@ A last note on RSA key pair generation: Especially the private key contains very
 a) do not store the key on the device but e.g. an USB-stick. This isn't usable on server systems that need to run without human input
 b) store the key in a key store. They are widely available and especially when using a webserver you come into direct contact with the stores. The store itself is protected with a password and the access to the key itself can get protected with an additional, different password. 
 c) store the key in a password protected zip- or rar- archive. This isn't less usefull as well in automated environments.
-d) use password protected ("encrypted") private keys. They are <u>my favorite</u> but using them exchangeable in cross-platform cryptography demand some more lines of code and sometimes external libraries.
+d) use password protected ("encrypted") private keys. They are <u>my favorite</u> but using them exchangeable in cross-platform cryptography demand some more lines of code and sometimes external libraries. An example how to use encrypted RSA private keys is decribed here: [RSA encrypted private key](rsa_sample_encrypted_private_key.md).
 
 **All of my examples use unprotected = unsecure private keys!**
 
 Go to [RSA string signature](rsa_signature_string.md) and [RSA string signature verification only](rsa_signature_string_verification_only.md).
 
-Last update: Jan. 08th 2021
+Last update: Apr. 25th 2021
 
 Back to the main page: [readme.md](../readme.md)

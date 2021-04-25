@@ -4,7 +4,7 @@
 
 Private-/Public cryptography needs a key pair for encryption and signing. This key pair is usually generated and then stored in files or a key store before the keys are used for encryption or signing.
 
-As I'm working with online-compiler I'm using use static, hard-coded keys instead of loading them from files. This is for demonstration purpose only - **do not do this in production environment!**
+As I'm working with online-compiler I'm using use static, hard-coded keys instead of loading them from files. This is for demonstration purpose only - **do not do this in production environment!**. As well all of my examples will use **unencrypted** private keys - you should avoid this as well and better work with **encrypted** private keys - find the example here: [RSA encrypted private key example using signature with PKCS#1.5 padding](rsa_encrypted_private_key_example_signature_string.md)
 
 I generated a RSA key pair with a length of 2048 bit and saved the keys in PEM-encoding (for a usage in **Java**, **PHP**, **CryptoJs** and **NodeJs**) and XML-format when working with **C#**.
 
@@ -44,7 +44,6 @@ rh+BZQbxy6x61CpCfaT9hAoA6HaNdeoU6y05lBz1DQKBgAbYiIk56QZHeoZKiZxy
 3PIW4/CddNs8mCSBOqTnoaxh
 -----END PRIVATE KEY-----
 ```
-
 
 Public Key 2048 bit ("publickey2048.pem"):
 
@@ -86,6 +85,6 @@ Public Key 2048 bit ("publickey2048.xml"):
 </RSAKeyValue>
 ```
 
-Last update: Jan. 08th 2021
+Last update: Apr. 25th 2021
 
 Back to the main page: [readme.md](../readme.md)

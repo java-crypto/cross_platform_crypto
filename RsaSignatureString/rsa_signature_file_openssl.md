@@ -45,7 +45,7 @@ QwIDAQAB
 -----END PUBLIC KEY-----
 ```
 
-A last note on EC key pair generation: Especially the private key contains very sensitive data so it need to get **protected**. More information can be found in the article [RSA key generation](rsa_key_generation.md).
+A last note on RSA key pair generation: Especially the private key contains very sensitive data so it need to get **protected**. More information can be found in the article [RSA key generation](rsa_key_generation.md).
 
 ### Second task: sign a file with the private key using OpenSSL
 

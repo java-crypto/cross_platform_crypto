@@ -99,7 +99,7 @@ The following links provide the solutions in code and an online compiler that ru
 | [Webcrypto encryption only](../JwtJweRsaOaep256Encryption/jwersaoaep256encryption.html) | :white_check_mark: | RSA-OAEP-256 | A256GCM | [your browser WebcryptoJweRsaOaep-256Encryption.html](https://java-crypto.github.io/cross_platform_crypto/JwtJweRsaOaep256Encryption/jwersaoaep256encryption.html) |
 | [Webcrypto decryption only](../JwtJweRsaOaep256Encryption/jwersaoaep256decryption.html) | :white_check_mark: | RSA-OAEP-256 | A256GCM | [your browser WebcryptoJweRsaOaep-256Decryption.html](https://java-crypto.github.io/cross_platform_crypto/JwtJweRsaOaep256Encryption/jwersaoaep256decryption.html) |
 | [Python](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.py) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcPythonJweRsaOaep256Encryption](https://repl.it/@javacrypto/CpcPythonJweRsaOaep256Encryption#main.py/) ***)** |
-| [Goa](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.go) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcGoJweRsaOaep256Encryption](https://replit.com/@javacrypto/CpcGoJweRsaOaep256Encryption#main.go/) |
+| [Go](../JwtJweRsaOaep256Encryption/JweRsaOaep256Encryption.go) | :white_check_mark: | RSA-OAEP-256, RSA-OAEP, RSA PKCS1.5 | A128GCM, A192GCM, A256GCM | [repl.it CpcGoJweRsaOaep256Encryption](https://replit.com/@javacrypto/CpcGoJweRsaOaep256Encryption#main.go/) |
 
 ***)** kindly note that the online compiler has to rebuild all libraries and that takes some seconds before the programs is ready to run.
 

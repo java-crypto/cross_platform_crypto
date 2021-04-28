@@ -40,17 +40,15 @@ To start with your JWT experience I recommend that you read the article [structu
 
 Here are my articles regarding JSON web token (JWT) themes:
 
-| Solution | Description | Java | PHP | C# | NodeJs | Browser | Python |
-| ------ | :------: | :--: | :--: | :--: | :--: | :--: | :--: |
+| Solution | Description | Java | PHP | C# | NodeJs | Browser | Python | Go |
+| ------ | :------: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[structure of a JSON web token (JWT)](json_web_token_structure.md) | explains the general structure of a JWT | | | | | | |
-|JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
-|[JSON Web JWK keys](json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | |
-|[JSON web signature (JWS) using RS256 algorithm](json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|[JSON web signature (JWS) using PS256 algorithm](json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
-|JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing | :x: |  :x: | :x: | :x: | :soon: |   :x: | 
-| [JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm](json_web_token_jwe_rsa_oaep_256_encryption.md) | encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-| JSON web encryption (JWE) |  | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: |
-
+|JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | | |
+|[JSON Web JWK keys](json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | | 
+|[JSON web signature (JWS) using RS256 algorithm](json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | :white_check_mark: |
+|[JSON web signature (JWS) using PS256 algorithm](json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing | :x: |  :x: | :x: | :x: | :soon: | :x: | :x: |
+| [JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm](json_web_token_jwe_rsa_oaep_256_encryption.md) | encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  
 
 ### What additional libraries do I need to get the stuff working?
 
@@ -60,7 +58,7 @@ Below I'm providing the names and download links of all libraries I have used to
 | ------ | :------: | -- | -- | 
 | Java | Bouncy Castle version 1.68 |  [https://github.com/bcgit/bc-java](https://github.com/bcgit/bc-java) | GitHub: [https://github.com/bcgit/bc-java](https://github.com/bcgit/bc-java) Maven: [https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on](https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on)
 | Java | Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP, and CRMF APIs version 1.68 |  [https://github.com/bcgit/bc-java](https://github.com/bcgit/bc-java) | GitHub: [https://github.com/bcgit/bc-java](https://github.com/bcgit/bc-java) Maven: [https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on](https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on)
-| Java | Nimbus JOSE+JWT version 9.4.1 | [https://connect2id.com/products/nimbus-jose-jwt](https://connect2id.com/products/nimbus-jose-jwt) | source: [https://bitbucket.org/connect2id/nimbus-jose-jwt/src/master/](https://bitbucket.org/connect2id/nimbus-jose-jwt/src/master/) Maven: [https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt](https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt)
+| Java | Nimbus JOSE+JWT version 9.4.1 | [https://connect2id.com/products/nimbus-jose-jwt](https://connect2id.com/products/nimbus-jose-jwt) | source: [https://bitbucket.org/connect2id/nimbus-jose-jwt/Post_Quantum_Cryptography.PQC_Rainbow_Signature.src/master/](https://bitbucket.org/connect2id/nimbus-jose-jwt/src/master/) Maven: [https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt](https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt)
 | Java | JCIP Annotations Under Apache License version 1.0.1 | [https://github.com/stephenc/jcip-annotations](https://github.com/stephenc/jcip-annotations) | Maven: [https://mvnrepository.com/artifact/com.github.stephenc.jcip/jcip-annotations](https://mvnrepository.com/artifact/com.github.stephenc.jcip/jcip-annotations)
 | PHP | phpseclib version 3 | [https://phpseclib.com/](https://phpseclib.com/) | GitHub:  [https://github.com/phpseclib/phpseclib] (https://github.com/phpseclib/phpseclib) |
 | C# | jose-jwt version 3.0.0 |  [https://github.com/dvsekhvalnov/jose-jwt](https://github.com/dvsekhvalnov/jose-jwt) | GitHub: [https://github.com/dvsekhvalnov/jose-jwt](https://github.com/dvsekhvalnov/jose-jwt) NugGet: [https://www.nuget.org/packages/jose-jwt/](https://www.nuget.org/packages/jose-jwt/) 
@@ -68,8 +66,9 @@ Below I'm providing the names and download links of all libraries I have used to
 | Browser | built-in Webcrypto engine | [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) | 
 | Python | PyJWT version 2.0.1  | [https://pyjwt.readthedocs.io/en/stable/index.html](https://pyjwt.readthedocs.io/en/stable/index.html) | GitHub:  [https://github.com/jpadilla/pyjwt/](https://github.com/jpadilla/pyjwt/) |
 | Python | pycryptodome version 3.9.9  | [https://www.pycryptodome.org/](https://www.pycryptodome.org/)  | [https://github.com/Legrandin/pycryptodome](https://github.com/Legrandin/pycryptodome) |
+| Go | Jose JWT library version 1.50 | [https://github.com/dvsekhvalnov/jose2go](https://github.com/dvsekhvalnov/jose2go/) | [https://github.com/dvsekhvalnov/jose2go](https://github.com/dvsekhvalnov/jose2go/) |
 
 
-Last update: Mar. 02nd 2021
+Last update: Apr. 28th 2021
 
 Back to the main page: [readme.md](../readme.md)

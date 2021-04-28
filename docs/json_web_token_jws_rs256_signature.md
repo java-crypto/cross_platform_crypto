@@ -61,6 +61,7 @@ The following links provide the solutions in code and an online compile that run
 | [Webcrypto sign only](../JwtJwsRs256Signature/jwsrs256signaturessign.html) | :white_check_mark: | [your browser WebcryptoJwsRs256Sign.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsRs256Signature/jwsrs256signaturessign.html)
 | [Webcrypto verify only](../JwtJwsRs256Signature/jwsrs256signatureverification.html) | :white_check_mark: | [your browser WebcryptoJwsRs256Verify.html](https://java-crypto.github.io/cross_platform_crypto/JwtJwsRs256Signature/jwsrs256signatureverification.html)
 | [Python](../JwtJwsRs256Signature/JwsRs256Signature.py) *) | :white_check_mark: | [repl.it CpcPythonJwsRs256Signature](https://repl.it/@javacrypto/CpcPythonJwsRs256Signature#main.py/)
+| [Go](../JwtJwsRs256Signature/JwsRs256Signature.go) *) | :white_check_mark: | [repl.it CpcGoJwsRs256Signature](https://replit.com/@javacrypto/CpcGoJwsRs256Signature#main.go/) |
 
 *) you need an external library
 
@@ -95,6 +96,6 @@ the token is valid and not expired: false
 
 ```
 
-Last update: Feb. 22nd 2021
+Last update: Apr. 28th 2021
 
 Back to the main page: [readme.md](../readme.md) or back to the [JSON web token overview](json_web_token_overview.md) page.

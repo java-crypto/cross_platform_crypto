@@ -150,16 +150,16 @@ Note: you need external libraries for this feature!
 [Elliptic curve file signature DER encoding](docs/ecdsa_signature_file_openssl.md) | the signature and verification is compatible with solutions in [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) |
 
 ### <a name="readme-jwt"></a>JWT JSON web token solutions ###
-| Solution | Description | Java | PHP | C# | NodeJS | Browser | Python |
-| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: |
-|[JSON web token (JWT) overview](docs/json_web_token_overview.md) | general information about JSON web token | | | | | | |
-|[structure of a JSON web token (JWT)](docs/json_web_token_structure.md) | explains the general structure of a JWT | | | | | | |
+| Solution | Description | Java | PHP | C# | NodeJS | Browser | Python | Go |
+| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+|[JSON web token (JWT) overview](docs/json_web_token_overview.md) | general information about JSON web token | | | | | | | |
+|[structure of a JSON web token (JWT)](docs/json_web_token_structure.md) | explains the general structure of a JWT | | | | | | | |
 |JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
-|[JSON Web JWK keys](docs/json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | |
-|[JSON web signature (JWS) using RS256 algorithm](docs/json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|[JSON web signature (JWS) using PS256 algorithm](docs/json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
-|JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing | :x: |  :x: | :x: | :x: | :soon: |   :x: | 
-| [JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm](docs/json_web_token_jwe_rsa_oaep_256_encryption.md) | encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | 
+|[JSON Web JWK keys](docs/json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | | |
+|[JSON web signature (JWS) using RS256 algorithm](docs/json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | :white_check_mark: |  
+|[JSON web signature (JWS) using PS256 algorithm](docs/json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
+|JSON web signature (JWS) using RSxxx & PSxxx algorithms (verify only) | verify a JWT with a RSA public key, PKCS1.5 & SSA-PSS padding and SHA-256/384/512 hashing | :x: |  :x: | :x: | :x: | :soon: | :x: | :x: | 
+| [JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm](docs/json_web_token_jwe_rsa_oaep_256_encryption.md) | encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  
 
 ### <a name="readme-pqc"></a>PQC Post Quantum Cryptography ###
 
@@ -238,7 +238,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | repl.it | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
 
-Last update: Apr. 25th 2021
+Last update: Apr. 28th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

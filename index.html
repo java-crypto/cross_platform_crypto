@@ -938,7 +938,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md">RSA String Signature PKSC#1.5 (full)</a></td>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md">RSA String Signature PKCS#1.5 (full)</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -951,7 +951,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string_verification_only.md">RSA String Signature PKSC#1.5 Verification only</a></td>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string_verification_only.md">RSA String Signature PKCS#1.5 Verification only</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -973,6 +973,19 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encrypted_private_key_example_signature_string.md">RSA encrypted private key example using signature with PKCS#1.5 padding</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
@@ -998,11 +1011,23 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_sample_keypair.md">RSA sample keys</a></td>
-<td style="text-align: center;">for my encryption and signature examples I used these keys</td>
+<td style="text-align: center;">for my encryption and signature examples I'm using these keys</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_formats.md">RSA key formats</a></td>
 <td style="text-align: center;">explanation of the most used key formats</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_sample_encrypted_private_key.md">RSA encrypted private key</a></td>
+<td style="text-align: center;">as you should protect your keys I recommend to work with encrypted private keys</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encrypted_private_key_example_signature_string.md">RSA encrypted private key example using signature with PKCS#1.5 padding</a></td>
+<td style="text-align: center;">example for the practical usage of encrypted keys</td>
+</tr>
+<tr>
+<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_sample_encrypted_private_key_manual.md">RSA encrypted private key - decrypt manually</a></td>
+<td style="text-align: center;">how to parse an encrypted private key</td>
 </tr>
 </tbody>
 </table>
@@ -1363,12 +1388,14 @@ based on dark.css by Vladimir Epifanov
 <th style="text-align: center;">NodeJS</th>
 <th style="text-align: center;">Browser</th>
 <th style="text-align: center;">Python</th>
+<th style="text-align: center;">Go</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_overview.md">JSON web token (JWT) overview</a></td>
 <td>general information about JSON web token</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1385,10 +1412,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td>JSON web token JWA algorithms</td>
 <td>standardized algorithms for JWT</td>
+<td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1405,10 +1434,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_jws_rs256_signature.md">JSON web signature (JWS) using RS256 algorithm</a></td>
 <td>sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1425,6 +1456,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 <tr>
 <td>JSON web signature (JWS) using RSxxx &amp; PSxxx algorithms (verify only)</td>
@@ -1435,10 +1467,12 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 <tr>
 <td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_jwe_rsa_oaep_256_encryption.md">JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm</a></td>
 <td>encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1759,7 +1793,7 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
-<p>Last update: Apr. 21st 2021</p>
+<p>Last update: Apr. 28th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

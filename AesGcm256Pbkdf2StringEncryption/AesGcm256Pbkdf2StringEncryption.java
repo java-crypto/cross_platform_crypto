@@ -67,7 +67,7 @@ public class AesGcm256Pbkdf2StringEncryption {
         SecretKeySpec secretKeySpec = new SecretKeySpec(secretKeyFactory.generateSecret(keySpec).getEncoded(), "AES");
         byte[] nonce = generateRandomNonce();
         GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(16 * 8, nonce);
-        Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, gcmParameterSpec);
         byte[] ciphertextWithTag = cipher.doFinal(data.getBytes(StandardCharsets.UTF_8));
         byte[] ciphertext = new byte[(ciphertextWithTag.length-16)];
@@ -92,7 +92,7 @@ public class AesGcm256Pbkdf2StringEncryption {
         SecretKeyFactory secretKeyFactory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
         KeySpec keySpec = new PBEKeySpec(password, salt, PBKDF2_ITERATIONS, 32 * 8);
         SecretKeySpec secretKeySpec = new SecretKeySpec(secretKeyFactory.generateSecret(keySpec).getEncoded(), "AES");
-        Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(16 * 8, nonce);
         cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, gcmParameterSpec);
         return new String(cipher.doFinal(encryptedData));

@@ -44,12 +44,3 @@ public class AesCbc256StringDecryptionOnly {
     }
 }
 
-/*
-AES CBC 256 String Decryption only
-
-* * * Decryption * * *
-decryptionKey (Base64): d3+KZq3lsdy5Hgd1VRVQFUhA9jU0PaBHTG2LG2PazQM=
-ciphertext (Base64): 8GhkycnbzDo5WbRol5zfCQ==:gQrTOJdobbI4fuCHCfu5eqKFYCaw/AM6xMK2o+xCXB0MeAQ7rFbXAbAE3Ex+bD8c
-input is (Base64) iv : (Base64) ciphertext
-plaintext:  The quick brown fox jumps over the lazy dog
- */

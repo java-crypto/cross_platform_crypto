@@ -91,20 +91,3 @@ public class AesCbc256Pbkdf2StringEncryption_Full {
         return Base64.getDecoder().decode(input);
     }
 }
-
-/*
-complete run data
-AES CBC 256 String encryption with PBKDF2 derived key
-plaintext:  The quick brown fox jumps over the lazy dog
-encryptionKey (Base64): sI5RagrofCpzDe1ucLI7cHb3GILAMsySr0A8CD04o0I=
-
-* * * Encryption * * *
-ciphertext (Base64): Vq5mhwLqgl2LoC/QNRKWA/5YpjrlZ1f3504NzpwEhUA=:QiEdP5gfXzNQwWcxNk4p1w==:Rwy3LC7SbeyDUREiitjjdtioQWkctU9H9OEvzv1ctWymzVh3A0SFQN4Ek/Ku4nVp
-output is (Base64) salt : (Base64) iv : (Base64) ciphertext
-
-* * * Decryption * * *
-AES CBC 256 String decryption with PBKDF2 derived key
-ciphertext (Base64): Vq5mhwLqgl2LoC/QNRKWA/5YpjrlZ1f3504NzpwEhUA=:QiEdP5gfXzNQwWcxNk4p1w==:Rwy3LC7SbeyDUREiitjjdtioQWkctU9H9OEvzv1ctWymzVh3A0SFQN4Ek/Ku4nVp
-input is (Base64) salt : (Base64) iv : (Base64) ciphertext
-plaintext:  The quick brown fox jumps over the lazy dog
- */

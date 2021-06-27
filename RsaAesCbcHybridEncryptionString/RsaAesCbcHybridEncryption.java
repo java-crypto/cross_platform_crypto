@@ -98,8 +98,8 @@ public class RsaAesCbcHybridEncryption {
         IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
-        String ciphertextBase64 = Base64.getEncoder().encodeToString(cipher.doFinal(data.getBytes(StandardCharsets.UTF_8)));
-        String ivBase64 = Base64.getEncoder().encodeToString(iv);
+        String ciphertextBase64 = base64Encoding(cipher.doFinal(data.getBytes(StandardCharsets.UTF_8)));
+        String ivBase64 = base64Encoding(iv);
         return ivBase64 + ":" + ciphertextBase64;
     }
 
@@ -188,7 +188,7 @@ public class RsaAesCbcHybridEncryption {
         privateKeyPEM = privateKeyPEM.replace("-----BEGIN PRIVATE KEY-----", "");
         privateKeyPEM = privateKeyPEM.replace("-----END PRIVATE KEY-----", "");
         privateKeyPEM = privateKeyPEM.replaceAll("[\\r\\n]+", "");
-        byte[] encoded = Base64.getDecoder().decode(privateKeyPEM);
+        byte[] encoded = base64Decoding(privateKeyPEM);
         KeyFactory kf = KeyFactory.getInstance("RSA");
         PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(encoded);
         PrivateKey privKey = (PrivateKey) kf.generatePrivate(keySpec);
@@ -200,7 +200,7 @@ public class RsaAesCbcHybridEncryption {
         publicKeyPEM = publicKeyPEM.replace("-----BEGIN PUBLIC KEY-----", "");
         publicKeyPEM = publicKeyPEM.replace("-----END PUBLIC KEY-----", "");
         publicKeyPEM = publicKeyPEM.replaceAll("[\\r\\n]+", "");
-        byte[] encoded = Base64.getDecoder().decode(publicKeyPEM);
+        byte[] encoded = base64Decoding(publicKeyPEM);
         KeyFactory kf = KeyFactory.getInstance("RSA");
         PublicKey pubKey = (PublicKey) kf.generatePublic(new X509EncodedKeySpec(encoded));
         return pubKey;

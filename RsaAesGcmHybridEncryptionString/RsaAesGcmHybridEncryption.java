@@ -102,7 +102,7 @@ public class RsaAesGcmHybridEncryption {
         byte[] nonce = generateRandomNonce();
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
         GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(16 * 8, nonce);
-        Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, gcmParameterSpec);
         byte[] ciphertextWithTag = cipher.doFinal(data.getBytes(StandardCharsets.UTF_8));
         byte[] ciphertext = new byte[(ciphertextWithTag.length-16)];
@@ -118,7 +118,7 @@ public class RsaAesGcmHybridEncryption {
     private static String aesGcmDecrypt(byte[] key, byte[] nonce, byte[] ciphertextWithoutTag, byte[] gcmTag)
             throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         byte[] encryptedData = concatenateByteArrays(ciphertextWithoutTag, gcmTag);
-        Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
         GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(16 * 8, nonce);
         cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, gcmParameterSpec);
@@ -202,7 +202,7 @@ public class RsaAesGcmHybridEncryption {
         privateKeyPEM = privateKeyPEM.replace("-----BEGIN PRIVATE KEY-----", "");
         privateKeyPEM = privateKeyPEM.replace("-----END PRIVATE KEY-----", "");
         privateKeyPEM = privateKeyPEM.replaceAll("[\\r\\n]+", "");
-        byte[] encoded = Base64.getDecoder().decode(privateKeyPEM);
+        byte[] encoded = base64Decoding(privateKeyPEM);
         KeyFactory kf = KeyFactory.getInstance("RSA");
         PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(encoded);
         PrivateKey privKey = (PrivateKey) kf.generatePrivate(keySpec);
@@ -214,7 +214,7 @@ public class RsaAesGcmHybridEncryption {
         publicKeyPEM = publicKeyPEM.replace("-----BEGIN PUBLIC KEY-----", "");
         publicKeyPEM = publicKeyPEM.replace("-----END PUBLIC KEY-----", "");
         publicKeyPEM = publicKeyPEM.replaceAll("[\\r\\n]+", "");
-        byte[] encoded = Base64.getDecoder().decode(publicKeyPEM);
+        byte[] encoded = base64Decoding(publicKeyPEM);
         KeyFactory kf = KeyFactory.getInstance("RSA");
         PublicKey pubKey = (PublicKey) kf.generatePublic(new X509EncodedKeySpec(encoded));
         return pubKey;

@@ -74,8 +74,8 @@ public class Curve25519KeyExchangeAesCbc256StringEncryption {
         IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
-        String ciphertextBase64 = Base64.getEncoder().encodeToString(cipher.doFinal(data.getBytes(StandardCharsets.UTF_8)));
-        String ivBase64 = Base64.getEncoder().encodeToString(iv);
+        String ciphertextBase64 = base64Encoding(cipher.doFinal(data.getBytes(StandardCharsets.UTF_8)));
+        String ivBase64 = base64Encoding(iv);
         return ivBase64 + ":" + ciphertextBase64;
     }
 

@@ -63,7 +63,7 @@ public class AesGcm256StringEncryption {
         byte[] nonce = generateRandomNonce();
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
         GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(16 * 8, nonce);
-        Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, gcmParameterSpec);
         byte[] ciphertextWithTag = cipher.doFinal(data.getBytes(StandardCharsets.UTF_8));
         byte[] ciphertext = new byte[(ciphertextWithTag.length-16)];
@@ -82,7 +82,7 @@ public class AesGcm256StringEncryption {
         byte[] ciphertextWithoutTag = base64Decoding(parts[1]);
         byte[] gcmTag = base64Decoding(parts[2]);
         byte[] encryptedData = concatenateByteArrays(ciphertextWithoutTag, gcmTag);
-        Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
         SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
         GCMParameterSpec gcmParameterSpec = new GCMParameterSpec(16 * 8, nonce);
         cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, gcmParameterSpec);

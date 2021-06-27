@@ -62,9 +62,9 @@ public class AesCbc256Pbkdf2StringEncryption_Full {
         IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
-        String ciphertextBase64 = Base64.getEncoder().encodeToString(cipher.doFinal(data.getBytes(StandardCharsets.UTF_8)));
-        String saltBase64 = Base64.getEncoder().encodeToString(salt);
-        String ivBase64 = Base64.getEncoder().encodeToString(iv);
+        String ciphertextBase64 = base64Encoding(cipher.doFinal(data.getBytes(StandardCharsets.UTF_8)));
+        String saltBase64 = base64Encoding(salt);
+        String ivBase64 = base64Encoding(iv);
         return saltBase64 + ":" + ivBase64 + ":" + ciphertextBase64;
     }
 
@@ -91,3 +91,4 @@ public class AesCbc256Pbkdf2StringEncryption_Full {
         return Base64.getDecoder().decode(input);
     }
 }
+

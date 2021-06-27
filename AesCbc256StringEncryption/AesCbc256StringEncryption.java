@@ -33,7 +33,6 @@ public class AesCbc256StringEncryption {
 
         // decryption
         System.out.println("\n* * * Decryption * * *");
-        String decryptionKeyBase64Node = "27YHPLw76nkx3s7G6AOSNAeNW7xOR/snCIAUVt24DBM=";
         String decryptionKeyBase64 = encryptionKeyBase64; // full
         String ciphertextDecryptionBase64 = ciphertextBase64;
         System.out.println("decryptionKey (Base64): " + decryptionKeyBase64);

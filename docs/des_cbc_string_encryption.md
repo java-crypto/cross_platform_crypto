@@ -46,20 +46,19 @@ The program follows the usual sequence:
 
 **This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
-The following links provide the solutions in code and an online compiler that runs the code.
+The following links provide the solutions in code and an online compiler that runs the code. The codes are for DES and TDES algorithm with CBC mode.
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../DesCbcStringEncryption/DesCbcStringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcJavaAesCbc256StringEncryptionFull#Main.java/)
-| [PHP](../DesCbcStringEncryption/DesCbcStringEncryption.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPhpAesCbc256StringEncryptionFull/)
-| [C#](../DesCbcStringEncryption/DesCbcStringEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCsharpAesCbc256StringEncryptionFull#main.cs/)
-| [Javascript CryptoJs](../DesCbcStringEncryption/DesCbcStringEncryptionCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256StringEncryptionFull#index.js/)
-| [NodeJS Crypto](../DesCbcStringEncryption/DesCbcStringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256StringEncryptionFull#index.js/)
-| [NodeJS node-forge](../DesCbcStringEncryption/DesCbcStringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256StringEncryptionFull#index.js/)
-| [Python](../DesCbcStringEncryption/DesCbcStringEncryption.py) *1) | :white_check_mark: | [repl.it CpcPythonAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256StringEncryptionFull#main.py/)
-| [Go](../DesCbcStringEncryption/DesCbcStringEncryption.go) | :white_check_mark: | [repl.it CpcGoAesCbc256StringEncryptionFull](https://repl.it/@javacrypto/CpcGoAesCbc256StringEncryptionFull#main.go/)
-| [Dart](../DesCbcStringEncryption/DesCbcStringEncryption.dart) *2) | :white_check_mark: | [replit.com  CpcDartDesCbcStringEncryption]
-
+| [Java](../DesCbcStringEncryption/DesCbcStringEncryption.java) | :white_check_mark: | [replit.com CpcJavaDesCbcStringEncryption](https://replit.com/@javacrypto/CpcJavaDesCbcStringEncryption#Main.java/)
+| [PHP](../DesCbcStringEncryption/DesCbcStringEncryption.php) | :white_check_mark: | [replit.com  CpcPhpDesCbcStringEncryption](https://replit.com/@javacrypto/CpcPhpDesCbcStringEncryption#main.php/)
+| [C#](../DesCbcStringEncryption/DesCbcStringEncryption.cs) | :white_check_mark: | [replit.com CpcCsharpDesCbcStringEncryption](https://replit.com/@javacrypto/CpcCsharpDesCbcStringEncryption#main.cs/)
+| [Javascript CryptoJs](../DesCbcStringEncryption/DesCbcStringEncryptionCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsDesCbcStringEncryption](https://replit.com/@javacrypto/CpcCryptoJsDesCbcStringEncryption#index.js/)
+| [NodeJS Crypto](../DesCbcStringEncryption/DesCbcStringEncryptionNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoDesCbcStringEncryption](https://replit.com/@javacrypto/CpcNodeJsCryptoDesCbcStringEncryption#index.js/)
+| [NodeJS node-forge](../DesCbcStringEncryption/DesCbcStringEncryptionNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsDesCbcStringEncryption](https://replit.com/@javacrypto/CpcNodeJsDesCbcStringEncryption#index.js/)
+| [Python](../DesCbcStringEncryption/DesCbcStringEncryption.py) *1) | :white_check_mark: | [replit.com CpcPythonDesCbcStringEncryption](https://replit.com/@javacrypto/CpcPythonDesCbcStringEncryption#main.py/)
+| [Go](../DesCbcStringEncryption/DesCbcStringEncryption.go) | :white_check_mark: | [replit.com CpcGoDesCbcStringEncryption](https://replit.com/@javacrypto/CpcGoDesCbcStringEncryption#main.go/)
+| [Dart](../DesCbcStringEncryption/DesCbcStringEncryption.dart) *2) | :white_check_mark: | no online compiler available)
 
 *1) you need the external library pycryptodome, version 3.9.9
 

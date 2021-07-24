@@ -1,14 +1,22 @@
 # Cross-platform cryptography
 
-## DES CBC mode string encryption
+## Triple DES CBC mode string encryption
 
 Before **AES** was selected as "standard encryption algorithm" everyone used **DES** ("Data Encryption Standard") as "secure encryption algorithm". Although never confirmed it should be named as **broken** and should be nevermore in use, but up to now there are still questions about "migration" of DES functions.
+
+This article is about a variant of the original DES algorithm called **Triple DES algorithm**. It's so called because it applies the DES cipher algorithm three times to each data block. The key length is of 3 * 8 = 24 bytes in total.
 
 Let's concentrate on the implementation details - there are 3 main parameters that need to be equal when crossing the platforms to decrypt the ciphertext.
 
 **First parameter: the length of the key**
 
-A DES key has just one "allowed" key length: 64 bits = 8 byte. There is a variant of DES called **TripleDES** still in use, but that's another [article](tdes_cbc_string_encryption.md). The main problem is that on each oktet (8 bit) ONE byte is reserved for a parity check, so in the end the real key length is only 56 bit = 7 byte and that's much too small for todays computing power.
+A TDES key has a key length of 192 bits = 24 byte (so called "3 keys DES"). There is a variant available with a key length of 16 byte and it is called "2 keys DES" but the key is enhanced to 24 bytes this way:
+
+```plaintext
+16 bytes key: 12345678abcdefgh
+enhancement takes the 8 starting bytes and appends it to the end
+24 bytes key: 12345678abcdefgh12345678
+```
 
 **Second parameter: the mode of operation**
 
@@ -19,11 +27,11 @@ There are several DES modes defined and here we are using the most common one - 
 The used CBC mode is a block algorithm means that the encryption (and decryption) is done in blocks of 8 bytes of data. There are only a few scenarios where you have to handle exact 8 bytes of data - in all other cases you have to fill up the plaintext to a length of multiple of 8. There are some padding algorithms available and our programs will use the PKCS#5 or PKCS#7 padding (Java names this padding PKCS#5, most other languages use PKCS#7).
 
 ### Is this encryption secure?
-The answer is simple - **DES encryption is BROKEN and UNSECURE**, please do not use it any longer.
+The answer is simple - **DES encryption is BROKEN and UNSECURE**, but the longer TDES algorithm seems to be unbroken, but please do not use DES nor TDES any longer.
 
-### Is there a more secure version of DES available?
+### Is there a less secure version of TDES available?
 
-Beneath of changing the algorithm to e.g. AES or Chacha20, there is a variant of DES still in use that is named **TripleDES** or short **TDES** and it is named as unbroken (I heared from Verizone that they encrypt credit card data for payments with TDES). For an implementation of TDES see my separate article [TripleDES CBC mode string encryption](tdes_cbc_string_encryption.md).
+Beneath of changing the algorithm to e.g. AES or Chacha20, there is a variant of TDES (the "basic one") available called **DES**, see my separate article [DES CBC mode string encryption](des_cbc_string_encryption.md).
 
 ### steps in the program
 
@@ -33,6 +41,7 @@ The program follows the usual sequence:
 3. starts the encryption process
 4. again for reasons of comparison it uses a fixed IV (generate a random initialization vector in production)
 5. set the encryption parameters
+5b. Note: some frameworks accept a 16 byte long key and enhance them automatically (like e.g. Python), other frameworks need a dedicated enhancement function (like e.g. Java)
 6. encrypt the plaintext, prepends the iv to the ciphertext and show the result ( iv:ciphertext) in Base64 encoding
 7. start the decryption process
 8. Base64 decoding of the encryption key and the ciphertext

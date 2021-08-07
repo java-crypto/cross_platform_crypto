@@ -12,7 +12,7 @@ A DES key has just one "allowed" key length: 64 bits = 8 byte. There is a varian
 
 **Second parameter: the mode of operation**
 
-There are several DES modes defined and here we are using the most common one - the CBC mode (Cipher Block Chaining mode). 
+There are several DES modes defined and here we are using the most common one - the **CBC mode** (Cipher Block Chaining mode). Another common mode is the **ECB mode** [which is **UNSECURE in general**], a sample implementation can be found here [DES ECB mode string encryption](des_ecb_string_encryption.md).
 
 **Third parameter: the padding of the data**
 
@@ -113,6 +113,6 @@ input is (Base64) iv : (Base64) ciphertext
 plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Jul. 24rd 2021
+Last update: Jul. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -10,7 +10,7 @@ Let's concentrate on the implementation details - there are 3 main parameters th
 
 **First parameter: the length of the key**
 
-A TDES key has a key length of 192 bits = 24 byte (so called "3 keys DES"). There is a variant available with a key length of 16 byte and it is called "2 keys DES" but the key is enhanced to 24 bytes this way:
+A TDES key has a key length of 192 bits = 24 byte (so called "3 keys DES"). There is a variant available with a key length of 16 byte and it is called "2 keys DES" but the key is just enhanced to 24 bytes this way [so the effective key length is 2 * (8 - 1 parity byte) = 14 bytes]:
 
 ```plaintext
 16 bytes key: 12345678abcdefgh
@@ -20,14 +20,14 @@ enhancement takes the 8 starting bytes and appends it to the end
 
 **Second parameter: the mode of operation**
 
-There are several DES modes defined and here we are using the most common one - the CBC mode (Cipher Block Chaining mode). 
+There are several DES modes defined and here we are using the most common one - the **CBC mode** (Cipher Block Chaining mode). Another common mode is the **ECB mode** [which is **UNSECURE in general**], a sample implementation can be found here [TDES ECB mode string encryption](tdes_ecb_string_encryption.md).
 
 **Third parameter: the padding of the data**
 
 The used CBC mode is a block algorithm means that the encryption (and decryption) is done in blocks of 8 bytes of data. There are only a few scenarios where you have to handle exact 8 bytes of data - in all other cases you have to fill up the plaintext to a length of multiple of 8. There are some padding algorithms available and our programs will use the PKCS#5 or PKCS#7 padding (Java names this padding PKCS#5, most other languages use PKCS#7).
 
 ### Is this encryption secure?
-The answer is simple - **DES encryption is BROKEN and UNSECURE**, but the longer TDES algorithm seems to be unbroken, but please do not use DES nor TDES any longer.
+The answer is simple - **DES encryption is BROKEN and UNSECURE**, but the longer TDES algorithm seems to be unbroken, but please do not use nether DES nor TDES any longer.
 
 ### Is there a less secure version of TDES available?
 
@@ -41,7 +41,7 @@ The program follows the usual sequence:
 3. starts the encryption process
 4. again for reasons of comparison it uses a fixed IV (generate a random initialization vector in production)
 5. set the encryption parameters
-5b. Note: some frameworks accept a 16 byte long key and enhance them automatically (like e.g. Python), other frameworks need a dedicated enhancement function (like e.g. Java)
+5b. Note: some frameworks accept a 16 byte long key and enhance them automatically (like e.g. Python), other frameworks need a dedicated enhancement function (like e.g. Java "tdes2ToDes3Key")
 6. encrypt the plaintext, prepends the iv to the ciphertext and show the result ( iv:ciphertext) in Base64 encoding
 7. start the decryption process
 8. Base64 decoding of the encryption key and the ciphertext
@@ -122,6 +122,6 @@ input is (Base64) iv : (Base64) ciphertext
 plaintext:  The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Jul. 24rd 2021
+Last update: Jul. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

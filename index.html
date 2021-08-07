@@ -520,7 +520,7 @@ based on dark.css by Vladimir Epifanov
     <h1 id="cross-platform-cryptography">Cross-platform cryptography</h1>
 <h2 id="general-information-and-overview">General information and overview</h2>
 <p>This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be &quot;secure&quot; but explain how the crypto routines are compatible with other platforms.</p>
-<p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>, <strong>Python</strong> (for selected programs) and <strong>Golang</strong> (for selected programs)  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
+<p>I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: <strong>Java</strong>, <strong>PHP</strong>, <strong>C#</strong>, <strong>Javascript - CryptoJs</strong>, <strong>NodeJs Crypto</strong>,  <strong>NodeJs node-forge</strong>, <strong>Python</strong> (for selected programs), <strong>Golang</strong> (for selected programs) and <strong>Dart</strong> (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers (except Dart as no online compiler can consume external libraries) to see what the output is and what happens when you change some parameters. For selected assignments there is a <strong>WebCrypto</strong> solution available, that will run in your (modern) browser. For very rare programs I provide an <a href="#readme-openssl"><strong>OpenSSL</strong></a> solution.</p>
 <p>Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the <a href="#readme-libsodium"><strong>Libsodium</strong></a> project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section.</p>
 <p>Sometimes you may have read about a &quot;JWT&quot; or &quot;JWT token&quot;, that is short form of a <strong>JSON web token</strong> or <strong>JWT</strong>. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some <a href="#readme-jwt"><strong>JWT web token</strong></a> solutions.</p>
 <p>A special chapter deals with the future of cryptography; and that is the <strong>Post Quantum Cryptography</strong>. Although the quantum computers are not on the market at the moment they will be there and cause catastrophic impacts on cryptography as they may been able to solve the RSA- and EC-curve problems and subsequently all RSA- and EC-curve encryption and signature become worthless. Visit the chapter <a href="#readme-pqc"><strong>PQC Post Quantum Cryptography</strong></a> at the end.</p>
@@ -544,7 +544,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_aes_key.md">generate a 32 byte long AES key</a></td>
+<td><a href="docs/generate_aes_key.md">generate a 32 byte long AES key</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -556,7 +556,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_initvector.md">generate a 16 byte long initvector</a></td>
+<td><a href="docs/generate_initvector.md">generate a 16 byte long initvector</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -568,7 +568,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_nonce.md">generate a 12 byte long nonce</a></td>
+<td><a href="docs/generate_nonce.md">generate a 12 byte long nonce</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -580,7 +580,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/base64_encoding_decoding.md">Base64 encoding &amp; decoding</a></td>
+<td><a href="docs/base64_encoding_decoding.md">Base64 encoding &amp; decoding</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -592,7 +592,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/binary_data_hex_string.md">binary data to a hex string &amp; back</a></td>
+<td><a href="docs/binary_data_hex_string.md">binary data to a hex string &amp; back</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -604,7 +604,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/sha256_hash.md">SHA256 hashing</a></td>
+<td><a href="docs/sha256_hash.md">SHA256 hashing</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -616,7 +616,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/hmac_256_calculation.md">HMAC 256 calculation</a></td>
+<td><a href="docs/hmac_256_calculation.md">HMAC 256 calculation</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -628,7 +628,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pbkdf2.md">PBKDF2 key derivation</a></td>
+<td><a href="docs/pbkdf2.md">PBKDF2 key derivation</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -640,8 +640,8 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_generation.md">Generate RSA keys</a></td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_generation.md">see explanation</a></td>
+<td><a href="docs/rsa_key_generation.md">Generate RSA keys</a></td>
+<td style="text-align: center;"><a href="docs/rsa_key_generation.md">see explanation</a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -652,7 +652,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/curve25519_key_generation.md">Generate Curve 25519 keys</a></td>
+<td><a href="docs/curve25519_key_generation.md">Generate Curve 25519 keys</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -664,8 +664,8 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_key_generation.md">Generate Elliptic keys</a></td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_key_generation.md">see explanation</a></td>
+<td><a href="docs/ec_key_generation.md">Generate Elliptic keys</a></td>
+<td style="text-align: center;"><a href="docs/ec_key_generation.md">see explanation</a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -695,7 +695,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_string_encryption.md">CBC-mode String Encryption</a></td>
+<td><a href="docs/aes_cbc_256_string_encryption.md">CBC-mode String Encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -707,7 +707,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_string_decryption_only.md">CBC-mode String Decryption only</a></td>
+<td><a href="docs/aes_cbc_256_string_decryption_only.md">CBC-mode String Decryption only</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -719,7 +719,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;">❌</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_string_encryption.md">CBC-mode PBKDF2 String Encryption</a></td>
+<td><a href="docs/aes_cbc_256_pbkdf2_string_encryption.md">CBC-mode PBKDF2 String Encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -731,7 +731,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_string_decryption_only.md">CBC-mode PBKDF2 String Decryption only</a></td>
+<td><a href="docs/aes_cbc_256_pbkdf2_string_decryption_only.md">CBC-mode PBKDF2 String Decryption only</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -743,7 +743,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;">❌</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md">CBC-mode PBKDF2 HMAC String Encryption</a></td>
+<td><a href="docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md">CBC-mode PBKDF2 HMAC String Encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -755,7 +755,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_256_passphrase_string_encryption.md">CBC-mode passphrase String Encryption</a></td>
+<td><a href="docs/aes_cbc_256_passphrase_string_encryption.md">CBC-mode passphrase String Encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -767,7 +767,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_gcm_256_string_encryption.md">GCM-mode String Encryption</a></td>
+<td><a href="docs/aes_gcm_256_string_encryption.md">GCM-mode String Encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -779,7 +779,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: right;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_gcm_256_pbkdf2_string_encryption.md">GCM-mode PBKDF2 String Encryption</a></td>
+<td><a href="docs/aes_gcm_256_pbkdf2_string_encryption.md">GCM-mode PBKDF2 String Encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -815,7 +815,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/aes_cbc_tampering.md">AES CBC-mode tampering</a></td>
+<td><a href="docs/aes_cbc_tampering.md">AES CBC-mode tampering</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">in Java as it is for demonstration only</td>
 </tr>
@@ -839,7 +839,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/chacha20_poly1305_string_encryption.md">ChaCha20-Poly1305 String encryption with random key</a></td>
+<td><a href="docs/chacha20_poly1305_string_encryption.md">ChaCha20-Poly1305 String encryption with random key</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -852,6 +852,79 @@ based on dark.css by Vladimir Epifanov
 </tr>
 </tbody>
 </table>
+<h3 id="des-and-tripledes-encryption">DES and TripleDES encryption</h3>
+<table>
+<thead>
+<tr>
+<th>Solution</th>
+<th style="text-align: center;">Jav</th>
+<th style="text-align: center;">PHP</th>
+<th style="text-align: center;">C#</th>
+<th style="text-align: center;">CJS</th>
+<th style="text-align: center;">Ndc</th>
+<th style="text-align: center;">Nfo</th>
+<th style="text-align: center;">Web</th>
+<th style="text-align: center;">Pyt</th>
+<th style="text-align: center;">Go</th>
+<th style="text-align: center;">Dar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="docs/des_cbc_string_encryption.md">DES CBC mode String encryption</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔜</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="docs/des_ecb_string_encryption.md">DES ECB mode String encryption</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔜</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="docs/tdes_cbc_string_encryption.md">TripleDES CBC mode String encryption</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔜</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="docs/tdes_ecb_string_encryption.md">TripleDES ECB mode String encryption</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🔜</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
+<p>Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart</p>
 <h3 id="rsa-encryption">RSA encryption</h3>
 <table>
 <thead>
@@ -870,7 +943,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encryption_pkcs15_string.md">RSA PKCS 1.5 padding String</a></td>
+<td><a href="docs/rsa_encryption_pkcs15_string.md">RSA PKCS 1.5 padding String</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -882,7 +955,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encryption_oaep_sha1_string.md">RSA OEAP padding SHA-1 String</a></td>
+<td><a href="docs/rsa_encryption_oaep_sha1_string.md">RSA OEAP padding SHA-1 String</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -894,7 +967,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_decryption_oaep_sha1_string.md">RSA OEAP padding SHA-1 String decryption only</a></td>
+<td><a href="docs/rsa_decryption_oaep_sha1_string.md">RSA OEAP padding SHA-1 String decryption only</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -906,7 +979,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encryption_oaep_sha256_string.md">RSA OEAP padding SHA-256 String</a></td>
+<td><a href="docs/rsa_encryption_oaep_sha256_string.md">RSA OEAP padding SHA-256 String</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -938,7 +1011,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md">RSA String Signature PKCS#1.5 (full)</a></td>
+<td><a href="docs/rsa_signature_string.md">RSA String Signature PKCS#1.5 (full)</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -951,7 +1024,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string_verification_only.md">RSA String Signature PKCS#1.5 Verification only</a></td>
+<td><a href="docs/rsa_signature_string_verification_only.md">RSA String Signature PKCS#1.5 Verification only</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -964,7 +1037,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_pss_string.md">RSA String Signature PSS (full)</a></td>
+<td><a href="docs/rsa_signature_pss_string.md">RSA String Signature PSS (full)</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -977,7 +1050,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encrypted_private_key_example_signature_string.md">RSA encrypted private key example using signature with PKCS#1.5 padding</a></td>
+<td><a href="docs/rsa_encrypted_private_key_example_signature_string.md">RSA encrypted private key example using signature with PKCS#1.5 padding</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1002,31 +1075,31 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_generation.md">How to generate RSA key pairs</a></td>
+<td><a href="docs/rsa_key_generation.md">How to generate RSA key pairs</a></td>
 <td style="text-align: center;">creation of RSA key pairs with OpenSSL</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_conversion.md">How to convert RSA keys</a></td>
+<td><a href="docs/rsa_key_conversion.md">How to convert RSA keys</a></td>
 <td style="text-align: center;">convert keys between XML- and PEM-format</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_sample_keypair.md">RSA sample keys</a></td>
+<td><a href="docs/rsa_sample_keypair.md">RSA sample keys</a></td>
 <td style="text-align: center;">for my encryption and signature examples I'm using these keys</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_formats.md">RSA key formats</a></td>
+<td><a href="docs/rsa_key_formats.md">RSA key formats</a></td>
 <td style="text-align: center;">explanation of the most used key formats</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_sample_encrypted_private_key.md">RSA encrypted private key</a></td>
+<td><a href="docs/rsa_sample_encrypted_private_key.md">RSA encrypted private key</a></td>
 <td style="text-align: center;">as you should protect your keys I recommend to work with encrypted private keys</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_encrypted_private_key_example_signature_string.md">RSA encrypted private key example using signature with PKCS#1.5 padding</a></td>
+<td><a href="docs/rsa_encrypted_private_key_example_signature_string.md">RSA encrypted private key example using signature with PKCS#1.5 padding</a></td>
 <td style="text-align: center;">example for the practical usage of encrypted keys</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_sample_encrypted_private_key_manual.md">RSA encrypted private key - decrypt manually</a></td>
+<td><a href="docs/rsa_sample_encrypted_private_key_manual.md">RSA encrypted private key - decrypt manually</a></td>
 <td style="text-align: center;">how to parse an encrypted private key</td>
 </tr>
 </tbody>
@@ -1049,7 +1122,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_aes_hybrid_encryption_string.md">RSA AES CBC 256 hybrid encryption</a></td>
+<td><a href="docs/rsa_aes_hybrid_encryption_string.md">RSA AES CBC 256 hybrid encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1061,7 +1134,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_aes_gcm_hybrid_encryption_string.md">RSA AES GCM 256 hybrid encryption</a></td>
+<td><a href="docs/rsa_aes_gcm_hybrid_encryption_string.md">RSA AES GCM 256 hybrid encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1090,7 +1163,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/curve25519_key_exchange_aes_cbc_256_string_encryption.md">Curve 25519 key exchange &amp; AES CBC mode 256 string encryption</a></td>
+<td><a href="docs/curve25519_key_exchange_aes_cbc_256_string_encryption.md">Curve 25519 key exchange &amp; AES CBC mode 256 string encryption</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1112,11 +1185,11 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_key_generation.md">EC key generation</a></td>
+<td><a href="docs/ec_key_generation.md">EC key generation</a></td>
 <td style="text-align: center;">creation of EC key pairs with OpenSSL</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_sample_keypair.md">EC sample keys</a></td>
+<td><a href="docs/ec_sample_keypair.md">EC sample keys</a></td>
 <td style="text-align: center;">sample key pair for curve SECP256R1 = P-256 = PRIME256V1</td>
 </tr>
 </tbody>
@@ -1140,7 +1213,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_ieee_p1363_string.md">ECDSA String Signature IEEE-P1363 encoding </a></td>
+<td><a href="docs/ecdsa_signature_ieee_p1363_string.md">ECDSA String Signature IEEE-P1363 encoding </a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1153,7 +1226,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_der_string.md">ECDSA String Signature DER encoding </a></td>
+<td><a href="docs/ecdsa_signature_der_string.md">ECDSA String Signature DER encoding </a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
@@ -1166,7 +1239,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_conversion.md">ECDSA signature converter DER ← → IEEE P1363 encoding </a></td>
+<td><a href="docs/ecdsa_signature_conversion.md">ECDSA signature converter DER ← → IEEE P1363 encoding </a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
@@ -1197,7 +1270,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_overview.md">Libsodium overview</a></td>
+<td><a href="docs/libsodium_overview.md">Libsodium overview</a></td>
 <td>general information about Libsodium (&quot;NaCl&quot;, &quot;Sodium&quot;) cryptography</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1208,8 +1281,8 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_secretbox_encryption_string.md">generate a random key</a></td>
-<td>see the examples in  <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_secretbox_encryption_string.md">authenticated string encryption with a random key</a></td>
+<td><a href="docs/libsodium_secretbox_encryption_string.md">generate a random key</a></td>
+<td>see the examples in  <a href="docs/libsodium_secretbox_encryption_string.md">authenticated string encryption with a random key</a></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1219,7 +1292,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/curve25519_key_generation.md">generate a curve 25519 key pair</a></td>
+<td><a href="docs/curve25519_key_generation.md">generate a curve 25519 key pair</a></td>
 <td>generate a curve X25519 private key and public key pair in Base64 encoding</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1230,7 +1303,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/x25519_public_key_generation.md">derive the curve X25519 public key from a secret key</a></td>
+<td><a href="docs/x25519_public_key_generation.md">derive the curve X25519 public key from a secret key</a></td>
 <td>generate the X25519 public key from a secret key in Base64 encoding</td>
 <td style="text-align: center;">🔜</td>
 <td style="text-align: center;">🔜</td>
@@ -1241,7 +1314,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_ed25519_keypair.md">generate a curve ED25519 key pair</a></td>
+<td><a href="docs/generate_ed25519_keypair.md">generate a curve ED25519 key pair</a></td>
 <td>generate a curve ED25519 private key and public key pair in Base64 encoding</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1252,7 +1325,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/generate_ed25519_keypair.md">generate a curve ED25519 public key from a private key</a></td>
+<td><a href="docs/generate_ed25519_keypair.md">generate a curve ED25519 public key from a private key</a></td>
 <td>generate an ED25519 public key from a private key in Base64 encoding</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1263,7 +1336,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/argon2.md">Argon 2 password derivation function</a></td>
+<td><a href="docs/argon2.md">Argon 2 password derivation function</a></td>
 <td>derives a password from a passphrase using the &quot;modern&quot; Argon2id algorithm</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1274,7 +1347,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/argon2_parameter.md">Argon 2 parameter</a></td>
+<td><a href="docs/argon2_parameter.md">Argon 2 parameter</a></td>
 <td>describes the parameters used in Argon 2 algorithm</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1285,7 +1358,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/chacha20_poly1305_string_encryption.md">ChaCha20-Poly1305 String encryption with random key</a></td>
+<td><a href="docs/chacha20_poly1305_string_encryption.md">ChaCha20-Poly1305 String encryption with random key</a></td>
 <td>encrypts a string on basis of a  <strong>randomly generated encryption key</strong>, using the <strong>ChaCha20 cipher</strong> for encryption and the <strong>Poly1305 MAC</strong> for authentication</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1296,7 +1369,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_secretbox_encryption_string.md">Libsodium authenticated string encryption with a random key (secret box)</a></td>
+<td><a href="docs/libsodium_secretbox_encryption_string.md">Libsodium authenticated string encryption with a random key (secret box)</a></td>
 <td>encrypts a string on basis of a <strong>randomly generated encryption key</strong>, using the <strong>XSalsa20 stream cipher</strong> for encryption and the <strong>Poly1305 MAC</strong> for authentication</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1307,7 +1380,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_cryptobox_encryption_string.md">Libsodium crypto box authenticated hybrid string encryption</a></td>
+<td><a href="docs/libsodium_cryptobox_encryption_string.md">Libsodium crypto box authenticated hybrid string encryption</a></td>
 <td>encrypts a string on basis of a <strong>X25519 curve</strong> key exchange, using the <strong>XSalsa20 stream cipher</strong> for encryption and the <strong>Poly1305 MAC</strong> for authentication</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1318,7 +1391,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_sealedcryptobox_encryption_string.md">Libsodium sealed box authenticated hybrid string encryption</a></td>
+<td><a href="docs/libsodium_sealedcryptobox_encryption_string.md">Libsodium sealed box authenticated hybrid string encryption</a></td>
 <td>encrypts a string on basis of a <strong>X25519 curve</strong> key exchange, using the <strong>XSalsa20 stream cipher</strong> for encryption and the <strong>Poly1305 MAC</strong> for authentication but without key exchange between the two partners</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1329,7 +1402,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/libsodium_signature_detached_string.md">Libsodium string signature (detached) with a private-public key</a></td>
+<td><a href="docs/libsodium_signature_detached_string.md">Libsodium string signature (detached) with a private-public key</a></td>
 <td>uses an ED25519 curve signature</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1351,28 +1424,28 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/openssl_overview.md">OpenSSL overview</a></td>
+<td><a href="docs/openssl_overview.md">OpenSSL overview</a></td>
 <td>general information about OpenSSL cryptography</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_key_generation.md">Generate a RSA key pair</a></td>
+<td><a href="docs/rsa_key_generation.md">Generate a RSA key pair</a></td>
 <td>generate a RSA private key and public key in PEM encoding</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ec_key_generation.md">Generate an EC key pair</a></td>
+<td><a href="docs/ec_key_generation.md">Generate an EC key pair</a></td>
 <td>generate an Elliptic curve (EC) private key and public key in PEM encoding</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_file_openssl.md">RSA file signature with PKCS#1.5 padding</a></td>
-<td>the signature and verification is compatible with solutions in  <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_string.md">RSA string signature with PKCS#1.5 padding</a></td>
+<td><a href="docs/rsa_signature_file_openssl.md">RSA file signature with PKCS#1.5 padding</a></td>
+<td>the signature and verification is compatible with solutions in  <a href="docs/rsa_signature_string.md">RSA string signature with PKCS#1.5 padding</a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/rsa_signature_pss_file_openssl.md">RSA file signature with PSS padding</a></td>
+<td><a href="docs/rsa_signature_pss_file_openssl.md">RSA file signature with PSS padding</a></td>
 <td>the signature and verification is compatible with solutions in  <a href="rsa_signature_pss_string.md">RSA string signature with PSS padding</a></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_file_openssl.md">Elliptic curve file signature DER encoding</a></td>
-<td>the signature and verification is compatible with solutions in <a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/ecdsa_signature_der_string.md">ECDSA String Signature DER encoding </a></td>
+<td><a href="docs/ecdsa_signature_file_openssl.md">Elliptic curve file signature DER encoding</a></td>
+<td>the signature and verification is compatible with solutions in <a href="docs/ecdsa_signature_der_string.md">ECDSA String Signature DER encoding </a></td>
 </tr>
 </tbody>
 </table>
@@ -1393,7 +1466,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_overview.md">JSON web token (JWT) overview</a></td>
+<td><a href="docs/json_web_token_overview.md">JSON web token (JWT) overview</a></td>
 <td>general information about JSON web token</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1404,7 +1477,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_structure.md">structure of a JSON web token (JWT)</a></td>
+<td><a href="docs/json_web_token_structure.md">structure of a JSON web token (JWT)</a></td>
 <td>explains the general structure of a JWT</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1426,7 +1499,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_jwk_keys.md">JSON Web JWK keys</a></td>
+<td><a href="docs/json_web_token_jwk_keys.md">JSON Web JWK keys</a></td>
 <td>standardized key format for JWT</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1437,7 +1510,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_jws_rs256_signature.md">JSON web signature (JWS) using RS256 algorithm</a></td>
+<td><a href="docs/json_web_token_jws_rs256_signature.md">JSON web signature (JWS) using RS256 algorithm</a></td>
 <td>sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1448,7 +1521,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_jws_ps256_signature.md">JSON web signature (JWS) using PS256 algorithm</a></td>
+<td><a href="docs/json_web_token_jws_ps256_signature.md">JSON web signature (JWS) using PS256 algorithm</a></td>
 <td>sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1470,7 +1543,7 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/json_web_token_jwe_rsa_oaep_256_encryption.md">JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm</a></td>
+<td><a href="docs/json_web_token_jwe_rsa_oaep_256_encryption.md">JSON web encryption (JWE) using RSA-OAEP-256 with A256GCM algorithm</a></td>
 <td>encrypt a JWT with a RSA key RSA-OAEP-256 and AES-256-GCM algorithm</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1493,22 +1566,22 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_overview.md">PQC overview</a></td>
+<td><a href="docs/pqc_overview.md">PQC overview</a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">several</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_overview_algorithm_facts.md">algorithms facts overview</a></td>
+<td><a href="docs/pqc_overview_algorithm_facts.md">algorithms facts overview</a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;">several</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_liboqs_overview.md">PQC with Liboqs library overview</a></td>
+<td><a href="docs/pqc_liboqs_overview.md">PQC with Liboqs library overview</a></td>
 <td style="text-align: center;">general overview about the OpenQuantumSafe library</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_overview_liboqs_algorithm_facts.md">liboqs algorithms facts overview</a></td>
+<td><a href="docs/pqc_overview_liboqs_algorithm_facts.md">liboqs algorithms facts overview</a></td>
 <td style="text-align: center;">information about key, ciphertext &amp; signature sizes</td>
 <td style="text-align: center;">Java binding</td>
 </tr>
@@ -1519,12 +1592,12 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td>Public key encryption</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_mceliece_encryption.md">McEliece</a></td>
+<td style="text-align: center;"><a href="docs/pqc_mceliece_encryption.md">McEliece</a></td>
 <td style="text-align: center;">Java</td>
 </tr>
 <tr>
 <td>Public key encryption</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_ntru_encryption.md">NTRU</a></td>
+<td style="text-align: center;"><a href="docs/pqc_ntru_encryption.md">NTRU</a></td>
 <td style="text-align: center;">Java</td>
 </tr>
 <tr>
@@ -1534,17 +1607,17 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td>key exchange (KEM)</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_chrystalskyber_kem.md">Chrystals-Kyber</a></td>
+<td style="text-align: center;"><a href="docs/pqc_chrystalskyber_kem.md">Chrystals-Kyber</a></td>
 <td style="text-align: center;">NodeJs</td>
 </tr>
 <tr>
 <td>key exchange (KEM)</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_sike_kem.md">Sike</a></td>
+<td style="text-align: center;"><a href="docs/pqc_sike_kem.md">Sike</a></td>
 <td style="text-align: center;">Java</td>
 </tr>
 <tr>
 <td>key exchange (KEM)</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_sike_liboqs_kem.md">Sike with Liboqs</a></td>
+<td style="text-align: center;"><a href="docs/pqc_sike_liboqs_kem.md">Sike with Liboqs</a></td>
 <td style="text-align: center;">Java</td>
 </tr>
 <tr>
@@ -1554,22 +1627,22 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td>signature</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_falcon_signature.md">FALCON</a></td>
+<td style="text-align: center;"><a href="docs/pqc_falcon_signature.md">FALCON</a></td>
 <td style="text-align: center;">Python</td>
 </tr>
 <tr>
 <td>signature</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_falcon_liboqs_signature.md">FALCON with Liboqs</a></td>
+<td style="text-align: center;"><a href="docs/pqc_falcon_liboqs_signature.md">FALCON with Liboqs</a></td>
 <td style="text-align: center;">Java binding</td>
 </tr>
 <tr>
 <td>signature</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_rainbow_signature.md">Rainbow</a></td>
+<td style="text-align: center;"><a href="docs/pqc_rainbow_signature.md">Rainbow</a></td>
 <td style="text-align: center;">Java</td>
 </tr>
 <tr>
 <td>signature</td>
-<td style="text-align: center;"><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/pqc_sphincs_signature.md">Sphincs</a></td>
+<td style="text-align: center;"><a href="docs/pqc_sphincs_signature.md">Sphincs</a></td>
 <td style="text-align: center;">Java</td>
 </tr>
 </tbody>
@@ -1586,7 +1659,7 @@ based on dark.css by Vladimir Epifanov
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_overview.md">MCRYPT migration overview</a></td>
+<td><a href="docs/mcrypt_overview.md">MCRYPT migration overview</a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1598,19 +1671,19 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 ECB</a></td>
+<td><a href="docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 ECB</a></td>
 <td style="text-align: center;">ECB mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 CBC</a></td>
+<td><a href="docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 CBC</a></td>
 <td style="text-align: center;">CBC mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 CTR</a></td>
+<td><a href="docs/mcrypt_rijndael128.md">MCRYPT Rijndael-128 CTR</a></td>
 <td style="text-align: center;">CTR mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
@@ -1622,19 +1695,19 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 ECB</a></td>
+<td><a href="docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 ECB</a></td>
 <td style="text-align: center;">ECB mode</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 CBC</a></td>
+<td><a href="docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 CBC</a></td>
 <td style="text-align: center;">CBC mode</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 CTR</a></td>
+<td><a href="docs/mcrypt_rijndael256.md">MCRYPT Rijndael-256 CTR</a></td>
 <td style="text-align: center;">CTR mode</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
@@ -1646,19 +1719,19 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_des.md">MCRYPT DES ECB</a></td>
+<td><a href="docs/mcrypt_des.md">MCRYPT DES ECB</a></td>
 <td style="text-align: center;">ECB mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_des.md">MCRYPT DES CBC</a></td>
+<td><a href="docs/mcrypt_des.md">MCRYPT DES CBC</a></td>
 <td style="text-align: center;">CBC mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_des.md">MCRYPT DES CTR</a></td>
+<td><a href="docs/mcrypt_des.md">MCRYPT DES CTR</a></td>
 <td style="text-align: center;">CTR mode</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
@@ -1670,19 +1743,19 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;"></td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_tdes.md">MCRYPT TDES ECB</a></td>
+<td><a href="docs/mcrypt_tdes.md">MCRYPT TDES ECB</a></td>
 <td style="text-align: center;">ECB mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_tdes.md">MCRYPT TDES CBC</a></td>
+<td><a href="docs/mcrypt_tdes.md">MCRYPT TDES CBC</a></td>
 <td style="text-align: center;">CBC mode</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td><a href="https://github.com/java-crypto/cross_platform_crypto/blob/main/docs/mcrypt_tdes.md">MCRYPT TDES CTR</a></td>
+<td><a href="docs/mcrypt_tdes.md">MCRYPT TDES CTR</a></td>
 <td style="text-align: center;">CTR mode</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
@@ -1704,7 +1777,7 @@ based on dark.css by Vladimir Epifanov
 </table>
 <p>not planned in future</p>
 <h3 id="which-platforms-are-supported-at-the-moment">Which platforms are supported at the moment?</h3>
-<p>I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like <a href="https://repl.it/">https://repl.it/</a>. Please don't ask if the programs will run on your system with a lower or higher version - just try it on your own.</p>
+<p>I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like <a href="https://replit.com/">https://replit.com/</a>. Please don't ask if the programs will run on your system with a lower or higher version - just try it on your own.</p>
 <p>A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. &quot;CryptoJs&quot;, NodeJs has a built-in &quot;Crypto&quot; or you can use &quot;node-forge&quot;).</p>
 <p>The few Javascript Webcrypto examples will run directly in your browser so you will need an actual one and Javascript is enabled.</p>
 <table>
@@ -1718,7 +1791,7 @@ based on dark.css by Vladimir Epifanov
 <tbody>
 <tr>
 <td>C#</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>Mono C# compiler version 6.8.0.123</td>
 </tr>
 <tr>
@@ -1738,22 +1811,22 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td>Java</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)</td>
 </tr>
 <tr>
 <td>Javascript CryptoJs</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>node v12.16.1, crypto-js version 4.0.0</td>
 </tr>
 <tr>
 <td>NodeJS Crypto</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>node v12.16.1, openssl 1.1.1g</td>
 </tr>
 <tr>
 <td>NodeJS node-forge</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>node v12.16.1, node-forge version 0.10.0</td>
 </tr>
 <tr>
@@ -1763,17 +1836,17 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td>PHP</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)</td>
 </tr>
 <tr>
 <td>PHP phpseclib</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">replit.com</td>
 <td>version 3</td>
 </tr>
 <tr>
 <td>Python</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>version 3.8.2 (default, Feb 26 2020, 02:56:10)</td>
 </tr>
 <tr>
@@ -1783,7 +1856,7 @@ based on dark.css by Vladimir Epifanov
 </tr>
 <tr>
 <td>Go</td>
-<td style="text-align: center;">repl.it</td>
+<td style="text-align: center;">replit.com</td>
 <td>version go 1.14 linux/amd64</td>
 </tr>
 <tr>
@@ -1791,9 +1864,14 @@ based on dark.css by Vladimir Epifanov
 <td style="text-align: center;">goplay.space</td>
 <td>version go 1.16.2</td>
 </tr>
+<tr>
+<td>Dart</td>
+<td style="text-align: center;">no online compiler available</td>
+<td>tested on 2.13.1</td>
+</tr>
 </tbody>
 </table>
-<p>Last update: Apr. 28th 2021</p>
+<p>Last update: Aug. 07th 2021</p>
 <p>The website is published under:  <a href="https://java-crypto.github.io/cross_platform_crypto//">https://java-crypto.github.io/cross_platform_crypto//</a></p>
 <p>If you are interested in much more information on cryptography in Java (and in German language) then visit my webpages <a href="http://javacrypto.bplaced.net/">http://javacrypto.bplaced.net</a> and <a href="http://java-crypto.bplaced.net/">http://java-crypto.bplaced.net</a>.</p>
 

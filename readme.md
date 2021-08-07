@@ -249,7 +249,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | goplay.space | version go 1.16.2 
 | Dart | no online compiler available | tested on 2.13.1
 
-Last update: Jul. 26th 2021
+Last update: Aug. 07th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

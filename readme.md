@@ -4,7 +4,7 @@
 
 This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
 
-I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**, **Python** (for selected programs) and **Golang** (for selected programs)  as long the functionality is available on the platform. You can test all programs with online compilers to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
+I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**, **Python** (for selected programs), **Golang** (for selected programs) and **Dart** (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers (except Dart as no online compiler can consume external libraries) to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
 
 Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the [**Libsodium**](#readme-libsodium) project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section. 
 
@@ -57,6 +57,16 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |  
 | [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
+### DES and TripleDES encryption ###
+
+| Solution | Jav | PHP | C# | CJS | Ndc |Nfo | Web | Pyt | Go | Dar |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |  :--: | 
+| [DES CBC mode String encryption](docs/des_cbc_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [DES ECB mode String encryption](docs/des_ecb_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [TripleDES CBC mode String encryption](docs/tdes_cbc_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [TripleDES ECB mode String encryption](docs/tdes_ecb_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
 
 ### RSA encryption ###
 
@@ -214,7 +224,7 @@ not planned in future
 
 ### Which platforms are supported at the moment?
 
-I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like [https://repl.it/](https://repl.it/). Please don't ask if the programs will run on your system with a lower or higher version - just try it on your own.
+I'm using an IDE for Java and PHP but for the other ones I'm using online compiler like [https://replit.com/](https://replit.com/). Please don't ask if the programs will run on your system with a lower or higher version - just try it on your own.
 
 A lot of solutions run with the built-in cryptographic modules but especially the Javascript-ones may need external libraries (pure Javascript will need e.g. "CryptoJs", NodeJs has a built-in "Crypto" or you can use "node-forge").
 
@@ -222,23 +232,24 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 
 | Language |  Online-compiler | framework version
 | ------ | :---: | ---- |
-| C# |  repl.it | Mono C# compiler version 6.8.0.123
+| C# |  replit.com | Mono C# compiler version 6.8.0.123
 | C# |  dotnetfiddle.net | .NET 4.7.2
 | C# |  dotnetfiddle.net | .NET 5
 | C# |  Bouncy Castle | version 1.89
-| Java |  repl.it | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
-| Javascript CryptoJs |  repl.it | node v12.16.1, crypto-js version 4.0.0
-| NodeJS Crypto |  repl.it | node v12.16.1, openssl 1.1.1g
-| NodeJS node-forge |  repl.it | node v12.16.1, node-forge version 0.10.0 
+| Java |  replit.com | OpenJDK Runtime Environment (build 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
+| Javascript CryptoJs |  replit.com | node v12.16.1, crypto-js version 4.0.0
+| NodeJS Crypto |  replit.com | node v12.16.1, openssl 1.1.1g
+| NodeJS node-forge |  replit.com | node v12.16.1, node-forge version 0.10.0 
 | OpenSSL |  | version 1.1.1g Windows x64
-| PHP |  repl.it | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
-| PHP phpseclib |   | version 3
-| Python | repl.it | version 3.8.2 (default, Feb 26 2020, 02:56:10)
+| PHP |  replit.com | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
+| PHP phpseclib | replit.com | version 3
+| Python | replit.com | version 3.8.2 (default, Feb 26 2020, 02:56:10)
 | Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
-| Go | repl.it | version go 1.14 linux/amd64
+| Go | replit.com | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
+| Dart | no online compiler available | tested on 2.13.1
 
-Last update: Apr. 28th 2021
+Last update: Jul. 26th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

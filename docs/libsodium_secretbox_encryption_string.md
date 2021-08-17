@@ -48,6 +48,9 @@ I do not provide a "decryption only" version as all functions are available in t
 | [Webcrypto / Browser](../LibsodiumSecretboxEncryptionString/libsodiumsecretboxencryptionstring.html) | :white_check_mark: | [your browser LibsodiumSecretboxStringEncryption.html](http://javacrypto.bplaced.net/cpcjs/secretbox/libsodiumsecretboxencryptionstring.html/)
 | [Python](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcPythonLibsodiumSecretboxEncryptionString#main.py/)
 | [Go](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.go) | :white_check_mark: | [repl.it CpcGoLibsodiumSecretboxStringEncryption](https://repl.it/@javacrypto/CpcGoLibsodiumSecretboxEncryptionString#main.go/)
+| [Dart](../LibsodiumSecretboxEncryptionString/LibsodiumSecretboxEncryptionString.dart) *1) | :white_check_mark: | no online compiler available
+
+*1) you need the external library "flutter_sodium" to run the code (flutter_sodium: ^0.2.0)
 
 This is an output (your will differ because a random element):
 
@@ -68,6 +71,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 25th 2021
+Last update: Aug. 17th 2021
 
 Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

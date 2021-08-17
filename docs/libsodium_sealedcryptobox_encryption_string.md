@@ -43,6 +43,9 @@ The following links provide the solutions in code and an online compiler that ru
 | [Browser sample decryption only](../LibsodiumSealedCryptoboxEncryptionString/libsodiumsealedcryptoboxencryptionsampledecryption.html) | :white_check_mark: | [your browser LibsodiumSealedCryptoboxStringSampleDecryption.html](http://javacrypto.bplaced.net/cpcjs/sealedcryptobox/libsodiumsealedcryptoboxencryptionsampledecryption.html/)
 | [Python](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.py) | :white_check_mark: | [repl.it CpcPythonSealedLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPythonLibsodiumSealedCryptoboxEncryptionString#main.py/)
 | [Go](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.go) | :white_check_mark: | [replit.com  CpcGoSealedLibsodiumCryptoboxStringEncryption](https://replit.com/@javacrypto/CpcGoLibsodiumSealedCryptoboxEncryptionString#main.go/)
+| [Dart](../LibsodiumSealedCryptoboxEncryptionString/LibsodiumSealedCryptoboxEncryptionString.dart) *1) | :white_check_mark: | no online compiler available
+
+*1) you need the external library "flutter_sodium" to run the code (flutter_sodium: ^0.2.0)
 
 This is an output (your will differ because a random element):
 
@@ -64,6 +67,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 25th 2021
+Last update: Aug. 17th 2021
 
 Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

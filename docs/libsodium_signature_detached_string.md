@@ -68,8 +68,11 @@ I do not provide a "verification only" version as all functions are available in
 | [Webcrypto / Browser](../LibsodiumSignatureDetachedString/libsodiumsignaturedetachedstring.html) | :white_check_mark: | [your browser LibsodiumSignatureDetachedString.html](http://javacrypto.bplaced.net/cpcjs/signature/libsodiumsignaturedetachedstring.html)
 | [Python](../LibsodiumSignatureDetachedString/LibsodiumSignatureDetachedString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumSignatureDetachedString](https://repl.it/@javacrypto/CpcPythonLibsodiumSignatureDetachedString#Main.py/)
 | [Go](../LibsodiumSignatureDetachedString/LibsodiumSignatureDetachedString.go) | :white_check_mark: | [repl.it CpcGoLibsodiumSignatureDetachedString](https://replit.com/@javacrypto/CpcGoLibsodiumSignatureDetachedString#main.go/)
+| [Dart](../LibsodiumSignatureDetachedString/LibsodiumSignatureDetachedString.dart) *2) | :white_check_mark: | no online compiler available
 
-note 1) at the time of writing the online-compiler dotnetfiddle.net does not work properly and claims about less resources - the code is running correctly but not online, sorry.
+note *1) at the time of writing the online-compiler dotnetfiddle.net does not work properly and claims about less resources - the code is running correctly but not online, sorry.
+
+*2) you need the external library "flutter_sodium" to run the code (flutter_sodium: ^0.2.0)
 
 This is an output:
 
@@ -86,6 +89,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Mar. 26th 2021
+Last update: Aug. 17th 2021
 
 Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

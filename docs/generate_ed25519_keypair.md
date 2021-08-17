@@ -49,11 +49,14 @@ c) store the key in a password protected zip- or rar- archive. This isn't less u
 | NodeJS forge | :x: | use above Javascript / NodeJs solution
 | [Webcrypto / Browser](../GenerateEd25519KeypairDerive/generateed25519keysderivation.html) | :white_check_mark: | [your browser GenerateEd25519KeysDerivation.html](http://javacrypto.bplaced.net/cpcjs/generateed25519keyderivation/generateed25519keysderivation.html)
 | [Python](../GenerateEd25519KeypairDerive/GenerateEd25519KeysDerivation.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumGenerateEd25519KeyDerivation](https://repl.it/@javacrypto/CpcPythonLibsodiumGenerateEd25519KeyDerivation#Main.py/)
+| [Dart](../GenerateEd25519KeypairDerive/GenerateCurve25519Keypair.dart) *2) | :white_check_mark: | no online compiler available
 
 note 1) at the time of writing the online-compiler dotnetfiddle.net does not work properly and claims about less ressources - the code is running correctly but not online, sorry.
 
+*2) you need the external library "flutter_sodium" to run the code (flutter_sodium: ^0.2.0)
+
 Go to [Libsodium detached signature of a string](libsodium_signature_detached_string.md).
 
-Last update: Feb. 07th 2021
+Last update: Aug. 17th 2021
 
 Back to the main page: [readme.md](../readme.md)

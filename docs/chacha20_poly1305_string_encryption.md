@@ -63,7 +63,8 @@ The following links provide the solutions in code and an online compile that run
 | NodeJS node-forge | :x: | not available
 | [Webcrypto encryption & decryption](../ChaCha20Poly1305StringEncryption/chacha20poly1305encryptionstring.html) *5) | :white_check_mark: | [your browser WebcryptoChaCha20Poly105StringEncryption.html](http://javacrypto.bplaced.net/cpcjs/chacha20poly1305/chacha20poly1305encryptionstring.html)
 | [Python](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.py) *6) | :white_check_mark: | [repl.it CpcPythonChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcPythonChaCha20Poly1305StringEncryption#main.py/)
-| [Go](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.go) | :white_check_mark: | [repl.it CpcGoChaCha20Poly1305StringEncryption](https://repl.it/@javacrypto/CpcGoChaCha20Poly1305StringEncryption#main.go/)
+| [Go](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.go) | :white_check_mark: | [repl.it CpcGoChaCha20Poly1305StringEncryption](https://replit.com/@javacrypto/CpcGoChaCha20Poly1305StringEncryption#main.go/)
+| [Dart](../ChaCha20Poly1305StringEncryption/Chacha20Poly1305StringEncryption.dart) *7)| :white_check_mark: | no online compiler available
 
 * *1) Java: runs in Java 11+ without external library
 * *2) PHP: runs in PHP 7.3+ without external library
@@ -71,7 +72,7 @@ The following links provide the solutions in code and an online compile that run
 * *4) NodeJs's built in Crypto library runs the ChaCha20Poly15 algorithm
 * *5) Webcrypto needs the external library "sodium.js" (documentation: https://github.com/jedisct1/libsodium.js/, code: https://github.com/jedisct1/libsodium.js/blob/master/dist/browsers/sodium.js)
 * *6) Python need the external library pycryptodome, version 3.9.9 (documentation: https://pypi.org/project/pycryptodome/, code: https://github.com/Legrandin/pycryptodome/)
-
+* *7) Dart need the external library "pointycastle" (pointycastle: ^3.1.1)
 
 This is an output (as there are random elements your output will differ):
 
@@ -93,6 +94,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 26th 2021
+Last update: Aug. 17th 2021
 
 Back to the main page: [readme.md](../readme.md)

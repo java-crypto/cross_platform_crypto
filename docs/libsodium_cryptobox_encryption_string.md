@@ -55,8 +55,11 @@ There is something I'm proud of: for the first time I did starting the programmi
 | [Webcrypto](../LibsodiumCryptoboxEncryptionString/libsodiumcryptoboxencryptionfull.html) | :white_check_mark: | [your browser LibsodiumCryptoboxStringEncryption.html](http://javacrypto.bplaced.net/cpcjs/cryptobox/libsodiumcryptoboxencryptionfull.html/)
 | [Python](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.py) | :white_check_mark: | [repl.it CpcPythonLibsodiumCryptoboxStringEncryption](https://repl.it/@javacrypto/CpcPythonLibsodiumCryptoboxEncryptionString#main.py/)
 | [Go](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.go) | :white_check_mark: | [repl.it CpcGoLibsodiumCryptoboxStringEncryption](https://replit.com/@javacrypto/CpcLibsodiumCryptoboxEncryptionString#main.go/)
+| [Dart](../LibsodiumCryptoboxEncryptionString/LibsodiumCryptoboxEncryptionString.dart) *2) | :white_check_mark: | no online compiler available
 
-1) Java alternativly solution: uses the library xsalsa20poly1305-0.11.0.jar - this is not a full Libsodium compatible library so you can use it just in this case (Libsodium Cryptobox).
+*1) Java alternativly solution: uses the library xsalsa20poly1305-0.11.0.jar - this is not a full Libsodium compatible library so you can use it just in this case (Libsodium Cryptobox).
+
+*2) you need the external library "flutter_sodium" to run the code (flutter_sodium: ^0.2.0)
 
 This is an output (your will differ because a random element):
 
@@ -80,6 +83,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 25th 2021
+Last update: Aug. 17th 2021
 
 Back to the [Libsodium overview page](libsodium_overview.md) or the main page: [readme.md](../readme.md)

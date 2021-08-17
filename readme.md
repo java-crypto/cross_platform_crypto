@@ -2,11 +2,11 @@
 
 ## General information and overview
 
-This is a series of cryptography articles that will show show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
+This is a series of cryptography articles that will show how cryptography is done between different programming platforms. The sample programs do not attempt to be "secure" but explain how the crypto routines are compatible with other platforms.
 
 I'm trying to serve a broad spectrum of programming languages and actually I have solutions for these  frameworks: **Java**, **PHP**, **C#**, **Javascript - CryptoJs**, **NodeJs Crypto**,  **NodeJs node-forge**, **Python** (for selected programs), **Golang** (for selected programs) and **Dart** (for selected programs) as long the functionality is available on the platform. You can test all programs with online compilers (except Dart as no online compiler can consume external libraries) to see what the output is and what happens when you change some parameters. For selected assignments there is a **WebCrypto** solution available, that will run in your (modern) browser. For very rare programs I provide an [**OpenSSL**](#readme-openssl) solution.
 
-Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the [**Libsodium**](#readme-libsodium) project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in a own section. 
+Wouldn't it be nice having a library that could be used cross-platform wide to get cryptographic tasks done? Yes and the library is still there, it is the [**Libsodium**](#readme-libsodium) project and there are a lot of bindings available for all major frameworks. The algorithms in Libsodium differ from the other ones used in the cross-platform-project, therefore the Libsodium solutions are in an own section. 
 
 Sometimes you may have read about a "JWT" or "JWT token", that is short form of a **JSON web token** or **JWT**. That are standardized signature and encryption schemes for a defined data exchange between different systems and frameworks. I provide some [**JWT web token**](#readme-jwt) solutions.
 
@@ -53,13 +53,15 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### ChaCha20-Poly1305 encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python | Go |
+| Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | Pyt | Go | Dar |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |  
-| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
 
 ### DES and TripleDES encryption ###
 
-| Solution | Jav | PHP | C# | CJS | Ndc |Nfo | Web | Pyt | Go | Dar |
+| Solution | Jav | PHP | C# | CJs | Ndc |Nfo | Web | Pyt | Go | Dar |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |  :--: | 
 | [DES CBC mode String encryption](docs/des_cbc_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [DES ECB mode String encryption](docs/des_ecb_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :soon: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -125,29 +127,32 @@ Note: you need external libraries for this feature!
 
 ### Elliptic curve signature ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python | Go |
+| Solution | Jav | PHP | C# | CJs | NdC | Nfo | Web | OSL | Python | Go | Dar |
 | ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: |
 | [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:|
 
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, OSL=OpenSSL, Go=Golang, Dar=Dart
 
 ### <a name="readme-libsodium"></a>Libsodium solutions
-| Solution | Description | Java | PHP | C# | NodeJS | Browser | Python | Go |
+| Solution | Description | Jav | PHP | C# | Ndc | Web | Pyt | Go | Dar |
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |
 [generate a random key](docs/libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](docs/libsodium_secretbox_encryption_string.md) | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  
 [generate a curve 25519 key pair](docs/curve25519_key_generation.md) | generate a curve X25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :x: |  
 [derive the curve X25519 public key from a secret key](docs/x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding | :soon: | :soon: |  :soon: | :soon: | :white_check_mark: |  
-[generate a curve ED25519 key pair](docs/generate_ed25519_keypair.md) | generate a curve ED25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   
-[generate a curve ED25519 public key from a private key](docs/generate_ed25519_keypair.md) | generate an ED25519 public key from a private key in Base64 encoding | :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  :white_check_mark: |  
+[generate a curve ED25519 key pair](docs/generate_ed25519_keypair.md) | generate a curve ED25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   | :white_check_mark: |
+[generate a curve ED25519 public key from a private key](docs/generate_ed25519_keypair.md) | generate an ED25519 public key from a private key in Base64 encoding | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |  | :white_check_mark: |
 | [Argon 2 password derivation function](docs/argon2.md) | derives a password from a passphrase using the "modern" Argon2id algorithm | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 |[Argon 2 parameter](docs/argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
-| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | encrypts a string on basis of a  **randomly generated encryption key**, using the **ChaCha20 cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [Libsodium authenticated string encryption with a random key (secret box)](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-|[Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication but without key exchange between the two partners |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-[Libsodium string signature (detached) with a private-public key](docs/libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | encrypts a string on basis of a  **randomly generated encryption key**, using the **ChaCha20 cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Libsodium authenticated string encryption with a random key (secret box)](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|[Libsodium crypto box authenticated hybrid string encryption](docs/libsodium_cryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Libsodium sealed box authenticated hybrid string encryption](docs/libsodium_sealedcryptobox_encryption_string.md) | encrypts a string on basis of a **X25519 curve** key exchange, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication but without key exchange between the two partners |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+[Libsodium string signature (detached) with a private-public key](docs/libsodium_signature_detached_string.md) | uses an ED25519 curve signature | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
 
 ### <a name="readme-openssl"></a>OpenSSL solutions ###
 | Solution | Description |
@@ -249,7 +254,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | goplay.space | version go 1.16.2 
 | Dart | no online compiler available | tested on 2.13.1
 
-Last update: Aug. 07th 2021
+Last update: Aug. 17th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

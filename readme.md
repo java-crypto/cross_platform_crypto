@@ -34,17 +34,19 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### AES string encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python | Go |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | --: |
-| [CBC-mode String Encryption](docs/aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
-| [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: |
-| [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | 
-| [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: | :x: |
-| [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: |
-| [CBC-mode passphrase String Encryption](docs/aes_cbc_256_passphrase_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: |
-| [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
-| [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |  :soon: | :soon: |
+| Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | Pyt | Go | Dar |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | --: | --: |
+| [CBC-mode String Encryption](docs/aes_cbc_256_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [CBC-mode String Decryption only](docs/aes_cbc_256_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: | :x: | :x: |
+| [CBC-mode PBKDF2 String Encryption](docs/aes_cbc_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | |  :white_check_mark: |
+| [CBC-mode PBKDF2 String Decryption only](docs/aes_cbc_256_pbkdf2_string_decryption_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: | :x: | :x: |
+| [CBC-mode PBKDF2 HMAC String Encryption](docs/aes_cbc_256_pbkdf2_hmac_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: | | :white_check_mark: |
+| [CBC-mode passphrase String Encryption](docs/aes_cbc_256_passphrase_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :x: | :x: | :x: | :x: |
+| [GCM-mode String Encryption](docs/aes_gcm_256_string_encryption.md) | :white_check_mark:| :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [GCM-mode PBKDF2 String Encryption](docs/aes_gcm_256_pbkdf2_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [GCM-mode PBKDF2 AAD String Encryption](readme.md) | :soon: | :soon: | :soon: | :soon: | :soon: | :soon: | :x: |  :soon: | :soon: | :soon: |
+
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
 
 #### AES CBC special: tampering
 | Solution | Java | Explanation |
@@ -54,7 +56,7 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 ### ChaCha20-Poly1305 encryption ###
 
 | Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | Pyt | Go | Dar |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |  
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: | :--: | 
 | [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
@@ -127,8 +129,8 @@ Note: you need external libraries for this feature!
 
 ### Elliptic curve signature ###
 
-| Solution | Jav | PHP | C# | CJs | NdC | Nfo | Web | OSL | Python | Go | Dar |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| Solution | Jav | PHP | C# | CJs | NdC | Nfo | Web | OSL | Pyt | Go | Dar |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: |
 | [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:|
@@ -144,7 +146,7 @@ Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Cry
 [derive the curve X25519 public key from a secret key](docs/x25519_public_key_generation.md) | generate the X25519 public key from a secret key in Base64 encoding | :soon: | :soon: |  :soon: | :soon: | :white_check_mark: |  
 [generate a curve ED25519 key pair](docs/generate_ed25519_keypair.md) | generate a curve ED25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   | :white_check_mark: |
 [generate a curve ED25519 public key from a private key](docs/generate_ed25519_keypair.md) | generate an ED25519 public key from a private key in Base64 encoding | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  |  | :white_check_mark: |
-| [Argon 2 password derivation function](docs/argon2.md) | derives a password from a passphrase using the "modern" Argon2id algorithm | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [Argon 2 password derivation function](docs/argon2.md) | derives a password from a passphrase using the "modern" Argon2id algorithm | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | | :white_check_mark: |
 |[Argon 2 parameter](docs/argon2_parameter.md) | describes the parameters used in Argon 2 algorithm | 
 | [ChaCha20-Poly1305 String encryption with random key](docs/chacha20_poly1305_string_encryption.md) | encrypts a string on basis of a  **randomly generated encryption key**, using the **ChaCha20 cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Libsodium authenticated string encryption with a random key (secret box)](docs/libsodium_secretbox_encryption_string.md) | encrypts a string on basis of a **randomly generated encryption key**, using the **XSalsa20 stream cipher** for encryption and the **Poly1305 MAC** for authentication | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
@@ -169,7 +171,7 @@ Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Cry
 | ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[JSON web token (JWT) overview](docs/json_web_token_overview.md) | general information about JSON web token | | | | | | | |
 |[structure of a JSON web token (JWT)](docs/json_web_token_structure.md) | explains the general structure of a JWT | | | | | | | |
-|JSON web token JWA algorithms | standardized algorithms for JWT | | | | | | |
+|[JSON web token JWA algorithms](docs/json_web_token_jwa_algorithms.md) | standardized algorithms for JWT | | | | | | |
 |[JSON Web JWK keys](docs/json_web_token_jwk_keys.md) | standardized key format for JWT | | | | | | | |
 |[JSON web signature (JWS) using RS256 algorithm](docs/json_web_token_jws_rs256_signature.md) | sign a JWT with a RSA key, PKCS1.5 padding and SHA-256 hashing | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |   :white_check_mark: | :white_check_mark: |  
 |[JSON web signature (JWS) using PS256 algorithm](docs/json_web_token_jws_ps256_signature.md) | sign a JWT with a RSA private key, RSASSA-PSS + MGF1 with SHA-256 and SHA-256 hashing |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | 
@@ -254,7 +256,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | goplay.space | version go 1.16.2 
 | Dart | no online compiler available | tested on 2.13.1
 
-Last update: Aug. 17th 2021
+Last update: Aug. 18th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

@@ -43,7 +43,7 @@ The program follows the usual sequence:
 
 **This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
-The following links provide the solutions in code and an online compile that runs the code.
+The following links provide the solutions in code and an online compiler that runs the code.
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |

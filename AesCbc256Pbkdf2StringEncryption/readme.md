@@ -49,7 +49,7 @@ If you like to see the **decryption part only** see my separate article [AES CBC
 
 **This is a serious warning regarding the security of the programs shown in these article series.  Always keep in mind my disclaimer regarding my programs: All programs are for educational purposes and are not intended to use in production or any other programs where a  secure solution is needed. The programs do not have proper exceptional/error handling and in some cases they use insecure key lengths or other methods that are insecure. Never ever use the programs in real life unless checked by a qualified professional cryptographer.**
 
-The following links provide the solutions in code and an online compile that runs the code.
+The following links provide the solutions in code and an online compiler that runs the code.
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
@@ -61,8 +61,11 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS node-forge](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [Webcrypto](../AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html)
 | [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :white_check_mark: | [repl.it CpcPythonAesCbc256Pbkdf2StringEncryptionFull](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
+| [Dart](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption.dart) *2) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pycryptodome, version 3.9.9
+
+*2) you need the external library pointycastle version 3.1.1
 
 An important note about the WebCrypto-program: the program is of **very poor quality** and should be used for demonstration purpose only. It has a lot of unnecessary conversions - **never ever use it as basis for your own (business) programs**.
 
@@ -102,6 +105,6 @@ Ciphertext is (Base64) salt : (Base64) iv : (Base64) ciphertext
 DecryptedtextCpc: The quick brown fox jumps over the lazy dog
 ```
 
-Last update: Feb. 02nd 2021
+Last update: Aug. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

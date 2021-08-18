@@ -130,7 +130,7 @@ Note: you need external libraries for this feature!
 ### Elliptic curve signature ###
 
 | Solution | Jav | PHP | C# | CJs | NdC | Nfo | Web | OSL | Pyt | Go | Dar |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | 
 | [ECDSA String Signature IEEE-P1363 encoding ](docs/ecdsa_signature_ieee_p1363_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :x:| :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: |
 | [ECDSA String Signature DER encoding ](docs/ecdsa_signature_der_string.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [ECDSA signature converter DER <- -> IEEE P1363 encoding ](docs/ecdsa_signature_conversion.md) | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :x: | :white_check_mark: | :x:| :x:|

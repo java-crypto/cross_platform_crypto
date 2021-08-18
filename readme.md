@@ -139,7 +139,7 @@ Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Cry
 
 ### <a name="readme-libsodium"></a>Libsodium solutions
 | Solution | Description | Jav | PHP | C# | Ndc | Web | Pyt | Go | Dar |
-| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| ------ | ------ | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 |[Libsodium overview](docs/libsodium_overview.md) | general information about Libsodium ("NaCl", "Sodium") cryptography |
 [generate a random key](docs/libsodium_secretbox_encryption_string.md) | see the examples in  [authenticated string encryption with a random key](docs/libsodium_secretbox_encryption_string.md) | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |  
 [generate a curve 25519 key pair](docs/curve25519_key_generation.md) | generate a curve X25519 private key and public key pair in Base64 encoding | :white_check_mark: | :white_check_mark: |  :white_check_mark: | :white_check_mark: | :x: |  

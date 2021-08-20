@@ -58,10 +58,13 @@ The following links provide the solutions in code and an online compile that run
 | [OpenSSL (file signature)](rsa_signature_pss_file_openssl.md) | :white_check_mark: | see explanation here: [RSA signature PSS OpenSSL](rsa_signature_pss_file_openssl.md)
 | [Python](../RsaSignaturePssString/RsaSignaturePssStringFull.py) *2) | :white_check_mark: | [repl.it CpcPythonRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcPythonRsaSignaturePssStringFull#main.py/)
 | [Go](../RsaSignaturePssString/RsaSignaturePssStringFull.go) | :white_check_mark: | [repl.it CpcGoRsaStringSignaturePssFull](https://repl.it/@javacrypto/CpcGoRsaSignaturePssStringFull#main.go/)
+| [Dart](../RsaSignaturePssString/RsaSignaturePssString.dart) *3) | :white_check_mark: | no online compiler available
 
 PHP *1): you need the library phpseclib version 3 to run this program
 
 Python *2) you need the external library pycryptodome, version 3.9.9
+
+Dart *3) you need the external libraries pointycastle version 3.1.1 and basic_utils: version 3.4.0
 
 This is an output:
 
@@ -91,6 +94,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Mar. 22nd 2021
+Last update: Aug. 20th 2021
 
 Back to the main page: [readme.md](../readme.md)

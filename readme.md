@@ -74,22 +74,25 @@ Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Cry
 
 ### RSA encryption ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS |NodeJs forge | WebCrypto | Python | Go |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: |
-| [RSA PKCS 1.5 padding String](docs/rsa_encryption_pkcs15_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: |
-| [RSA OEAP padding SHA-1 String](docs/rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | Pyt | Go | Dar |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: |  :--: | :--: | :--: | :--: |
+| [RSA PKCS 1.5 padding String](docs/rsa_encryption_pkcs15_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA OEAP padding SHA-1 String](docs/rsa_encryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [RSA OEAP padding SHA-1 String decryption only](docs/rsa_decryption_oaep_sha1_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | |  |
-| [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA OEAP padding SHA-256 String](docs/rsa_encryption_oaep_sha256_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
 
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
 
 ### RSA signature with different padding modes ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS Crypto | NodeJs forge | WebCrypto | OpenSSL | Python | Go |
-| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| [RSA String Signature PKCS#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | OSL | Pyt | Go | Dar |
+| ------ | :------: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| [RSA String Signature PKCS#1.5 (full)](docs/rsa_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [RSA String Signature PKCS#1.5 Verification only](docs/rsa_signature_string_verification_only.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark:| :white_check_mark: | :white_check_mark: |  |  | |
-| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted_private_key_example_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :white_check_mark: |
+| [RSA String Signature PSS (full)](docs/rsa_signature_pss_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [RSA encrypted private key example using signature with PKCS#1.5 padding](docs/rsa_encrypted_private_key_example_signature_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | :white_check_mark: | :x: | :x: | :white_check_mark: | :white_check_mark: | :x: 
+
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, OSL=OpenSSL, Go=Golang, Dar=Dart
 
 ### RSA keys ###
 
@@ -256,7 +259,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | goplay.space | version go 1.16.2 
 | Dart | no online compiler available | tested on 2.13.1
 
-Last update: Aug. 18th 2021
+Last update: Aug. 20th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

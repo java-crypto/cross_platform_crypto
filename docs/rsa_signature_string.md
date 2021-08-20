@@ -62,8 +62,11 @@ The following links provide the solutions in code and an online compile that run
 | [OpenSSL (file signature)](rsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [RSA signature OpenSSL](rsa_signature_file_openssl.md)
 | [Python](../RsaSignatureString/RsaSignatureStringFull.py) *1) | :white_check_mark: | [repl.it CpcPythonRsaStringSignatureFull](https://repl.it/@javacrypto/CpcPythonRsaSignatureStringFull#main.py/)
 | [Go](../RsaSignatureString/RsaSignatureStringFull.go) | :white_check_mark: | [repl.it CpcGoRsaStringSignatureFull](https://repl.it/@javacrypto/CpcGoRsaSignatureStringFull#main.go/)
+| [Dart](../RsaSignatureString/RsaSignatureString.dart) *2) | :white_check_mark: |  no online compiler available
 
 *1) you need the external library pycryptodome, version 3.9.9
+
+*2) you need the external libraries pointycastle version 3.1.1 and basic_utils: version 3.4.0
 
 This is an output:
 
@@ -95,6 +98,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Mar. 22nd 2021
+Last update: Aug. 20th 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -67,8 +67,11 @@ The following links provide the solutions in code and an online compile that run
 | Webcrypto decryption only | :x: | the PKCS 1.5 padding is not available
 | [Python](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15.py) *1) | :white_check_mark: | [replit.com CpcPythonRsaEncryptionPkcs15String](https://replit.com/@javacrypto/CpcPythonRsaEncryptionPkcs15String/#main.py)
 | [Go](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15.go) | :white_check_mark: | [replit.com CpcGoRsaEncryptionPkcs15String](https://replit.com/@javacrypto/CpcGoRsaEncryptionPkcs15String/#main.go/)
+| [Dart](../RsaEncryptionPkcs15String/RsaEncryptionPkcs15.dart) *2) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pycryptodome, version 3.9.9
+
+*2) you need the external libraries pointycastle version 3.1.1 and asn1lib version 1.0.2
 
 This is an output (your will differ because a random element):
 
@@ -85,6 +88,6 @@ decryptedtext: The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Apr. 21st 2021
+Last update: Aug. 20th 2021
 
 Back to the main page: [readme.md](../readme.md)

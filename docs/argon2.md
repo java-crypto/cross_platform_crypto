@@ -38,7 +38,7 @@ Don't rely on default parameters when working with Argon 2-functions on differen
 
 #### Serious security note
 
-To get a comparable output I'm using a function called "generateFixedSalt16Byte" that is providing an output of 16 "x00" values for the salt. **Never ever** use this in production but the correct "generateSalt16Byte" function.
+To get a comparable output I'm using a function called "generateFixedSalt16Byte" that is providing an output of 16 "x00" values for the salt. **Never ever** use this in production but instead the correct "generateSalt16Byte" function.
 
 ## :warning: Security warning :warning:
 
@@ -55,6 +55,9 @@ The following links provide the solution in code and within an online compiler t
 | [NodeJS Crypto](../Argon2id/Argon2idNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoArgon2id](https://repl.it/@javacrypto/CpcNodeJsCryptoArgon2id#index.js/)
 | NodeJS forge | :x: | use version with NodeJs built-in Crypto module
 | [Browser](../Argon2id/argon2id.html) | :white_check_mark: | [your browser](http://javacrypto.bplaced.net/cpcjs/argon2id/argon2id.html)
+| [Dart](../Argon2id/Argon2id.dart) *1) | :white_check_mark: | no online compiler available
+
+*1) you need the external library pointycastle version 3.1.1
 
 This is an output generated with "generateFixedSalt16Byte" for comparison reasons - don't do this in production!:
 
@@ -68,7 +71,16 @@ encryptionKeyArgon2id (Base64) moderate:    gdizE6kia1W/CgTA3bRKKjtaf8cgZL1BIe6j
 encryptionKeyArgon2id (Base64) sensitive:   19Uym9wI6e/l5f0NocZmNEaouoHvsSyVfrp9iRYl/C8=
 ```
 
-Below is the output of the browser version that looks like different to the other ones. The output provides the "full argon 2id hash" that incorporates some more information as just the hash. It gives an information about the used algorithm (argon2id), version number (in decimals: 19), the memory limit (66536), the ops limit (2), the parallelism (1) and hash in use (in Base64 encoding: AAAAAAAAAAAAAAAAAAAAAA). Note that after the hash the next value is separated with a "$" character and that is the "encryptionKeyArgon2id" (FZcsUwo7wf7V24qWTwKeSN9//+Pxy2gCKN35KZX2hXs) with a skipped "=" at the end. The value "hash" is the encryption key in hex string encoding (15972c530a3bc1fed5db8a964f029e48df7fffe3f1cb680228ddf92995f6857b). 
+Below is the output of the browser version that looks like different to the other ones. The output provides the "full argon 2id hash" that incorporates some more information as just the hash. It gives an information about 
+
+* the used algorithm (argon2id) 
+* the version number (in decimals: 19)
+* the memory limit (66536)
+* the ops limit (2) 
+* the parallelism (1) 
+* and hash in use (in Base64 encoding: AAAAAAAAAAAAAAAAAAAAAA)
+
+Note that after the hash the next value is separated with a "$" character and that is the "encryptionKeyArgon2id" (FZcsUwo7wf7V24qWTwKeSN9//+Pxy2gCKN35KZX2hXs) with a skipped "=" at the end. The value "hash" is the encryption key in hex string encoding (15972c530a3bc1fed5db8a964f029e48df7fffe3f1cb680228ddf92995f6857b). 
 
 ```plaintext
 generateHash interactive
@@ -77,6 +89,6 @@ $argon2id$v=19$m=66536,t=2,p=1$AAAAAAAAAAAAAAAAAAAAAA$FZcsUwo7wf7V24qWTwKeSN9//+
 Hash (hex encoding): 15972c530a3bc1fed5db8a964f029e48df7fffe3f1cb680228ddf92995f6857b
 ```
 
-Last update: Jan. 22nd 2021
+Last update: Aug. 20th 2021
 
 Back to the main page: [readme.md](../readme.md)

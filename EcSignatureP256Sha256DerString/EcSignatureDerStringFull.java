@@ -59,24 +59,25 @@ public class EcSignatureDerStringFull {
 
     private static String loadEcPrivateKeyPem() {
         // this is a sample key - don't worry !
-        return "-----BEGIN EC PRIVATE KEY-----\n" +
-                "MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY\n" +
-                "96yXUhFY5vppVjw1iPKRfk1wHA==\n" +
-                "-----END EC PRIVATE KEY-----";
+        return "-----BEGIN PRIVATE KEY-----\n" +
+                "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12\n" +
+                "YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe\n" +
+                "SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA\n" +
+                "-----END PRIVATE KEY-----";
     }
 
     private static String loadEcPublicKeyPem() {
         // this is a sample key - don't worry !
         return "-----BEGIN PUBLIC KEY-----\n" +
-                "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M\n" +
-                "rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==\n" +
+                "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q\n" +
+                "HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==\n" +
                 "-----END PUBLIC KEY-----";
     }
 
     public static PrivateKey getEcPrivateKeyFromString(String key) throws GeneralSecurityException {
         String privateKeyPEM = key;
-        privateKeyPEM = privateKeyPEM.replace("-----BEGIN EC PRIVATE KEY-----", "");
-        privateKeyPEM = privateKeyPEM.replace("-----END EC PRIVATE KEY-----", "");
+        privateKeyPEM = privateKeyPEM.replace("-----BEGIN PRIVATE KEY-----", "");
+        privateKeyPEM = privateKeyPEM.replace("-----END PRIVATE KEY-----", "");
         privateKeyPEM = privateKeyPEM.replaceAll("[\\r\\n]+", "");
         byte[] encoded = Base64.getDecoder().decode(privateKeyPEM);
         KeyFactory kf = KeyFactory.getInstance("EC");

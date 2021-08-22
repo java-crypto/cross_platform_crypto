@@ -8,9 +8,7 @@ console.log('dataToSign:  ', dataToSign);
 // here we use hardcoded keys for demonstration - don't do this in real programs
 
 console.log('\n* * * sign the plaintext with the EC private key * * *');
-// the beginning of the EC PRIVATE KEY needs to get changed to
-// PRIVATE KEY, same for the end
-const private_key = formatEcPrivateKeyPem(getEcPrivateKeyPem());
+const private_key = getEcPrivateKeyPem();
 console.log('used private key:\n', private_key);
 const signatureBase64 = ecSignToBase64(private_key, dataToSign);
 console.log('signature (Base64): ', signatureBase64);
@@ -26,7 +24,7 @@ function ecSignToBase64(privateKey, message) {
   signer.update(message);
   signer.end();
   const signature = signer.sign(
-    {key:private_key,
+    {key:private_key, 
     dsaEncoding:'der'
     });
   return signature.toString('Base64')
@@ -38,29 +36,25 @@ function ecVerifySignatureFromBase64(publicKey, message, signatureBase64) {
   verifier.update(message);
   verifier.end();
   return verifier.verify(
-    {key:publicKey,
+    {key:publicKey, 
     dsaEncoding:'der'
     },
     signature);
 }
 
-function formatEcPrivateKeyPem(privateKeyPem) {
-  var re = /EC PRIVATE KEY/gi;
-  return privateKeyPem.replace(re, "PRIVATE KEY");
-}
-
 function getEcPrivateKeyPem() {
-    const key = '-----BEGIN EC PRIVATE KEY-----\n' +
-                'MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY\n' +
-                '96yXUhFY5vppVjw1iPKRfk1wHA==\n' +
-                '-----END EC PRIVATE KEY-----\n'; // important last crlf
+    const key = '-----BEGIN PRIVATE KEY-----\n' +
+                'MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12\n' +
+                'YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe\n' +
+                'SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA\n' +
+                '-----END PRIVATE KEY-----\n'; // important last crlf
     return key;
 }
 
 function getEcPublicKeyPem() {
     const key = '-----BEGIN PUBLIC KEY-----\n' +
-                'MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M\n' +
-                'rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==\n' +
+                'MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q\n' +
+                'HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==\n' +
                 '-----END PUBLIC KEY-----\n'; // important last crlf
     return key;
 }

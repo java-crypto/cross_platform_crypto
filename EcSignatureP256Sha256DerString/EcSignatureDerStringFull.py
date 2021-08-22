@@ -12,8 +12,7 @@ def base64Decoding(input):
     return base64.decodebytes(input.encode("ascii"))
 
 def ecSignToBase64(privateKeyPem, message):
-  privateKeyDer = base64Decoding(privateKeyPem)
-  ecPrivateKey = ECC.import_key(privateKeyDer)
+  ecPrivateKey = ECC.import_key(privateKeyPem)
   hashMessage = SHA256.new(message.encode("ascii"))
   signer = DSS.new(ecPrivateKey, 'fips-186-3', 'der')
   signature = signer.sign(hashMessage)
@@ -26,28 +25,23 @@ def ecVerifySignatureFromBase64(publicKeyPem, message, signatureBase64):
   verifier = DSS.new(ecPublicKey, 'fips-186-3', 'der')
   try:
     verifier.verify(hashMessage, signatureBytes)
-    print("The message is authentic.")
     return True
   except ValueError:
-    print("The message is not authentic.")
     return False
-
 
 def loadEcPrivateKeyPem():
   return """-----BEGIN PRIVATE KEY-----
-MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY
-96yXUhFY5vppVjw1iPKRfk1wHA==
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12
+YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe
+SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA
 -----END PRIVATE KEY-----
 """
 
 def loadEcPublicKeyPem():
   return """-----BEGIN PUBLIC KEY-----
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M
-rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q
+HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==
 -----END PUBLIC KEY-----"""
-
-def loadEcPrivateKeyDerBase64():
-  return """MDECAQEEIBTZ/y3Oj31nUejEmVj3rJdSEVjm+mlWPDWI8pF+TXAcoAoGCCqGSM49AwEH"""
 
 print("EC signature string (ECDSA with SHA256) DER-encoding")
 
@@ -55,7 +49,7 @@ dataToSign = "The quick brown fox jumps over the lazy dog"
 print("dataToSign: " + dataToSign)
 
 print("\n* * * sign the plaintext with the EC private key * * *")
-privateEcKeyPem = loadEcPrivateKeyDerBase64()
+privateEcKeyPem = loadEcPrivateKeyPem()
 print("used private key:\n" + privateEcKeyPem)
 signatureBase64 = ecSignToBase64(privateEcKeyPem, dataToSign)
 print("signature (Base64): " + signatureBase64)

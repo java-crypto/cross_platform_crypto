@@ -4,22 +4,21 @@ using Org.BouncyCastle.Security;
 
 public class EcSignatureString {
 	public static void Main() {
-	    // running with .NET 4.7.2 and BouncyCastle 1.89
+		// running with .NET 4.7.2 and BouncyCastle 1.89
 
 		Console.WriteLine("EC signature string (ECDSA with SHA256) DER-encoding");
 		var dataToSignString = "The quick brown fox jumps over the lazy dog";
 		var dataToSign = System.Text.Encoding.UTF8.GetBytes(dataToSignString);
-
+		
 		Console.WriteLine("dataToSign: " + dataToSignString);
-
 		try {
 			Console.WriteLine("\n* * * sign the plaintext with the EC private key * * *");
 			string ecPrivateKeyPem = loadEcPrivateKeyPem();
 			string signatureBase64 = ecSignDerToBase64(ecPrivateKeyPem, dataToSign);
 			Console.WriteLine("used private key:");
 			Console.WriteLine(ecPrivateKeyPem);
-			Console.WriteLine("\nsignature (Base64): " + signatureBase64);
-
+			Console.WriteLine("\nsignature (Base64): " + signatureBase64);	
+			
 			// verify
 			Console.WriteLine("\n* * * verify the signature against hash of plaintext with the EC public key * * *");
 			string signatureReceivedBase64 = signatureBase64;
@@ -34,7 +33,7 @@ public class EcSignatureString {
 			Console.WriteLine("The data was not signed or verified");
 		}
 	}
-
+	
 	private static string ecSignDerToBase64(string ecPrivateKeyPem, byte[] messageByte) {
 		var privateKey = PrivateKeyFactory.CreateKey(Convert.FromBase64String(getEcPrivateKeyFromPemStripped(ecPrivateKeyPem)));
 		var signer = SignerUtilities.GetSigner(X9ObjectIdentifiers.ECDsaWithSha256.Id);
@@ -42,8 +41,8 @@ public class EcSignatureString {
 		signer.BlockUpdate(messageByte, 0, messageByte.Length);
 		var signature = signer.GenerateSignature();
 		return Base64Encoding(signature);
-	}
-
+	}	
+	
 	private static bool ecVerifySignatureDerFromBase64(string ecPublicKeyPem, byte[] messageByte, String signatureBase64) {
 		var publicKey = PublicKeyFactory.CreateKey(Convert.FromBase64String(getEcPublicKeyFromPemStripped(ecPublicKeyPem)));
 		var verifier = SignerUtilities.GetSigner(X9ObjectIdentifiers.ECDsaWithSha256.Id);
@@ -51,24 +50,24 @@ public class EcSignatureString {
 		verifier.BlockUpdate(messageByte, 0, messageByte.Length);
 		return verifier.VerifySignature(Convert.FromBase64String(signatureBase64));
 	}
-
+		
 	private static string getEcPrivateKeyFromPemStripped(string ecPrivateKeyPem) {
-		string ecPrivateKeyHeaderPem = "-----BEGIN EC PRIVATE KEY-----\n";
-		string ecPrivateKeyFooterPem = "-----END EC PRIVATE KEY-----";
+		string ecPrivateKeyHeaderPem = "-----BEGIN PRIVATE KEY-----\n";
+		string ecPrivateKeyFooterPem = "-----END PRIVATE KEY-----";
 		string ecPrivateKeyDataPem = ecPrivateKeyPem.Replace(ecPrivateKeyHeaderPem, "").Replace(ecPrivateKeyFooterPem, "").Replace("\n", "");
 		return ecPrivateKeyDataPem;
 	}
-
+	
 	private static string getEcPublicKeyFromPemStripped(string ecPublicKeyPem) {
 		string ecPublicKeyHeaderPem = "-----BEGIN PUBLIC KEY-----\n";
 		string ecPublicKeyFooterPem = "-----END PUBLIC KEY-----";
 		string ecPublicKeyDataPem = ecPublicKeyPem.Replace(ecPublicKeyHeaderPem, "").Replace(ecPublicKeyFooterPem, "").Replace("\n", "");
 		return ecPublicKeyDataPem;
 	}
-
+	
 	private static byte[] getEcPrivateKeyEncodedFromPem(string ecPrivateKeyPem) {
-		string ecPrivateKeyHeaderPem = "-----BEGIN EC PRIVATE KEY-----\n";
-		string ecPrivateKeyFooterPem = "-----END EC PRIVATE KEY-----";
+		string ecPrivateKeyHeaderPem = "-----BEGIN PRIVATE KEY-----\n";
+		string ecPrivateKeyFooterPem = "-----END PRIVATE KEY-----";
 		string ecPrivateKeyDataPem = ecPrivateKeyPem.Replace(ecPrivateKeyHeaderPem, "").Replace(ecPrivateKeyFooterPem, "").Replace("\n", "");
 		return Base64Decoding(ecPrivateKeyDataPem);
 	}
@@ -82,17 +81,18 @@ public class EcSignatureString {
 
 	private static string loadEcPrivateKeyPem() {
 		// this is a sample key - don't worry !
-		return "-----BEGIN EC PRIVATE KEY-----\n"
-			+ "MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY\n"
-			+ "96yXUhFY5vppVjw1iPKRfk1wHA==\n"
-			+ "-----END EC PRIVATE KEY-----";
+		return "-----BEGIN PRIVATE KEY-----\n"
+			+ "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12\n"  
+			+ "YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe\n"
+			+ "SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA\n"
+			+ "-----END PRIVATE KEY-----";
 	}
 
 	private static string loadEcPublicKeyPem() {
 		// this is a sample key - don't worry !
 		return "-----BEGIN PUBLIC KEY-----\n"
-			+ "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M\n"
-			+ "rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==\n"
+			+ "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q\n"
+			+ "HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==\n"
 			+ "-----END PUBLIC KEY-----";
 	}
 

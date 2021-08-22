@@ -63,7 +63,7 @@ The following links provide the solutions in code and an online compiler that ru
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](../EcSignatureP256Sha256String/EcSignatureStringFullNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoEcSignatureStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureP256StringFull#index.js/)
 | NodeJS forge | :x: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
-| [Webcrypto sign only](../EcSignatureP256Sha256String/ecsignaturestringsign.html) *1) | :white_check_mark: | [your browser WebcryptoEcSignString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringsign.html) - does not work with Firefox 84
+| [Webcrypto sign only](../EcSignatureP256Sha256String/ecsignaturestringsign.html) *1) | :white_check_mark: | [your browser WebcryptoEcSignString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringsign.html) - does not work with Firefox 91
 | [Webcrypto verify only](../EcSignatureP256Sha256String/ecsignaturestringverification.html) | :white_check_mark: | [your browser WebcryptoEcVerifyString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256String/ecsignaturestringverification.html)
 | OpenSSL | :x: | not available
 | [Python](../EcSignatureP256Sha256String/EcSignatureStringFull.py) *1) | :white_check_mark: | [repl.it CpcPythonEcSignatureStringFull](https://repl.it/@javacrypto/CpcPythonEcSignatureP256StringFull#main.py/)
@@ -79,7 +79,7 @@ If you need to convert the signature format types (DER to IEEE P1363 and vice ve
 
 The other important part is the key management. Some implementations will work with other curves, some implementations do have hard-coded import functions that will work with the named curve **SECP256R1** only.
 
-*1) Running the WebCrypto examples in my Browser I found that the Firefox Browser (tested with Version 84, x64 Windows) cannot run the **sign** example due to a long lasting bug - please use Chrome or Opera as they will sign.
+*1) Running the WebCrypto examples in my Browser I found that the Firefox Browser (tested with Version 91, x64 Windows) cannot run the **sign** example due to a long lasting bug - please use Chrome or Opera as they will sign.
 
 This is an output (your output will differ due to a random element when signing):
 
@@ -89,24 +89,25 @@ dataToSign: The quick brown fox jumps over the lazy dog
 
 * * * sign the plaintext with the EC private key * * *
 used private key:
------BEGIN EC PRIVATE KEY-----
-MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY
-96yXUhFY5vppVjw1iPKRfk1wHA==
------END EC PRIVATE KEY-----
+-----BEGIN PRIVATE KEY-----
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12
+YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe
+SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA
+-----END PRIVATE KEY-----
 
-signature (Base64): MEYCIQDHYuDoqKndX4zUTcz+oIacSd+JuOkBhGwmjwhX0X+NbwIhAIkdxElOpzhV7UEQcbe5nLSQSxDiCpec+UZ4BnJiVIep
+signature (Base64): tyNG717LIZdZAXCDMRI0cgeyA030XGsRS5AT3w/5+PyDMJglW3E4HLqT6yInKXYtmsFiTArWEiX671u0dQ5tTg==
 
 * * * verify the signature against the plaintext with the EC public key * * *
 used public key:
 -----BEGIN PUBLIC KEY-----
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M
-rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q
+HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==
 -----END PUBLIC KEY-----
 
 signature (Base64) verified: true
 
 ```
 
-Last update: Mar. 24th 2021
+Last update: Aug. 22nd 2021
 
 Back to the main page: [readme.md](../readme.md)

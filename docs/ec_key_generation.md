@@ -8,14 +8,29 @@ Here I'm showing you a different tool that is very useful in all cryptographic q
 
 My example key pair was created with the curve **SECP256R1** that is known with these names as well (depending on the platform): **NIST P-256**, **PRIME256V1** or with the O.I.D. identifier **1.2.840.10045.3.1.7**. 
 
-The **key generation** takes place in two steps - first we generate the EC <u>private key</u> and then we generate the belonging <u>public key</u>:
+The **key generation** takes place in tthree steps - first we generate the EC <u>private key in SEC1 encoding</u>, then we convert the private key into a <u>PKCS#8 encoding</u> and then we generate the belonging <u>public key</u>:
+
+### Step 1: generate the EC private key in SEC1 encoding
 
 ```plaintext
 ecdsa private key generation:
 openssl ecparam -name prime256v1 -genkey -noout -out ecprivatekey_secp256r1.pem
-ecdsa public key generation:
+```
+
+### Step 2: convert the private key into PKCS#8 encoding
+
+```plaintext
+ecdsa private key conversion:
+openssl pkcs8 -topk8 -nocrypt -in ecprivatekey_secp256r1.pem -out ecprivatekey_secp256r1_pkcs8.pem
+```
+
+### Step 3: get the EC public key from the private key:
+
+```plaintext
+ecdsa public key derivation:
 openssl ec -in ecprivatekey_secp256r1.pem -pubout -out ecpublickey_secp256r1.pem
 ```
+
 If you like to see more details on the generated keys use OpenSSL again for information:
 
 ```plaintext
@@ -25,37 +40,72 @@ openssl pkey -in ecpublickey_secp256r1.pem -pubin -text
 
 Here are the results:
 ```plaintext
+EC private key in SEC1 encoding:
+
+-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIHIj7f4Lpc8O/13tdmDrv7y1ICFGfu4BqOVZJlNAfoFFoAoGCCqGSM49
+AwEHoUQDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5QHkgaLi+IV84oiV+THv/DqGxY
+DX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==
+-----END EC PRIVATE KEY-----
+
+dump:
 -----BEGIN PRIVATE KEY-----
-MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY
-96yXUhFY5vppVjw1iPKRfk1wHA==
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12
+YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe
+SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA
 -----END PRIVATE KEY-----
 Private-Key: (256 bit)
 priv:
-    14:d9:ff:2d:ce:8f:7d:67:51:e8:c4:99:58:f7:ac:
-    97:52:11:58:e6:fa:69:56:3c:35:88:f2:91:7e:4d:
-    70:1c
+    72:23:ed:fe:0b:a5:cf:0e:ff:5d:ed:76:60:eb:bf:
+    bc:b5:20:21:46:7e:ee:01:a8:e5:59:26:53:40:7e:
+    81:45
 pub:
-    04:cd:be:f2:00:55:ae:a7:a8:83:a8:98:84:ab:be:
-    b8:ac:0b:a6:b1:5d:8c:ae:ca:59:c5:a3:f7:58:6a:
-    70:1d:a0:b8:51:f7:f7:37:85:1b:25:91:7b:65:a7:
-    35:73:a5:bb:28:99:74:79:e0:8f:d3:6d:39:43:75:
-    04:a7:0c:67:75
+    04:31:91:e7:b7:50:f5:b5:d7:4b:34:69:44:1d:71:
+    2d:13:0e:4a:fc:6e:50:1e:48:1a:2e:2f:88:57:ce:
+    28:89:5f:93:1e:ff:c3:a8:6c:58:0d:7d:85:e4:93:
+    a4:7f:2b:f7:ea:26:12:7f:99:5f:20:2e:ea:f5:e9:
+    78:60:b9:e5:c0
 ASN1 OID: prime256v1
 NIST CURVE: P-256
 ```
 
 ```plaintext
+EC private key in PKCS#8 encoding:
+
+-----BEGIN PRIVATE KEY-----
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12
+YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe
+SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA
+-----END PRIVATE KEY-----
+Private-Key: (256 bit)
+priv:
+    72:23:ed:fe:0b:a5:cf:0e:ff:5d:ed:76:60:eb:bf:
+    bc:b5:20:21:46:7e:ee:01:a8:e5:59:26:53:40:7e:
+    81:45
+pub:
+    04:31:91:e7:b7:50:f5:b5:d7:4b:34:69:44:1d:71:
+    2d:13:0e:4a:fc:6e:50:1e:48:1a:2e:2f:88:57:ce:
+    28:89:5f:93:1e:ff:c3:a8:6c:58:0d:7d:85:e4:93:
+    a4:7f:2b:f7:ea:26:12:7f:99:5f:20:2e:ea:f5:e9:
+    78:60:b9:e5:c0
+ASN1 OID: prime256v1
+NIST CURVE: P-256
+```
+
+```plaintext
+EC public key:
+
 -----BEGIN PUBLIC KEY-----
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M
-rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q
+HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==
 -----END PUBLIC KEY-----
 Public-Key: (256 bit)
 pub:
-    04:cd:be:f2:00:55:ae:a7:a8:83:a8:98:84:ab:be:
-    b8:ac:0b:a6:b1:5d:8c:ae:ca:59:c5:a3:f7:58:6a:
-    70:1d:a0:b8:51:f7:f7:37:85:1b:25:91:7b:65:a7:
-    35:73:a5:bb:28:99:74:79:e0:8f:d3:6d:39:43:75:
-    04:a7:0c:67:75
+    04:31:91:e7:b7:50:f5:b5:d7:4b:34:69:44:1d:71:
+    2d:13:0e:4a:fc:6e:50:1e:48:1a:2e:2f:88:57:ce:
+    28:89:5f:93:1e:ff:c3:a8:6c:58:0d:7d:85:e4:93:
+    a4:7f:2b:f7:ea:26:12:7f:99:5f:20:2e:ea:f5:e9:
+    78:60:b9:e5:c0
 ASN1 OID: prime256v1
 NIST CURVE: P-256
 ```
@@ -76,6 +126,6 @@ d) use password protected ("encrypted") private keys. They are <u>my favorite</u
 
 Go to [ECDSA string signature](ecdsa_signature_string.md).
 
-Last update: Jan. 08th 2021
+Last update: Aug. 22nd 2021
 
 Back to the main page: [readme.md](../readme.md)

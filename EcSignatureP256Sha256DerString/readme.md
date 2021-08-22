@@ -63,7 +63,7 @@ The following links provide the solutions in code and an online compiler that ru
 | Javascript CryptoJs | :x: | the signature functionality is not available in CryptoJs
 | [NodeJS Crypto](../EcSignatureP256Sha256DerString/EcSignatureDerStringFullNodeJsCrypto.js) | :x: | [repl.it CpcNodeJsCryptoEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcNodeJsCryptoEcSignatureP256DerStringFull#index.js/)
 | NodeJS forge | :white_check_mark: | the signature functionality is not available in node-forge, use the above NodeJs Crypto implementation
-|  [Webcrypto sign only](../EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) - does not work with Firefox 84
+|  [Webcrypto sign only](../EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) ***2)** | :white_check_mark: | [Your browser WebcryptoEcSignDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringsign.html) - does not work with Firefox 91
 | [Webcrypto verify only](../EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) | :white_check_mark: | [Your browser WebcryptoEcVerifyDerString.html](https://java-crypto.github.io/cross_platform_crypto/EcSignatureP256Sha256DerString/ecsignaturederstringverification.html) 
 | [OpenSSL (file signature)](ecdsa_signature_file_openssl.md) | :white_check_mark: | see explanation here: [EC signature DER OpenSSL](ecdsa_signature_file_openssl.md)
 | [Python](../EcSignatureP256Sha256DerString/EcSignatureDerStringFull.py) *3) | :white_check_mark: | [repl.it CpcPythonEcSignatureDerStringFull](https://repl.it/@javacrypto/CpcPythonEcSignatureP256DerStringFull#main.py/)
@@ -71,7 +71,7 @@ The following links provide the solutions in code and an online compiler that ru
 
 ***1)** runs with .NET 4.7.2 and Bouncy Castle 1.89
 
-***2)** Running the WebCrypto examples in my Browser I found that the Firefox Browser (tested with Version 84, x64 Windows) cannot run the **sign** example due to a long lasting bug - please use Chrome or Opera as they will sign.
+***2)** Running the WebCrypto examples in my Browser I found that the Firefox Browser (tested with Version 91, x64 Windows) cannot run the **sign** example due to a long lasting bug - please use Chrome or Opera as they will sign.
 
 ***3)** you need the external library pycryptodome, version 3.9.9
 
@@ -93,24 +93,25 @@ dataToSign: The quick brown fox jumps over the lazy dog
 
 * * * sign the plaintext with the EC private key * * *
 used private key:
------BEGIN EC PRIVATE KEY-----
-MEECAQAwEwYHKoZIzj0CAQYIKoZIzj0DAQcEJzAlAgEBBCAU2f8tzo99Z1HoxJlY
-96yXUhFY5vppVjw1iPKRfk1wHA==
------END EC PRIVATE KEY-----
+-----BEGIN PRIVATE KEY-----
+MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgciPt/gulzw7/Xe12
+YOu/vLUgIUZ+7gGo5VkmU0B+gUWhRANCAAQxkee3UPW110s0aUQdcS0TDkr8blAe
+SBouL4hXziiJX5Me/8OobFgNfYXkk6R/K/fqJhJ/mV8gLur16XhgueXA
+-----END PRIVATE KEY-----
 
-signature (Base64): MEUCICshvthDSMqNJNaPPf31bh5H8HiO1Xs8EoSktKfQvfrrAiEA9BKl3bCv0uuJQ/Ft+da2iB3Rd1kgyoECmzyTuVGI0zA=
+signature (Base64): MEUCIQCqKwzYJDhdqjyx+PCUhvcr4IRWsqk9CHplypBiiG2oZQIgN3yOkk3HjuqSQzOy2wjB2XnjkHgwUrYpnqxpcYM19og=
 
 * * * verify the signature against the plaintext with the EC public key * * *
 used public key:
 -----BEGIN PUBLIC KEY-----
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzb7yAFWup6iDqJiEq764rAumsV2M
-rspZxaP3WGpwHaC4Uff3N4UbJZF7Zac1c6W7KJl0eeCP0205Q3UEpwxndQ==
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEMZHnt1D1tddLNGlEHXEtEw5K/G5Q
+HkgaLi+IV84oiV+THv/DqGxYDX2F5JOkfyv36iYSf5lfIC7q9el4YLnlwA==
 -----END PUBLIC KEY-----
 
 signature (Base64) verified: true
 
 ```
 
-Last update: Mar. 23rd 2021
+Last update: Aug. 22nd 2021
 
 Back to the main page: [readme.md](../readme.md)

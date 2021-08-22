@@ -18,8 +18,8 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 ### General routines ###
 
-| Solution | Java | PHP | C# | CryptoJS | NodeJS | NodeJs forge | WebCrypto | Python | Go |
-| ------ | :---: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | 
+| Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | Pyt | Go | Dar |
+| ------ | :---: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | [generate a 32 byte long AES key](docs/generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [generate a 16 byte long initvector](docs/generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [generate a 12 byte long nonce](docs/generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
@@ -31,6 +31,8 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 | [Generate RSA keys](docs/rsa_key_generation.md) | [see explanation](docs/rsa_key_generation.md) |
 [Generate Curve 25519 keys](docs/curve25519_key_generation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :x: |
 | [Generate Elliptic keys](docs/ec_key_generation.md) | [see explanation](docs/ec_key_generation.md) |
+
+Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Crypto, Nfo=NodeJs with forge, Web=WebCrypto, Pyt=Python, Go=Golang, Dar=Dart
 
 ### AES string encryption ###
 
@@ -254,12 +256,12 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | PHP |  replit.com | PHP CLI 7.2.17-0ubuntu0.18.04.1 (cli) (built: Apr 18 2019 14:12:38)
 | PHP phpseclib | replit.com | version 3
 | Python | replit.com | version 3.8.2 (default, Feb 26 2020, 02:56:10)
-| Webcrypto | modern browser | tested in Firefox 83 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
+| Webcrypto | modern browser | tested in Firefox 91 (x64), Google Chrome 84.0.4147.135 (x86), Opera 70.0.3728.119
 | Go | replit.com | version go 1.14 linux/amd64
 | Go | goplay.space | version go 1.16.2 
 | Dart | no online compiler available | tested on 2.13.1
 
-Last update: Aug. 20th 2021
+Last update: Aug. 22nd 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

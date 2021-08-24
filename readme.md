@@ -20,12 +20,12 @@ A lot of solutions run with the built-in cryptographic modules but especially th
 
 | Solution | Jav | PHP | C# | CJs | Ndc | Nfo | Web | Pyt | Go | Dar |
 | ------ | :---: | :----: | :---: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| [generate a 32 byte long AES key](docs/generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
-| [generate a 16 byte long initvector](docs/generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
-| [generate a 12 byte long nonce](docs/generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
-| [Base64 encoding & decoding](docs/base64_encoding_decoding.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [binary data to a hex string & back](docs/binary_data_hex_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| [SHA256 hashing](docs/sha256_hash.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| [generate a 32 byte long AES key](docs/generate_aes_key.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | | :white_check_mark: |
+| [generate a 16 byte long initvector](docs/generate_initvector.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | | :white_check_mark: |
+| [generate a 12 byte long nonce](docs/generate_nonce.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: | | :white_check_mark: |
+| [Base64 encoding & decoding](docs/base64_encoding_decoding.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | :white_check_mark: |
+| [binary data to a hex string & back](docs/binary_data_hex_string.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | :white_check_mark: |
+| [SHA256 hashing](docs/sha256_hash.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | | :white_check_mark: |
 | [HMAC 256 calculation](docs/hmac_256_calculation.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [PBKDF2 key derivation](docs/pbkdf2.md) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
 | [Generate RSA keys](docs/rsa_key_generation.md) | [see explanation](docs/rsa_key_generation.md) |
@@ -53,7 +53,7 @@ Jav=Java, PHP=PHP, C#=Csharp, CJs=Javascript with Crypto-JS, Ndc=NodeJs with Cry
 #### AES CBC special: tampering
 | Solution | Java | Explanation |
 | ------ | :------: | :----: |
-| [AES CBC-mode tampering](docs/aes_cbc_tampering.md) | :white_check_mark: | in Java as it is for demonstration only |
+| [AES CBC-mode tampering](docs/aes_cbc_tampering.md) | :white_check_mark: | written in Java as it is for demonstration only |
 
 ### ChaCha20-Poly1305 encryption ###
 
@@ -261,7 +261,7 @@ The few Javascript Webcrypto examples will run directly in your browser so you w
 | Go | goplay.space | version go 1.16.2 
 | Dart | no online compiler available | tested on 2.13.1
 
-Last update: Aug. 22nd 2021
+Last update: Aug. 24th 2021
 
 The website is published under:  [https://java-crypto.github.io/cross_platform_crypto//](https://java-crypto.github.io/cross_platform_crypto//)
 

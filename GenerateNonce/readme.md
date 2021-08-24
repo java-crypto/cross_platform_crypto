@@ -21,6 +21,9 @@ The following links provide the solution in code and within an online compile th
 | [NodeJS Crypto](../GenerateNonce/GenerateRandomNonceNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsCryptoGenerateRandomNonce/)
 | [NodeJS forge](../GenerateNonce/GenerateRandomNonceNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomNonce/)
 | [Python](../GenerateNonce/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Dart](../GenerateAesKey/GenerateRandomKeyIvNonce.dart) *1) | :white_check_mark: | no online compiler available
+
+*1) you need the external library pointycastle version 3.1.1
 
 This is an output (as there is a random element your output will differ):
 
@@ -29,6 +32,6 @@ Generate a 12 byte long nonce for AES GCM
 generated nonce length: 12 base64: iK+wXGH26uFN+XFX
 ```
 
-Last update: Feb. 08th 2021
+Last update: Aug. 24th 2021
 
 Back to the main page: [readme.md](../readme.md)

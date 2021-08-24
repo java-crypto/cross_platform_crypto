@@ -23,6 +23,9 @@ The following links provide the solution in code and within an online compile th
 | [NodeJS Crypto](../GenerateAesKey/GenerateRandomAesKeyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
 | [NodeJS forge](../GenerateAesKey/GenerateRandomAesKeyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
 | [Python](../GenerateAesKey/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Dart](../GenerateAesKey/GenerateRandomKeyIvNonce.dart) *1) | :white_check_mark: | no online compiler available
+
+*1) you need the external library pointycastle version 3.1.1
 
 This is an output (as there is a random element your output will differ):
 
@@ -31,6 +34,6 @@ Generate a 32 byte long AES key
 generated key length: 32 base64: a9VVidAcHk6mv09zGSfH6ZiWNWSsjt/gryi6UcnMdAg=
 ```
 
-Last update: Feb. 08th 2021
+Last update: Aug. 24th 2021
 
 Back to the main page: [readme.md](../readme.md)

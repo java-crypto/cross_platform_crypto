@@ -2,7 +2,7 @@
 
 ## RSA AES CBC hybrid encryption
 
-This article is a combined solution, based on [RSA OEAP padding SHA-1 String](rsa_encryption_oaep_sha1_string.md) and [AES CBC-mode String Encryption](aes_cbc_256_string_encryption.md). Here I'm leaving out details to the encryption schemes, kindly check the information on the linked articles.
+This article is a combined solution of a **hybrid encryption**, based on [RSA OEAP padding SHA-1 String](rsa_encryption_oaep_sha1_string.md) and [AES CBC-mode String Encryption](aes_cbc_256_string_encryption.md). Here I'm leaving out details to the encryption schemes, kindly check the information on the linked articles.
 
 ### What is the workflow of a hybrid encryption?
 
@@ -34,7 +34,9 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS forge](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesCbcHybridStringEncryption#index.js/)
 | [Python](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.py) | :white_check_mark: | [repl.it CpcPythonRsaAesCbcHybridStringEncryption](https://repl.it/@javacrypto/CpcPythonRsaAesCbcHybridStringEncryption#Main.py/)
 | [Go](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.go) | :white_check_mark: | [repl.it CpcGoRsaAesCbcHybridStringEncryption](https://replit.com/@javacrypto/CpcGoRsaAesCbcHybridStringEncryption#main.go/)
+| [Dart](../RsaAesCbcHybridEncryptionString/RsaAesCbcHybridEncryption.dart) *1) | :white_check_mark: | no online compiler available
 
+Dart *1) you need the external libraries pointycastle version 3.1.1 and basic_utils version 3.4.0
 
 This is an output (your will differ because a random element):
 
@@ -56,6 +58,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 22nd 2021
+Last update: Aug. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

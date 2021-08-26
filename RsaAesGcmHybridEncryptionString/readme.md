@@ -2,7 +2,7 @@
 
 ## RSA AES GCM hybrid encryption
 
-This article is a combined solution, based on [RSA OEAP padding SHA-1 String](rsa_encryption_oaep_sha1_string.md) and [AES GCM-mode String Encryption](aes_gcm_256_string_encryption.md). Here I'm leaving out details to the encryption schemes, kindly check the information on the linked articles.
+This article is a combined solution of a **hybrid encryption**, based on [RSA OEAP padding SHA-1 String](rsa_encryption_oaep_sha1_string.md) and [AES GCM-mode String Encryption](aes_gcm_256_string_encryption.md). Here I'm leaving out details to the encryption schemes, kindly check the information on the linked articles.
 
 ### What is the workflow of a hybrid encryption?
 
@@ -35,6 +35,10 @@ The following links provide the solutions in code and an online compile that run
 | [NodeJS forge](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcNodeJsRsaAesGcmHybridStringEncryption#index.js/)
 | [Python](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.py) | :white_check_mark: | [repl.it CpcPythonRsaAesGcmHybridStringEncryption](https://replit.com/@javacrypto/CpcPythonRsaAesGcmHybridStringEncryption#Main.py/)
 | [Go](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.go) | :white_check_mark: | [repl.it CpcGoRsaAesGcmHybridStringEncryption](https://repl.it/@javacrypto/CpcGoRsaAesGcmHybridStringEncryption#main.go/)
+| [Dart](../RsaAesGcmHybridEncryptionString/RsaAesGcmHybridEncryption.dart) *1) | :white_check_mark: | no online compiler available
+
+Dart *1) you need the external libraries pointycastle version 3.1.1 and basic_utils version 3.4.0
+
 
 This is an output (your will differ because a random element):
 
@@ -56,6 +60,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Mar. 23rd 2021
+Last update: Aug. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -68,8 +68,11 @@ The following links provide the solutions in code and an online compiler that ru
 | OpenSSL | :x: | not available
 | [Python](../EcSignatureP256Sha256String/EcSignatureStringFull.py) *1) | :white_check_mark: | [repl.it CpcPythonEcSignatureStringFull](https://repl.it/@javacrypto/CpcPythonEcSignatureP256StringFull#main.py/)
 | [Go](../EcSignatureP256Sha256String/EcSignatureStringFull.go) | :white_check_mark: | [repl.it CpcGoEcStringSignatureFull](https://repl.it/@javacrypto/CpcGoEcSignatureP256StringFull#main.go/)
+| [Dart](../EcSignatureP256Sha256String/EcSignatureStringFull.dart) *2) | :white_check_mark: | no online compiler available
 
 Python *1) you need the external library pycryptodome, version 3.9.9
+
+Dart *2) you need the external libraries pointycastle version 3.1.1 and basic_utils version 3.4.0
 
 ### Notes regarding the implementations: 
 
@@ -108,6 +111,6 @@ signature (Base64) verified: true
 
 ```
 
-Last update: Aug. 22nd 2021
+Last update: Aug. 26th 2021
 
 Back to the main page: [readme.md](../readme.md)

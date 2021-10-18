@@ -28,14 +28,15 @@ The following links provide the solution in code and within an online compiler t
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.java) | :white_check_mark: | [repl.it CpcJavaGenerateSha256Base64Hex#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
-| [PHP](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.php) | :white_check_mark: | [repl.it CspPhpGenerateSha256Base64Hex](https://repl.it/@javacrypto/CpcPhpGenerateSha256Base64Hex#main.php/)
-| [C#](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateSha256Base64Hex#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateSha256Base64Hex#main.cs/)
-| [Javascript CryptoJs](../GenerateSha256Base64Hex/GenerateSha256Base64HexCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateSha256Base64Hex](https://repl.it/@javacrypto/CpcCryptoJsGenerateSha256Base64Hex#index.js/)
-| [NodeJS Crypto](../GenerateSha256Base64Hex/GenerateSha256Base64HexNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateSha256Base64Hex#index.js](https://repl.it/@javacrypto/CpcNodeJsCryptoGenerateSha256Base64Hex#index.js/)
-| [NodeJS forge](../GenerateSha256Base64Hex/GenerateSha256Base64HexNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateSha256Base64Hex#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateSha256Base64Hex#index.js/)
+| [Java](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.java) | :white_check_mark: | [replit.com CpcJavaGenerateSha256Base64Hex#Main.java](https://replit.com/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
+| [PHP](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.php) | :white_check_mark: | [replit.com CspPhpGenerateSha256Base64Hex](https://replit.com/@javacrypto/CpcPhpGenerateSha256Base64Hex#main.php/)
+| [C#](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.cs) | :white_check_mark: | [replit.com CpcCsharpGenerateSha256Base64Hex#main.cs](https://replit.com/@javacrypto/CpcCsharpGenerateSha256Base64Hex#main.cs/)
+| [Javascript CryptoJs](../GenerateSha256Base64Hex/GenerateSha256Base64HexCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsGenerateSha256Base64Hex](https://replit.com/@javacrypto/CpcCryptoJsGenerateSha256Base64Hex#index.js/)
+| [NodeJS Crypto](../GenerateSha256Base64Hex/GenerateSha256Base64HexNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateSha256Base64Hex#index.js](https://replit.com/@javacrypto/CpcNodeJsCryptoGenerateSha256Base64Hex#index.js/)
+| [NodeJS forge](../GenerateSha256Base64Hex/GenerateSha256Base64HexNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateSha256Base64Hex#index.js](https://replit.com/@javacrypto/CpcNodeJsGenerateSha256Base64Hex#index.js/)
 | [Webcrypto](../GenerateSha256Base64Hex/generatesha256base64hex.html) | :white_check_mark: | [your browser WebcryptoGenerateSha256Base64Hex.html](https://java-crypto.github.io/cross_platform_crypto/GenerateSha256Base64Hex/generatesha256base64hex.html)
-| [Python](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.py) | :white_check_mark: | [repl.it CpcPythonGenerateSha256Base64Hex#main.java](https://repl.it/@javacrypto/CpcPythonGenerateSha256Base64Hex#main.py/)
+| [Python](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.py) | :white_check_mark: | [replit.com CpcPythonGenerateSha256Base64Hex#main.java](https://replit.com/@javacrypto/CpcPythonGenerateSha256Base64Hex#main.py/)
+| [Go](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.go) | :white_check_mark: | [replit.com CpcGoGenerateSha256Base64Hex#Main.go](https://replit.com/@javacrypto/CpcGoGenerateRandomAesKey#Main.go/)
 | [Dart](../GenerateSha256Base64Hex/GenerateSha256Base64Hex.dart) *1) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pointycastle version 3.1.1
@@ -53,6 +54,6 @@ sha256HexString converted to a byte array:
 sha256Value (hex) length: 32 data: d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
 ```
 
-Last update: Aug. 24th 2021
+Last update: Oct. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

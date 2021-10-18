@@ -50,13 +50,14 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../Pbkdf2/Pbkdf2.java) | :white_check_mark: | [repl.it CpcJavaPbkdf2](https://repl.it/@javacrypto/CpcJavaPbkdf2#Main.java/)
-| [PHP](../Pbkdf2/Pbkdf2.php) | :white_check_mark: | [repl.it CpcPhpPbkdf2](https://repl.it/@javacrypto/CpcPhpPbkdf2#main.php/)
-| [C#](../Pbkdf2/Pbkdf2.cs) | :white_check_mark: | [repl.it CpcCsharpPbkdf2](https://repl.it/@javacrypto/CpcCsharpPbkdf2#main.cs/)
-| [Javascript CryptoJs](../Pbkdf2/Pbkdf2CryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsPbkdf2](https://repl.it/@javacrypto/CpcCryptoJsPbkdf2#index.js/)
-| [NodeJS CryptoJs](../Pbkdf2/Pbkdf2NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoPbkdf2](https://repl.it/@javacrypto/CpcNodeJsCryptoPbkdf2#index.js/)
-| [NodeJS forge](../Pbkdf2/Pbkdf2NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsPbkdf2](https://repl.it/@javacrypto/CpcNodeJsPbkdf2#index.js/)
-| [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :white_check_mark: | [repl.it see AesCbc256Pbkdf2StringEncryption](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
+| [Java](../Pbkdf2/Pbkdf2.java) | :white_check_mark: | [replit.com CpcJavaPbkdf2](https://replit.com/@javacrypto/CpcJavaPbkdf2#Main.java/)
+| [PHP](../Pbkdf2/Pbkdf2.php) | :white_check_mark: | [replit.com CpcPhpPbkdf2](https://replit.com/@javacrypto/CpcPhpPbkdf2#main.php/)
+| [C#](../Pbkdf2/Pbkdf2.cs) | :white_check_mark: | [replit.com CpcCsharpPbkdf2](https://replit.com/@javacrypto/CpcCsharpPbkdf2#main.cs/)
+| [Javascript CryptoJs](../Pbkdf2/Pbkdf2CryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsPbkdf2](https://replit.com/@javacrypto/CpcCryptoJsPbkdf2#index.js/)
+| [NodeJS CryptoJs](../Pbkdf2/Pbkdf2NodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoPbkdf2](https://replit.com/@javacrypto/CpcNodeJsCryptoPbkdf2#index.js/)
+| [NodeJS forge](../Pbkdf2/Pbkdf2NodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsPbkdf2](https://replit.com/@javacrypto/CpcNodeJsPbkdf2#index.js/)
+| [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :white_check_mark: | [replit.com see AesCbc256Pbkdf2StringEncryption](https://replit.com/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
+| [Go](../Pbkdf2/Pbkdf2.go) | :white_check_mark: | [replit.com CpcGoPbkdf2](https://replit.com/@javacrypto/CpcGoPbkdf2#Main.go/)
 
 *1) There is not separate example in Python, see the full working code in AES CBC 256 PBKDF2  String Encryption 
 
@@ -68,6 +69,6 @@ aesKeySha256 length:  32  data:  e1ea3e4b0376c0f9bf93b94fe71719a099317297b79108a
 aesKeySha1   length:  32  data:  d6bc1ae2aea28f5098826b555d7a0fe073e5bc7d8136d232e01d422ba2dd761e
 ```
 
-Last update: Feb. 08th 2021
+Last update: Oct. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

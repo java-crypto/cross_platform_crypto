@@ -41,13 +41,14 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../HmacCalculation/Hmac256Calculation.java) | :white_check_mark: | [repl.it CpcJavaHmac256Calculation](https://repl.it/@javacrypto/CpcJavaHmac256Calculation#Main.java/)
-| [PHP](../HmacCalculation/Hmac256Calculation.php) | :white_check_mark: | [repl.it CpcPhpHmac256Calculation](https://repl.it/@javacrypto/CpcPhpHmac256Calculation#main.php/)
-| [C#](../HmacCalculation/Hmac256Calculation.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcCsharpHmac256Calculation#main.cs/)
-| [Javascript CryptoJs](../HmacCalculation/Hmac256CalculationCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsHmac256Calculation](https://repl.it/@javacrypto/CpcCryptoJsHmac256Calculation#index.js/)
-| [NodeJS Crypto](../HmacCalculation/Hmac256CalculationNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoHmac256Calculation](https://repl.it/@javacrypto/CpcCpcNodeJsCryptoHmac256Calculation#index.js/)
-| [NodeJS node-forge](../HmacCalculation/Hmac256CalculationNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsHmac256Calculation](https://repl.it/@javacrypto/CpcCpcNodeJsHmac256Calculation#index.js/)
-| [Python](../HmacCalculation/Hmac256Calculation.py) | :white_check_mark: | [repl.it CpcPythonHmac256Calculation](https://repl.it/@javacrypto/CpcPythonHmac256Calculation#main.py/)
+| [Java](../HmacCalculation/Hmac256Calculation.java) | :white_check_mark: | [replit.com CpcJavaHmac256Calculation](https://replit.com/@javacrypto/CpcJavaHmac256Calculation#Main.java/)
+| [PHP](../HmacCalculation/Hmac256Calculation.php) | :white_check_mark: | [replit.com CpcPhpHmac256Calculation](https://replit.com/@javacrypto/CpcPhpHmac256Calculation#main.php/)
+| [C#](../HmacCalculation/Hmac256Calculation.cs) | :white_check_mark: | [replit.com CpcCsharpAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcCsharpHmac256Calculation#main.cs/)
+| [Javascript CryptoJs](../HmacCalculation/Hmac256CalculationCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsHmac256Calculation](https://replit.com/@javacrypto/CpcCryptoJsHmac256Calculation#index.js/)
+| [NodeJS Crypto](../HmacCalculation/Hmac256CalculationNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoHmac256Calculation](https://replit.com/@javacrypto/CpcCpcNodeJsCryptoHmac256Calculation#index.js/)
+| [NodeJS node-forge](../HmacCalculation/Hmac256CalculationNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsHmac256Calculation](https://replit.com/@javacrypto/CpcCpcNodeJsHmac256Calculation#index.js/)
+| [Go](../HmacCalculation/Hmac256Calculation.go) | :white_check_mark: | [replit.com CpcGoHmac256Calculation](https://replit.com/@javacrypto/CpcGoHmac256Calculation#Main.go/)
+| [Python](../HmacCalculation/Hmac256Calculation.py) | :white_check_mark: | [replit.com CpcPythonHmac256Calculation](https://replit.com/@javacrypto/CpcPythonHmac256Calculation#main.py/)
 
 
 This is an output:
@@ -60,6 +61,6 @@ hmac256 length: 32 (Base64) data: avMiN7NEG6L32JBmfvL9UviofJmdgLdfRP6QwF+suM8=
 
 ```
 
-Last update: Feb. 09th 2021
+Last update: Oct. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

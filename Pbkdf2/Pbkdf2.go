@@ -1,4 +1,3 @@
-// https://replit.com/@javacrypto/CpcGoPbkdf2#main.go
 package main
 
 import (

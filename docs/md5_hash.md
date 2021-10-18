@@ -43,7 +43,7 @@ The following links provide the solution in code and an online compiler that run
 | [NodeJS Crypto](../GenerateMd5/GenerateMd5NodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateMd5#index.js](https://replit.com/@javacrypto/CpcNodeJsCryptoGenerateMd5#index.js/)
 | [NodeJS forge](../GenerateMd5/GenerateMd5NodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateMd5#index.js](https://replit.com/@javacrypto/CpcNodeJsGenerateMd5#index.js/)
 | [Python](../GenerateMd5/GenerateMd5.py) | :white_check_mark: | [repl.it CpcPythonGenerateMd5#main.java](https://replit.com/@javacrypto/CpcPythonGenerateMd5#main.py/)
-| [Go](../GenerateMd5/GenerateMd5.py) | :white_check_mark: | [repl.it CpcPythonGenerateMd5#main.java](https://replit.com/@javacrypto/CpcPythonGenerateMd5#main.py/)
+| [Go](../GenerateMd5/GenerateMd5.go) | :white_check_mark: | [repl.it CpcGoGenerateMd5#main.java](https://replit.com/@javacrypto/CpcGoGenerateMd5#main.py/)
 | [Dart](../GenerateMd5/GenerateMd5.dart) *1) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pointycastle version 3.1.1

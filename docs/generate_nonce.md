@@ -14,16 +14,19 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../GenerateNonce/GenerateRandomNonce.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomNonce#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomNonce#Main.java/)
-| [PHP](../GenerateNonce/GenerateRandomNonce.php) | :white_check_mark: | [repl.it CpcPhpGenerateNonce#main.php](https://repl.it/@javacrypto/CpcCsharpGenerateRandomNonce#main.php/)
-| [C#](../GenerateNonce/GenerateRandomNonce.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomNonce#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomNonce#main.cs/)
-| [Javascript CryptoJs](../GenerateNonce/GenerateRandomNonceCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomNonce/)
-| [NodeJS Crypto](../GenerateNonce/GenerateRandomNonceNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsCryptoGenerateRandomNonce/)
-| [NodeJS forge](../GenerateNonce/GenerateRandomNonceNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomNonce](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomNonce/)
-| [Python](../GenerateNonce/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Java](../GenerateNonce/GenerateRandomNonce.java) | :white_check_mark: | [replit.com CpcJavaGenerateRandomNonce#Main.java](https://replit.com/@javacrypto/CpcJavaGenerateRandomNonce#Main.java/)
+| [PHP](../GenerateNonce/GenerateRandomNonce.php) | :white_check_mark: | [replit.com CpcPhpGenerateNonce#main.php](https://replit.com/@javacrypto/CpcCsharpGenerateRandomNonce#main.php/)
+| [C#](../GenerateNonce/GenerateRandomNonce.cs) | :white_check_mark: | [replit.com CpcCsharpGenerateRandomNonce#main.cs](https://replit.com/@javacrypto/CpcCsharpGenerateRandomNonce#main.cs/)
+| [Javascript CryptoJs](../GenerateNonce/GenerateRandomNonceCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsGenerateRandomNonce](https://replit.com/@javacrypto/CpcCryptoJsGenerateRandomNonce/)
+| [NodeJS Crypto](../GenerateNonce/GenerateRandomNonceNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoGenerateRandomNonce](https://replit.com/@javacrypto/CpcNodeJsCryptoGenerateRandomNonce/)
+| [NodeJS forge](../GenerateNonce/GenerateRandomNonceNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateRandomNonce](https://replit.com/@javacrypto/CpcNodeJsGenerateRandomNonce/)
+| [Python](../GenerateNonce/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [replit.com CpcPythonGenerateRandomKeyIvNonce#main.py](https://replit.com/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Go](../GenerateNonce/GenerateAesKeyIvNonce.go) *2) | :white_check_mark: | [replit.com CpcGoGenerateRandomAesKey#Main.go](https://replit.com/@javacrypto/CpcGoGenerateKeyIvNonce#main.go/)
 | [Dart](../GenerateAesKey/GenerateRandomKeyIvNonce.dart) *1) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pointycastle version 3.1.1
+
+*2) the Go version is a combined one: generate AES key, IV and nonce in one program
 
 This is an output (as there is a random element your output will differ):
 
@@ -32,6 +35,6 @@ Generate a 12 byte long nonce for AES GCM
 generated nonce length: 12 base64: iK+wXGH26uFN+XFX
 ```
 
-Last update: Aug. 24th 2021
+Last update: Oct. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

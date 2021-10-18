@@ -16,16 +16,19 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../GenerateAesKey/GenerateRandomAesKey.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomAesKey#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
-| [PHP](../GenerateAesKey/GenerateRandomAesKey.php) | :white_check_mark: | [repl.it CspPhpGenerateRandomAesKey](https://repl.it/@javacrypto/CspPhpGenerateRandomAesKey/)
-| [C#](../GenerateAesKey/GenerateRandomAesKey.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomAesKey#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomAesKey#main.cs/)
-| [Javascript CryptoJs](../GenerateAesKey/GenerateRandomAesKeyCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomAesKey](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)
-| [NodeJS Crypto](../GenerateAesKey/GenerateRandomAesKeyNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
-| [NodeJS forge](../GenerateAesKey/GenerateRandomAesKeyNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomAesKey#index.js](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
-| [Python](../GenerateAesKey/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Java](../GenerateAesKey/GenerateRandomAesKey.java) | :white_check_mark: | [replit.com CpcJavaGenerateRandomAesKey#Main.java](https://replit.com/@javacrypto/CpcJavaGenerateRandomAesKey#Main.java/)
+| [PHP](../GenerateAesKey/GenerateRandomAesKey.php) | :white_check_mark: | [replit.com CspPhpGenerateRandomAesKey](https://replit.com/@javacrypto/CspPhpGenerateRandomAesKey/)
+| [C#](../GenerateAesKey/GenerateRandomAesKey.cs) | :white_check_mark: | [replit.com CpcCsharpGenerateRandomAesKey#main.cs](https://replit.com/@javacrypto/CpcCsharpGenerateRandomAesKey#main.cs/)
+| [Javascript CryptoJs](../GenerateAesKey/GenerateRandomAesKeyCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsGenerateRandomAesKey](https://replit.com/@javacrypto/CpcCryptoJsGenerateRandomAesKey/)
+| [NodeJS Crypto](../GenerateAesKey/GenerateRandomAesKeyNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateRandomAesKey#index.js](https://replit.com/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
+| [NodeJS forge](../GenerateAesKey/GenerateRandomAesKeyNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateRandomAesKey#index.js](https://replit.com/@javacrypto/CpcNodeJsGenerateRandomAesKey#index.js/)
+| [Python](../GenerateAesKey/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [replit.com CpcPythonGenerateRandomKeyIvNonce#main.py](https://replit.com/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Go](../GenerateAesKey/GenerateAesKeyIvNonce.go) *2) | :white_check_mark: | [replit.com CpcGoGenerateRandomAesKey#Main.go](https://replit.com/@javacrypto/CpcGoGenerateKeyIvNonce#main.go/)
 | [Dart](../GenerateAesKey/GenerateRandomKeyIvNonce.dart) *1) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pointycastle version 3.1.1
+
+*2) the Go version is a combined one: generate AES key, IV and nonce in one program
 
 This is an output (as there is a random element your output will differ):
 
@@ -34,6 +37,6 @@ Generate a 32 byte long AES key
 generated key length: 32 base64: a9VVidAcHk6mv09zGSfH6ZiWNWSsjt/gryi6UcnMdAg=
 ```
 
-Last update: Aug. 24th 2021
+Last update: Oct. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

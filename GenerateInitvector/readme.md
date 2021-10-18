@@ -14,16 +14,19 @@ The following links provide the solution in code and within an online compile th
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../GenerateInitvector/GenerateRandomInitvector.java) | :white_check_mark: | [repl.it CpcJavaGenerateRandomInitvector#Main.java](https://repl.it/@javacrypto/CpcJavaGenerateRandomInitvector#Main.java/)
-| [PHP](../GenerateInitvector/GenerateRandomInitvector.php) | :white_check_mark: | [repl.it CpcPhpGenerateInitvector#main.php](https://repl.it/@javacrypto/CpcPhpGenerateInitvector#main.php/)
-| [C#](../GenerateInitvector/GenerateRandomInitvector.cs) | :white_check_mark: | [repl.it CpcCsharpGenerateRandomInitvector#main.cs](https://repl.it/@javacrypto/CpcCsharpGenerateRandomInitvector#main.cs/)
-| [Javascript CryptoJs](../GenerateInitvector/GenerateRandomInitvectorCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcCryptoJsGenerateRandomInitvector/)
-| [NodeJS CryptoJs](../GenerateInitvector/GenerateRandomInitvectorNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
-| [NodeJS forge](../GenerateInitvector/GenerateRandomInitvectorNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsGenerateRandomInitvector](https://repl.it/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
-| [Python](../GenerateInitvector/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [repl.it CpcPythonGenerateRandomKeyIvNonce#main.py](https://repl.it/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Java](../GenerateInitvector/GenerateRandomInitvector.java) | :white_check_mark: | [replit.com CpcJavaGenerateRandomInitvector#Main.java](https://replit.com/@javacrypto/CpcJavaGenerateRandomInitvector#Main.java/)
+| [PHP](../GenerateInitvector/GenerateRandomInitvector.php) | :white_check_mark: | [replit.com CpcPhpGenerateInitvector#main.php](https://replit.com/@javacrypto/CpcPhpGenerateInitvector#main.php/)
+| [C#](../GenerateInitvector/GenerateRandomInitvector.cs) | :white_check_mark: | [replit.com CpcCsharpGenerateRandomInitvector#main.cs](https://replit.com/@javacrypto/CpcCsharpGenerateRandomInitvector#main.cs/)
+| [Javascript CryptoJs](../GenerateInitvector/GenerateRandomInitvectorCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsGenerateRandomInitvector](https://replit.com/@javacrypto/CpcCryptoJsGenerateRandomInitvector/)
+| [NodeJS CryptoJs](../GenerateInitvector/GenerateRandomInitvectorNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateRandomInitvector](https://replit.com/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
+| [NodeJS forge](../GenerateInitvector/GenerateRandomInitvectorNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsGenerateRandomInitvector](https://replit.com/@javacrypto/CpcNodeJsGenerateRandomInitvector/)
+| [Python](../GenerateInitvector/GenerateRandomKeyIvNonce.py) | :white_check_mark: | [replit.com CpcPythonGenerateRandomKeyIvNonce#main.py](https://replit.com/@javacrypto/CpcPythonGenerateRandomKeyIvNonce#main.py/)
+| [Go](../GenerateInitvector/GenerateAesKeyIvNonce.go) *2) | :white_check_mark: | [replit.com CpcGoGenerateRandomAesKey#Main.go](https://replit.com/@javacrypto/CpcGoGenerateKeyIvNonce#main.go/)
 | [Dart](../GenerateAesKey/GenerateRandomKeyIvNonce.dart) *1) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pointycastle version 3.1.1
+
+*2) the Go version is a combined one: generate AES key, IV and nonce in one program
 
 This is an output (as there is a random element your output will differ):
 
@@ -32,6 +35,6 @@ Generate a 16 byte long Initialization vector (IV)
 generated iv length: 16 base64: PnujuygIgaMxwdQRWz9wvA==
 ```
 
-Last update: Aug. 24th 2021
+Last update: Oct. 18th 2021
 
 Back to the main page: [readme.md](../readme.md)

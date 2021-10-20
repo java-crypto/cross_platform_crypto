@@ -61,7 +61,7 @@ The following links provide the solutions in code and an online compiler that ru
 | [NodeJS node-forge](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_FullNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull](https://replit.com/@javacrypto/CpcNodeJsAesCbc256Pbkdf2StringEncryptionFull#index.js/)
 | [Webcrypto](../AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html) | :white_check_mark: | [your browser AesCbc256Pbkdf2StringEncryptionWebcrypto.html](https://java-crypto.github.io/cross_platform_crypto/AesCbc256Pbkdf2StringEncryption/aescbc256pbkdf2stringencryptionwebcrypto.html)
 | [Python](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption_Full.py) *1) | :white_check_mark: | [replit.com CpcPythonAesCbc256Pbkdf2StringEncryptionFull](https://replit.com/@javacrypto/CpcPythonAesCbc256Pbkdf2StringEncryptionFull#main.py/)
-| [Go](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption.go) | :white_check_mark: | [replit.com CpcGoAesCbc256Pbkdf2StringEncryptionFull](https://replit.com/@javacrypto/CpcGoAesCbc256Pbkdf2StringEncryptionFull#Main.go/)
+| [Go](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption.go) | :white_check_mark: | [replit.com CpcGoAesCbc256Pbkdf2StringEncryption](https://replit.com/@javacrypto/CpcGoAesCbc256Pbkdf2StringEncryption#Main.go/)
 | [Dart](../AesCbc256Pbkdf2StringEncryption/AesCbc256Pbkdf2StringEncryption.dart) *2) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pycryptodome, version 3.9.9

@@ -59,13 +59,14 @@ The following links provide the solutions in code and an online compiler that ru
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.java) | :white_check_mark: | [repl.it CpcJavaAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcJavaAesCbc256Pbkdf2HmacStringEncryption#Main.java/)
-| [PHP](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.php) | :white_check_mark: | [repl.it CpcPhpAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcPhpAesCbc256Pbkdf2HmacStringEncryption/)
-| [C#](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcCsharpAesCbc256Pbkdf2HmacStringEncryption#main.cs/)
-| [Javascript CryptoJs](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcCryptoJsAesCbc256Pbkdf2HmacStringEncryption#index.js/)
-| [NodeJS Crypto](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoAesCbc256Pbkdf2HmacStringEncryption#index.js/)
-| [NodeJS node-forge](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesCbc256Pbkdf2HmacStringEncryption#index.js/)
-| [Python](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.py) *1) | :white_check_mark: | [repl.it CpcPythonAesCbc256Pbkdf2HmacStringEncryption](https://repl.it/@javacrypto/CpcPythonAesCbc256Pbkdf2HmacStringEncryption#main.py/)
+| [Java](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.java) | :white_check_mark: | [replit.com CpcJavaAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcJavaAesCbc256Pbkdf2HmacStringEncryption#Main.java/)
+| [PHP](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.php) | :white_check_mark: | [replit.com CpcPhpAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcPhpAesCbc256Pbkdf2HmacStringEncryption/)
+| [C#](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.cs) | :white_check_mark: | [replit.com CpcCsharpAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcCsharpAesCbc256Pbkdf2HmacStringEncryption#main.cs/)
+| [Javascript CryptoJs](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcCryptoJsAesCbc256Pbkdf2HmacStringEncryption#index.js/)
+| [NodeJS Crypto](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcNodeJsCryptoAesCbc256Pbkdf2HmacStringEncryption#index.js/)
+| [NodeJS node-forge](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryptionNodeJs.js) | :white_check_mark: | [replit.com CpcNodeJsAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcNodeJsAesCbc256Pbkdf2HmacStringEncryption#index.js/)
+| [Python](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.py) *1) | :white_check_mark: | [replit.com CpcPythonAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcPythonAesCbc256Pbkdf2HmacStringEncryption#main.py/)
+| [Go](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.go) | :white_check_mark: | [replit.com CpcGoAesCbc256Pbkdf2HmacStringEncryption](https://replit.com/@javacrypto/CpcGoAesCbc256Pbkdf2HmacStringEncryption#Main.go/)
 | [Dart](../AesCbc256Pbkdf2HmacStringEncryption/AesCbc256Pbkdf2HmacStringEncryption.dart) *2) | :white_check_mark: | no online compiler available
 
 *1) you need the external library pycryptodome, version 3.9.9
@@ -89,6 +90,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Aug. 18th 2021
+Last update: Oct. 20th 2021
 
 Back to the main page: [readme.md](../readme.md)

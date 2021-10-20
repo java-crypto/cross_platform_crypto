@@ -65,19 +65,21 @@ The following links provide the solutions in code and an online compile that run
 
 | Language | available | Online-compiler
 | ------ | :---: | :----: |
-| [Java](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.java) | :white_check_mark: | [repl.it CpcJavaCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcJavaCurve25519KeyExchangeAesCbc256StringEncryption#Main.java/)
-| [PHP](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.php) | :white_check_mark: | [repl.it CpcPhpCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcPhpCurve25519KeyExchangeAesCbc256StringEncryption#main.php/)
-| [C#](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.cs) | :white_check_mark: | [repl.it CpcCsharpCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcCsharpCurve25519KeyExchangeAesCbc256StringEncryption#main.cs/)
-| [Javascript CryptoJs](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionCryptoJs.js) | :white_check_mark: | [repl.it CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption#index.js/)
-| [NodeJS Crypto](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [repl.it CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryp#index.js/)
+| [Java](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.java) | :white_check_mark: | [replit.com CpcJavaCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcJavaCurve25519KeyExchangeAesCbc256StringEncryption#Main.java/)
+| [PHP](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.php) | :white_check_mark: | [replit.com CpcPhpCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcPhpCurve25519KeyExchangeAesCbc256StringEncryption#main.php/)
+| [C#](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.cs) | :white_check_mark: | [replit.com CpcCsharpCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcCsharpCurve25519KeyExchangeAesCbc256StringEncryption#main.cs/)
+| [Javascript CryptoJs](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionCryptoJs.js) | :white_check_mark: | [replit.com CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcCryptoJsCurve25519KeyExchangeAesCbc256StringEncryption#index.js/)
+| [NodeJS Crypto](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryptionNodeJsCrypto.js) | :white_check_mark: | [replit.com CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcNodeJsCryptoCurve25519KeyExchangeAesCbc256StringEncryp#index.js/)
 | NodeJS node-forge | :x: | please use the built-in Node Crypto-solution above
-| [Python](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.py) | :white_check_mark: | [repl.it CpcPythonCurve25519KeyExchangeAesCbc256StringEncryption](https://repl.it/@javacrypto/CpcPythonCurve25519KeyExchangeAesCbc256StringEncryption#main.py/)
+| [Python](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.py) | :white_check_mark: | [replit.com CpcPythonCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcPythonCurve25519KeyExchangeAesCbc256StringEncryption#main.py/)
+| [Go](../Curve25519KeyExchangeAesCbc256StringEncryption/Curve25519KeyExchangeAesCbc256StringEncryption.go) | :white_check_mark: | [replit.com CpcGoCurve25519KeyExchangeAesCbc256StringEncryption](https://replit.com/@javacrypto/CpcGoCurve25519KeyExchangeAesCbc256StringEncryption#Main.go/)
+
 
 ### What additional libraries do I need to run the examples?
 
 | Language | library | link
 | ------ | :---: | :---- |
-| Java | curve25519-java-0.5.0.jar | [https://mvnrepository.com/artifact/org.whispersystems/curve25519-java](https://mvnrepository.com/artifact/org.whispersystems/curve25519-java/) and online on https://repl.it https://github.com/wavesplatform/curve25519-java/|
+| Java | curve25519-java-0.5.0.jar | [https://mvnrepository.com/artifact/org.whispersystems/curve25519-java](https://mvnrepository.com/artifact/org.whispersystems/curve25519-java/) and online on https://replit.com https://github.com/wavesplatform/curve25519-java/|
 | PHP | Curve25519.php | [https://github.com/lt/PHP-Curve25519](https://github.com/lt/PHP-Curve25519/) |
 | C# | Curve25519.cs | [https://github.com/hanswolff/curve25519](https://github.com/hanswolff/curve25519/) |
 | Javascript | axlsign.js | [https://github.com/wavesplatform/curve25519-js](https://github.com/wavesplatform/curve25519-js/) |
@@ -113,6 +115,6 @@ decrypt.text:The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Feb. 09th 2021
+Last update: Oct. 20th 2021
 
 Back to the main page: [readme.md](../readme.md)

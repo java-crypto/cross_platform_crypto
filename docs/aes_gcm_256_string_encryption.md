@@ -55,7 +55,7 @@ The following links provide the solutions in code and an online compiler that ru
 | [NodeJS node-forge](../AesGcm256StringEncryption/AesGcm256StringEncryptionNodeJs.js) | :white_check_mark: | [repl.it CpcNodeJsAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcNodeJsAesGcm256StringEncryption#index.js/)
 | [Python](../AesGcm256StringEncryption/AesGcm256StringEncryption.py) *2) | :white_check_mark: | [repl.it CpcPythonAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcPythonAesGcm256StringEncryption#main.py/)
 | [Go](../AesGcm256StringEncryption/AesGcm256StringEncryption.go) *3) | :white_check_mark: | [repl.it CpcGoAesGCM256StringEncryption](https://repl.it/@javacrypto/CpcGoAesGcm256StringEncryption#main.go/)
-| [Dart](../AesGcm256StringEncryption/AesGcm256StringEncryption.go) | :white_check_mark: | no online compiler available
+| [Dart](../AesGcm256StringEncryption/AesGcm256StringEncryption.dart) | :white_check_mark: | no online compiler available
 
 *1) C# needs **dot.net 5** to run, so I changed my online compiler for this example.
 
@@ -82,6 +82,6 @@ plaintext:  The quick brown fox jumps over the lazy dog
 
 ```
 
-Last update: Aug. 18th 2021
+Last update: Nov. 06th 2021
 
 Back to the main page: [readme.md](../readme.md)

@@ -23,9 +23,9 @@ The OAEP-padding includes a hashing algorithm that is not always named by the al
 
 The <u>encryption</u> is performed with the **Public key** of the recipient. For the <u>decryption</u> the **Private Key** of the recipient is used - so in a typical environment the Public Key is provided from the recipient to the encryptor(s) of the data and only the recipient is been able to decrypt the data.
 
-**Key generation:** All examples use pre-generated keys that are described on the page [RSA sample keys](rsa_sample_keypair.md). If you want to see how my keys got generated visit the page [RSA key generation](rsa_key_generation.md). 
+**Key generation:** All examples use pre-generated keys that are described on the page [RSA sample keys](../docs/rsa_sample_keypair.md). If you want to see how my keys got generated visit the page [RSA key generation](../docs/rsa_key_generation.md). 
 
-When comparing the programs you will notice that the keys for C# looking like different as they are not in the "PEM"-format ("---Begin...") but in a XML-format. As it is a little bit tricky to convert the keys between XML- and PEM-format I setup an own page for this point: [RSA  key conversion](rsa_key_conversion.md)
+When comparing the programs you will notice that the keys for C# looking like different as they are not in the "PEM"-format ("---Begin...") but in a XML-format. As it is a little bit tricky to convert the keys between XML- and PEM-format I setup an own page for this point: [RSA  key conversion](../docs/rsa_key_conversion.md)
 
 One note about the **key management** in my programs: usually the keys are (securely) stored in files or a key store and may have additional password protection. Both scenarios are unhandy in demonstration programs running in an online compiler. That's why I'm using <u>static, hard-coded</u> keys in my programs - **please do not do this in production environment! Never ever store a Private Key in the source!** The minimum is to load the keys from a secured device; simply uncomment a line in the code to load the key from a file.
 
@@ -44,7 +44,7 @@ The program follows the usual sequence:
 10. set the decryption parameters (same as used for encrypting)
 11. decrypt the ciphertext to the "decryptedtext" and show the result.
 
-If you like to see the **decryption part only** see my separate article [RSA string decryption OAEP SHA 1 padding](rsa_decryption_oaep_sha1_string.md).
+If you like to see the **decryption part only** see my separate article [RSA string decryption OAEP SHA 1 padding](../docs/rsa_decryption_oaep_sha1_string.md).
 
 ## :warning: Security warning :warning:
 
